@@ -1,5 +1,12 @@
 .basic-info {
     font-size: 20px;
-    color: blue;
-    background-color: chartreuse;
+    color: white;
+    background-color: #36303c;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 }
