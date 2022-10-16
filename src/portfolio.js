@@ -7,13 +7,13 @@ const settings = {
 
 //SEO Related settings
 const seo = {
-  title: "Ashutosh's Portfolio",
+  title: "Nguyen Van Loc",
   description:
-    "A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.",
+    "A third-year student with passion on Artificial Intelligence and Data Science",
   og: {
-    title: "Ashutosh Hathidara Portfolio",
+    title: "Nguyen Van Loc's Portfolio",
     type: "website",
-    url: "http://ashutoshhathidara.com/",
+    url: "https://nguyenvanloc.online/",
   },
 };
 
