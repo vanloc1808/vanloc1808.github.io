@@ -21,8 +21,8 @@ const seo = {
 const greeting = {
   title: "Nguyen Van Loc",
   logo_name: "NguyenVanLoc",
-  subTitle:
-    "Hello",
+  nickname: "Penguin",
+  subTitle: "Hello",
   resumeLink:
     "https://drive.google.com/open?id=1XYpYhLeqCdyx_q6l0bQoC7RgwQjAjXPf",
   portfolio_repository: "https://github.com/ashutosh1919/masterPortfolio",
