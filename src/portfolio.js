@@ -90,33 +90,40 @@ const skills = {
       title: "Data Science & AI",
       fileName: "DataScienceImg",
       skills: [
-        "⚡ Developing highly scalable production ready models for various deeplearning and statistical use cases",
-        "⚡ Experience of working with Computer Vision and NLP projects",
-        "⚡ Complex quantitative modelling for dynamic forecasting and time series analysis",
+        "⚡ Currently learning about Machine Learning, Deep Learning and Data Science",
+        "⚡ Beginning some small projects on Data Science and AI",
+        // "⚡ Complex quantitative modelling for dynamic forecasting and time series analysis",
       ],
       softwareSkills: [
         {
-          skillName: "Tensorflow",
+          skillName: "Jupyter Notebook",
+          fontAwesomeClassname: "logos-jupyter",
+          style: {
+            backgroundColor: "transparent",
+          },
+        },
+        {
+          skillName: "TensorFlow",
           fontAwesomeClassname: "logos-tensorflow",
           style: {
             backgroundColor: "transparent",
           },
         },
-        {
-          skillName: "Keras",
-          fontAwesomeClassname: "simple-icons:keras",
-          style: {
-            backgroundColor: "white",
-            color: "#D00000",
-          },
-        },
-        {
-          skillName: "PyTorch",
-          fontAwesomeClassname: "logos-pytorch",
-          style: {
-            backgroundColor: "transparent",
-          },
-        },
+        // {
+        //   skillName: "Keras",
+        //   fontAwesomeClassname: "simple-icons:keras",
+        //   style: {
+        //     backgroundColor: "white",
+        //     color: "#D00000",
+        //   },
+        // },
+        // {
+        //   skillName: "PyTorch",
+        //   fontAwesomeClassname: "logos-pytorch",
+        //   style: {
+        //     backgroundColor: "transparent",
+        //   },
+        // },
         {
           skillName: "Python",
           fontAwesomeClassname: "ion-logo-python",
@@ -128,12 +135,14 @@ const skills = {
       ],
     },
     {
-      title: "Full Stack Development",
+      title: "Software Engineering",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Building responsive website front end using React-Redux",
-        "⚡ Developing mobile applications using Flutter, React Native and solo android apps using Kotlin",
-        "⚡ Creating application backend in Node, Express & Flask",
+        // "⚡ Building responsive website front end using React-Redux",
+        // "⚡ Developing mobile applications using Flutter, React Native and solo android apps using Kotlin",
+        // "⚡ Creating application backend in Node, Express & Flask",
+        "⚡ Building some small websites with HTML, CSS, NodeJS, and ReactJS (including this website...)",
+        "⚡ Have some school projects with C++ and Python (check the Projects section)",
       ],
       softwareSkills: [
         {

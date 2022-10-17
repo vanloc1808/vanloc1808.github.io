@@ -89,7 +89,19 @@
 
   .portfolio-repo-btn-div {
     width: 100%;
-    display: flex;
+    display: inline-block;
+    justify-content: center;
+  }
+
+  .resume-btn-div {
+    width: 90%;
+    display: inline-block;
+    justify-content: center;
+  }
+
+  .github_and_resume {
+    width: 100%;
+    display: inline-block;
     justify-content: center;
   }
 }
