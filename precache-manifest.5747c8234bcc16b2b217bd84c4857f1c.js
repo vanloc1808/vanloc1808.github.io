@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "933a16cb1e3c5f460a4c6186e2ca4e61",
+    "revision": "cedfd02e2987d73eb9fb04f29508fe42",
     "url": "/index.html"
   },
   {
-    "revision": "dd60782a11520f303cce",
+    "revision": "07bc26df3d2a9354172d",
     "url": "/static/css/main.ecc96a53.chunk.css"
   },
   {
-    "revision": "4e96364ddfdf5e027296",
-    "url": "/static/js/2.831e9ba7.chunk.js"
+    "revision": "40f57e4dbd42bc2d55e0",
+    "url": "/static/js/2.e01e0a3c.chunk.js"
   },
   {
-    "revision": "dd60782a11520f303cce",
-    "url": "/static/js/main.344c19f2.chunk.js"
+    "revision": "07bc26df3d2a9354172d",
+    "url": "/static/js/main.0e3f9239.chunk.js"
   },
   {
     "revision": "6138eaf4a6c67cbf898e",
@@ -188,12 +188,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/googleAssistant.a6addc3f.svg"
   },
   {
-    "revision": "d3fccbe1db76b96f4f320d9c0f7da30c",
-    "url": "/static/media/ibm_logo.d3fccbe1.png"
+    "revision": "5b1ca4d1e50ebb745d59a14c962a8fac",
+    "url": "/static/media/hcmus_logo.5b1ca4d1.png"
   },
   {
-    "revision": "571a8584e69ecfbe326c8b8385fbbf54",
-    "url": "/static/media/iiitk_logo.571a8584.png"
+    "revision": "d3fccbe1db76b96f4f320d9c0f7da30c",
+    "url": "/static/media/ibm_logo.d3fccbe1.png"
   },
   {
     "revision": "29152cf756a1facead5393c32e373371",
