@@ -1,1 +1,112 @@
-{"data":[{"id":"MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzQ=","name":"masterPortfolio","createdAt":"2020-03-06T16:26:54Z","url":"https://github.com/ashutosh1919/masterPortfolio","description":"The complete portfolio website hosted using github pages (gh-pages). Visit the website here : ","isFork":false,"languages":[{"name":"HTML","iconifyClass":"logos-html-5"},{"name":"CSS","iconifyClass":"logos-css-3"},{"name":"JavaScript","iconifyClass":"logos-javascript"}]},{"id":"MDEwOlJlcG9zaXRvcnkyNjkwNzUwMjM=","name":"truvisory","createdAt":"2020-06-03T11:53:55Z","url":"https://github.com/ashutosh1919/truvisory","description":"This project is meant to provide resources to users who want to access good LinkedIn posts which contains resources to learn any Technology, Design, Self-Branding, Motivation etc. You can visit project by:","isFork":false,"languages":[{"name":"HTML","iconifyClass":"logos-html-5"},{"name":"CSS","iconifyClass":"logos-css-3"},{"name":"JavaScript","iconifyClass":"logos-javascript"}]},{"id":"MDEwOlJlcG9zaXRvcnkyNzM1MTI1NTE=","name":"ml-data-bot","createdAt":"2020-06-19T14:24:55Z","url":"https://github.com/ashutosh1919/ml-data-bot","description":"Chatbot which helps you to get important statistics from the data to get insights to build Machine learning, Deep learning and Statistical models","isFork":false,"languages":[{"name":"Python","iconifyClass":"logos-python"}]},{"id":"MDEwOlJlcG9zaXRvcnkxNTU5NTE3NTk=","name":"Stock-Prediction-using-LSTM","createdAt":"2018-11-03T05:00:56Z","url":"https://github.com/ashutosh1919/Stock-Prediction-using-LSTM","description":"This Project is predicting stocks for 32 companies with error less than 1% using LSTM Networks.","isFork":false,"languages":[{"name":"Python","iconifyClass":"logos-python"},{"name":"Jupyter Notebook","iconifyClass":"logos-jupyter"}]},{"id":"MDEwOlJlcG9zaXRvcnkyMDIxNDc4ODA=","name":"Pick-Parser","createdAt":"2019-08-13T13:13:00Z","url":"https://github.com/dsc-iiitdmk/Pick-Parser","description":"This Project is to create a tool which can parse the Resumes and transform them into our own templates","isFork":false,"languages":[{"name":"Python","iconifyClass":"logos-python"}]},{"id":"MDEwOlJlcG9zaXRvcnkxODIxMjk3NTQ=","name":"Survival_3D_Game","createdAt":"2019-04-18T17:25:51Z","url":"https://github.com/ashutosh1919/Survival_3D_Game","description":"Survival Game using Unity3D","isFork":false,"languages":[{"name":"C#","iconifyClass":"logos-c-sharp"}]}]}
+{
+  "data": [
+    {
+      "id": "MDEwOlJlcG9zaXRvcnkxODIxMjk3NTQ=",
+      "name": "Mathematical Formulas Detection in PDF Documents",
+      "finishedIn": "June 2022",
+      "url": "https://github.com/vanloc1808/HCMUS-Research-Methods",
+      "description": "In this project, we researched about some methods for detecting mathematical expressions in PDF documents. We focused on a Deep Learning method, with Faster R-CNN and ResNet50 as the backbone.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        },
+        {
+          "name": "Jupyter Notebook",
+          "iconifyClass": "logos-jupyter"
+        }
+      ]
+    },
+    {
+      "id": "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzQ=",
+      "name": "Analyzing and Predicting the Success of a SpaceX's landing",
+      "finishedIn": "August 2022",
+      "url": "https://github.com/vanloc1808/Coursera-IBM-data-science-professional-certificate/tree/main/course10-applied-data-science-capstone",
+      "description": "A final project on IBM Data Science Professional Certificate, using Exploratory Data Analysis to explore data features, visualization tools to have a pictorial view of data, then use Support Vector Machine, Classification Trees, and Logistic Regression to make decision. You can visit project by:",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        },
+        {
+          "name": "Jupyter Notebook",
+          "iconifyClass": "logos-jupyter"
+        }
+      ]
+    },
+    {
+      "id": "MDEwOlJlcG9zaXRvcnkyNjkwNzUwMjM=",
+      "name": "Analyzing Historical Stock/Revenue Data and Building a Dashboard",
+      "finishedIn": "June 2022",
+      "url": "https://github.com/vanloc1808/Coursera-IBM-data-science-professional-certificate/blob/main/course05-python-projects-for-data-science/Final-Assignment.ipynb",
+      "description": "Extract the revenue data for Tesla and GameStop, then build a dashboard to compare the price of stocks versus the revenue, help to make decision. You can visit project by:",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        },
+        {
+          "name": "Jupyter Notebook",
+          "iconifyClass": "logos-jupyter"
+        }
+      ]
+    },
+    {
+      "id": "MDEwOlJlcG9zaXRvcnkyNzM1MTI1NTE=",
+      "name": "PC Control via Email",
+      "finishedIn": "June 2022",
+      "url": "https://github.com/vanloc1808/HCMUS-Computer-Networks-Projects/tree/main/Socket-Email",
+      "description": "A program that allows users to remotely control their computers using their emails, by sending mails to a specific mail address, they can require their computers to capture screenshots, turn on/turn off a process, keylog, shutdown, restart their computers, etc. This app is implemented using concepts of socket programming.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        }
+      ]
+    },
+    {
+      "id": "MDEwOlJlcG9zaXRvcnkxNTU5NTE3NTk=",
+      "name": "Research about Hidden Markov Model",
+      "finishedIn": "May 2022",
+      "url": "https://github.com/vanloc1808/HCMUS-Applied-Maths-and-Statistics-Projects/tree/main/Project-2",
+      "description": "A brief research on Hidden Markov Model, a statistical model, famous in Natural Language Processing and also has use in Machine Learning, with theory, implementation and its application.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        },
+        {
+          "name": "Jupyter Notebook",
+          "iconifyClass": "logos-jupyter"
+        },
+        {
+          "name": "LaTeX",
+          "iconifyClass": "cib-latex"
+        }
+      ]
+    },
+    {
+      "id": "MDEwOlJlcG9zaXRvcnkyMDIxNDc4ODA=",
+      "name": "NOAA Weather Data Processing",
+      "finishedIn": "April 2022",
+      "url": "{https://github.com/vanloc1808/HCMUS-Applied-Maths-and-Statistics-Projects/tree/main/Project-1",
+      "description": "A project for data visualization with matplotlib, data description, and data prediction using Regression model, on a small dataset extracted from NOAA's weather data.",
+      "isFork": false,
+      "languages": [
+        {
+          "name": "Python",
+          "iconifyClass": "logos-python"
+        },
+        {
+          "name": "Jupyter Notebook",
+          "iconifyClass": "logos-jupyter"
+        }
+      ]
+    }
+  ]
+}
