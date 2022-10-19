@@ -569,7 +569,8 @@ const publications = {
       id: "MDEwOlJlcG9zaXRvcnkyNDU0NjcyNzQ=",
       name:
         "A Deep Learning Method for Mathematical Formulas Detection in PDF Documents",
-      createdAt: "2020-03-06T16:26:54Z",
+      finishedIn: "Jun 2022",
+      publishedOn: "Not yet",
       description:
         "In this paper, we provide a deep learning method to detect mathematical formulas in scientific PDF documents. This task is quite different from the extraction of mathematical expressions in images. The task of mathematical formulas detection has three main challenges: a large scale span, a large variation of the ratio between the width and the height, and a rich character set and mathematical expressions. Considering these challenges, we use Faster R-CNN, a real-time object detection model, with ResNet50, and a suitable level of Feature Pyramid Network. Our model is trained, tested, and evaluated on the IBEM dataset and provides significant results on both embedded and isolated formulas.",
       url:

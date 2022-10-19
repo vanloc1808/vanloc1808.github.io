@@ -28,7 +28,8 @@ export default function PublicationCard({ pub, theme }) {
               className="publication-creation-date subTitle"
               style={{ color: theme.secondaryText }}
             >
-              Published on {pub.createdAt.split("T")[0]}
+              Finished in {pub.finishedIn.split("T")[0]} <br />
+              Published on {pub.publishedOn.split("T")[0]}
             </p>
           </div>
           {/* <div className="repo-stats">
