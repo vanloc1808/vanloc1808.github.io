@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cedfd02e2987d73eb9fb04f29508fe42",
+    "revision": "dcf6a3b30b23924c7fdb170465d874a4",
     "url": "/index.html"
   },
   {
-    "revision": "07bc26df3d2a9354172d",
+    "revision": "8173bd5b7951255f26f7",
     "url": "/static/css/main.ecc96a53.chunk.css"
   },
   {
-    "revision": "40f57e4dbd42bc2d55e0",
-    "url": "/static/js/2.e01e0a3c.chunk.js"
+    "revision": "4e96364ddfdf5e027296",
+    "url": "/static/js/2.831e9ba7.chunk.js"
   },
   {
-    "revision": "07bc26df3d2a9354172d",
-    "url": "/static/js/main.0e3f9239.chunk.js"
+    "revision": "8173bd5b7951255f26f7",
+    "url": "/static/js/main.519b9bf7.chunk.js"
   },
   {
     "revision": "6138eaf4a6c67cbf898e",
@@ -56,10 +56,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/address_image.16559172.svg"
   },
   {
-    "revision": "be4f4800caf3d342509c1af959ff434d",
-    "url": "/static/media/animated_ashutosh.be4f4800.png"
-  },
-  {
     "revision": "dcd6dee2bd7458a4a576dc131506fd83",
     "url": "/static/media/animated_logo.dcd6dee2.svg"
   },
@@ -90,10 +86,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3e23ca14e7a7c8a7b63d255466749000",
     "url": "/static/media/developerActivity.3e23ca14.svg"
-  },
-  {
-    "revision": "63f707f224c8a842ac928c36e3be879a",
-    "url": "/static/media/dsc_logo.63f707f2.png"
   },
   {
     "revision": "3bab7a9dc4324f1b2364d25a47fcfcf0",
@@ -218,6 +210,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "95a12a2b8c3149cce2175679755c4b4d",
     "url": "/static/media/nptel_logo.95a12a2b.png"
+  },
+  {
+    "revision": "12408f03071729f6caabe7d53aff6c33",
+    "url": "/static/media/nvl.12408f03.png"
   },
   {
     "revision": "414dfbd98516b39255a3e22ed90b3f7d",
