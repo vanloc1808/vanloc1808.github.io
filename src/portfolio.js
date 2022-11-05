@@ -25,7 +25,7 @@ const greeting = {
   subTitle:
     "I am currently a third-year student at the University of Science, VNUHCM. I am passionate about Artificial Intelligence and Data Science, also Software Engineering. I am currently looking for an internship in the field of AI and Data Science.",
   resumeLink:
-    "https://drive.google.com/file/d/1Ds2oupMKs_7zzvmRJnEqtfFZjwg8TtNs/view?usp=sharing",
+    "https://drive.google.com/file/d/1KjS_aURYiwnV3Zp88ltF5hrDt7FuJTt3/view?usp=sharing",
   portfolio_repository: "https://github.com/vanloc1808/vanloc1808.github.io",
   githubProfile: "https://github.com/vanloc1808",
 };
