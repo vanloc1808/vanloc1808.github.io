@@ -480,7 +480,7 @@ const projectsHeader = {
 const publicationsHeader = {
   title: "Publications",
   description:
-    "I have written a paper on Mathematical Formulas Detection project, however I have not publicated any papers yet.",
+    "I have written a paper on Mathematical Formulas Detection project, publicated in the 13rd Conference of University of Science, VNUHCM.",
   avatar_image_path: "projects_image.svg",
 };
 
@@ -491,7 +491,8 @@ const publications = {
       name:
         "A Deep Learning Method for Mathematical Formulas Detection in PDF Documents",
       finishedIn: "Jun 2022",
-      publishedOn: "Not yet",
+      publishedOn:
+        "Nov 22 2022 in VNUHCM University of Science 13rd Conference",
       description:
         "In this paper, we provide a deep learning method to detect mathematical formulas in scientific PDF documents. This task is quite different from the extraction of mathematical expressions in images. The task of mathematical formulas detection has three main challenges: a large scale span, a large variation of the ratio between the width and the height, and a rich character set and mathematical expressions. Considering these challenges, we use Faster R-CNN, a real-time object detection model, with ResNet50, and a suitable level of Feature Pyramid Network. Our model is trained, tested, and evaluated on the IBEM dataset and provides significant results on both embedded and isolated formulas.",
       url:
