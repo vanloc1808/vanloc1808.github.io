@@ -25,21 +25,13 @@ const greeting = {
   subTitle:
     "I am currently a third-year student at the University of Science, VNUHCM. I am passionate about Artificial Intelligence and Data Science, also Software Engineering. I am currently looking for an internship in the field of AI and Data Science.",
   resumeLink:
-    "https://drive.google.com/file/d/1KjS_aURYiwnV3Zp88ltF5hrDt7FuJTt3/view?usp=sharing",
+    "https://drive.google.com/file/d/1Idvx8mC1tZDOC2KWTRtAUvbAbyC0iX5w/view?usp=sharing",
   portfolio_repository: "https://github.com/vanloc1808/vanloc1808.github.io",
   githubProfile: "https://github.com/vanloc1808",
 };
 
 const socialMediaLinks = [
   /* Your Social Media Link */
-  // github: "https://github.com/ashutosh1919",
-  // linkedin: "https://www.linkedin.com/in/ashutosh-hathidara-88710b138/",
-  // gmail: "ashutoshhathidara98@gmail.com",
-  // gitlab: "https://gitlab.com/ashutoshhathidara98",
-  // facebook: "https://www.facebook.com/laymanbrother.19/",
-  // twitter: "https://twitter.com/ashutosh_1919",
-  // instagram: "https://www.instagram.com/layman_brother/"
-
   {
     name: "GitHub",
     link: "https://github.com/vanloc1808",
@@ -92,7 +84,6 @@ const skills = {
       skills: [
         "⚡ Currently learning about Machine Learning, Deep Learning and Data Science",
         "⚡ Beginning some small projects on Data Science and AI",
-        // "⚡ Complex quantitative modelling for dynamic forecasting and time series analysis",
       ],
       softwareSkills: [
         {
@@ -109,21 +100,6 @@ const skills = {
             backgroundColor: "transparent",
           },
         },
-        // {
-        //   skillName: "Keras",
-        //   fontAwesomeClassname: "simple-icons:keras",
-        //   style: {
-        //     backgroundColor: "white",
-        //     color: "#D00000",
-        //   },
-        // },
-        // {
-        //   skillName: "PyTorch",
-        //   fontAwesomeClassname: "logos-pytorch",
-        //   style: {
-        //     backgroundColor: "transparent",
-        //   },
-        // },
         {
           skillName: "Python",
           fontAwesomeClassname: "ion-logo-python",
@@ -138,10 +114,9 @@ const skills = {
       title: "Software Engineering",
       fileName: "FullStackImg",
       skills: [
-        // "⚡ Building responsive website front end using React-Redux",
-        // "⚡ Developing mobile applications using Flutter, React Native and solo android apps using Kotlin",
-        // "⚡ Creating application backend in Node, Express & Flask",
         "⚡ Building some small websites with HTML, CSS, NodeJS, and ReactJS (including this website...)",
+        "⚡ Mobile Application Development with Java and Android Studio",
+        "⚡ Server-side Development with Django",
         "⚡ Have some school projects with C++ and Python (please check the Projects section)",
       ],
       softwareSkills: [
@@ -158,6 +133,28 @@ const skills = {
           style: {
             backgroundColor: "transparent",
             color: "#3776AB",
+          },
+        },
+        {
+          skillName: "Django",
+          fontAwesomeClassname: "vscode-icons:file-type-django",
+          style: {
+            backgroundColor: "transparent",
+            color: "#3776AB",
+          },
+        },
+        {
+          skillName: "Java",
+          fontAwesomeClassname: "skill-icons:java-light",
+          style: {
+            color: "#3333FF",
+          },
+        },
+        {
+          skillName: "Android Studio",
+          fontAwesomeClassname: "mdi:android-studio",
+          style: {
+            color: "#E34F26",
           },
         },
         {
@@ -182,195 +179,30 @@ const skills = {
             color: "#F7DF1E",
           },
         },
-        // {
-        //   skillName: "ReactJS",
-        //   fontAwesomeClassname: "simple-icons:react",
-        //   style: {
-        //     color: "#61DAFB",
-        //   },
-        // },
-        // {
-        //   skillName: "NodeJS",
-        //   fontAwesomeClassname: "simple-icons:node-dot-js",
-        //   style: {
-        //     color: "#339933",
-        //   },
-        // },
-        // {
-        //   skillName: "NPM",
-        //   fontAwesomeClassname: "simple-icons:npm",
-        //   style: {
-        //     color: "#CB3837",
-        //   },
-        // },
-        // {
-        //   skillName: "Yarn",
-        //   fontAwesomeClassname: "simple-icons:yarn",
-        //   style: {
-        //     color: "#2C8EBB",
-        //   },
-        // },
-        // {
-        //   skillName: "Gatsby",
-        //   fontAwesomeClassname: "simple-icons:gatsby",
-        //   style: {
-        //     color: "#663399",
-        //   },
-        // },
-        // {
-        //   skillName: "Flutter",
-        //   fontAwesomeClassname: "simple-icons:flutter",
-        //   style: {
-        //     color: "#02569B",
-        //   },
-        // },
       ],
     },
-    // {
-    //   title: "Cloud Infra-Architecture",
-    //   fileName: "CloudInfraImg",
-    //   skills: [
-    //     "⚡ Experience working on multiple cloud platforms",
-    //     "⚡ Hosting and maintaining websites on virtual machine instances along with integration of databases",
-    //     "⚡ Deploying deep learning models on cloud to use on mobile devices",
-    //     "⚡ Setting up streaming jobs from DB to Server or vice-versa on GCP and AWS",
-    //   ],
-    //   softwareSkills: [
-    //     {
-    //       skillName: "GCP",
-    //       fontAwesomeClassname: "simple-icons:googlecloud",
-    //       style: {
-    //         color: "#4285F4",
-    //       },
-    //     },
-    //     {
-    //       skillName: "AWS",
-    //       fontAwesomeClassname: "simple-icons:amazonaws",
-    //       style: {
-    //         color: "#FF9900",
-    //       },
-    //     },
-    //     {
-    //       skillName: "Azure",
-    //       fontAwesomeClassname: "simple-icons:microsoftazure",
-    //       style: {
-    //         color: "#0089D6",
-    //       },
-    //     },
-    //     {
-    //       skillName: "Firebase",
-    //       fontAwesomeClassname: "simple-icons:firebase",
-    //       style: {
-    //         color: "#FFCA28",
-    //       },
-    //     },
-    //     {
-    //       skillName: "PostgreSQL",
-    //       fontAwesomeClassname: "simple-icons:postgresql",
-    //       style: {
-    //         color: "#336791",
-    //       },
-    //     },
-    //     {
-    //       skillName: "MongoDB",
-    //       fontAwesomeClassname: "simple-icons:mongodb",
-    //       style: {
-    //         color: "#47A248",
-    //       },
-    //     },
-    //     {
-    //       skillName: "Docker",
-    //       fontAwesomeClassname: "simple-icons:docker",
-    //       style: {
-    //         color: "#1488C6",
-    //       },
-    //     },
-    //     {
-    //       skillName: "Kubernetes",
-    //       fontAwesomeClassname: "simple-icons:kubernetes",
-    //       style: {
-    //         color: "#326CE5",
-    //       },
-    //     },
-    //   ],
-    // },
-    // {
-    //   title: "UI/UX Design",
-    //   fileName: "DesignImg",
-    //   skills: [
-    //     "⚡ Designing highly attractive user interface for mobile and web applications",
-    //     "⚡ Customizing logo designs and building logos from scratch",
-    //     "⚡ Creating the flow of application functionalities to optimize user experience",
-    //   ],
-    //   softwareSkills: [
-    //     {
-    //       skillName: "Adobe XD",
-    //       fontAwesomeClassname: "simple-icons:adobexd",
-    //       style: {
-    //         color: "#FF2BC2",
-    //       },
-    //     },
-    //     {
-    //       skillName: "Figma",
-    //       fontAwesomeClassname: "simple-icons:figma",
-    //       style: {
-    //         color: "#F24E1E",
-    //       },
-    //     },
-    //     {
-    //       skillName: "Adobe Illustrator",
-    //       fontAwesomeClassname: "simple-icons:adobeillustrator",
-    //       style: {
-    //         color: "#FF7C00",
-    //       },
-    //     },
-    //     {
-    //       skillName: "Inkscape",
-    //       fontAwesomeClassname: "simple-icons:inkscape",
-    //       style: {
-    //         color: "#000000",
-    //       },
-    //     },
-    //   ],
-    // },
   ],
 };
 
 // Education Page
 const competitiveSites = {
   competitiveSites: [
-    // {
-    //   siteName: "HackerRank",
-    //   iconifyClassname: "simple-icons:hackerrank",
-    //   style: {
-    //     color: "#2EC866",
-    //   },
-    //   profileLink: "https://www.hackerrank.com/layman_brother",
-    // },
-    // {
-    //   siteName: "Codechef",
-    //   iconifyClassname: "simple-icons:codechef",
-    //   style: {
-    //     color: "#5B4638",
-    //   },
-    //   profileLink: "https://www.codechef.com/users/ashutosh_1919",
-    // },
-    // {
-    //   siteName: "Codeforces",
-    //   iconifyClassname: "simple-icons:codeforces",
-    //   style: {
-    //     color: "#1F8ACB",
-    //   },
-    //   profileLink: "http://codeforces.com/profile/layman_brother",
-    // },
-    // {
-    //   siteName: "Hackerearth",
-    //   iconifyClassname: "simple-icons:hackerearth",
-    //   style: {
-    //     color: "#323754",
-    //   },
-    //   profileLink: "https://www.hackerearth.com/@ashutosh391",
-    // },
+    {
+      siteName: "Codeforces",
+      iconifyClassname: "simple-icons:codeforces",
+      style: {
+        color: "#1F8ACB",
+      },
+      profileLink: "https://codeforces.com/profile/vanloc1808",
+    },
+    {
+      siteName: "LeetCode",
+      iconifyClassname: "simple-icons:leetcode",
+      style: {
+        color: "#1F8ACB",
+      },
+      profileLink: "https://leetcode.com/vanloc1808/",
+    },
     {
       siteName: "Kaggle",
       iconifyClassname: "simple-icons:kaggle",
@@ -403,12 +235,22 @@ const degrees = {
 const certifications = {
   certifications: [
     {
+      title: "Deep Learning",
+      subtitle: "- Andrew Ng",
+      logo_path: "dlai_logo.png",
+      certificate_link:
+        "https://www.coursera.org/account/accomplishments/specialization/certificate/K9MW3KYRFFZR",
+      alt_name: "DeepLearning.AI",
+      color_code: "#8C151599",
+    },
+
+    {
       title: "Machine Learning",
       subtitle: "- Andrew Ng",
-      logo_path: "stanford_logo.png",
+      logo_path: "dlai_logo.png",
       certificate_link:
         "https://www.coursera.org/account/accomplishments/specialization/certificate/VHKCRT38MNFE",
-      alt_name: "Stanford University",
+      alt_name: "DeepLearning.AI",
       color_code: "#8C151599",
     },
 
@@ -420,6 +262,16 @@ const certifications = {
         "https://www.coursera.org/account/accomplishments/specialization/certificate/VA25F52RCVC9",
       alt_name: "IBM",
       color_code: "#1F70C199",
+    },
+
+    {
+      title: "Programming with Google Go",
+      subtitle: "Coursera",
+      logo_path: "coursera_logo.png",
+      certificate_link:
+        "https://www.coursera.org/account/accomplishments/specialization/certificate/K9MW3KYRFFZR",
+      alt_name: "DeepLearning.AI",
+      color_code: "#8C151599",
     },
 
     {

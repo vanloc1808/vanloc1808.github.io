@@ -2,19 +2,23 @@
   "data": [
     {
       "id": "MDEwOlJlcG9zaXRvcnkxODIxMjk3NTQ=",
-      "name": "Mathematical Formulas Detection in PDF Documents",
-      "finishedIn": "June 2022",
-      "url": "https://github.com/vanloc1808/HCMUS-Research-Methods",
-      "description": "In this project, we researched about some methods for detecting mathematical expressions in PDF documents. We focused on a Deep Learning method, with Faster R-CNN and ResNet50 as the backbone.",
+      "name": "MiniShopping",
+      "finishedIn": "January 2023",
+      "url": "https://github.com/mekanican/MiniShopping",
+      "description": "This is an e-commerce application, built with Java, Android Studio, and Django.",
       "isFork": false,
       "languages": [
         {
-          "name": "Python",
-          "iconifyClass": "logos-python"
+          "name": "Java",
+          "iconifyClass": "skill-icons:java-light"
         },
         {
-          "name": "Jupyter Notebook",
-          "iconifyClass": "logos-jupyter"
+          "name": "Android Studio",
+          "iconifyClass": "mdi:android-studio"
+        },
+        {
+          "name": "Django",
+          "iconifyClass": "vscode-icons:file-type-django"
         }
       ]
     },
