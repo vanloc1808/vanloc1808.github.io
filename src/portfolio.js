@@ -23,9 +23,9 @@ const greeting = {
   logo_name: "NguyenVanLoc",
   nickname: "Penguin",
   subTitle:
-    "I am currently a third-year student at the University of Science, VNUHCM. I am passionate about Artificial Intelligence and Data Science, also Software Engineering. I am currently looking for an internship in the field of AI and Data Science.",
+    "I am currently a final-year student at University of Science, VNU-HCM, and Python Developer at Saritasa Vietnam.",
   resumeLink:
-    "https://drive.google.com/file/d/1Idvx8mC1tZDOC2KWTRtAUvbAbyC0iX5w/view?usp=sharing",
+    "https://drive.google.com/file/d/1y1pZ9hamM3hO6gMTJH6mEtGJgTSAUCn6/view?usp=sharing",
   portfolio_repository: "https://github.com/vanloc1808/vanloc1808.github.io",
   githubProfile: "https://github.com/vanloc1808",
 };
@@ -114,9 +114,9 @@ const skills = {
       title: "Software Engineering",
       fileName: "FullStackImg",
       skills: [
-        "⚡ Building some small websites with HTML, CSS, NodeJS, and ReactJS (including this website...)",
+        "⚡ Backend Development with Django and Django REST Framework",
+        "⚡ Building some small websites with HTML, CSS, and ReactJS (including this website...)",
         "⚡ Mobile Application Development with Java and Android Studio",
-        "⚡ Server-side Development with Django",
         "⚡ Have some school projects with C++ and Python (please check the Projects section)",
       ],
       softwareSkills: [
@@ -289,18 +289,36 @@ const certifications = {
 // Experience Page
 const experience = {
   title: "Experience",
-  subtitle: "Work, Internship and Volunteership",
-  description:
-    "I have not participated in any companies for an internship or an official position yet. Besides that, I have joined in an outdoor club at my high school.",
+  subtitle: "Work and Outdor Activities",
+  description: "I am currently Python Developer at Saritasa Vietnam.",
   header_image_path: "experience.svg",
   sections: [
     {
       title: "Work",
-      experiences: [],
-    },
-    {
-      title: "Volunteerships",
-      experiences: [],
+      experiences: [
+        {
+          title: "Python Developer",
+          company: "Saritasa Vietnam",
+          company_url: "https://www.saritasa.vn/",
+          logo_path: "saritasa_logo.png",
+          duration: "June 2023 - PRESENT",
+          location: "Ho Chi Minh City",
+          description:
+            "Back-end development with Django, and mainly with Django REST Framework. Build APIs that meet the specification of OpenAPI, implement unit tests, and write documentation for the APIs.\nFamiliar with Postmain and Swagger.",
+          color: "#0879bf",
+        },
+        {
+          title: "Python Developer Intern",
+          company: "Saritasa Vietnam",
+          company_url: "https://www.saritasa.vn/",
+          logo_path: "saritasa_logo.png",
+          duration: "March 2023 - May 2023",
+          location: "Ho Chi Minh City",
+          description:
+            "Be trained with core Python modules and Django development, moreover with GitHub flow, Jira, Postman, and other skills. Build a project with Django and Django REST Framework.",
+          color: "#0879bf",
+        },
+      ],
     },
     {
       title: "Outdoor Activities",
