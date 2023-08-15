@@ -289,7 +289,7 @@ const certifications = {
 // Experience Page
 const experience = {
   title: "Experience",
-  subtitle: "Work and Outdor Activities",
+  subtitle: "Work and Outdoor Activities",
   description: "I am currently Python Developer at Saritasa Vietnam.",
   header_image_path: "experience.svg",
   sections: [
@@ -392,10 +392,6 @@ const contactPageData = {
     avatar_image_path: "address_image.svg",
     location_map_link:
       "https://www.google.com/maps/d/u/0/viewer?msa=0&mid=1IPp8JEozOseXcZ42sTJnOFhuxhs&ll=10.779296088039567%2C106.6803705&z=13",
-  },
-  phoneSection: {
-    title: "Phone Number",
-    subtitle: "+84 905481342",
   },
 };
 
