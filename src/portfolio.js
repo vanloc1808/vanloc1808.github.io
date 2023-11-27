@@ -304,7 +304,7 @@ const experience = {
           duration: "June 2023 - PRESENT",
           location: "Ho Chi Minh City",
           description:
-            "Back-end development with Django, and mainly with Django REST Framework. Build APIs that meet the specification of OpenAPI, implement unit tests, and write documentation for the APIs.\nFamiliar with Postmain and Swagger.",
+            "Back-end development with Django, and mainly with Django REST Framework. Build APIs that meet the specification of OpenAPI, implement unit tests, and write documentation for the APIs.\nFamiliar with Postman and Swagger.",
           color: "#0879bf",
         },
         {
