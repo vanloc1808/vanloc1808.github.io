@@ -23,7 +23,7 @@ const greeting = {
   logo_name: "NguyenVanLoc",
   nickname: "Penguin",
   subTitle:
-    "I am currently a final-year student at University of Science, VNU-HCM, and Python Developer at Saritasa Vietnam.",
+    "I am currently a final-year student at University of Science, VNU-HCM, and works as a Python Developer at Saritasa Vietnam.",
   resumeLink:
     "https://drive.google.com/file/d/1y1pZ9hamM3hO6gMTJH6mEtGJgTSAUCn6/view?usp=sharing",
   portfolio_repository: "https://github.com/vanloc1808/vanloc1808.github.io",
