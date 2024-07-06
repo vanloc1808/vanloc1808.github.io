@@ -61,6 +61,33 @@ function ProjectCard({ project }) {
             <span className="text-cyan-400">{' ' + project.description}</span>
             <span className="text-gray-400">,</span>
           </div>
+         {/* Check if we have backend_code field */}
+          {
+            project.backend_code &&
+            <div className="ml-4 lg:ml-8 mr-2">
+              <span className="text-white">Backend Code: </span>
+              <span className="text-cyan-400"><a href={project.backend_code} target="_blank">{project.backend_code}</a></span>
+              <span className="text-gray-400">,</span>
+            </div>
+          }
+          {/* Check if we have frontend_code field */}
+          {
+            project.frontend_code &&
+            <div className="ml-4 lg:ml-8 mr-2">
+              <span className="text-white">Frontend Code: </span>
+              <span className="text-cyan-400"><a href={project.frontend_code} target="_blank">{project.frontend_code}</a></span>
+              <span className="text-gray-400">,</span>
+            </div>
+          }
+          {/* Check if we have demo field */}
+          {
+            project.demo &&
+            <div className="ml-4 lg:ml-8 mr-2">
+              <span className="text-white">Demo: </span>
+              <span className="text-cyan-400"><a href={project.demo} target="_blank">{project.demo}</a></span>
+              <span className="text-gray-400">,</span>
+            </div>
+          }
           <div><span className="text-gray-400">{`};`}</span></div>
         </code>
       </div>
