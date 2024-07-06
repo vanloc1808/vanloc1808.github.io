@@ -1,4 +1,4 @@
-import { publications } from "@/utils/data/publication";
+import { publicationsData } from "@/utils/data/publications-data";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
 import AnimationLottie from "../../helper/animation-lottie";
@@ -37,7 +37,7 @@ function Publication() {
           <div>
             <div className="flex flex-col gap-6">
               {
-                publications.slice(0, 6).map(publication => (
+                publicationsData.slice(0, 6).map(publication => (
                   <a href={publication.url} key={publication.id} target="_blank" rel="noopener noreferrer">
                   <GlowCard key={publication.id} identifier={`experience-${publication.id}`}>
                     <div className="p-3 relative">
