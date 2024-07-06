@@ -11,7 +11,8 @@
         "Minh",
         "passwordreset",
         "reduxjs",
-        "Saritasa"
+        "Saritasa",
+        "Supabase"
     ],
     "editor.tabSize": 2,
 }
