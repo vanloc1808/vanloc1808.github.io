@@ -1,0 +1,19 @@
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+    "editor.formatOnSave": false,
+    "cSpell.words": [
+        "Cheapfake",
+        "Cheapfakes",
+        "Googlescholar",
+        "hookform",
+        "leetcode",
+        "Minh",
+        "passwordreset",
+        "reduxjs",
+        "Saritasa",
+        "Supabase"
+    ],
+    "editor.tabSize": 2,
+}
