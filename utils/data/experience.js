@@ -1,20 +1,18 @@
 export const experiences = [
-  {
-    id: 1,
-    title: 'Software Engineer I',
-    company: "Teton Private Ltd.",
-    duration: "(Jan 2022 - Present)"
-  },
-  {
-    id: 2,
-    title: "FullStack Developer",
-    company: "Fiverr (freelance)",
-    duration: "(Jun 2021 - Jan 2022)"
-  },
-  {
-    id: 3,
-    title: "Self Employed",
-    company: "Code and build something in everyday.",
-    duration: "(Jan 2018 - Present)"
-  }
+    {
+      id: 1,
+      title: "Python Developer",
+      company: "Saritasa - Builders of Better",
+      "companyLink": "https://www.saritasa.com/",
+      duration: "(Jun 2023 - Present)",
+      "description": "Back-end development with Django, and mainly with Django REST Framework. Build APIs that meet the specification of OpenAPI, implement unit tests, and write documentation for the APIs. Familiar with Postman and Swagger."
+    },
+    {
+      id: 2,
+      title: "Python Developer Intern",
+      company: "Saritasa - Builders of Better",
+      "companyLink": "https://www.saritasa.com/",
+      duration: "(Mar 2023 - May 2023)",
+      "description": "Be trained with core Python modules and Django development, moreover with GitHub flow, Jira, Postman, and other skills. Build a project with Django and Django REST Framework."
+    }
 ]
