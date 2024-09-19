@@ -2,7 +2,7 @@ export const publicationsData = [
   {
     "id": 4,
     "title": "AI-Enhanced Photo Authenticity: A User-Focused Approach to Detecting and Analyzing Manipulated Images",
-    "conference": "2024 International Conference on Multimedia Analysis and Pattern Recognition (MAPR)",
+    "conference": "The 2024 International Conference on Multimedia Analysis and Pattern Recognition (MAPR)",
     "date": "August 16, 2024",
     "description": "This paper presents the development of an AI-assisted system designed to aid users in identifying and verifying the genuineness of photos.",
     "url": "https://ieeexplore.ieee.org/abstract/document/10661051",
