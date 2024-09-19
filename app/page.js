@@ -8,6 +8,7 @@ import Publication from "./components/homepage/publications";
 import HeroSection from "./components/homepage/hero-section";
 import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
+import NewsSection from "./components/homepage/news";
 
 async function getData() {
   const res = await fetch(`https://dev.to/api/articles?username=${personalData.devUsername}`)
@@ -30,6 +31,7 @@ export default async function Home() {
     <>
       <HeroSection />
       <AboutSection />
+      <NewsSection />
       <Publication />
       <Experience />
       <Skills />
