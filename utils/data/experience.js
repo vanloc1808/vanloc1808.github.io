@@ -1,7 +1,7 @@
 export const experiences = [
     {
       id: 1,
-      title: "Python Developer",
+      title: "Backend Developer Intern (Python + Django)",
       company: "Saritasa - Builders of Better",
       "companyLink": "https://www.saritasa.com/",
       duration: "(Jun 2023 - Present)",
