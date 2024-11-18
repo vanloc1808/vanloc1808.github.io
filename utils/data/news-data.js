@@ -1,5 +1,21 @@
 export const newsData = [
   {
+    "date": "October 23, 2024",
+    "title": "One paper (co-author) accepted at SOICT 2024",
+  },
+  {
+    "date": "October 19, 2024",
+    "title": "One paper (co-first-author) accepted at LAVA Workshop, ACCV 2024",
+  },
+  {
+    "date": "October 8, 2024",
+    "title": "Advanced to the final round of AI Challenge, Ho Chi Minh City 2024",
+  },
+  {
+    "date": "October 7, 2024",
+    "title": "Won first prize at the LAVA Workshop Challenge, ACCV 2024",
+  },
+  {
     "date": "August 25, 2024",
     "title": "Successfully defend our undergraduate thesis with score 10.00",
   },
