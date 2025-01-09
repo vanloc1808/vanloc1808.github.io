@@ -7,6 +7,7 @@
         "ACCV",
         "Cheapfake",
         "Cheapfakes",
+        "Euréka",
         "Googlescholar",
         "hookform",
         "leetcode",
@@ -17,7 +18,8 @@
         "reduxjs",
         "Saritasa",
         "SOICT",
-        "Supabase"
+        "Supabase",
+        "VNUHCM"
     ],
     "editor.tabSize": 2,
 }
