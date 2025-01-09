@@ -1,5 +1,21 @@
 export const newsData = [
   {
+    "date": "August 16, 2024",
+    "title": "Our paper \"An Approach to Complex Visual Data Interpretation with Vision-Language Models\" has been published at The 1st Large Vision - Language Model Learning and Applications Workshop, ACCV 2024",
+  },
+  {
+    "date": "December 8, 2024",
+    "title": "Won third prize at the 26th Student Scientific Research Award - Euréka, 2024",
+  },
+  {
+    "date": "December 5, 2024",
+    "title": "Won third prize at the AI Challenge, Ho Chi Minh City 2024",
+  },
+  {
+    "date": "December 1, 2024",
+    "title": "Graduated at rank 6/59 of the Bachelor of Science - Honors Program in Information Technology at the University of Science, VNUHCM."
+  },
+  {
     "date": "October 23, 2024",
     "title": "One paper (co-author) accepted at SOICT 2024",
   },
