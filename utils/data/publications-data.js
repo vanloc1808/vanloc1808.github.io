@@ -1,5 +1,13 @@
 export const publicationsData = [
   {
+    "id": 5,
+    "title": "An Approach to Complex Visual Data Interpretation with Vision-Language Models",
+    "conference": "The 1st Large Vision - Language Model Learning and Applications Workshop, ACCV 2024",
+    "date": "December 8, 2024",
+    "description": "Our research adapted the MMMU benchmarks and utilized prompt engineering with a voting-based ensemble method to enhance Large Vision-Language Models' performance on complex visual data interpretation, achieving a top score of 0.85 in the LAVA Workshop 2024 challenge.",
+    "url": "https://openaccess.thecvf.com/content/ACCV2024W/LAVA/html/Nguyen_An_Approach_to_Complex_Visual_Data_Interpretation_with_Vision-Language_Models_ACCVW_2024_paper.html}{December 2024"
+  },
+  {
     "id": 4,
     "title": "AI-Enhanced Photo Authenticity: A User-Focused Approach to Detecting and Analyzing Manipulated Images",
     "conference": "The 2024 International Conference on Multimedia Analysis and Pattern Recognition (MAPR)",
