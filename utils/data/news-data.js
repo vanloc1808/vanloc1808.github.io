@@ -1,5 +1,9 @@
 export const newsData = [
   {
+    "date": "February 21, 2025",
+    "title": "I left the job as Python Developer at Saritasa"
+  },
+  {
     "date": "August 16, 2024",
     "title": "Our paper \"An Approach to Complex Visual Data Interpretation with Vision-Language Models\" has been published at The 1st Large Vision - Language Model Learning and Applications Workshop, ACCV 2024",
   },
