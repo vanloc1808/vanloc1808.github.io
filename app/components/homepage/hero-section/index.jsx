@@ -4,7 +4,7 @@ import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
@@ -27,7 +27,7 @@ function HeroSection() {
             Hello, <br />
             This is {' '}
             <span className=" text-pink-500">{personalData.name}</span>
-            {` , I'm a `}
+            {` , I'm an `}
             <span className=" text-[#16f2b3]">{personalData.designation}</span>
             .
           </h1>
@@ -68,13 +68,6 @@ function HeroSection() {
             >
               <SiLeetcode size={30} />
             </Link>
-            {/* <Link
-              href={personalData.twitter}
-              target='_blank'
-              className="transition-all text-pink-500 hover:scale-125 duration-300"
-            >
-              <FaTwitterSquare size={30} />
-            </Link> */}
           </div>
 
           <div className="flex items-center gap-3">
@@ -126,20 +119,11 @@ function HeroSection() {
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">C++</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Django</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Django REST Framework</span>
+                <span className="text-amber-300">PyTorch</span>
                 <span className="text-gray-400">{"', '"}</span>
                 <span className="text-amber-300">Jupyter Notebook</span>
                 <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">PyTorch</span>
-                {/* <span className="text-amber-300">MySql</span>
-                <span className="text-gray-400">{"', '"}</span> */}
-                {/* <span className="text-amber-300">MongoDB</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">Docker</span>
-                <span className="text-gray-400">{"', '"}</span>
-                <span className="text-amber-300">AWS</span> */}
+                <span className="text-amber-300">FastAPI</span>
                 <span className="text-gray-400">{"'],"}</span>
               </div>
               <div>
