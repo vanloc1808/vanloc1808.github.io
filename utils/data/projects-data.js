@@ -58,7 +58,7 @@ export const projectsData = [
     },
     {
         id: 6,
-        name: "Search Engine",
+        name: "Big Integers",
         description: "An application that performs arithmetic operations, logic operations on Big Integers. This is the project for Arts of Programming course.",
         tools: ["C++"],
         role: "Developer",
