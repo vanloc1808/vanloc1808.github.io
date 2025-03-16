@@ -1,7 +1,11 @@
 export const newsData = [
   {
+    "date": "March 3, 2025",
+    "title": "Started the job as an AI Engineer at Autonomous"
+  },
+  {
     "date": "February 21, 2025",
-    "title": "I left the job as Python Developer at Saritasa"
+    "title": "Left the job as Python Developer at Saritasa"
   },
   {
     "date": "August 16, 2024",
