@@ -18,13 +18,14 @@ function Experience() {
         className="absolute top-0 -z-10"
       />
 
+      {/* Adjusted section title colors for light/dark */}
       <div className="flex justify-center my-5 lg:py-8">
         <div className="flex  items-center">
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] absolute left-0  w-fit text-white px-5 py-3 text-xl rounded-md">
+          <span className="w-24 h-[2px] bg-gray-300 dark:bg-[#1a1443]"></span>
+          <span className="bg-gray-200 dark:bg-[#1a1443] w-fit text-gray-800 dark:text-white px-5 py-3 text-xl rounded-md">
             EXPERIENCES
           </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
+          <span className="w-24 h-[2px] bg-gray-300 dark:bg-[#1a1443]"></span>
         </div>
       </div>
 
@@ -50,19 +51,22 @@ function Experience() {
                         className="absolute bottom-0 opacity-80"
                       />
                       <div className="flex justify-center">
-                        <p className="text-xs sm:text-sm text-[#16f2b3]">
+                        {/* Kept duration color */}
+                        <p className="text-xs sm:text-sm text-[#16f2b3] dark:text-[#16f2b3]">
                           {experience.duration}
                         </p>
                       </div>
                       <div className="flex items-center gap-x-8 px-3 py-5">
-                        <div className="text-violet-500  transition-all duration-300 hover:scale-125">
+                        {/* Adjusted icon color */}
+                        <div className="text-violet-600 dark:text-violet-500 transition-all duration-300 hover:scale-125">
                           <BsPersonWorkspace size={36} />
                         </div>
                         <div>
+                          {/* Text colors inherit from GlowCard, adjusted link color */}
                           <p className="text-base sm:text-xl mb-2 font-medium uppercase">
                             {experience.title}
                           </p>
-                          <p className="text-sm sm:text-base">
+                          <p className="text-sm sm:text-base text-gray-800 dark:text-gray-200">
                             {experience.company}
                           </p>
                           {
@@ -70,13 +74,13 @@ function Experience() {
                               <a
                                 href={experience.companyLink}
                                 target="_blank"
-                                className="text-sm sm:text-base text-[#16f2b3] hover:underline"
+                                className="text-sm sm:text-base text-[#16f2b3] dark:text-[#16f2b3] hover:underline"
                               >
                                 {experience.companyLink}
                               </a>
                             )
                           }
-                          <p className="text-sm sm:text-base">
+                          <p className="text-sm sm:text-base text-gray-800 dark:text-gray-200">
                             {experience.description}
                           </p>
                         </div>
