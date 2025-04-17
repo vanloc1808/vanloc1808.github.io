@@ -7,15 +7,12 @@ import GlowCard from "../components/helper/glow-card";
 
 function Publication() {
   return (
-    <div id="publication" className="relative z-50 border-t my-12 lg:my-24 border-[#25213b]">
-      <div className="flex justify-center my-5 lg:py-8">
-        <div className="flex items-center">
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-          <span className="bg-[#1a1443] absolute left-0 w-fit text-white px-5 py-3 text-xl rounded-md">
-            ALL PUBLICATIONS
-          </span>
-          <span className="w-24 h-[2px] bg-[#1a1443]"></span>
-        </div>
+    <div id="publication" className="relative z-50 border-t my-12 lg:my-24">
+      <div className="relative flex items-center justify-start my-5 lg:py-8">
+        <span className="bg-gray-200 dark:bg-[#1a1443] text-gray-800 dark:text-white absolute left-0 w-fit px-5 py-3 text-xl rounded-md">
+          ALL PUBLICATIONS
+        </span>
+        <span className="w-full h-[2px] bg-[#1a1443] dark:bg-white"></span>
       </div>
 
       <div className="py-8">

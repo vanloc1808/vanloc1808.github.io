@@ -2,21 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: rgb(211, 216, 232);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-  }
-}
-
+/* Default (Light Theme) */
 body {
-  color: rgb(var(--foreground-rgb));
-  background-color: #0d1224;
+  color: #1f2937; /* Dark Gray text */
+  background-color: #ffffff; /* White background */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
 }
 
+/* Dark Theme */
+html.dark body {
+  color: rgb(211, 216, 232); /* Original foreground color */
+  background-color: #0d1224; /* Original dark background */
+}
+
+/* Keep existing sticky card styles */
 #sticky-card-1 {
   --index: 1;
 }
@@ -34,6 +33,18 @@ body {
 }
 
 .sticky-card {
-  // padding-top: calc(var(--index) * 2.5rem);
+  /* padding-top: calc(var(--index) * 2.5rem); */
   top: calc(var(--index) * 4rem);
 }
+
+/* Ensure links and other elements adapt */
+html.dark a {
+  /* Add specific dark mode link styles if needed, otherwise they inherit body color */
+}
+
+/* You might need to add more specific .dark styles for other components */
+/* Example: */
+/* html.dark .some-component {
+  background-color: #1a202c;
+  color: #cbd5e0;
+} */
