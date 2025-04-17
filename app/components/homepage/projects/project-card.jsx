@@ -37,7 +37,7 @@ function ProjectCard({ project, identifier }) {
 
             <div>
               <span className="ml-4 lg:ml-8 mr-2 text-gray-800 dark:text-white">name:</span>
-              <span className="text-gray-500 dark:text-gray-400">'</span>
+              <span className="text-gray-500 dark:text-gray-400">&apos;</span>
               <span className="text-amber-600 dark:text-amber-300">{project.name}</span>
               <span className="text-gray-500 dark:text-gray-400">,&nbsp;</span>
             </div>
