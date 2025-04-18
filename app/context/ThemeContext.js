@@ -16,9 +16,24 @@ export const ThemeProvider = ({ children }) => {
       const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
       setTheme(initialTheme);
+      setTheme(initialTheme);
       document.documentElement.classList.toggle('dark', initialTheme === 'dark');
+
+      // Listener for system theme changes
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const handleChange = (e) => {
+        const newTheme = e.matches ? 'dark' : 'light';
+        setTheme(newTheme);
+        localStorage.setItem('theme', newTheme); // Update localStorage as well
+        document.documentElement.classList.toggle('dark', newTheme === 'dark');
+      };
+
+      mediaQuery.addEventListener('change', handleChange);
+
+      // Cleanup listener on component unmount
+      return () => mediaQuery.removeEventListener('change', handleChange);
     }
-  }, []);
+  }, []); // Empty dependency array ensures this runs only once on mount
 
   const toggleTheme = () => {
     if (!theme) return; // Still loading
