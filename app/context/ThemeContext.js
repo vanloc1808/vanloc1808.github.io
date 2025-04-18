@@ -7,23 +7,29 @@ const ThemeContext = createContext();
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('theme');
-      if (saved) return saved;
-      return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    return 'light'; // fallback during SSR
-  });
+  const [theme, setTheme] = useState(null); // `null` to avoid SSR mismatch
 
   useEffect(() => {
-    localStorage.setItem('theme', theme);
-    document.documentElement.classList.toggle('dark', theme === 'dark');
-  }, [theme]);
+    // Only run this in the browser
+    if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+      const savedTheme = localStorage.getItem('theme');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+      setTheme(initialTheme);
+      document.documentElement.classList.toggle('dark', initialTheme === 'dark');
+    }
+  }, []);
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
+    if (!theme) return; // Still loading
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
   };
+
+  // Don't render children until theme is determined to prevent mismatch
+  if (theme === null) return null;
 
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
