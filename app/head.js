@@ -1,4 +1,3 @@
-// app/head.js
 export default function Head() {
   return (
     <>
@@ -7,11 +6,12 @@ export default function Head() {
           __html: `
             (function () {
               try {
-                const savedTheme = localStorage.getItem('theme');
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+                const theme = localStorage.getItem('theme') ||
+                  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
                 document.documentElement.classList.toggle('dark', theme === 'dark');
-              } catch (e) {}
+              } catch (e) {
+                console.error('Theme init error', e);
+              }
             })();
           `,
         }}
