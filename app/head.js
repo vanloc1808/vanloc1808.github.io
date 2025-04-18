@@ -1,0 +1,21 @@
+export default function Head() {
+  return (
+    <>
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function () {
+              try {
+                const theme = localStorage.getItem('theme') ||
+                  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                document.documentElement.classList.toggle('dark', theme === 'dark');
+              } catch (e) {
+                console.error('Theme init error', e);
+              }
+            })();
+          `,
+        }}
+      />
+    </>
+  );
+}

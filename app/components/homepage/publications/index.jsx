@@ -1,7 +1,12 @@
+'use client';
+
 import { publicationsData } from "@/utils/data/publications-data";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
-import AnimationLottie from "../../helper/animation-lottie";
+import dynamic from 'next/dynamic';
+const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), {
+  ssr: false,
+});
 import GlowCard from "../../helper/glow-card";
 import experience from '/public/lottie/code.json';
 import { FaArrowRight } from 'react-icons/fa';
@@ -25,7 +30,7 @@ function Publication() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           <div className="flex justify-center items-start lg:pr-4">
             <div className="w-full h-full max-w-md">
-              <AnimationLottie animationPath={experience} />
+              <AnimationLottie animationData={experience} />
             </div>
           </div>
 
