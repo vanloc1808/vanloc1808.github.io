@@ -1,8 +1,13 @@
+'use client';
+
 import { publicationsData } from "@/utils/data/publications-data";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
 import experience from '/public/lottie/code.json';
-import AnimationLottie from "../components/helper/animation-lottie";
+import dynamic from 'next/dynamic';
+const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), {
+  ssr: false,
+});
 import GlowCard from "../components/helper/glow-card";
 
 function Publication() {
@@ -21,7 +26,7 @@ function Publication() {
           {/* Make animation container smaller */}
           <div className="flex justify-center items-start lg:pr-4">
             <div className="w-full h-full max-w-md">
-              <AnimationLottie animationPath={experience} />
+              <AnimationLottie animationData={experience} />
             </div>
           </div>
 

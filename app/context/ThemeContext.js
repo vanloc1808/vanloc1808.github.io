@@ -7,22 +7,13 @@ const ThemeContext = createContext();
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState('dark'); // Default to dark theme
+  const [theme, setTheme] = useState('dark'); // Default fallback
 
   useEffect(() => {
-    // Check local storage for saved theme preference
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      setTheme(savedTheme);
-      document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-    } else {
-      // If no saved theme, check system preference (optional, but good practice)
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      const initialTheme = prefersDark ? 'dark' : 'light';
-      setTheme(initialTheme);
-      localStorage.setItem('theme', initialTheme);
-      document.documentElement.classList.toggle('dark', initialTheme === 'dark');
-    }
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+    setTheme(initialTheme); // Just set the React state — DOM already handled
   }, []);
 
   const toggleTheme = () => {
