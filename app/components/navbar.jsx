@@ -13,13 +13,19 @@ function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Function to close menu
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="bg-transparent relative z-[100]">
       <div className="flex items-center justify-between py-5">
         <div className="flex flex-shrink-0 items-center">
           <Link
             href="/"
-            className=" text-[#16f2b3] text-3xl font-bold">
+            onClick={closeMenu}
+            className="text-[#16f2b3] text-3xl font-bold">
             VAN-LOC NGUYEN
           </Link>
         </div>
@@ -47,22 +53,22 @@ function Navbar() {
           px-4 md:px-0
           space-y-4 md:space-y-0`}>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#about">
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#about" onClick={closeMenu}>
               <div className="text-sm text-gray-800 dark:text-white transition-colors duration-300 hover:text-pink-600 dark:hover:text-pink-600">ABOUT</div>
             </Link>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#experience">
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#experience" onClick={closeMenu}>
               <div className="text-sm text-gray-800 dark:text-white transition-colors duration-300 hover:text-pink-600 dark:hover:text-pink-600">EXPERIENCE</div>
             </Link>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#skills">
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#skills" onClick={closeMenu}>
               <div className="text-sm text-gray-800 dark:text-white transition-colors duration-300 hover:text-pink-600 dark:hover:text-pink-600">SKILLS</div>
             </Link>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#education">
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#education" onClick={closeMenu}>
               <div className="text-sm text-gray-800 dark:text-white transition-colors duration-300 hover:text-pink-600 dark:hover:text-pink-600">EDUCATION</div>
             </Link>
           </li>
@@ -70,33 +76,36 @@ function Navbar() {
             <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/blog"><div className="text-sm text-gray-800 dark:text-white transition-colors duration-300 hover:text-pink-600 dark:hover:text-pink-600">BLOGS</div></Link>
           </li> */}
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/projects">
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/projects" onClick={closeMenu}>
               <div className="text-sm text-gray-800 dark:text-white transition-colors duration-300 hover:text-pink-600 dark:hover:text-pink-600">PROJECTS</div>
             </Link>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/publications">
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/publications" onClick={closeMenu}>
               <div className="text-sm text-gray-800 dark:text-white transition-colors duration-300 hover:text-pink-600 dark:hover:text-pink-600">PUBLICATIONS</div>
             </Link>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/news">
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/news" onClick={closeMenu}>
               <div className="text-sm text-gray-800 dark:text-white transition-colors duration-300 hover:text-pink-600 dark:hover:text-pink-600">NEWS</div>
             </Link>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="https://blog.nguyenvanloc.com/">
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="https://blog.nguyenvanloc.com/" onClick={closeMenu}>
               <div className="text-sm text-gray-800 dark:text-white transition-colors duration-300 hover:text-pink-600 dark:hover:text-pink-600">BLOGS</div>
             </Link>
           </li>
           {/* Theme Toggle Button */}
           <li>
             <button
-              onClick={toggleTheme}
+              onClick={(e) => {
+                toggleTheme();
+                closeMenu();
+              }}
               className="block px-4 py-2 text-sm text-gray-800 dark:text-white transition-colors duration-300 hover:text-pink-600 dark:hover:text-pink-600 focus:outline-none"
               aria-label="Toggle Theme"
             >
-              {theme === 'light' ? '🌙 Dark' : '☀️ Light'} {/* Simple text toggle */}
+              {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
             </button>
           </li>
         </ul>
