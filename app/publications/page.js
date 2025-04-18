@@ -5,7 +5,7 @@ import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
 import experience from '/public/lottie/code.json';
 import dynamic from 'next/dynamic';
-const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), {
+const AnimationLottie = dynamic(() => import('../components/helper/animation-lottie'), {
   ssr: false,
 });
 import GlowCard from "../components/helper/glow-card";
