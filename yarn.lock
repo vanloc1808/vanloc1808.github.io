@@ -339,10 +339,10 @@
   resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-15.3.1.tgz"
   integrity sha512-3PMvF2zRJAifcRNni9uMk/gulWfWS+qVI/pagd+4yLF5bcXPZPPH2xlYRYOsUjmCJOXSTAC2PjRzbhsRzR2fDQ==
 
-"@next/third-parties@^15.0.1":
-  version "15.0.1"
-  resolved "https://registry.npmjs.org/@next/third-parties/-/third-parties-15.0.1.tgz"
-  integrity sha512-URkJqgF+75uH6JTZ5bXkVNANO5WDXSPV+IM17DluywUMMkqJvot/LhjgnTZ5TM2X0q7rdQmRHeOxQi2bMbynQQ==
+"@next/third-parties@^15.3.1":
+  version "15.3.1"
+  resolved "https://registry.yarnpkg.com/@next/third-parties/-/third-parties-15.3.1.tgz#36b98762529831abfdd220eb20aaa47ff3f1deba"
+  integrity sha512-8v1pAtRjcaCbs80qcYLLCrSsECgeSb0WMU0J3pMBYNavG3Y3yQOgFog18nVgiNrNB20HkyrScquWsy8gcdiGRA==
   dependencies:
     third-party-capital "1.0.20"
 
