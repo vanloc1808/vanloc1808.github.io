@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Van-Loc Nguyen",
   description:
-    "This is the portfolio of Van-Loc Nguyen. I am an AI researcher and engineer . I love to learn new things and I am always open to collaborating with others.",
+    "This is the portfolio of Van-Loc Nguyen. I am an AI researcher and engineer. I love to learn new things and I am always open to collaborating with others.",
 };
 
 export default function RootLayout({ children }) {
