@@ -1,17 +1,15 @@
 'use client';
 
 import { publicationsData } from "@/utils/data/publications-data";
-import Image from "next/image";
-import { BsPersonWorkspace } from "react-icons/bs";
 import dynamic from 'next/dynamic';
 const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), {
   ssr: false,
 });
-import GlowCard from "../../helper/glow-card";
 import experiences from '/public/lottie/code.json';
 import { FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
 import { FC } from 'react';
+import PublicationCard from '../../helper/publication-card';
 
 interface Publication {
   id: number;
@@ -46,45 +44,13 @@ const Publication: FC = () => {
 
           <div>
             <div className="flex flex-col gap-4">
-              {
-                publicationsData.slice(0, 5).map((publication: Publication) => (
-                  <GlowCard key={publication.id} identifier={`experiences-${publication.id}`}>
-                    <div className="p-3 relative">
-                      <Image
-                        src="/blur-23.svg"
-                        alt="Hero"
-                        width={1080}
-                        height={200}
-                        className="absolute bottom-0 opacity-80"
-                      />
-                      <div className="flex items-start gap-x-4 px-3 py-4">
-                        <div className="text-violet-500 transition-all duration-300 hover:scale-125 mt-1">
-                          <BsPersonWorkspace size={32} />
-                        </div>
-                        <div className="flex-1 overflow-hidden">
-                          <p className="text-base sm:text-lg mb-2 font-medium uppercase break-words">
-                            {publication.title}
-                          </p>
-                          <p className="text-xs sm:text-sm text-[#16f2b3] mb-1">
-                            Published at {publication.conference}
-                          </p>
-                          <p className="text-xs sm:text-sm text-[#df7518] mb-2">
-                            {publication.date}
-                          </p>
-                          <p className="text-sm sm:text-base mb-2 break-words">
-                            {publication.description}
-                          </p>
-                          <p className="text-xs sm:text-sm text-[#16f2b3] break-all">
-                            <a href={publication.url} target="_blank" rel="noopener noreferrer" className="text-[#16f2b3] hover:text-[#df7518]">
-                              {publication.url}
-                            </a>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </GlowCard>
-                ))
-              }
+              {publicationsData.slice(0, 5).map((publication: Publication) => (
+                <PublicationCard
+                  key={publication.id}
+                  publication={publication}
+                  identifier={`publication-${publication.id}`}
+                />
+              ))}
             </div>
           </div>
         </div>
