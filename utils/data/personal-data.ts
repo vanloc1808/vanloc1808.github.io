@@ -26,7 +26,7 @@ export const personalData: PersonalData = {
   address: "District 5, Ho Chi Minh City, Vietnam",
   github: "https://github.com/vanloc1808",
   "googleScholar": "https://scholar.google.com/citations?user=39z1A1IAAAAJ&hl=en",
-  facebook: "https://www.facebook.com/vanlocO19180802/",
+  facebook: "https://www.facebook.com/vanloc1808/",
   linkedIn: "https://www.linkedin.com/in/vanloc1808/",
   // twitter: "https://twitter.com/said7388",
   stackOverflow: "https://stackoverflow.com/users/20888325/van-loc-nguyen",
