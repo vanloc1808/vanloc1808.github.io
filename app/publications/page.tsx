@@ -4,7 +4,7 @@ import { FC } from 'react';
 import { publicationsData } from "@/utils/data/publications-data";
 import Image from "next/image";
 import { BsPersonWorkspace } from "react-icons/bs";
-import experience from '/public/lottie/code.json';
+import experiences from '/public/lottie/code.json';
 import dynamic from 'next/dynamic';
 const AnimationLottie = dynamic(() => import('../components/helper/animation-lottie'), {
   ssr: false,
@@ -25,7 +25,7 @@ const Publication: FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           <div className="flex justify-center items-start lg:pr-4">
             <div className="w-full h-full max-w-md">
-              <AnimationLottie animationData={experience} />
+              <AnimationLottie animationData={experiences} />
             </div>
           </div>
 
@@ -33,7 +33,7 @@ const Publication: FC = () => {
             <div className="flex flex-col gap-4">
               {
                 publicationsData.map(publication => (
-                  <GlowCard key={publication.id} identifier={`experience-${publication.id}`}>
+                  <GlowCard key={publication.id} identifier={`experiences-${publication.id}`}>
                     <div className="p-3 relative">
                       <Image
                         src="/blur-23.svg"

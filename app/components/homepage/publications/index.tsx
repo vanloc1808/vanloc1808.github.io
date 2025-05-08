@@ -8,7 +8,7 @@ const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), {
   ssr: false,
 });
 import GlowCard from "../../helper/glow-card";
-import experience from '/public/lottie/code.json';
+import experiences from '/public/lottie/code.json';
 import { FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
 import { FC } from 'react';
@@ -40,7 +40,7 @@ const Publication: FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
           <div className="flex justify-center items-start lg:pr-4">
             <div className="w-full h-full max-w-md">
-              <AnimationLottie animationData={experience} />
+              <AnimationLottie animationData={experiences} />
             </div>
           </div>
 
@@ -48,7 +48,7 @@ const Publication: FC = () => {
             <div className="flex flex-col gap-4">
               {
                 publicationsData.slice(0, 6).map((publication: Publication) => (
-                  <GlowCard key={publication.id} identifier={`experience-${publication.id}`}>
+                  <GlowCard key={publication.id} identifier={`experiences-${publication.id}`}>
                     <div className="p-3 relative">
                       <Image
                         src="/blur-23.svg"

@@ -8,7 +8,7 @@ import Projects from "./components/homepage/projects";
 import Skills from "./components/homepage/skills";
 import NewsSection from "./components/homepage/news";
 
-export default async function Home(): Promise<JSX.Element> {
+export default async function Home() {
   return (
     <>
       <HeroSection />

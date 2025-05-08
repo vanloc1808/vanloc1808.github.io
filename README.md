@@ -31,7 +31,7 @@
 
 - HERO SECTION
 - ABOUT ME
-- EXPERIENCE
+- EXPERIENCES
 - SKILLS
 - PROJECTS
 - EDUCATION
@@ -150,7 +150,7 @@ export const personalData = {
 ---
 
 # Source
-https://github.com/said7388/developer-portfolio 
+https://github.com/said7388/developer-portfolio
 
 # Acknowledgements
 Special thanks to Abu Said

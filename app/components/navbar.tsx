@@ -61,8 +61,8 @@ const Navbar: FC = () => {
             </Link>
           </li>
           <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#experience" onClick={closeMenu}>
-              <div className="text-sm text-gray-800 dark:text-white transition-colors duration-300 hover:text-pink-600 dark:hover:text-pink-600">EXPERIENCE</div>
+            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/#experiences" onClick={closeMenu}>
+              <div className="text-sm text-gray-800 dark:text-white transition-colors duration-300 hover:text-pink-600 dark:hover:text-pink-600">EXPERIENCES</div>
             </Link>
           </li>
           <li>
