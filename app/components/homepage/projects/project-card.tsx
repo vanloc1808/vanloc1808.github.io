@@ -65,7 +65,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
             </div>
 
             <div>
-              <span className="ml-4 lg:ml-8 mr-2 text-gray-800 dark:text-white">myRole:</span>
+              <span className="ml-4 lg:ml-8 mr-2 text-gray-800 dark:text-white">My Role:</span>
               <span className="text-orange-600 dark:text-orange-400">{project.role}</span>
               <span className="text-gray-500 dark:text-gray-400">,</span>
             </div>
