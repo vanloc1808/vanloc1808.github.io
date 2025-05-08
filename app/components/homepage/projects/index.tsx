@@ -3,19 +3,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
 import ProjectCard from './project-card';
 import { FC } from 'react';
-
-interface Project {
-  id: number;
-  name: string;
-  tools: string[];
-  role: string;
-  description: string;
-  code?: string;
-  backend_code?: string;
-  frontend_code?: string;
-  demo?: string;
-  image?: any;
-}
+import { Project } from '@/types/project';
 
 const Projects: FC = () => {
   return (

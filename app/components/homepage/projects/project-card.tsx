@@ -2,17 +2,7 @@
 
 import * as React from 'react';
 import GlowCard from '../../helper/glow-card';
-
-interface Project {
-  name: string;
-  tools: string[];
-  role: string;
-  description: string;
-  code?: string;
-  backend_code?: string;
-  frontend_code?: string;
-  demo?: string;
-}
+import { Project } from '@/types/project';
 
 interface ProjectCardProps {
   project: Project;
