@@ -3,6 +3,16 @@ import { Project } from "@/types/project";
 
 export const projectsData: Project[] = [
     {
+        id: 0,
+        name: "Fake News Analysis and Detection",
+        description: "This is my undergraduate thesis. This combines the output of our end-to-end networks for cheapfakes detection, a reputation online checking flow, and a system for advising users on the reality of the news they are reading.",
+        tools: ["Python", "PyTorch", "Streamlit"],
+        role: "Co-main Developer",
+        code: "https://github.com/nbtin/fakenews-detection-demo",
+        demo: "https://youtu.be/INMS347zwS4",
+        image: crefin,
+    },
+    {
         id: 1,
         name: "Connect",
         description: "A powerful chat-app with features like Telegram. This is the project for Software Architecture course.",
