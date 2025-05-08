@@ -9,6 +9,14 @@ interface Publication {
 
 export const publicationsData: Publication[] = [
   {
+    "id": 6,
+    "title": "NewsInsight2.0: An Enhanced Version Integrating Large Language Model-Based Query Optimization with Advanced Temporal Mechanisms",
+    "conference": "The 13th International Symposium on Information and Communication Technology (SOICT 2024)",
+    "date": "December 14, 2024",
+    "description": "We introduce NewsInsight2.0, a cutting-edge evolution of the NewsInsight system, specifically designed for the Ho Chi Minh AI Challenge 2024. Building on the strengths of ViewsInsight, NewsInsight2.0 addresses previous performance limitations with significant enhancements. Our optimized architecture is tailored to deliver exceptional search capabilities for AIC 2024. At its core, NewsInsight2.0 leverages the CLIP (Contrastive Language-Image Pre-training) model, trained on a vast dataset of 5 billion parameters (DFN-5B). Additionally, we have refined our temporal query mechanism with a more efficient algorithm and an intuitive user interface. Furthermore, NewsInsight2.0 features an automatic query generator powered by open-source large language models, streamlining the process of optimizing user input queries.",
+    "url": "https://link.springer.com/chapter/10.1007/978-981-96-4291-5_28"
+  },
+  {
     "id": 5,
     "title": "An Approach to Complex Visual Data Interpretation with Vision-Language Models",
     "conference": "The 1st Large Vision - Language Model Learning and Applications Workshop, ACCV 2024",

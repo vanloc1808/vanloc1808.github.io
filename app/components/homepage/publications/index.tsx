@@ -30,7 +30,7 @@ const Publication: FC = () => {
         <div className="flex items-center">
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
           <span className="bg-gray-200 dark:bg-[#1a1443] w-fit text-gray-800 dark:text-white px-5 py-3 text-xl rounded-md">
-            PUBLICATIONS
+            RECENT PUBLICATIONS
           </span>
           <span className="w-24 h-[2px] bg-[#1a1443]"></span>
         </div>
@@ -47,7 +47,7 @@ const Publication: FC = () => {
           <div>
             <div className="flex flex-col gap-4">
               {
-                publicationsData.slice(0, 6).map((publication: Publication) => (
+                publicationsData.slice(0, 5).map((publication: Publication) => (
                   <GlowCard key={publication.id} identifier={`experiences-${publication.id}`}>
                     <div className="p-3 relative">
                       <Image
