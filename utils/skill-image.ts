@@ -53,10 +53,6 @@ export const skillsImage = (skill: string): SkillImage => {
       return {
         src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
       };
-    case "django":
-      return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-original.svg",
-      };
     case "flask":
       return {
         src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/flask-original.svg",
@@ -633,6 +629,18 @@ export const skillsImage = (skill: string): SkillImage => {
       return {
         src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/logz/logz-original.svg",
       };
+    case "django":
+      return {
+        src: "/image/django.svg",
+      };
+    case "unity":
+      return {
+        src: "/image/unity.svg",
+      };
+    case "c++":
+      return {
+        src: "/image/cpp.svg",
+      }
     default:
       return {
         src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
