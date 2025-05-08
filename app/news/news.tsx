@@ -1,9 +1,10 @@
+import { FC } from 'react';
 import { newsData } from "@/utils/data/news-data";
 import Image from "next/image";
 import { BsNewspaper } from "react-icons/bs";
 import GlowCard from "../components/helper/glow-card";
 
-function News() {
+const News: FC = () => {
   return (
     <div id="news" className="relative z-50 border-t my-12 lg:my-24">
       <div className="relative flex items-center justify-start my-5 lg:py-8">
@@ -52,6 +53,6 @@ function News() {
       </div>
     </div>
   );
-}
+};
 
 export default News;

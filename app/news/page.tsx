@@ -1,6 +1,7 @@
+import { FC } from 'react';
 import News from "./news";
 
-const NewsPage = () => {
+const NewsPage: FC = () => {
   return <News />;
 };
 

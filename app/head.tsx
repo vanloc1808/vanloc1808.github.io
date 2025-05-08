@@ -1,4 +1,6 @@
-export default function Head() {
+import { FC } from 'react';
+
+const Head: FC = () => {
   return (
     <>
       <script
@@ -18,4 +20,6 @@ export default function Head() {
       />
     </>
   );
-}
+};
+
+export default Head;

@@ -1,4 +1,9 @@
-export const newsData = [
+interface NewsItem {
+  date: string;
+  title: string;
+}
+
+export const newsData: NewsItem[] = [
   {
     "date": "March 3, 2025",
     "title": "Started the job as an AI Engineer at Autonomous"
@@ -58,5 +63,5 @@ export const newsData = [
   {
     "date": "June 1, 2023",
     "title": "Start my work at Saritasa Vietnam as a Backend Developer (Python - Django) after finishing 3 months of internship"
-  }
-]
+  },
+];

@@ -1,4 +1,22 @@
-export const personalData = {
+interface PersonalData {
+  name: string;
+  designation: string;
+  description: string;
+  email: string;
+  phone: string;
+  address: string;
+  resume: string;
+  profile: string;
+  github: string;
+  googleScholar: string;
+  linkedIn: string;
+  facebook: string;
+  leetcode: string;
+  devUsername: string;
+  stackOverflow: string;
+}
+
+export const personalData: PersonalData = {
   name: "VAN-LOC NGUYEN",
   profile: "/profile_image.png",
   designation: "AI Engineer",
@@ -15,4 +33,4 @@ export const personalData = {
   leetcode: "https://leetcode.com/u/vanloc1808/",
   devUsername: "vanloc1808",
   resume: "/CV.pdf"
-}
+};

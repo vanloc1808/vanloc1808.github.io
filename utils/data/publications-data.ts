@@ -1,4 +1,13 @@
-export const publicationsData = [
+interface Publication {
+  id: number;
+  title: string;
+  conference: string;
+  date: string;
+  description: string;
+  url: string;
+}
+
+export const publicationsData: Publication[] = [
   {
     "id": 5,
     "title": "An Approach to Complex Visual Data Interpretation with Vision-Language Models",
@@ -39,4 +48,4 @@ export const publicationsData = [
     "description": "A research for pointing out an efficient method for detection and tracking of spermatozoa, with YOLOv8 trained on a a COCO-format dataset.",
     "url": "https://ceur-ws.org/Vol-3658/paper21.pdf"
   },
-]
+];

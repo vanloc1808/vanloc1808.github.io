@@ -1,20 +1,23 @@
-'use client'; // Add this for client-side hooks
+'use client';
 
-// @flow strict
 import Link from "next/link";
-import { useTheme } from '@/app/context/ThemeContext'; // Import useTheme
-import React, { useState } from 'react'; // Added useState
+import { useTheme } from '@/app/context/ThemeContext';
+import { FC, useState } from 'react';
 
-function Navbar() {
-  const { theme, toggleTheme } = useTheme(); // Get theme and toggle function
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+interface Theme {
+  theme: 'light' | 'dark';
+  toggleTheme: () => void;
+}
 
-  const toggleMenu = () => {
+const Navbar: FC = () => {
+  const { theme, toggleTheme } = useTheme() as Theme;
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Function to close menu
-  const closeMenu = () => {
+  const closeMenu = (): void => {
     setIsMenuOpen(false);
   };
 
@@ -72,9 +75,6 @@ function Navbar() {
               <div className="text-sm text-gray-800 dark:text-white transition-colors duration-300 hover:text-pink-600 dark:hover:text-pink-600">EDUCATIONS</div>
             </Link>
           </li>
-          {/* <li>
-            <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/blog"><div className="text-sm text-gray-800 dark:text-white transition-colors duration-300 hover:text-pink-600 dark:hover:text-pink-600">BLOGS</div></Link>
-          </li> */}
           <li>
             <Link className="block px-4 py-2 no-underline outline-none hover:no-underline" href="/projects" onClick={closeMenu}>
               <div className="text-sm text-gray-800 dark:text-white transition-colors duration-300 hover:text-pink-600 dark:hover:text-pink-600">PROJECTS</div>
