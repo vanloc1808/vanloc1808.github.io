@@ -13,7 +13,7 @@ export const experiences: Experience[] = [
     title: "AI Engineer",
     company: "Autonomous",
     duration: "(Mar 2025 - Present)",
-    description: "Working on some AI projects at Glinks."
+    description: "Be responsible for building fantastic AI agents for real-world needs. Improve existing MCP servers to enhance the user experience. Optimize AI agents to run on a local environment with a small model (for example, 4B models)."
   },
   {
     id: 1,
