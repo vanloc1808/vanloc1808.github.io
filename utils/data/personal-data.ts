@@ -20,7 +20,7 @@ export const personalData: PersonalData = {
   name: "VAN-LOC NGUYEN",
   profile: "/profile_image.png",
   designation: "AI Engineer",
-  description: "My name is Van-Loc Nguyen. I am a professional and enthusiastic programmer in my daily life. I am a quick learner with a self-learning attitude. I love to learn and explore new technologies and am passionate about problem-solving. I love Artificial Intelligence, especially Computer Vision and Deep Learning. My core skill is based on Python and I love almost all of the things with Python.",
+  description: "👋 My name is Van-Loc Nguyen.\n\n💻 I am a professional and enthusiastic programmer in my daily life.\n\n🚀 I am a quick learner with a self-learning attitude.\n\n🔍 I love to learn and explore new technologies and am passionate about problem-solving.\n\n🤖 I love Artificial Intelligence, especially Computer Vision and Deep Learning.\n\n🐍 My core skill is based on Python and I love almost all of the things with Python.",
   email: "contact@nguyenvanloc.com",
   phone: "",
   address: "District 5, Ho Chi Minh City, Vietnam",
