@@ -30,6 +30,7 @@ const AboutSection: FC = () => {
             height={360}
             alt="Van-Loc Nguyen"
             className="rounded-lg transition-all duration-1000 hover:grayscale-0 hover:scale-110 cursor-pointer"
+            style={{ width: 'auto', height: 'auto' }}
           />
         </div>
       </div>
