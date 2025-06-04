@@ -93,7 +93,7 @@ const Experience: FC = () => {
                               </a>
                             )
                           }
-                          <p className="text-sm sm:text-base text-gray-800 dark:text-gray-200">
+                          <p className="text-sm sm:text-base text-gray-800 dark:text-gray-200 whitespace-pre-line">
                             {experience.description}
                           </p>
                         </div>
