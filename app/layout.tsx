@@ -9,9 +9,40 @@ import ScrollToTop from './components/helper/scroll-to-top';
 import { ReactNode } from 'react';
 
 export const metadata = {
-  title: 'Van-Loc Nguyen',
+  title: 'Van-Loc Nguyen | vanloc1808',
   description:
-    'This is the portfolio of Van-Loc Nguyen. I am an AI researcher and engineer. I love to learn new things and I am always open to collaborating with others.',
+    'Portfolio of Van-Loc Nguyen (vanloc1808) - AI Engineer, Developer, and Researcher.',
+  keywords: [
+    'vanloc1808',
+    'Van-Loc Nguyen',
+    'AI Engineer',
+    'Portfolio',
+    'Developer',
+  ],
+  openGraph: {
+    title: 'Van-Loc Nguyen | vanloc1808',
+    description:
+      'Portfolio of Van-Loc Nguyen (vanloc1808) - AI Engineer, Developer, and Researcher.',
+    url: 'https://vanloc1808.github.io',
+    siteName: 'vanloc1808',
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'vanloc1808',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Van-Loc Nguyen | vanloc1808',
+    description:
+      'Portfolio of Van-Loc Nguyen (vanloc1808) - AI Engineer, Developer, and Researcher.',
+    images: ['/og-image.png'],
+  },
 };
 
 interface RootLayoutProps {
