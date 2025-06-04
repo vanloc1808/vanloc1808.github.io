@@ -19,7 +19,7 @@ const AboutSection: FC = () => {
           <p className="font-medium mb-5 text-[#16f2b3] dark:text-[#16f2b3] text-xl uppercase">
             Who am I?
           </p>
-          <p className="text-gray-700 dark:text-gray-200 text-sm lg:text-lg">
+          <p className="text-gray-700 dark:text-gray-200 text-sm lg:text-lg whitespace-pre-line">
             {personalData.description}
           </p>
         </div>
