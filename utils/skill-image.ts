@@ -640,7 +640,11 @@ export const skillsImage = (skill: string): SkillImage => {
     case "c++":
       return {
         src: "/image/cpp.svg",
-      }
+      };
+    case "fastapi":
+      return {
+        src: "/image/fastapi.svg",
+      };
     default:
       return {
         src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",

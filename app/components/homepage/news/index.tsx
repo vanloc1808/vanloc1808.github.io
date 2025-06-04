@@ -21,14 +21,14 @@ const NewsSection: FC = () => {
       <div className="grid grid-cols-1 gap-8">
         <div>
           {/* Kept heading color, adjusted list text color */}
-          <p className="font-medium mb-5 text-[#16f2b3] dark:text-[#16f2b3] text-xl uppercase">
+          <p className="font-medium mb-5 text-[#448171] dark:text-[#16f2b3] text-xl uppercase">
             Latest News
           </p>
           <ul className="text-gray-700 dark:text-gray-200 text-sm lg:text-lg">
             {newsData.slice(0, 5).map((newsItem: NewsItem, index: number) => (
               <li key={index} className="mb-4">
                 {/* Kept date color */}
-                <span className="block text-[#16f2b3] dark:text-[#16f2b3]">{newsItem.date}</span>
+                <span className="block text-[#448171] dark:text-[#16f2b3]">{newsItem.date}</span>
                 {/* List item title inherits color from ul */}
                 <strong>{newsItem.title}</strong>
               </li>
