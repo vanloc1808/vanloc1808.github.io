@@ -35,6 +35,9 @@
 - [ ] Add proper social media links
 - [ ] Add proper resume download button
 - [ ] Add proper language support (i18n)
+- [ ] Add an Open Graph image at /public/og-image.png (1200x630px, branded with "vanloc1808")
+- [ ] Link to your site from your GitHub, LinkedIn, etc., using "vanloc1808" as anchor text
+- [ ] Make sure "vanloc1808" appears naturally in your About and other sections
 
 ## Development Improvements
 
