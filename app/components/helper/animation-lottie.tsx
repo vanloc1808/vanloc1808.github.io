@@ -8,12 +8,7 @@ interface AnimationLottieProps {
 }
 
 const AnimationLottie: FC<AnimationLottieProps> = ({ animationData }) => {
-  return (
-    <Lottie
-      animationData={animationData}
-      loop={true}
-    />
-  );
+  return <Lottie animationData={animationData} loop={true} />;
 };
 
 export default AnimationLottie;

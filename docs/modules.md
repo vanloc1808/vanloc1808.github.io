@@ -1,0 +1,45 @@
+[developer-portfolio - v0.1.0](README.md) / Modules
+
+# developer-portfolio - v0.1.0
+
+## Table of contents
+
+### Modules
+
+- [app/components/footer](modules/app_components_footer.md)
+- [app/components/helper/animation-lottie](modules/app_components_helper_animation_lottie.md)
+- [app/components/helper/glow-card](modules/app_components_helper_glow_card.md)
+- [app/components/helper/publication-card](modules/app_components_helper_publication_card.md)
+- [app/components/helper/scroll-to-top](modules/app_components_helper_scroll_to_top.md)
+- [app/components/homepage/about](modules/app_components_homepage_about.md)
+- [app/components/homepage/contact](modules/app_components_homepage_contact.md)
+- [app/components/homepage/education](modules/app_components_homepage_education.md)
+- [app/components/homepage/experience](modules/app_components_homepage_experience.md)
+- [app/components/homepage/hero-section](modules/app_components_homepage_hero_section.md)
+- [app/components/homepage/news](modules/app_components_homepage_news.md)
+- [app/components/homepage/projects](modules/app_components_homepage_projects.md)
+- [app/components/homepage/projects/project-card](modules/app_components_homepage_projects_project_card.md)
+- [app/components/homepage/publications](modules/app_components_homepage_publications.md)
+- [app/components/homepage/skills](modules/app_components_homepage_skills.md)
+- [app/components/navbar](modules/app_components_navbar.md)
+- [app/context/ThemeContext](modules/app_context_ThemeContext.md)
+- [app/head](modules/app_head.md)
+- [app/layout](modules/app_layout.md)
+- [app/news/news](modules/app_news_news.md)
+- [app/news/page](modules/app_news_page.md)
+- [app/page](modules/app_page.md)
+- [app/projects/page](modules/app_projects_page.md)
+- [app/publications/page](modules/app_publications_page.md)
+- [app/types/personal](modules/app_types_personal.md)
+- [types/json](modules/types_json.md)
+- [types/project](modules/types_project.md)
+- [utils/check-email](modules/utils_check_email.md)
+- [utils/data/educations](modules/utils_data_educations.md)
+- [utils/data/experience](modules/utils_data_experience.md)
+- [utils/data/news-data](modules/utils_data_news_data.md)
+- [utils/data/personal-data](modules/utils_data_personal_data.md)
+- [utils/data/projects-data](modules/utils_data_projects_data.md)
+- [utils/data/publications-data](modules/utils_data_publications_data.md)
+- [utils/data/skills](modules/utils_data_skills.md)
+- [utils/skill-image](modules/utils_skill_image.md)
+- [utils/time-converter](modules/utils_time_converter.md)

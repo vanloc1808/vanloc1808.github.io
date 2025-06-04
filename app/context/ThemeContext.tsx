@@ -1,6 +1,12 @@
 'use client';
 
-import React, { createContext, useState, useEffect, useContext, ReactNode } from 'react';
+import React, {
+  createContext,
+  useState,
+  useEffect,
+  useContext,
+  ReactNode,
+} from 'react';
 
 interface ThemeContextType {
   theme: 'light' | 'dark' | null;
@@ -27,11 +33,19 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   useEffect(() => {
     // Only run this in the browser
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
-      const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | null;
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const savedTheme = localStorage.getItem('theme') as
+        | 'light'
+        | 'dark'
+        | null;
+      const prefersDark = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches;
       const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
       setTheme(initialTheme);
-      document.documentElement.classList.toggle('dark', initialTheme === 'dark');
+      document.documentElement.classList.toggle(
+        'dark',
+        initialTheme === 'dark'
+      );
 
       // Listener for system theme changes
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');

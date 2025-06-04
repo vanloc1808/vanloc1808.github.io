@@ -17,20 +17,21 @@ interface PersonalData {
 }
 
 export const personalData: PersonalData = {
-  name: "VAN-LOC NGUYEN",
-  profile: "/profile_image.png",
-  designation: "AI Engineer",
-  description: "👋 My name is Van-Loc Nguyen.\n\n💻 I am a professional and enthusiastic programmer in my daily life.\n\n🚀 I am a quick learner with a self-learning attitude.\n\n🔍 I love to learn and explore new technologies and am passionate about problem-solving.\n\n🤖 I love Artificial Intelligence, especially Computer Vision and Deep Learning.\n\n🐍 My core skill is based on Python and I love almost all of the things with Python.",
-  email: "contact@nguyenvanloc.com",
-  phone: "",
-  address: "District 5, Ho Chi Minh City, Vietnam",
-  github: "https://github.com/vanloc1808",
-  "googleScholar": "https://scholar.google.com/citations?user=39z1A1IAAAAJ&hl=en",
-  facebook: "https://www.facebook.com/vanloc1808/",
-  linkedIn: "https://www.linkedin.com/in/vanloc1808/",
+  name: 'VAN-LOC NGUYEN',
+  profile: '/profile_image.png',
+  designation: 'AI Engineer',
+  description:
+    '👋 My name is Van-Loc Nguyen.\n\n💻 I am a professional and enthusiastic programmer in my daily life.\n\n🚀 I am a quick learner with a self-learning attitude.\n\n🔍 I love to learn and explore new technologies and am passionate about problem-solving.\n\n🤖 I love Artificial Intelligence, especially Computer Vision and Deep Learning.\n\n🐍 My core skill is based on Python and I love almost all of the things with Python.',
+  email: 'contact@nguyenvanloc.com',
+  phone: '',
+  address: 'District 5, Ho Chi Minh City, Vietnam',
+  github: 'https://github.com/vanloc1808',
+  googleScholar: 'https://scholar.google.com/citations?user=39z1A1IAAAAJ&hl=en',
+  facebook: 'https://www.facebook.com/vanloc1808/',
+  linkedIn: 'https://www.linkedin.com/in/vanloc1808/',
   // twitter: "https://twitter.com/said7388",
-  stackOverflow: "https://stackoverflow.com/users/20888325/van-loc-nguyen",
-  leetcode: "https://leetcode.com/u/vanloc1808/",
-  devUsername: "vanloc1808",
-  resume: "/CV.pdf"
+  stackOverflow: 'https://stackoverflow.com/users/20888325/van-loc-nguyen',
+  leetcode: 'https://leetcode.com/u/vanloc1808/',
+  devUsername: 'vanloc1808',
+  resume: '/CV.pdf',
 };

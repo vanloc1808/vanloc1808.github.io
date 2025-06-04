@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import News from "./news";
+import News from './news';
 
 const NewsPage: FC = () => {
   return <News />;
