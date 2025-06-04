@@ -16,7 +16,7 @@ const AboutSection: FC = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
         <div className="order-2 lg:order-1">
           {/* Kept heading color, adjusted description text color */}
-          <p className="font-medium mb-5 text-[#16f2b3] dark:text-[#16f2b3] text-xl uppercase">
+          <p className="font-medium mb-5 text-[#448171] dark:text-[#16f2b3] text-xl uppercase">
             Who am I?
           </p>
           <p className="text-gray-700 dark:text-gray-200 text-sm lg:text-lg whitespace-pre-line">

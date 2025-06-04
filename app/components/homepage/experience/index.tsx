@@ -65,7 +65,7 @@ const Experience: FC = () => {
                       />
                       <div className="flex justify-center">
                         {/* Kept duration color */}
-                        <p className="text-xs sm:text-sm text-[#16f2b3] dark:text-[#16f2b3]">
+                        <p className="text-xs sm:text-sm text-[#448171] dark:text-[#16f2b3]">
                           {experience.duration}
                         </p>
                       </div>
@@ -87,7 +87,7 @@ const Experience: FC = () => {
                               <a
                                 href={experience.companyLink}
                                 target="_blank"
-                                className="text-sm sm:text-base text-[#16f2b3] dark:text-[#16f2b3] hover:underline"
+                                className="text-sm sm:text-base text-[#448171] dark:text-[#16f2b3] hover:underline"
                               >
                                 {experience.companyLink}
                               </a>

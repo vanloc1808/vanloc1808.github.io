@@ -66,7 +66,7 @@ const Education: FC = () => {
                       className="absolute bottom-0 opacity-80"
                     />
                     <div className="flex justify-center">
-                      <p className="text-xs sm:text-sm text-[#16f2b3]">
+                      <p className="text-xs sm:text-sm text-[#448171] dark:text-[#16f2b3]">
                         {education.duration}
                       </p>
                     </div>

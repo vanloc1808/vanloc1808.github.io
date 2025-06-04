@@ -28,7 +28,7 @@ const Navbar: FC = () => {
           <Link
             href="/"
             onClick={closeMenu}
-            className="text-[#16f2b3] text-3xl font-bold">
+            className="text-[#448171] dark:text-[#16f2b3] text-3xl font-bold">
             VAN-LOC NGUYEN
           </Link>
         </div>

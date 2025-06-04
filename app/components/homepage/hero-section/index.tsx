@@ -39,7 +39,7 @@ const HeroSection: FC = () => {
             This is {' '}
             <span className="text-pink-500 dark:text-pink-500">{personalData.name}</span>
             {` , I'm an `}
-            <span className="text-[#16f2b3] dark:text-[#16f2b3]">{personalData.designation}</span>
+            <span className="text-[#448171] dark:text-[#16f2b3]">{personalData.designation}</span>
             .
           </h1>
 
@@ -152,7 +152,7 @@ const HeroSection: FC = () => {
                 <span className="text-gray-500 dark:text-gray-400">,</span>
               </div>
               <div>
-                <span className="ml-4 lg:ml-8 mr-2 text-green-600 dark:text-green-400">hireable:</span>
+                <span className="ml-4 lg:ml-8 mr-2 text-green-800 dark:text-green-400 font-semibold">hireable:</span>
                 <span className="text-orange-600 dark:text-orange-400">function</span>
                 <span className="text-gray-500 dark:text-gray-400">{'() {'}</span>
               </div>

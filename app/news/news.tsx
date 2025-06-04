@@ -36,7 +36,7 @@ const News: FC = () => {
                         <p className="text-base sm:text-xl mb-2 font-medium uppercase">
                           {newsItem.title}
                         </p>
-                        <p className="text-xs sm:text-sm text-[#16f2b3]">
+                        <p className="text-xs sm:text-sm text-[#448171] dark:text-[#16f2b3]">
                           Date: {newsItem.date}
                         </p>
                       </div>

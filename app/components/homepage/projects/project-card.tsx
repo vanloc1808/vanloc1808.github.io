@@ -26,7 +26,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
             <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-orange-400" />
             <div className="h-2 w-2 lg:h-3 lg:w-3 rounded-full bg-green-200" />
           </div>
-          <p className="ml-3 text-center text-base text-[#16f2b3] lg:text-xl">
+          <p className="ml-3 text-center text-base text-[#448171] dark:text-[#16f2b3] lg:text-xl">
             {project.name}
           </p>
         </div>

@@ -37,7 +37,7 @@ const PublicationCard: FC<PublicationCardProps> = ({ publication, identifier }) 
               <p className="text-base sm:text-lg mb-2 font-medium uppercase break-words">
                 {publication.title}
               </p>
-              <p className="text-xs sm:text-sm text-[#16f2b3] mb-1">
+              <p className="text-xs sm:text-sm text-[#448171] dark:text-[#16f2b3] mb-1">
                 Published at {publication.conference}
               </p>
               <p className="text-xs sm:text-sm text-[#df7518] mb-2">
@@ -46,8 +46,8 @@ const PublicationCard: FC<PublicationCardProps> = ({ publication, identifier }) 
               <p className="text-sm sm:text-base mb-2 break-words">
                 {publication.description}
               </p>
-              <p className="text-xs sm:text-sm text-[#16f2b3] break-all">
-                <span className="text-[#16f2b3] hover:text-[#df7518]">
+              <p className="text-xs sm:text-sm text-[#448171] dark:text-[#16f2b3] break-all">
+                <span className="text-[#448171] dark:text-[#16f2b3] hover:text-[#df7518]">
                   {publication.url}
                 </span>
               </p>
