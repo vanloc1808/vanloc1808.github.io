@@ -1,6 +1,7 @@
 # Portfolio Website Improvements
 
 ## Performance & Technical Improvements
+
 - [ ] Implement proper caching strategies for static assets
 - [ ] Add loading states and skeleton screens for better UX
 - [ ] Implement proper error boundaries for better error handling
@@ -13,18 +14,19 @@
 - [ ] Add proper testing (Unit, Integration, E2E)
 
 ## UI/UX Improvements
-- [ ] Add dark/light mode toggle animation
+
+- [x] Add dark/light mode toggle animation
 - [ ] Add proper loading animations for page transitions
-- [ ] Implement proper responsive design for all screen sizes
+- [x] Implement proper responsive design for all screen sizes
 - [ ] Add proper hover effects and animations
 - [ ] Implement proper accessibility features (ARIA labels, keyboard navigation)
-- [ ] Add proper form validation and error messages
 - [ ] Implement proper toast notifications for form submissions
 - [ ] Add proper scroll animations
 - [ ] Implement proper image lazy loading
 - [ ] Add proper image optimization
 
 ## Content Improvements
+
 - [ ] Add proper project descriptions with images
 - [ ] Add proper blog section with markdown support
 - [ ] Add proper case studies for projects
@@ -37,6 +39,7 @@
 - [ ] Add proper language support (i18n)
 
 ## Development Improvements
+
 - [ ] Add proper CI/CD pipeline
 - [ ] Add proper code documentation
 - [ ] Add proper code formatting and linting rules
@@ -49,6 +52,7 @@
 - [ ] Add proper version control strategy
 
 ## Security Improvements
+
 - [ ] Implement proper CSRF protection
 - [ ] Add proper rate limiting
 - [ ] Implement proper input sanitization
@@ -61,6 +65,7 @@
 - [ ] Add proper security monitoring
 
 ## Documentation Improvements
+
 - [ ] Add proper README.md with setup instructions
 - [ ] Add proper API documentation
 - [ ] Add proper component documentation
@@ -73,6 +78,7 @@
 - [ ] Add proper contact information
 
 ## Future Features
+
 - [ ] Add proper blog system with comments
 - [ ] Add proper newsletter subscription
 - [ ] Add proper search functionality
@@ -85,6 +91,7 @@
 - [ ] Add proper analytics dashboard
 
 ## Maintenance
+
 - [ ] Regular dependency updates
 - [ ] Regular security audits
 - [ ] Regular performance monitoring
