@@ -40,7 +40,7 @@ const HeroSection: FC = () => {
             <span className='text-pink-500 dark:text-pink-500'>
               {personalData.name}
             </span>
-            {` , I'm an `}
+            {` (vanloc1808), I'm an `}
             <span className='text-[#448171] dark:text-[#16f2b3]'>
               {personalData.designation}
             </span>
