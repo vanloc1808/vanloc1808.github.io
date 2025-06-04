@@ -9,11 +9,9 @@ interface GlowCardProps {
 
 const GlowCard: FC<GlowCardProps> = ({ children, identifier }) => {
   return (
-    <div className="relative group">
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 to-purple-600 rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
-      <div className="relative">
-        {children}
-      </div>
+    <div className='group relative'>
+      <div className='animate-tilt absolute -inset-0.5 rounded-lg bg-gradient-to-r from-pink-600 to-purple-600 opacity-25 blur transition duration-1000 group-hover:opacity-75 group-hover:duration-200'></div>
+      <div className='relative'>{children}</div>
     </div>
   );
 };

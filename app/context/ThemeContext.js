@@ -13,15 +13,20 @@ export const ThemeProvider = ({ children }) => {
     // Only run this in the browser
     if (typeof window !== 'undefined' && typeof document !== 'undefined') {
       const savedTheme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const prefersDark = window.matchMedia(
+        '(prefers-color-scheme: dark)'
+      ).matches;
       const initialTheme = savedTheme || (prefersDark ? 'dark' : 'light');
       setTheme(initialTheme);
       setTheme(initialTheme);
-      document.documentElement.classList.toggle('dark', initialTheme === 'dark');
+      document.documentElement.classList.toggle(
+        'dark',
+        initialTheme === 'dark'
+      );
 
       // Listener for system theme changes
       const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      const handleChange = (e) => {
+      const handleChange = e => {
         const newTheme = e.matches ? 'dark' : 'light';
         setTheme(newTheme);
         localStorage.setItem('theme', newTheme); // Update localStorage as well

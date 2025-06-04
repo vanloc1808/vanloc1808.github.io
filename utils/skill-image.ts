@@ -5,649 +5,649 @@ interface SkillImage {
 export const skillsImage = (skill: string): SkillImage => {
   const skillId = skill.toLowerCase();
   switch (skillId) {
-    case "html":
+    case 'html':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg',
       };
-    case "css":
+    case 'css':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg',
       };
-    case "javascript":
+    case 'javascript':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg',
       };
-    case "typescript":
+    case 'typescript':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg',
       };
-    case "react":
+    case 'react':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg',
       };
-    case "nextjs":
+    case 'nextjs':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg',
       };
-    case "nodejs":
+    case 'nodejs':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original.svg',
       };
-    case "express":
+    case 'express':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg',
       };
-    case "mongodb":
+    case 'mongodb':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original.svg',
       };
-    case "postgresql":
+    case 'postgresql':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg',
       };
-    case "mysql":
+    case 'mysql':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg',
       };
-    case "python":
+    case 'python':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg',
       };
-    case "flask":
+    case 'flask':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/flask-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/flask-original.svg',
       };
-    case "docker":
+    case 'docker':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg',
       };
-    case "kubernetes":
+    case 'kubernetes':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/kubernetes/kubernetes-original.svg',
       };
-    case "aws":
+    case 'aws':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original.svg',
       };
-    case "azure":
+    case 'azure':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/azure/azure-original.svg',
       };
-    case "gcp":
+    case 'gcp':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/googlecloud/googlecloud-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/googlecloud/googlecloud-original.svg',
       };
-    case "git":
+    case 'git':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg',
       };
-    case "github":
+    case 'github':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg',
       };
-    case "gitlab":
+    case 'gitlab':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/gitlab/gitlab-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/gitlab/gitlab-original.svg',
       };
-    case "bitbucket":
+    case 'bitbucket':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bitbucket/bitbucket-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/bitbucket/bitbucket-original.svg',
       };
-    case "vscode":
+    case 'vscode':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vscode/vscode-original.svg',
       };
-    case "vim":
+    case 'vim':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/vim/vim-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vim/vim-original.svg',
       };
-    case "linux":
+    case 'linux':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg',
       };
-    case "ubuntu":
+    case 'ubuntu':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/ubuntu/ubuntu-plain.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/ubuntu/ubuntu-plain.svg',
       };
-    case "debian":
+    case 'debian':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/debian/debian-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/debian/debian-original.svg',
       };
-    case "centos":
+    case 'centos':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/centos/centos-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/centos/centos-original.svg',
       };
-    case "redhat":
+    case 'redhat':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redhat/redhat-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redhat/redhat-original.svg',
       };
-    case "windows":
+    case 'windows':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/windows8/windows8-original.svg',
       };
-    case "macos":
+    case 'macos':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/apple/apple-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apple/apple-original.svg',
       };
-    case "android":
+    case 'android':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original.svg',
       };
-    case "ios":
+    case 'ios':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/apple/apple-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apple/apple-original.svg',
       };
-    case "flutter":
+    case 'flutter':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/flutter/flutter-original.svg',
       };
-    case "reactnative":
+    case 'reactnative':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg',
       };
-    case "swift":
+    case 'swift':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/swift/swift-original.svg',
       };
-    case "kotlin":
+    case 'kotlin':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/kotlin/kotlin-original.svg',
       };
-    case "java":
+    case 'java':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg',
       };
-    case "spring":
+    case 'spring':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/spring/spring-original.svg',
       };
-    case "c":
+    case 'c':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg',
       };
-    case "cpp":
+    case 'cpp':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg',
       };
-    case "csharp":
+    case 'csharp':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg',
       };
-    case "dotnet":
+    case 'dotnet':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/dotnetcore/dotnetcore-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/dotnetcore/dotnetcore-original.svg',
       };
-    case "php":
+    case 'php':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg',
       };
-    case "laravel":
+    case 'laravel':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/laravel/laravel-plain.svg',
       };
-    case "ruby":
+    case 'ruby':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/ruby/ruby-original.svg',
       };
-    case "rails":
+    case 'rails':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rails/rails-original-wordmark.svg',
       };
-    case "go":
+    case 'go':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/go/go-original.svg',
       };
-    case "rust":
+    case 'rust':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rust/rust-plain.svg',
       };
-    case "scala":
+    case 'scala':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/scala/scala-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/scala/scala-original.svg',
       };
-    case "haskell":
+    case 'haskell':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/haskell/haskell-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/haskell/haskell-original.svg',
       };
-    case "elixir":
+    case 'elixir':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/elixir/elixir-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/elixir/elixir-original.svg',
       };
-    case "erlang":
+    case 'erlang':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/erlang/erlang-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/erlang/erlang-original.svg',
       };
-    case "clojure":
+    case 'clojure':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/clojure/clojure-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/clojure/clojure-original.svg',
       };
-    case "ocaml":
+    case 'ocaml':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/ocaml/ocaml-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/ocaml/ocaml-original.svg',
       };
-    case "fsharp":
+    case 'fsharp':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/fsharp/fsharp-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/fsharp/fsharp-original.svg',
       };
-    case "r":
+    case 'r':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/r/r-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/r/r-original.svg',
       };
-    case "julia":
+    case 'julia':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/julia/julia-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/julia/julia-original.svg',
       };
-    case "matlab":
+    case 'matlab':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/matlab/matlab-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/matlab/matlab-original.svg',
       };
-    case "tensorflow":
+    case 'tensorflow':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/tensorflow/tensorflow-original.svg',
       };
-    case "pytorch":
+    case 'pytorch':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg',
       };
-    case "keras":
+    case 'keras':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/keras/keras-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/keras/keras-original.svg',
       };
-    case "scikit-learn":
+    case 'scikit-learn':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/scikit-learn/scikit-learn-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/scikit-learn/scikit-learn-original.svg',
       };
-    case "pandas":
+    case 'pandas':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/pandas/pandas-original.svg',
       };
-    case "numpy":
+    case 'numpy':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg',
       };
-    case "jupyter":
+    case 'jupyter':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jupyter/jupyter-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/jupyter/jupyter-original.svg',
       };
-    case "rstudio":
+    case 'rstudio':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/rstudio/rstudio-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rstudio/rstudio-original.svg',
       };
-    case "spark":
+    case 'spark':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/apache-spark/apache-spark-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apache-spark/apache-spark-original.svg',
       };
-    case "hadoop":
+    case 'hadoop':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/hadoop/hadoop-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/hadoop/hadoop-original.svg',
       };
-    case "kafka":
+    case 'kafka':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/apache-kafka/apache-kafka-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apache-kafka/apache-kafka-original.svg',
       };
-    case "rabbitmq":
+    case 'rabbitmq':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/rabbitmq/rabbitmq-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rabbitmq/rabbitmq-original.svg',
       };
-    case "redis":
+    case 'redis':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/redis/redis-original.svg',
       };
-    case "elasticsearch":
+    case 'elasticsearch':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/elasticsearch/elasticsearch-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/elasticsearch/elasticsearch-original.svg',
       };
-    case "solr":
+    case 'solr':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/apache-solr/apache-solr-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apache-solr/apache-solr-original.svg',
       };
-    case "neo4j":
+    case 'neo4j':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/neo4j/neo4j-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/neo4j/neo4j-original.svg',
       };
-    case "cassandra":
+    case 'cassandra':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/apache-cassandra/apache-cassandra-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apache-cassandra/apache-cassandra-original.svg',
       };
-    case "couchdb":
+    case 'couchdb':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/couchdb/couchdb-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/couchdb/couchdb-original.svg',
       };
-    case "firebase":
+    case 'firebase':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/firebase/firebase-plain.svg',
       };
-    case "supabase":
+    case 'supabase':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg',
       };
-    case "graphql":
+    case 'graphql':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/graphql/graphql-plain.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/graphql/graphql-plain.svg',
       };
-    case "rest":
+    case 'rest':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-original.svg',
       };
-    case "grpc":
+    case 'grpc':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/grpc/grpc-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/grpc/grpc-original.svg',
       };
-    case "websocket":
+    case 'websocket':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/websocket/websocket-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/websocket/websocket-original.svg',
       };
-    case "socket.io":
+    case 'socket.io':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/socket.io/socket.io-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/socket.io/socket.io-original.svg',
       };
-    case "nginx":
+    case 'nginx':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg',
       };
-    case "apache":
+    case 'apache':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/apache/apache-original.svg',
       };
-    case "jenkins":
+    case 'jenkins':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/jenkins-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/jenkins/jenkins-original.svg',
       };
-    case "travis":
+    case 'travis':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/travis/travis-plain.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/travis/travis-plain.svg',
       };
-    case "circleci":
+    case 'circleci':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/circleci/circleci-plain.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/circleci/circleci-plain.svg',
       };
-    case "github-actions":
+    case 'github-actions':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg',
       };
-    case "gitlab-ci":
+    case 'gitlab-ci':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/gitlab/gitlab-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/gitlab/gitlab-original.svg',
       };
-    case "bitbucket-pipelines":
+    case 'bitbucket-pipelines':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bitbucket/bitbucket-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/bitbucket/bitbucket-original.svg',
       };
-    case "terraform":
+    case 'terraform':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/terraform/terraform-original.svg',
       };
-    case "ansible":
+    case 'ansible':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/ansible/ansible-original.svg',
       };
-    case "puppet":
+    case 'puppet':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/puppet/puppet-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/puppet/puppet-original.svg',
       };
-    case "chef":
+    case 'chef':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/chef/chef-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/chef/chef-original.svg',
       };
-    case "saltstack":
+    case 'saltstack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/saltstack/saltstack-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/saltstack/saltstack-original.svg',
       };
-    case "prometheus":
+    case 'prometheus':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/prometheus/prometheus-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/prometheus/prometheus-original.svg',
       };
-    case "grafana":
+    case 'grafana':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/grafana/grafana-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/grafana/grafana-original.svg',
       };
-    case "elk":
+    case 'elk':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/elasticsearch/elasticsearch-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/elasticsearch/elasticsearch-original.svg',
       };
-    case "splunk":
+    case 'splunk':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/splunk/splunk-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/splunk/splunk-original.svg',
       };
-    case "datadog":
+    case 'datadog':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/datadog/datadog-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/datadog/datadog-original.svg',
       };
-    case "newrelic":
+    case 'newrelic':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/newrelic/newrelic-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/newrelic/newrelic-original.svg',
       };
-    case "pagerduty":
+    case 'pagerduty':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/pagerduty/pagerduty-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/pagerduty/pagerduty-original.svg',
       };
-    case "opsgenie":
+    case 'opsgenie':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/opsgenie/opsgenie-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/opsgenie/opsgenie-original.svg',
       };
-    case "victorops":
+    case 'victorops':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/victorops/victorops-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/victorops/victorops-original.svg',
       };
-    case "sentry":
+    case 'sentry':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/sentry/sentry-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/sentry/sentry-original.svg',
       };
-    case "rollbar":
+    case 'rollbar':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/rollbar/rollbar-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/rollbar/rollbar-original.svg',
       };
-    case "bugsnag":
+    case 'bugsnag':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/bugsnag/bugsnag-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/bugsnag/bugsnag-original.svg',
       };
-    case "airbrake":
+    case 'airbrake':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/airbrake/airbrake-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/airbrake/airbrake-original.svg',
       };
-    case "raygun":
+    case 'raygun':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/raygun/raygun-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/raygun/raygun-original.svg',
       };
-    case "logentries":
+    case 'logentries':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/logentries/logentries-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/logentries/logentries-original.svg',
       };
-    case "papertrail":
+    case 'papertrail':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/papertrail/papertrail-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/papertrail/papertrail-original.svg',
       };
-    case "loggly":
+    case 'loggly':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/loggly/loggly-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/loggly/loggly-original.svg',
       };
-    case "sumologic":
+    case 'sumologic':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/sumologic/sumologic-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/sumologic/sumologic-original.svg',
       };
-    case "graylog":
+    case 'graylog':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/graylog/graylog-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/graylog/graylog-original.svg',
       };
-    case "logz.io":
+    case 'logz.io':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/logz/logz-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/logz/logz-original.svg',
       };
-    case "humio":
+    case 'humio':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/humio/humio-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/humio/humio-original.svg',
       };
-    case "loki":
+    case 'loki':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/loki/loki-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/loki/loki-original.svg',
       };
-    case "jaeger":
+    case 'jaeger':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jaeger/jaeger-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/jaeger/jaeger-original.svg',
       };
-    case "zipkin":
+    case 'zipkin':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/zipkin/zipkin-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/zipkin/zipkin-original.svg',
       };
-    case "opentelemetry":
+    case 'opentelemetry':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/opentelemetry/opentelemetry-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/opentelemetry/opentelemetry-original.svg',
       };
-    case "lightstep":
+    case 'lightstep':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/lightstep/lightstep-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/lightstep/lightstep-original.svg',
       };
-    case "honeycomb":
+    case 'honeycomb':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/honeycomb/honeycomb-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/honeycomb/honeycomb-original.svg',
       };
-    case "datadog-apm":
+    case 'datadog-apm':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/datadog/datadog-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/datadog/datadog-original.svg',
       };
-    case "newrelic-apm":
+    case 'newrelic-apm':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/newrelic/newrelic-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/newrelic/newrelic-original.svg',
       };
-    case "dynatrace":
+    case 'dynatrace':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/dynatrace/dynatrace-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/dynatrace/dynatrace-original.svg',
       };
-    case "appdynamics":
+    case 'appdynamics':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/appdynamics/appdynamics-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/appdynamics/appdynamics-original.svg',
       };
-    case "instana":
+    case 'instana':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/instana/instana-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/instana/instana-original.svg',
       };
-    case "elastic-apm":
+    case 'elastic-apm':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/elasticsearch/elasticsearch-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/elasticsearch/elasticsearch-original.svg',
       };
-    case "grafana-tempo":
+    case 'grafana-tempo':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/grafana/grafana-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/grafana/grafana-original.svg',
       };
-    case "signoz":
+    case 'signoz':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/signoz/signoz-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/signoz/signoz-original.svg',
       };
-    case "uptrace":
+    case 'uptrace':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/uptrace/uptrace-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/uptrace/uptrace-original.svg',
       };
-    case "opstrace":
+    case 'opstrace':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/opstrace/opstrace-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/opstrace/opstrace-original.svg',
       };
-    case "coralogix":
+    case 'coralogix':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/coralogix/coralogix-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/coralogix/coralogix-original.svg',
       };
-    case "logz.io-apm":
+    case 'logz.io-apm':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/logz/logz-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/logz/logz-original.svg',
       };
-    case "elastic-stack":
+    case 'elastic-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/elasticsearch/elasticsearch-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/elasticsearch/elasticsearch-original.svg',
       };
-    case "graylog-stack":
+    case 'graylog-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/graylog/graylog-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/graylog/graylog-original.svg',
       };
-    case "loki-stack":
+    case 'loki-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/loki/loki-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/loki/loki-original.svg',
       };
-    case "jaeger-stack":
+    case 'jaeger-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/jaeger/jaeger-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/jaeger/jaeger-original.svg',
       };
-    case "zipkin-stack":
+    case 'zipkin-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/zipkin/zipkin-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/zipkin/zipkin-original.svg',
       };
-    case "opentelemetry-stack":
+    case 'opentelemetry-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/opentelemetry/opentelemetry-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/opentelemetry/opentelemetry-original.svg',
       };
-    case "lightstep-stack":
+    case 'lightstep-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/lightstep/lightstep-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/lightstep/lightstep-original.svg',
       };
-    case "honeycomb-stack":
+    case 'honeycomb-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/honeycomb/honeycomb-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/honeycomb/honeycomb-original.svg',
       };
-    case "datadog-stack":
+    case 'datadog-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/datadog/datadog-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/datadog/datadog-original.svg',
       };
-    case "newrelic-stack":
+    case 'newrelic-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/newrelic/newrelic-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/newrelic/newrelic-original.svg',
       };
-    case "dynatrace-stack":
+    case 'dynatrace-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/dynatrace/dynatrace-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/dynatrace/dynatrace-original.svg',
       };
-    case "appdynamics-stack":
+    case 'appdynamics-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/appdynamics/appdynamics-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/appdynamics/appdynamics-original.svg',
       };
-    case "instana-stack":
+    case 'instana-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/instana/instana-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/instana/instana-original.svg',
       };
-    case "elastic-stack-apm":
+    case 'elastic-stack-apm':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/elasticsearch/elasticsearch-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/elasticsearch/elasticsearch-original.svg',
       };
-    case "grafana-stack":
+    case 'grafana-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/grafana/grafana-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/grafana/grafana-original.svg',
       };
-    case "signoz-stack":
+    case 'signoz-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/signoz/signoz-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/signoz/signoz-original.svg',
       };
-    case "uptrace-stack":
+    case 'uptrace-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/uptrace/uptrace-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/uptrace/uptrace-original.svg',
       };
-    case "opstrace-stack":
+    case 'opstrace-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/opstrace/opstrace-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/opstrace/opstrace-original.svg',
       };
-    case "coralogix-stack":
+    case 'coralogix-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/coralogix/coralogix-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/coralogix/coralogix-original.svg',
       };
-    case "logz.io-stack":
+    case 'logz.io-stack':
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/logz/logz-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/logz/logz-original.svg',
       };
-    case "django":
+    case 'django':
       return {
-        src: "/image/django.svg",
+        src: '/image/django.svg',
       };
-    case "unity":
+    case 'unity':
       return {
-        src: "/image/unity.svg",
+        src: '/image/unity.svg',
       };
-    case "c++":
+    case 'c++':
       return {
-        src: "/image/cpp.svg",
+        src: '/image/cpp.svg',
       };
-    case "fastapi":
+    case 'fastapi':
       return {
-        src: "/image/fastapi.svg",
+        src: '/image/fastapi.svg',
       };
     default:
       return {
-        src: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg',
       };
   }
 };
