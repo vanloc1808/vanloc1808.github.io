@@ -24,6 +24,7 @@ export async function POST(request) {
       { status: 500 }
     );
   } catch (error) {
+    console.error('Captcha verification error:', error);
     return NextResponse.json(
       {
         error: 'Captcha verification failed!',

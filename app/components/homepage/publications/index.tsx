@@ -11,7 +11,7 @@ import Link from 'next/link';
 import { FC } from 'react';
 import PublicationCard from '../../helper/publication-card';
 
-interface Publication {
+interface PublicationItem {
   id: number;
   title: string;
   conference: string;
@@ -46,13 +46,15 @@ const Publication: FC = () => {
 
           <div>
             <div className='flex flex-col gap-4'>
-              {publicationsData.slice(0, 5).map((publication: Publication) => (
-                <PublicationCard
-                  key={publication.id}
-                  publication={publication}
-                  identifier={`publication-${publication.id}`}
-                />
-              ))}
+              {publicationsData
+                .slice(0, 5)
+                .map((publication: PublicationItem) => (
+                  <PublicationCard
+                    key={publication.id}
+                    publication={publication}
+                    identifier={`publication-${publication.id}`}
+                  />
+                ))}
             </div>
           </div>
         </div>

@@ -4,10 +4,6 @@ import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
 import { FC } from 'react';
 
-interface SkillImage {
-  src: string;
-}
-
 const Skills: FC = () => {
   return (
     <div

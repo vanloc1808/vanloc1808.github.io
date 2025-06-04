@@ -1,5 +1,5 @@
 import { personalData } from '@/utils/data/personal-data';
-import { PersonalData, CoderProfile } from '@/app/types/personal';
+import { CoderProfile } from '@/app/types/personal';
 import Image from 'next/image';
 import Link from 'next/link';
 import { BsGithub, BsLinkedin } from 'react-icons/bs';

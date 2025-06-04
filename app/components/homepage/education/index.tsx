@@ -12,7 +12,7 @@ const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), {
   ssr: false,
 });
 
-interface Education {
+interface EducationItem {
   id: number;
   title: string;
   institution: string;
@@ -58,7 +58,7 @@ const Education: FC = () => {
 
           <div>
             <div className='flex flex-col gap-6'>
-              {educations.map((education: Education) => (
+              {educations.map((education: EducationItem) => (
                 <GlowCard
                   key={education.id}
                   identifier={`education-${education.id}`}

@@ -11,7 +11,7 @@ import GlowCard from '../../helper/glow-card';
 import experience from '/public/lottie/code.json';
 import { FC } from 'react';
 
-interface Experience {
+interface ExperienceItem {
   id: number;
   title: string;
   company: string;
@@ -55,7 +55,7 @@ const Experience: FC = () => {
 
           <div>
             <div className='flex flex-col gap-6'>
-              {experiences.map((experience: Experience) => (
+              {experiences.map((experience: ExperienceItem) => (
                 <GlowCard
                   key={experience.id}
                   identifier={`experience-${experience.id}`}

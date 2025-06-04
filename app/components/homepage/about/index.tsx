@@ -1,5 +1,4 @@
 import { personalData } from '@/utils/data/personal-data';
-import { PersonalData } from '@/app/types/personal';
 import Image from 'next/image';
 import { FC } from 'react';
 
