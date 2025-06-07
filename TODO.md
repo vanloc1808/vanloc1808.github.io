@@ -1,10 +1,11 @@
 # Portfolio Website Improvements
 
 ## Performance & Technical Improvements
+
 - [ ] Implement proper caching strategies for static assets
 - [ ] Add loading states and skeleton screens for better UX
 - [ ] Implement proper error boundaries for better error handling
-- [ ] Add proper TypeScript types for all components and functions
+- [x] Add proper TypeScript types for all components and functions
 - [ ] Implement proper SEO meta tags and OpenGraph images
 - [ ] Add proper sitemap.xml and robots.txt
 - [ ] Implement proper analytics tracking
@@ -13,18 +14,17 @@
 - [ ] Add proper testing (Unit, Integration, E2E)
 
 ## UI/UX Improvements
-- [ ] Add dark/light mode toggle animation
+
+- [x] Add dark/light mode toggle animation
 - [ ] Add proper loading animations for page transitions
-- [ ] Implement proper responsive design for all screen sizes
+- [x] Implement proper responsive design for all screen sizes
 - [ ] Add proper hover effects and animations
 - [ ] Implement proper accessibility features (ARIA labels, keyboard navigation)
-- [ ] Add proper form validation and error messages
-- [ ] Implement proper toast notifications for form submissions
-- [ ] Add proper scroll animations
 - [ ] Implement proper image lazy loading
 - [ ] Add proper image optimization
 
 ## Content Improvements
+
 - [ ] Add proper project descriptions with images
 - [ ] Add proper blog section with markdown support
 - [ ] Add proper case studies for projects
@@ -35,12 +35,15 @@
 - [ ] Add proper social media links
 - [ ] Add proper resume download button
 - [ ] Add proper language support (i18n)
+- [ ] Add an Open Graph image at /public/og-image.png (1200x630px, branded with "vanloc1808")
+- [ ] Link to your site from your GitHub, LinkedIn, etc., using "vanloc1808" as anchor text
+- [ ] Make sure "vanloc1808" appears naturally in your About and other sections
 
 ## Development Improvements
-- [ ] Add proper CI/CD pipeline
-- [ ] Add proper code documentation
-- [ ] Add proper code formatting and linting rules
-- [ ] Add proper Git hooks for pre-commit checks
+
+- [x] Add proper code documentation
+- [x] Add proper code formatting and linting rules
+- [x] Add proper Git hooks for pre-commit checks
 - [ ] Add proper environment variable validation
 - [ ] Add proper logging system
 - [ ] Add proper monitoring system
@@ -49,6 +52,7 @@
 - [ ] Add proper version control strategy
 
 ## Security Improvements
+
 - [ ] Implement proper CSRF protection
 - [ ] Add proper rate limiting
 - [ ] Implement proper input sanitization
@@ -61,9 +65,10 @@
 - [ ] Add proper security monitoring
 
 ## Documentation Improvements
-- [ ] Add proper README.md with setup instructions
+
+- [x] Add proper README.md with setup instructions
 - [ ] Add proper API documentation
-- [ ] Add proper component documentation
+- [x] Add proper component documentation
 - [ ] Add proper contribution guidelines
 - [ ] Add proper code of conduct
 - [ ] Add proper license information
@@ -73,6 +78,7 @@
 - [ ] Add proper contact information
 
 ## Future Features
+
 - [ ] Add proper blog system with comments
 - [ ] Add proper newsletter subscription
 - [ ] Add proper search functionality
@@ -85,6 +91,7 @@
 - [ ] Add proper analytics dashboard
 
 ## Maintenance
+
 - [ ] Regular dependency updates
 - [ ] Regular security audits
 - [ ] Regular performance monitoring
