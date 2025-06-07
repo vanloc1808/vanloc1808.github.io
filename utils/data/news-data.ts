@@ -13,7 +13,11 @@ export const newsData: NewsItem[] = [
     "title": "👋 Left the job as Python Developer at Saritasa"
   },
   {
-    "date": "August 16, 2024",
+    "date": "December 14, 2024",
+    "title": "📄 Our paper \"NewsInsight2.0: An Enhanced Version Integrating Large Language Model-Based Query Optimization with Advanced Temporal Mechanisms\" has been published at The 13th International Symposium on Information and Communication Technology (SOICT), 2024",
+  },
+  {
+    "date": "December 9, 2024",
     "title": "📄 Our paper \"An Approach to Complex Visual Data Interpretation with Vision-Language Models\" has been published at The 1st Large Vision - Language Model Learning and Applications Workshop, ACCV 2024",
   },
   {
