@@ -22,6 +22,8 @@
 - [ ] Implement proper accessibility features (ARIA labels, keyboard navigation)
 - [ ] Implement proper image lazy loading
 - [ ] Add proper image optimization
+- [ ] Change "Subscribe to the newsletter" section to "Buy me a coffee"
+- [ ] Add "System" theme toggle
 
 ## Content Improvements
 
