@@ -15,10 +15,10 @@ import React, { FC, useState } from 'react';
  */
 interface Theme {
   /** Current theme mode - either 'light' or 'dark' */
-  theme: 'light' | 'dark';
+  theme: 'light' | 'dark' | 'system';
 
   /** Function to toggle between light and dark themes */
-  toggleTheme: () => void;
+  setTheme: (theme: 'light' | 'dark' | 'system') => void;
 }
 
 /**
@@ -46,8 +46,9 @@ interface Theme {
  * @since 1.0.0
  */
 const Navbar: FC = (): React.JSX.Element => {
-  const { theme, toggleTheme } = useTheme() as Theme;
+  const { theme, setTheme } = useTheme() as Theme;
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isThemeMenuOpen, setIsThemeMenuOpen] = useState<boolean>(false);
 
   /**
    * Toggles the mobile menu open/closed state.
@@ -102,16 +103,7 @@ const Navbar: FC = (): React.JSX.Element => {
 
         {/* Navigation Links */}
         <ul
-          className={`absolute left-0 right-0 top-full mt-0 flex flex-col items-start
-          bg-white text-sm transition-all duration-300 ease-in-out
-          dark:bg-gray-900 md:relative md:flex md:flex-row md:items-center
-          md:space-x-1 md:bg-transparent md:dark:bg-transparent
-          ${isMenuOpen ? 'visible opacity-100' : 'invisible opacity-0 md:visible md:opacity-100'}
-          space-y-4 border-b border-gray-200 px-4
-          py-4 shadow-lg
-          dark:border-gray-700 md:space-y-0
-          md:border-none md:px-0
-          md:py-0 md:shadow-none`}
+          className={`absolute left-0 right-0 top-full mt-0 flex flex-col items-start bg-white text-sm transition-all duration-300 ease-in-out dark:bg-gray-900 md:relative md:flex md:flex-row md:items-center md:space-x-1 md:bg-transparent md:dark:bg-transparent ${isMenuOpen ? 'visible opacity-100' : 'invisible opacity-0 md:visible md:opacity-100'} space-y-4 border-b border-gray-200 px-4 py-4 shadow-lg dark:border-gray-700 md:space-y-0 md:border-none md:px-0 md:py-0 md:shadow-none`}
         >
           <li>
             <Link
@@ -202,17 +194,60 @@ const Navbar: FC = (): React.JSX.Element => {
             </Link>
           </li>
           {/* Theme Toggle Button */}
-          <li>
+          <li className='relative'>
             <button
-              onClick={() => {
-                toggleTheme();
-                closeMenu();
+              onClick={e => {
+                e.stopPropagation();
+                setIsThemeMenuOpen(v => !v);
               }}
-              className='block px-4 py-2 text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 focus:outline-none dark:text-white dark:hover:text-pink-600'
-              aria-label='Toggle Theme'
+              className='flex items-center gap-1 px-4 py-2 text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 focus:outline-none dark:text-white dark:hover:text-pink-600'
+              aria-label='Theme Menu'
+              type='button'
             >
-              {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
+              {theme === 'light' && <span>☀️</span>}
+              {theme === 'dark' && <span>🌙</span>}
+              {theme === 'system' && <span>🖥️</span>}
             </button>
+            {isThemeMenuOpen && (
+              <div
+                className='absolute right-0 z-50 mt-2 w-40 rounded-lg border border-gray-300 bg-white p-2 shadow-lg dark:border-gray-700 dark:bg-gray-900'
+                onClick={e => e.stopPropagation()}
+              >
+                <button
+                  className={`flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm transition-colors ${theme === 'light' ? 'bg-gray-100 font-bold dark:bg-gray-800' : ''}`}
+                  onClick={e => {
+                    e.stopPropagation();
+                    setTheme('light');
+                    setIsThemeMenuOpen(false);
+                  }}
+                  type='button'
+                >
+                  <span>☀️</span> Light
+                </button>
+                <button
+                  className={`flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm transition-colors ${theme === 'dark' ? 'bg-gray-100 font-bold dark:bg-gray-800' : ''}`}
+                  onClick={e => {
+                    e.stopPropagation();
+                    setTheme('dark');
+                    setIsThemeMenuOpen(false);
+                  }}
+                  type='button'
+                >
+                  <span>🌙</span> Dark
+                </button>
+                <button
+                  className={`flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm transition-colors ${theme === 'system' ? 'bg-gray-100 font-bold dark:bg-gray-800' : ''}`}
+                  onClick={e => {
+                    e.stopPropagation();
+                    setTheme('system');
+                    setIsThemeMenuOpen(false);
+                  }}
+                  type='button'
+                >
+                  <span>🖥️</span> System
+                </button>
+              </div>
+            )}
           </li>
         </ul>
       </div>
