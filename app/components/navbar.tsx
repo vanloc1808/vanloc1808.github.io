@@ -119,7 +119,7 @@ const Navbar: FC = (): React.JSX.Element => {
           <li>
             <Link
               className='block px-4 py-2 no-underline outline-none hover:no-underline'
-              href='/#experiences'
+              href='/experiences'
               onClick={closeMenu}
             >
               <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
