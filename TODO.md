@@ -34,7 +34,7 @@
 - [ ] Implement proper form validation feedback
 - [ ] Add proper loading spinners for async operations
 - [ ] Implement proper mobile navigation menu
-- [ ] Add proper scroll-to-top button
+- [x] Add proper scroll-to-top button
 
 ## Content Improvements
 
