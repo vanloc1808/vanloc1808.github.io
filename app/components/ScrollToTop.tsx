@@ -1,12 +1,12 @@
 'use client';
 
-import { FC, useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FaArrowUp } from 'react-icons/fa';
 
-const ScrollToTop: FC = () => {
+const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Show button when page is scrolled up to given distance
+  // Show button when page is scrolled down
   const toggleVisibility = () => {
     if (window.scrollY > 300) {
       setIsVisible(true);
@@ -15,15 +15,7 @@ const ScrollToTop: FC = () => {
     }
   };
 
-  // Set the top cordinate to 0
-  // make scrolling smooth
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
-
+  // Set the scroll event listener
   useEffect(() => {
     window.addEventListener('scroll', toggleVisibility);
     return () => {
@@ -31,18 +23,26 @@ const ScrollToTop: FC = () => {
     };
   }, []);
 
+  // Scroll to top smoothly
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   return (
-    <div className='fixed bottom-8 right-8 z-50'>
+    <>
       {isVisible && (
         <button
           onClick={scrollToTop}
           aria-label='Scroll to top'
-          className='flex h-12 w-12 items-center justify-center rounded-full bg-violet-600 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50'
+          className='bg-primary-500 hover:bg-primary-600 focus:ring-primary-500 fixed bottom-8 right-8 z-50 transform rounded-full p-3 text-white shadow-lg transition-all duration-300 ease-in-out hover:scale-110 focus:outline-none focus:ring-2 focus:ring-opacity-50'
         >
           <FaArrowUp className='h-5 w-5' />
         </button>
       )}
-    </div>
+    </>
   );
 };
 
