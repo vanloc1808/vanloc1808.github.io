@@ -1,6 +1,6 @@
 'use client';
 
-import { FC } from 'react';
+import { FC, Suspense } from 'react';
 import { experiences } from '@/utils/data/experience';
 import experience from '/public/lottie/code.json';
 import dynamic from 'next/dynamic';
@@ -13,6 +13,7 @@ const AnimationLottie = dynamic(
 import GlowCard from '../components/helper/glow-card';
 import Image from 'next/image';
 import { BsPersonWorkspace } from 'react-icons/bs';
+import ExperienceSkeleton from '../components/ExperienceSkeleton';
 
 const Experience: FC = () => {
   return (
@@ -33,54 +34,56 @@ const Experience: FC = () => {
           </div>
 
           <div>
-            <div className='flex flex-col gap-4'>
-              {experiences.map(experience => (
-                <GlowCard
-                  key={experience.id}
-                  identifier={`experience-${experience.id}`}
-                >
-                  <div className='relative p-3'>
-                    <Image
-                      src='/blur-23.svg'
-                      alt='Hero'
-                      width={1080}
-                      height={200}
-                      className='absolute bottom-0 opacity-80'
-                    />
-                    <div className='flex justify-center'>
-                      <p className='text-xs text-[#448171] dark:text-[#16f2b3] sm:text-sm'>
-                        {experience.duration}
-                      </p>
-                    </div>
-                    <div className='flex items-center gap-x-8 px-3 py-5'>
-                      <div className='text-violet-600 transition-all duration-300 hover:scale-125 dark:text-violet-500'>
-                        <BsPersonWorkspace size={36} />
-                      </div>
-                      <div>
-                        <p className='mb-2 text-base font-medium uppercase sm:text-xl'>
-                          {experience.title}
-                        </p>
-                        <p className='text-sm text-gray-800 dark:text-gray-200 sm:text-base'>
-                          {experience.company}
-                        </p>
-                        {experience.companyLink && (
-                          <a
-                            href={experience.companyLink}
-                            target='_blank'
-                            className='text-sm text-[#448171] hover:underline dark:text-[#16f2b3] sm:text-base'
-                          >
-                            {experience.companyLink}
-                          </a>
-                        )}
-                        <p className='whitespace-pre-line text-sm text-gray-800 dark:text-gray-200 sm:text-base'>
-                          {experience.description}
+            <Suspense fallback={<ExperienceSkeleton />}>
+              <div className='flex flex-col gap-4'>
+                {experiences.map(experience => (
+                  <GlowCard
+                    key={experience.id}
+                    identifier={`experience-${experience.id}`}
+                  >
+                    <div className='relative p-3'>
+                      <Image
+                        src='/blur-23.svg'
+                        alt='Hero'
+                        width={1080}
+                        height={200}
+                        className='absolute bottom-0 opacity-80'
+                      />
+                      <div className='flex justify-center'>
+                        <p className='text-xs text-[#448171] dark:text-[#16f2b3] sm:text-sm'>
+                          {experience.duration}
                         </p>
                       </div>
+                      <div className='flex items-center gap-x-8 px-3 py-5'>
+                        <div className='text-violet-600 transition-all duration-300 hover:scale-125 dark:text-violet-500'>
+                          <BsPersonWorkspace size={36} />
+                        </div>
+                        <div>
+                          <p className='mb-2 text-base font-medium uppercase sm:text-xl'>
+                            {experience.title}
+                          </p>
+                          <p className='text-sm text-gray-800 dark:text-gray-200 sm:text-base'>
+                            {experience.company}
+                          </p>
+                          {experience.companyLink && (
+                            <a
+                              href={experience.companyLink}
+                              target='_blank'
+                              className='text-sm text-[#448171] hover:underline dark:text-[#16f2b3] sm:text-base'
+                            >
+                              {experience.companyLink}
+                            </a>
+                          )}
+                          <p className='whitespace-pre-line text-sm text-gray-800 dark:text-gray-200 sm:text-base'>
+                            {experience.description}
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </GlowCard>
-              ))}
-            </div>
+                  </GlowCard>
+                ))}
+              </div>
+            </Suspense>
           </div>
         </div>
       </div>
