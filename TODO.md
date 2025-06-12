@@ -23,7 +23,7 @@
 - [x] Add dark/light mode toggle animation
 - [ ] Add proper loading animations for page transitions
 - [x] Implement proper responsive design for all screen sizes
-- [ ] Add proper hover effects and animations
+- [x] Add proper hover effects and animations
 - [ ] Implement proper accessibility features (ARIA labels, keyboard navigation)
 - [ ] Implement proper image lazy loading
 - [ ] Add proper image optimization

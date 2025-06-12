@@ -16,13 +16,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
       <div className='relative w-full rounded-lg border border-gray-300 bg-gradient-to-r from-gray-100 to-gray-200 dark:border-[#1b2c68a0] dark:from-[#0d1224] dark:to-[#0a0d37]'>
         {/* Project Image */}
         {project.image && (
-          <div className='relative h-48 w-full overflow-hidden'>
+          <div className='relative h-48 w-full overflow-hidden transition-transform duration-300 group-hover:scale-105'>
             <Image
               src={project.image}
               alt={`${project.name} project screenshot`}
               fill
               sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
-              className='object-cover'
+              className='object-cover transition-transform duration-300 group-hover:scale-110'
               quality={85}
             />
           </div>
@@ -113,7 +113,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
                 <span className='text-gray-800 dark:text-white'>Code:</span>
                 <span className='text-cyan-600 dark:text-cyan-400'>
                   {' '}
-                  <a href={project.code} target='_blank' rel='noreferrer'>
+                  <a
+                    href={project.code}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='transition-colors duration-200 hover:text-cyan-400 dark:hover:text-cyan-300'
+                  >
                     {project.code}
                   </a>
                 </span>
@@ -132,6 +137,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
                     href={project.backend_code}
                     target='_blank'
                     rel='noreferrer'
+                    className='transition-colors duration-200 hover:text-cyan-400 dark:hover:text-cyan-300'
                   >
                     {project.backend_code}
                   </a>
@@ -151,6 +157,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
                     href={project.frontend_code}
                     target='_blank'
                     rel='noreferrer'
+                    className='transition-colors duration-200 hover:text-cyan-400 dark:hover:text-cyan-300'
                   >
                     {project.frontend_code}
                   </a>
@@ -164,7 +171,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
                 <span className='text-gray-800 dark:text-white'>Demo:</span>
                 <span className='text-cyan-600 dark:text-cyan-400'>
                   {' '}
-                  <a href={project.demo} target='_blank' rel='noreferrer'>
+                  <a
+                    href={project.demo}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='transition-colors duration-200 hover:text-cyan-400 dark:hover:text-cyan-300'
+                  >
                     {project.demo}
                   </a>
                 </span>
