@@ -12,7 +12,7 @@
 - [ ] Add proper security headers
 - [ ] Implement proper PWA support
 - [ ] Add proper testing (Unit, Integration, E2E)
-- [ ] Implement image optimization using next/image
+- [x] Implement image optimization using next/image
 - [ ] Add proper bundle analysis and optimization
 - [ ] Implement proper code splitting
 - [ ] Add proper service worker for offline support

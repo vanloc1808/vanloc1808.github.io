@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+import Image from 'next/image';
 import GlowCard from '../../helper/glow-card';
 import { Project } from '@/types/project';
 
@@ -13,6 +14,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
   return (
     <GlowCard identifier={identifier}>
       <div className='relative w-full rounded-lg border border-gray-300 bg-gradient-to-r from-gray-100 to-gray-200 dark:border-[#1b2c68a0] dark:from-[#0d1224] dark:to-[#0a0d37]'>
+        {/* Project Image */}
+        {project.image && (
+          <div className='relative h-48 w-full overflow-hidden'>
+            <Image
+              src={project.image}
+              alt={`${project.name} project screenshot`}
+              fill
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+              className='object-cover'
+              quality={85}
+            />
+          </div>
+        )}
+
         {/* Top gradient line */}
         <div className='flex flex-row'>
           <div className='h-[1px] w-full bg-gradient-to-r from-transparent via-pink-500 to-violet-600'></div>

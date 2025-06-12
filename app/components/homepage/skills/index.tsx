@@ -50,13 +50,14 @@ const Skills: FC = () => {
                   </div>
                 </div>
                 <div className='flex flex-col items-center justify-center gap-3 p-6'>
-                  <div className='h-8 sm:h-10'>
+                  <div className='relative h-8 w-8 sm:h-10 sm:w-10'>
                     <Image
                       src={skillsImage(skill)?.src}
                       alt={skill}
-                      width={40}
-                      height={40}
-                      className='h-full w-auto rounded-lg'
+                      fill
+                      sizes='(max-width: 768px) 32px, 40px'
+                      className='rounded-lg object-contain'
+                      quality={90}
                     />
                   </div>
                   <p className='text-sm text-gray-800 dark:text-white sm:text-lg'>
