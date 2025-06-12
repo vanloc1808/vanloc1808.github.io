@@ -23,14 +23,17 @@ const AboutSection: FC = () => {
           </p>
         </div>
         <div className='order-1 flex justify-center lg:order-2'>
-          <Image
-            src={personalData.profile}
-            width={360}
-            height={360}
-            alt='Van-Loc Nguyen'
-            className='cursor-pointer rounded-lg transition-all duration-1000 hover:scale-110 hover:grayscale-0'
-            style={{ width: 'auto', height: 'auto' }}
-          />
+          <div className='relative h-[360px] w-[360px] overflow-hidden rounded-lg'>
+            <Image
+              src={personalData.profile}
+              alt='Van-Loc Nguyen'
+              fill
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+              priority
+              quality={90}
+              className='cursor-pointer object-cover transition-all duration-1000 hover:scale-110 hover:grayscale-0'
+            />
+          </div>
         </div>
       </div>
     </div>
