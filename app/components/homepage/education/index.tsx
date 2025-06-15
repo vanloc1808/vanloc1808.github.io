@@ -17,6 +17,7 @@ interface EducationItem {
   title: string;
   institution: string;
   duration: string;
+  logo: string;
 }
 
 const Education: FC = () => {
@@ -77,8 +78,13 @@ const Education: FC = () => {
                       </p>
                     </div>
                     <div className='flex items-center gap-x-8 px-3 py-5'>
-                      <div className='text-violet-500 transition-all duration-300 hover:scale-125'>
-                        <BsPersonWorkspace size={36} />
+                      <div className='relative h-12 w-12 overflow-hidden rounded-full'>
+                        <Image
+                          src={education.logo}
+                          alt={`${education.institution} logo`}
+                          fill
+                          className='object-contain'
+                        />
                       </div>
                       <div>
                         <p className='mb-2 text-base font-medium uppercase sm:text-xl'>
