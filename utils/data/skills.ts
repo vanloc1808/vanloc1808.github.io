@@ -1,15 +1,15 @@
 export const skillsData: string[] = [
-  'Python',
-  'C',
-  'C++',
-  'Django',
-  'Jupyter',
-  'PyTorch',
-  'Git',
-  'Docker',
-  'PostgreSQL',
-  'Unity',
-  'FastAPI',
+  "Python",
+  "C",
+  "C++",
+  "Django",
+  "Jupyter",
+  "PyTorch",
+  "Git",
+  "Docker",
+  "PostgreSQL",
+  "Unity",
+  "FastAPI",
 ];
 
 // Choose your skills from below. Make sure it's in the same format and spelled correctly.
