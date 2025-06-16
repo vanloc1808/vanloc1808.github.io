@@ -50,9 +50,9 @@ const Education: FC = () => {
       </div>
 
       <div className='py-8'>
-        <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16'>
+        <div className='grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1.5fr] lg:gap-16'>
           <div className='flex items-start justify-center'>
-            <div className='h-3/4 w-3/4'>
+            <div className='h-1/2 w-1/2'>
               <AnimationLottie animationData={lottieFile} />
             </div>
           </div>
@@ -64,7 +64,7 @@ const Education: FC = () => {
                   key={education.id}
                   identifier={`education-${education.id}`}
                 >
-                  <div className='relative p-3 text-gray-800 dark:text-white'>
+                  <div className='relative p-8 text-gray-800 dark:text-white'>
                     <Image
                       src='/blur-23.svg'
                       alt='Hero'
@@ -77,8 +77,8 @@ const Education: FC = () => {
                         {education.duration}
                       </p>
                     </div>
-                    <div className='flex items-center gap-x-8 px-3 py-5'>
-                      <div className='relative h-12 w-12 overflow-hidden rounded-full'>
+                    <div className='flex items-center gap-x-8 px-6 py-8'>
+                      <div className='relative h-20 w-20 overflow-hidden rounded-full'>
                         <Image
                           src={education.logo}
                           alt={`${education.institution} logo`}
@@ -87,10 +87,10 @@ const Education: FC = () => {
                         />
                       </div>
                       <div>
-                        <p className='mb-2 text-base font-medium uppercase sm:text-xl'>
+                        <p className='mb-2 text-lg font-semibold uppercase sm:text-2xl'>
                           {education.title}
                         </p>
-                        <p className='text-sm sm:text-base'>
+                        <p className='text-base sm:text-lg'>
                           {education.institution}
                         </p>
                       </div>
