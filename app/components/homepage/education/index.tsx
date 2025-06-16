@@ -17,6 +17,7 @@ interface EducationItem {
   title: string;
   institution: string;
   duration: string;
+  logo: string;
 }
 
 const Education: FC = () => {
@@ -49,9 +50,9 @@ const Education: FC = () => {
       </div>
 
       <div className='py-8'>
-        <div className='grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16'>
+        <div className='grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1.5fr] lg:gap-16'>
           <div className='flex items-start justify-center'>
-            <div className='h-3/4 w-3/4'>
+            <div className='h-1/2 w-1/2'>
               <AnimationLottie animationData={lottieFile} />
             </div>
           </div>
@@ -63,7 +64,7 @@ const Education: FC = () => {
                   key={education.id}
                   identifier={`education-${education.id}`}
                 >
-                  <div className='relative p-3 text-gray-800 dark:text-white'>
+                  <div className='relative p-8 text-gray-800 dark:text-white'>
                     <Image
                       src='/blur-23.svg'
                       alt='Hero'
@@ -76,12 +77,17 @@ const Education: FC = () => {
                         {education.duration}
                       </p>
                     </div>
-                    <div className='flex items-center gap-x-8 px-3 py-5'>
-                      <div className='text-violet-500 transition-all duration-300 hover:scale-125'>
-                        <BsPersonWorkspace size={36} />
+                    <div className='flex items-start gap-x-8 px-6 py-8'>
+                      <div className='relative h-28 w-28 flex-shrink-0 overflow-hidden rounded-full'>
+                        <Image
+                          src={education.logo}
+                          alt={`${education.institution} logo`}
+                          fill
+                          className='object-contain'
+                        />
                       </div>
                       <div>
-                        <p className='mb-2 text-base font-medium uppercase sm:text-xl'>
+                        <p className='mb-2 text-base font-semibold uppercase sm:text-xl'>
                           {education.title}
                         </p>
                         <p className='text-sm sm:text-base'>
