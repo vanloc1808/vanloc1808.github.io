@@ -77,8 +77,8 @@ const Education: FC = () => {
                         {education.duration}
                       </p>
                     </div>
-                    <div className='flex items-center gap-x-8 px-6 py-8'>
-                      <div className='relative h-28 w-28 overflow-hidden rounded-full'>
+                    <div className='flex items-start gap-x-8 px-6 py-8'>
+                      <div className='relative h-28 w-28 flex-shrink-0 overflow-hidden rounded-full'>
                         <Image
                           src={education.logo}
                           alt={`${education.institution} logo`}
