@@ -18,6 +18,7 @@ interface EducationItem {
   institution: string;
   duration: string;
   logo: string;
+  secondLogo: string | null;
 }
 
 const Education: FC = () => {
@@ -78,14 +79,35 @@ const Education: FC = () => {
                       </p>
                     </div>
                     <div className='flex items-start gap-x-8 px-6 py-8'>
-                      <div className='relative h-28 w-28 flex-shrink-0 overflow-hidden rounded-full'>
-                        <Image
-                          src={education.logo}
-                          alt={`${education.institution} logo`}
-                          fill
-                          className='object-contain'
-                        />
-                      </div>
+                      {education.secondLogo ? (
+                        <div className='flex flex-shrink-0 flex-row items-center gap-x-4'>
+                          <div className='relative h-24 w-24 overflow-hidden rounded-full'>
+                            <Image
+                              src={education.logo}
+                              alt={`${education.institution} logo`}
+                              fill
+                              className='object-contain'
+                            />
+                          </div>
+                          <div className='relative h-24 w-24 overflow-hidden rounded-full'>
+                            <Image
+                              src={education.secondLogo}
+                              alt={`${education.institution} second logo`}
+                              fill
+                              className='object-contain'
+                            />
+                          </div>
+                        </div>
+                      ) : (
+                        <div className='relative flex h-28 w-28 flex-shrink-0 items-center justify-center overflow-hidden rounded-full'>
+                          <Image
+                            src={education.logo}
+                            alt={`${education.institution} logo`}
+                            fill
+                            className='object-contain'
+                          />
+                        </div>
+                      )}
                       <div>
                         <p className='mb-2 text-base font-semibold uppercase sm:text-xl'>
                           {education.title}
