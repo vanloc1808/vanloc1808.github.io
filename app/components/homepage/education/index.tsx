@@ -78,7 +78,7 @@ const Education: FC = () => {
                       </p>
                     </div>
                     <div className='flex items-center gap-x-8 px-6 py-8'>
-                      <div className='relative h-20 w-20 overflow-hidden rounded-full'>
+                      <div className='relative h-28 w-28 overflow-hidden rounded-full'>
                         <Image
                           src={education.logo}
                           alt={`${education.institution} logo`}
@@ -87,10 +87,10 @@ const Education: FC = () => {
                         />
                       </div>
                       <div>
-                        <p className='mb-2 text-lg font-semibold uppercase sm:text-2xl'>
+                        <p className='mb-2 text-base font-semibold uppercase sm:text-xl'>
                           {education.title}
                         </p>
-                        <p className='text-base sm:text-lg'>
+                        <p className='text-sm sm:text-base'>
                           {education.institution}
                         </p>
                       </div>
