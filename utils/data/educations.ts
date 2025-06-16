@@ -27,4 +27,13 @@ export const educations: Education[] = [
     logo: "/images/education/vnuhcm-logo.png",
     secondLogo: "/images/education/hcmus-logo.png",
   },
+  {
+    id: 3,
+    title: 'Gifted Student on Mathematics',
+    duration: 'Aug 2017 - Aug 2020',
+    institution:
+      'Le Quy Don High School for Gifted Students, Ba Ria - Vung Tau Province',
+    logo: '/images/education/lqd-logo.png',
+    secondLogo: null,
+  },
 ];
