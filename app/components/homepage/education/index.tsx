@@ -81,7 +81,7 @@ const Education: FC = () => {
                     <div className='flex items-start gap-x-8 px-6 py-8'>
                       {education.secondLogo ? (
                         <div className='flex flex-shrink-0 flex-row items-center gap-x-4'>
-                          <div className='relative h-24 w-24 overflow-hidden rounded-full'>
+                          <div className='relative h-24 w-24 overflow-hidden rounded-full dark:drop-shadow-[0_0_10px_white]'>
                             <Image
                               src={education.logo}
                               alt={`${education.institution} logo`}
@@ -89,7 +89,7 @@ const Education: FC = () => {
                               className='object-contain'
                             />
                           </div>
-                          <div className='relative h-24 w-24 overflow-hidden rounded-full'>
+                          <div className='relative h-24 w-24 overflow-hidden rounded-full dark:drop-shadow-[0_0_10px_white]'>
                             <Image
                               src={education.secondLogo}
                               alt={`${education.institution} second logo`}
@@ -99,7 +99,7 @@ const Education: FC = () => {
                           </div>
                         </div>
                       ) : (
-                        <div className='relative flex h-28 w-28 flex-shrink-0 items-center justify-center overflow-hidden rounded-full'>
+                        <div className='relative flex h-28 w-28 flex-shrink-0 items-center justify-center overflow-hidden rounded-full dark:drop-shadow-[0_0_10px_white]'>
                           <Image
                             src={education.logo}
                             alt={`${education.institution} logo`}
