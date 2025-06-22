@@ -54,13 +54,46 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang='en'>
       <body suppressHydrationWarning={true}>
         <ThemeProvider>
+          {/* Skip Links for Screen Readers and Keyboard Navigation */}
+          <a
+            href='#main-content'
+            className='sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[999] focus:rounded focus:bg-blue-600 focus:px-4 focus:py-2 focus:text-white focus:no-underline focus:shadow-lg'
+            tabIndex={0}
+          >
+            Skip to main content
+          </a>
+          <a
+            href='#navigation'
+            className='sr-only focus:not-sr-only focus:absolute focus:left-36 focus:top-4 focus:z-[999] focus:rounded focus:bg-blue-600 focus:px-4 focus:py-2 focus:text-white focus:no-underline focus:shadow-lg'
+            tabIndex={0}
+          >
+            Skip to navigation
+          </a>
+
           <ToastContainer />
-          <main className='relative mx-auto min-h-screen px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem]'>
-            <Navbar />
+
+          {/* Header with Navigation */}
+          <header role='banner'>
+            <nav id='navigation' aria-label='Main navigation'>
+              <Navbar />
+            </nav>
+          </header>
+
+          {/* Main Content Area */}
+          <main
+            id='main-content'
+            role='main'
+            className='relative mx-auto min-h-screen px-6 sm:px-12 lg:max-w-[70rem] xl:max-w-[76rem] 2xl:max-w-[92rem]'
+            aria-label='Main content'
+          >
             {children}
             <ScrollToTop />
           </main>
-          <Footer />
+
+          {/* Footer */}
+          <footer role='contentinfo'>
+            <Footer />
+          </footer>
         </ThemeProvider>
         {/* <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} /> */}
       </body>
