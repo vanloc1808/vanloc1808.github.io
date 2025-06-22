@@ -24,7 +24,7 @@
 - [ ] Add proper loading animations for page transitions
 - [x] Implement proper responsive design for all screen sizes
 - [x] Add proper hover effects and animations
-- [ ] Implement proper accessibility features (ARIA labels, keyboard navigation)
+- [x] Implement proper accessibility features (ARIA labels, keyboard navigation)
 - [ ] Implement proper image lazy loading
 - [ ] Add proper image optimization
 - [ ] Change "Subscribe to the newsletter" section to "Buy me a coffee"
