@@ -15,13 +15,21 @@ const ScrollToTop: FC = () => {
     }
   };
 
-  // Set the top cordinate to 0
+  // Set the top coordinate to 0
   // make scrolling smooth
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
     });
+  };
+
+  // Handle keyboard navigation
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      scrollToTop();
+    }
   };
 
   useEffect(() => {
@@ -36,10 +44,14 @@ const ScrollToTop: FC = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          aria-label='Scroll to top'
-          className='flex h-12 w-12 items-center justify-center rounded-full bg-violet-600 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-opacity-50'
+          onKeyDown={handleKeyDown}
+          aria-label='Scroll to top of page'
+          title='Scroll to top'
+          className='flex h-12 w-12 items-center justify-center rounded-full bg-violet-600 text-white shadow-lg transition-all duration-300 hover:scale-110 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2'
+          type='button'
         >
-          <FaArrowUp className='h-5 w-5' />
+          <FaArrowUp className='h-5 w-5' aria-hidden='true' />
+          <span className='sr-only'>Scroll to top</span>
         </button>
       )}
     </div>
