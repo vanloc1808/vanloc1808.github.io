@@ -91,12 +91,7 @@ const Education: FC = () => {
                         />
 
                         {/* Status badge */}
-                        <div className='mb-4 flex items-start justify-between'>
-                          <div className='flex justify-center'>
-                            <p className='text-xs text-[#448171] dark:text-[#16f2b3] sm:text-sm'>
-                              {education.duration}
-                            </p>
-                          </div>
+                        <div className='mb-4 flex items-start justify-end'>
                           <div
                             className={`rounded-full px-3 py-1 text-xs font-semibold ${
                               education.endYear === null
