@@ -42,6 +42,14 @@ const translations: Record<Locale, Translation> = {
         completed: 'Completed',
       },
     },
+    experience: {
+      title: 'EXPERIENCES',
+      present: 'Present',
+      timeline: {
+        current: 'Current',
+        completed: 'Completed',
+      },
+    },
     language: {
       english: 'English',
       vietnamese: 'Tiếng Việt',
@@ -67,6 +75,14 @@ const translations: Record<Locale, Translation> = {
       present: 'Hiện tại',
       timeline: {
         current: 'Đang học',
+        completed: 'Hoàn thành',
+      },
+    },
+    experience: {
+      title: 'KINH NGHIỆM',
+      present: 'Hiện tại',
+      timeline: {
+        current: 'Đang làm',
         completed: 'Hoàn thành',
       },
     },

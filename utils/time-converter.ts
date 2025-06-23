@@ -1,26 +1,57 @@
-export const timeConverter = (timestamp: number): string => {
-  const a = new Date(timestamp * 1000);
-  const months = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec',
-  ];
-  const year = a.getFullYear();
-  const month = months[a.getMonth()];
-  const date = a.getDate();
-  const hour = a.getHours();
-  const min = a.getMinutes();
-  const sec = a.getSeconds();
-  const time =
-    date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec;
-  return time;
+export const timeConverter = (inputDate: string) => {
+  const currentDate = new Date(inputDate);
+  const timeDifference = Date.now() - currentDate.getTime();
+  const timeAgo = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+  if (timeAgo === 0) {
+    return 'today';
+  } else if (timeAgo === 1) {
+    return 'yesterday';
+  } else if (timeAgo < 30) {
+    return `${timeAgo} days ago`;
+  } else if (timeAgo < 365) {
+    const monthsAgo = Math.floor(timeAgo / 30);
+    return monthsAgo === 1 ? 'a month ago' : `${monthsAgo} months ago`;
+  } else {
+    const yearsAgo = Math.floor(timeAgo / 365);
+    return yearsAgo === 1 ? 'a year ago' : `${yearsAgo} years ago`;
+  }
+};
+
+export const getMonthName = (
+  month: number,
+  locale: 'en' | 'vi' = 'en'
+): string => {
+  const monthNames = {
+    en: [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ],
+    vi: [
+      'T1',
+      'T2',
+      'T3',
+      'T4',
+      'T5',
+      'T6',
+      'T7',
+      'T8',
+      'T9',
+      'T10',
+      'T11',
+      'T12',
+    ],
+  };
+
+  return monthNames[locale][month - 1] || '';
 };
