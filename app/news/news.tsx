@@ -1,13 +1,14 @@
 'use client';
 
 import { FC } from 'react';
-import { newsData } from '@/utils/data/news-data';
+import { getNews } from '@/utils/data/news-data';
 import Image from 'next/image';
 import { BsNewspaper } from 'react-icons/bs';
 import { useTranslation } from '../context/I18nContext';
 
 const News: FC = () => {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
+  const newsData = getNews(locale);
 
   return (
     <div id='news' className='relative z-50 my-12 border-t lg:my-24'>

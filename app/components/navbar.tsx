@@ -209,7 +209,7 @@ const Navbar: FC = (): React.JSX.Element => {
             aria-label='Go to Publications page'
           >
             <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
-              PUBLICATIONS
+              {t('navigation.publications').toUpperCase()}
             </div>
           </Link>
           <Link

@@ -187,7 +187,7 @@ const translations: Record<Locale, Translation> = {
       frontendCode: 'Mã nguồn Frontend',
     },
     publications: {
-      title: 'CÔNG TRÌNH KHOA HỌC',
+      title: 'CÔNG TRÌNH',
       viewAll: 'Xem tất cả',
       readPaper: 'Đọc bài báo',
     },

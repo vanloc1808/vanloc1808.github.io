@@ -1,7 +1,7 @@
 'use client';
 
 import { FC } from 'react';
-import { publicationsData } from '@/utils/data/publications-data';
+import { getPublications } from '@/utils/data/publications-data';
 import experiences from '/public/lottie/code.json';
 import dynamic from 'next/dynamic';
 import { useTranslation } from '../context/I18nContext';
@@ -14,7 +14,8 @@ const AnimationLottie = dynamic(
 import PublicationCard from '../components/helper/publication-card';
 
 const Publication: FC = () => {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
+  const publicationsData = getPublications(locale);
 
   return (
     <div id='publication' className='relative z-50 my-12 border-t lg:my-24'>
