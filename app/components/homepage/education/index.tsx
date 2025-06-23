@@ -6,6 +6,7 @@ import { BsPersonWorkspace } from 'react-icons/bs';
 import GlowCard from '../../helper/glow-card';
 import lottieFile from '/public/lottie/study.json';
 import { FC } from 'react';
+import { useTranslation } from '../../../context/I18nContext';
 
 import dynamic from 'next/dynamic';
 const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), {
@@ -17,11 +18,15 @@ interface EducationItem {
   title: string;
   institution: string;
   duration: string;
+  startYear: number;
+  endYear: number | null;
   logo: string;
   secondLogo: string | null;
 }
 
 const Education: FC = () => {
+  const { t } = useTranslation('common');
+
   return (
     <div
       id='education'
@@ -44,7 +49,7 @@ const Education: FC = () => {
         <div className='flex items-center'>
           <span className='h-[2px] w-24 bg-[#1a1443] dark:bg-white'></span>
           <span className='w-fit rounded-md bg-gray-200 px-5 py-3 text-xl text-gray-800 dark:bg-[#1a1443] dark:text-white'>
-            EDUCATIONS
+            {t('education.title')}
           </span>
           <span className='h-[2px] w-24 bg-[#1a1443] dark:bg-white'></span>
         </div>
@@ -58,67 +63,119 @@ const Education: FC = () => {
             </div>
           </div>
 
-          <div>
-            <div className='flex flex-col gap-6'>
-              {educations.map((education: EducationItem) => (
-                <GlowCard
-                  key={education.id}
-                  identifier={`education-${education.id}`}
-                >
-                  <div className='relative p-8 text-gray-800 dark:text-white'>
-                    <Image
-                      src='/blur-23.svg'
-                      alt='Hero'
-                      width={1080}
-                      height={200}
-                      className='absolute bottom-0 opacity-80'
-                    />
-                    <div className='flex justify-center'>
-                      <p className='text-xs text-[#448171] dark:text-[#16f2b3] sm:text-sm'>
-                        {education.duration}
-                      </p>
-                    </div>
-                    <div className='flex items-start gap-x-8 px-6 py-8'>
-                      {education.secondLogo ? (
-                        <div className='flex flex-shrink-0 flex-row items-center gap-x-4'>
-                          <div className='relative h-24 w-24 overflow-hidden rounded-full dark:drop-shadow-[0_0_10px_white]'>
-                            <Image
-                              src={education.logo}
-                              alt={`${education.institution} logo`}
-                              fill
-                              className='object-contain'
-                            />
-                          </div>
-                          <div className='relative h-24 w-24 overflow-hidden rounded-full dark:drop-shadow-[0_0_10px_white]'>
-                            <Image
-                              src={education.secondLogo}
-                              alt={`${education.institution} second logo`}
-                              fill
-                              className='object-contain'
-                            />
-                          </div>
-                        </div>
-                      ) : (
-                        <div className='relative flex h-28 w-28 flex-shrink-0 items-center justify-center overflow-hidden rounded-full dark:drop-shadow-[0_0_10px_white]'>
-                          <Image
-                            src={education.logo}
-                            alt={`${education.institution} logo`}
-                            fill
-                            className='object-contain'
-                          />
-                        </div>
-                      )}
-                      <div>
-                        <p className='mb-2 text-base font-semibold uppercase sm:text-xl'>
-                          {education.title}
-                        </p>
-                        <p className='text-sm sm:text-base'>
-                          {education.institution}
-                        </p>
-                      </div>
-                    </div>
+          <div className='relative'>
+            {/* Timeline line */}
+            <div className='absolute bottom-0 left-8 top-0 w-0.5 bg-gradient-to-b from-violet-500 via-purple-500 to-pink-500 opacity-30'></div>
+
+            <div className='flex flex-col gap-8'>
+              {educations.map((education: EducationItem, index: number) => (
+                <div key={education.id} className='relative'>
+                  {/* Timeline dot */}
+                  <div className='absolute left-6 top-8 z-10 h-4 w-4 rounded-full border-4 border-white bg-gradient-to-r from-violet-500 to-purple-500 dark:border-[#0d1224]'></div>
+
+                  {/* Timeline year label */}
+                  <div className='absolute left-12 top-6 ml-4 text-sm font-semibold text-violet-500 dark:text-violet-400'>
+                    {education.startYear} -{' '}
+                    {education.endYear || t('timeline.present')}
                   </div>
-                </GlowCard>
+
+                  <div className='ml-16'>
+                    <GlowCard identifier={`education-${education.id}`}>
+                      <div className='relative p-8 text-gray-800 dark:text-white'>
+                        <Image
+                          src='/blur-23.svg'
+                          alt='Hero'
+                          width={1080}
+                          height={200}
+                          className='absolute bottom-0 opacity-80'
+                        />
+
+                        {/* Status badge */}
+                        <div className='mb-4 flex items-start justify-between'>
+                          <div className='flex justify-center'>
+                            <p className='text-xs text-[#448171] dark:text-[#16f2b3] sm:text-sm'>
+                              {education.duration}
+                            </p>
+                          </div>
+                          <div
+                            className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                              education.endYear === null
+                                ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
+                                : 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
+                            }`}
+                          >
+                            {education.endYear === null
+                              ? t('education.timeline.current')
+                              : t('education.timeline.completed')}
+                          </div>
+                        </div>
+
+                        <div className='flex items-start gap-x-8 px-6 py-4'>
+                          {education.secondLogo ? (
+                            <div className='flex flex-shrink-0 flex-row items-center gap-x-4'>
+                              <div className='relative h-20 w-20 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white]'>
+                                <Image
+                                  src={education.logo}
+                                  alt={`${education.institution} logo`}
+                                  fill
+                                  className='object-contain'
+                                />
+                              </div>
+                              <div className='relative h-20 w-20 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white]'>
+                                <Image
+                                  src={education.secondLogo}
+                                  alt={`${education.institution} second logo`}
+                                  fill
+                                  className='object-contain'
+                                />
+                              </div>
+                            </div>
+                          ) : (
+                            <div className='relative flex h-24 w-24 flex-shrink-0 items-center justify-center overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white]'>
+                              <Image
+                                src={education.logo}
+                                alt={`${education.institution} logo`}
+                                fill
+                                className='object-contain'
+                              />
+                            </div>
+                          )}
+                          <div className='flex-1'>
+                            <h3 className='mb-2 text-base font-semibold uppercase leading-tight sm:text-lg'>
+                              {education.title}
+                            </h3>
+                            <p className='text-sm text-gray-600 dark:text-gray-300 sm:text-base'>
+                              {education.institution}
+                            </p>
+
+                            {/* Timeline progress indicator */}
+                            <div className='mt-4 border-t border-gray-200 pt-4 dark:border-gray-700'>
+                              <div className='flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400'>
+                                <div className='flex items-center gap-1'>
+                                  <div className='h-2 w-2 rounded-full bg-violet-500'></div>
+                                  <span>{education.startYear}</span>
+                                </div>
+                                <div className='h-px flex-1 bg-gradient-to-r from-violet-500 to-purple-500'></div>
+                                <div className='flex items-center gap-1'>
+                                  <span>
+                                    {education.endYear || t('timeline.present')}
+                                  </span>
+                                  <div
+                                    className={`h-2 w-2 rounded-full ${
+                                      education.endYear === null
+                                        ? 'animate-pulse bg-green-500'
+                                        : 'bg-purple-500'
+                                    }`}
+                                  ></div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </GlowCard>
+                  </div>
+                </div>
               ))}
             </div>
           </div>

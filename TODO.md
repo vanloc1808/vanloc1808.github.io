@@ -27,11 +27,8 @@
 - [x] Implement proper accessibility features (ARIA labels, keyboard navigation)
 - [ ] Implement proper image lazy loading
 - [ ] Add proper image optimization
-- [ ] Change "Subscribe to the newsletter" section to "Buy me a coffee"
 - [x] Add "System" theme toggle
 - [ ] Implement smooth scroll behavior
-- [ ] Add proper toast notifications for user actions
-- [ ] Implement proper form validation feedback
 - [ ] Add proper loading spinners for async operations
 - [ ] Implement proper mobile navigation menu
 - [x] Add proper scroll-to-top button
@@ -43,11 +40,21 @@
 - [ ] Add proper case studies for projects
 - [ ] Add proper testimonials section
 - [ ] Add proper skills section with progress bars
-- [ ] Add proper education section with timeline
+- [x] Add proper education section with timeline ✅
+  - Implemented chronological timeline with visual timeline design
+  - Added start/end years with proper sorting (newest first)
+  - Added status badges (Current/Completed)
+  - Added timeline progress indicators
+  - Updated education data structure with startYear/endYear fields
 - [ ] Add proper contact form with proper validation
 - [ ] Add proper social media links
 - [ ] Add proper resume download button
-- [ ] Add proper language support (i18n)
+- [x] Add proper language support (i18n) ✅
+  - Implemented custom i18n context for App Router compatibility
+  - Added English and Vietnamese language support
+  - Created language switcher component with dropdown
+  - Integrated translations for navigation and education sections
+  - Added automatic locale detection and localStorage persistence
 - [ ] Add an Open Graph image at /public/og-image.png (1200x630px, branded with "vanloc1808")
 - [ ] Link to your site from your GitHub, LinkedIn, etc., using "vanloc1808" as anchor text
 - [ ] Make sure "vanloc1808" appears naturally in your About and other sections
