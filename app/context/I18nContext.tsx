@@ -45,6 +45,7 @@ const translations: Record<Locale, Translation> = {
     experience: {
       title: 'EXPERIENCES',
       present: 'Present',
+      viewAll: 'View More',
       timeline: {
         current: 'Current',
         completed: 'Completed',
@@ -57,6 +58,71 @@ const translations: Record<Locale, Translation> = {
     timeline: {
       present: 'Present',
       to: 'to',
+    },
+    hero: {
+      hello: 'Hello,',
+      thisIs: 'This is',
+      imAn: "I'm an",
+      contactMe: 'Contact me',
+      getResume: 'Get Resume',
+    },
+    about: {
+      title: 'ABOUT ME',
+      whoAmI: 'Who am I?',
+    },
+    skills: {
+      title: 'SKILLS',
+      description:
+        'I love to learn and explore new technologies and am passionate about problem-solving.',
+    },
+    projects: {
+      title: 'PROJECTS',
+      viewAll: 'View All',
+      viewDetails: 'View Details',
+      liveDemo: 'Live Demo',
+      sourceCode: 'Source Code',
+      backendCode: 'Backend Code',
+      frontendCode: 'Frontend Code',
+    },
+    publications: {
+      title: 'PUBLICATIONS',
+      viewAll: 'View All',
+      readPaper: 'Read Paper',
+    },
+    contact: {
+      title: 'CONTACT WITH ME',
+      description:
+        'I am always open to discussing new opportunities, interesting projects, or just having a chat about technology and innovation.',
+      nameLabel: 'Your Name',
+      emailLabel: 'Your Email',
+      messageLabel: 'Your Message',
+      sendMessage: 'Send Message',
+      namePlaceholder: 'Enter your name',
+      emailPlaceholder: 'Enter your email',
+      messagePlaceholder: 'Enter your message',
+    },
+    news: {
+      title: 'NEWS',
+      readMore: 'Read More',
+      viewAll: 'View All',
+    },
+    footer: {
+      rights: 'All rights reserved',
+      madeWith: 'Made with',
+      by: 'by',
+    },
+    common: {
+      loading: 'Loading...',
+      error: 'An error occurred',
+      retry: 'Retry',
+      close: 'Close',
+      save: 'Save',
+      cancel: 'Cancel',
+      submit: 'Submit',
+      back: 'Back',
+      next: 'Next',
+      previous: 'Previous',
+      all: 'All',
     },
   },
   vi: {
@@ -81,6 +147,7 @@ const translations: Record<Locale, Translation> = {
     experience: {
       title: 'KINH NGHIỆM',
       present: 'Hiện tại',
+      viewAll: 'Xem thêm',
       timeline: {
         current: 'Đang làm',
         completed: 'Hoàn thành',
@@ -93,6 +160,71 @@ const translations: Record<Locale, Translation> = {
     timeline: {
       present: 'Hiện tại',
       to: 'đến',
+    },
+    hero: {
+      hello: 'Xin chào,',
+      thisIs: 'Đây là',
+      imAn: 'Tôi là một',
+      contactMe: 'Liên hệ với tôi',
+      getResume: 'Tải CV',
+    },
+    about: {
+      title: 'VỀ TÔI',
+      whoAmI: 'Tôi là ai?',
+    },
+    skills: {
+      title: 'KỸ NĂNG',
+      description:
+        'Tôi thích học hỏi và khám phá các công nghệ mới, đồng thời đam mê việc giải quyết vấn đề.',
+    },
+    projects: {
+      title: 'DỰ ÁN',
+      viewAll: 'Xem tất cả',
+      viewDetails: 'Xem chi tiết',
+      liveDemo: 'Demo trực tiếp',
+      sourceCode: 'Mã nguồn',
+      backendCode: 'Mã nguồn Backend',
+      frontendCode: 'Mã nguồn Frontend',
+    },
+    publications: {
+      title: 'CÔNG TRÌNH KHOA HỌC',
+      viewAll: 'Xem tất cả',
+      readPaper: 'Đọc bài báo',
+    },
+    contact: {
+      title: 'LIÊN HỆ VỚI TÔI',
+      description:
+        'Tôi luôn sẵn sàng thảo luận về các cơ hội mới, dự án thú vị, hoặc chỉ đơn giản là trò chuyện về công nghệ và đổi mới.',
+      nameLabel: 'Tên của bạn',
+      emailLabel: 'Email của bạn',
+      messageLabel: 'Tin nhắn của bạn',
+      sendMessage: 'Gửi tin nhắn',
+      namePlaceholder: 'Nhập tên của bạn',
+      emailPlaceholder: 'Nhập email của bạn',
+      messagePlaceholder: 'Nhập tin nhắn của bạn',
+    },
+    news: {
+      title: 'TIN TỨC',
+      readMore: 'Đọc thêm',
+      viewAll: 'Xem tất cả',
+    },
+    footer: {
+      rights: 'Bảo lưu mọi quyền',
+      madeWith: 'Được tạo với',
+      by: 'bởi',
+    },
+    common: {
+      loading: 'Đang tải...',
+      error: 'Đã xảy ra lỗi',
+      retry: 'Thử lại',
+      close: 'Đóng',
+      save: 'Lưu',
+      cancel: 'Hủy',
+      submit: 'Gửi',
+      back: 'Quay lại',
+      next: 'Tiếp theo',
+      previous: 'Trước đó',
+      all: 'Tất cả',
     },
   },
 };

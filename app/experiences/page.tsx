@@ -1,7 +1,7 @@
 'use client';
 
 import { FC, Suspense } from 'react';
-import { experiences } from '@/utils/data/experience';
+import { getExperiences } from '@/utils/data/experience';
 import type { Experience } from '@/utils/data/experience';
 import experience from '/public/lottie/code.json';
 import dynamic from 'next/dynamic';
@@ -22,6 +22,7 @@ import { getMonthName } from '@/utils/time-converter';
 
 const Experience: FC = () => {
   const { t, locale } = useTranslation();
+  const experiences = getExperiences(locale);
 
   const formatDate = (month: number | null, year: number | null): string => {
     if (month === null || year === null) {
@@ -49,7 +50,7 @@ const Experience: FC = () => {
         <div className='flex items-center'>
           <span className='h-[2px] w-24 bg-[#1a1443] dark:bg-white'></span>
           <span className='w-fit rounded-md bg-gray-200 px-5 py-3 text-xl text-gray-800 dark:bg-[#1a1443] dark:text-white'>
-            ALL {t('experience.title')}
+            {t('common.all')} {t('experience.title')}
           </span>
           <span className='h-[2px] w-24 bg-[#1a1443] dark:bg-white'></span>
         </div>

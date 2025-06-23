@@ -5,6 +5,7 @@ import { useTheme } from '@/app/context/ThemeContext';
 import React, { FC, useState, useEffect, useRef } from 'react';
 import { useTranslation } from '../context/I18nContext';
 import LanguageSwitcher from './LanguageSwitcher';
+import { getPersonalData } from '@/utils/data/personal-data';
 
 /**
  * Interface for theme context properties.
@@ -55,7 +56,8 @@ const Navbar: FC = (): React.JSX.Element => {
   const [isThemeMenuOpen, setIsThemeMenuOpen] = useState<boolean>(false);
   const themeMenuRef = useRef<HTMLDivElement>(null);
   const themeButtonRef = useRef<HTMLButtonElement>(null);
-  const { t } = useTranslation();
+  const { locale, t } = useTranslation();
+  const personalData = getPersonalData(locale);
 
   // Helper function to get theme icon
   const getThemeIcon = () => {
@@ -142,9 +144,9 @@ const Navbar: FC = (): React.JSX.Element => {
             href='/'
             onClick={closeMenu}
             className='rounded text-3xl font-bold text-[#448171] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:text-[#16f2b3]'
-            aria-label='Van-Loc Nguyen - Go to homepage'
+            aria-label={`${personalData.name} - Go to homepage`}
           >
-            VAN-LOC NGUYEN
+            {personalData.name}
           </Link>
         </div>
 
@@ -177,7 +179,7 @@ const Navbar: FC = (): React.JSX.Element => {
             aria-label='Go to Skills section'
           >
             <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
-              SKILLS
+              {t('skills.title')}
             </div>
           </Link>
           <Link
@@ -207,7 +209,7 @@ const Navbar: FC = (): React.JSX.Element => {
             aria-label='Go to Publications page'
           >
             <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
-              {t('navigation.publications').toUpperCase()}
+              PUBLICATIONS
             </div>
           </Link>
           <Link
@@ -302,12 +304,11 @@ const Navbar: FC = (): React.JSX.Element => {
                   <span aria-hidden='true'>🖥️</span> System
                 </button>
               </div>
-            )}
-          </div>
-
-          {/* Language Switcher - Far Right */}
-          <div className='opacity-70 transition-opacity duration-200 hover:opacity-100'>
-            <LanguageSwitcher />
+            )}{' '}
+            {/* Language Switcher - Far Right */}
+            <div className='opacity-70 transition-opacity duration-200 hover:opacity-100'>
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
 

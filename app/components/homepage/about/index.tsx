@@ -1,14 +1,20 @@
-import { personalData } from '@/utils/data/personal-data';
+'use client';
+
+import { getPersonalData } from '@/utils/data/personal-data';
 import Image from 'next/image';
 import { FC } from 'react';
+import { useTranslation } from '@/app/context/I18nContext';
 
 const AboutSection: FC = () => {
+  const { locale, t } = useTranslation();
+  const personalData = getPersonalData(locale);
+
   return (
     <div id='about' className='relative my-12 lg:my-16'>
       {/* Adjusted sidebar colors for light/dark */}
       <div className='absolute -right-8 top-16 hidden flex-col items-center lg:flex'>
         <span className='w-fit rotate-90 rounded-md bg-gray-200 p-2 px-5 text-xl text-gray-800 dark:bg-[#1a1443] dark:text-white'>
-          ABOUT ME
+          {t('about.title')}
         </span>
         <span className='h-36 w-[2px] bg-gray-300 dark:bg-[#1a1443]'></span>
       </div>
@@ -16,7 +22,7 @@ const AboutSection: FC = () => {
         <div className='order-2 lg:order-1'>
           {/* Kept heading color, adjusted description text color */}
           <p className='mb-5 text-xl font-medium uppercase text-[#448171] dark:text-[#16f2b3]'>
-            Who am I?
+            {t('about.whoAmI')}
           </p>
           <p className='whitespace-pre-line text-sm text-gray-700 dark:text-gray-200 lg:text-lg'>
             {personalData.description}
@@ -26,7 +32,7 @@ const AboutSection: FC = () => {
           <div className='relative h-[360px] w-[360px] overflow-hidden rounded-lg'>
             <Image
               src={personalData.profile}
-              alt='Van-Loc Nguyen'
+              alt={personalData.name}
               fill
               sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               priority

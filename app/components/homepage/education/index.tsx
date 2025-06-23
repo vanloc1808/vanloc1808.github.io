@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { educations } from '@/utils/data/educations';
+import { getEducations } from '@/utils/data/educations';
 import GlowCard from '../../helper/glow-card';
 import lottieFile from '/public/lottie/study.json';
 import { FC } from 'react';
@@ -23,7 +23,8 @@ interface EducationItem {
 }
 
 const Education: FC = () => {
-  const { t } = useTranslation();
+  const { t, locale } = useTranslation();
+  const educations = getEducations(locale);
 
   return (
     <div

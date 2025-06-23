@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { experiences } from '@/utils/data/experience';
+import { getExperiences } from '@/utils/data/experience';
 import { BsPersonWorkspace } from 'react-icons/bs';
 import GlowCard from '../../helper/glow-card';
 import lottieFile from '/public/lottie/code.json';
@@ -30,6 +30,7 @@ interface ExperienceItem {
 
 const Experience: FC = () => {
   const { t, locale } = useTranslation();
+  const experiences = getExperiences(locale);
 
   const formatDate = (month: number | null, year: number | null): string => {
     if (month === null || year === null) {
@@ -194,7 +195,7 @@ const Experience: FC = () => {
           role='button'
           href='/experiences'
         >
-          <span>View More</span>
+          <span>{t('experience.viewAll') || 'View More'}</span>
           <FaArrowRight size={16} />
         </Link>
       </div>

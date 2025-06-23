@@ -4,6 +4,7 @@ import { FC } from 'react';
 import { publicationsData } from '@/utils/data/publications-data';
 import experiences from '/public/lottie/code.json';
 import dynamic from 'next/dynamic';
+import { useTranslation } from '../context/I18nContext';
 const AnimationLottie = dynamic(
   () => import('../components/helper/animation-lottie'),
   {
@@ -13,11 +14,13 @@ const AnimationLottie = dynamic(
 import PublicationCard from '../components/helper/publication-card';
 
 const Publication: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div id='publication' className='relative z-50 my-12 border-t lg:my-24'>
       <div className='relative my-5 flex items-center justify-start lg:py-8'>
         <span className='absolute left-0 w-fit rounded-md bg-gray-200 px-5 py-3 text-xl text-gray-800 dark:bg-[#1a1443] dark:text-white'>
-          ALL PUBLICATIONS
+          {t('common.all')} {t('navigation.publications')}
         </span>
         <span className='h-[2px] w-full bg-[#1a1443] dark:bg-white'></span>
       </div>

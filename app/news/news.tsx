@@ -1,14 +1,19 @@
+'use client';
+
 import { FC } from 'react';
 import { newsData } from '@/utils/data/news-data';
 import Image from 'next/image';
 import { BsNewspaper } from 'react-icons/bs';
+import { useTranslation } from '../context/I18nContext';
 
 const News: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div id='news' className='relative z-50 my-12 border-t lg:my-24'>
       <div className='relative my-5 flex items-center justify-start lg:py-8'>
         <span className='absolute left-0 w-fit rounded-md bg-gray-200 px-5 py-3 text-xl text-gray-800 dark:bg-[#1a1443] dark:text-white'>
-          ALL NEWS
+          {t('common.all')} {t('navigation.news')}
         </span>
         <span className='h-[2px] w-full bg-[#1a1443] dark:bg-white'></span>
       </div>

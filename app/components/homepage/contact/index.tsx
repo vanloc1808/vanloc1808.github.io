@@ -1,4 +1,6 @@
-import { personalData } from '@/utils/data/personal-data';
+'use client';
+
+import { getPersonalData } from '@/utils/data/personal-data';
 import Link from 'next/link';
 import { BiLogoLinkedin } from 'react-icons/bi';
 import { CiLocationOn } from 'react-icons/ci';
@@ -7,8 +9,12 @@ import { IoLogoGithub } from 'react-icons/io';
 import { MdAlternateEmail } from 'react-icons/md';
 import { SiGooglescholar } from 'react-icons/si';
 import { FC } from 'react';
+import { useTranslation } from '@/app/context/I18nContext';
 
 const ContactSection: FC = () => {
+  const { locale, t } = useTranslation();
+  const personalData = getPersonalData(locale);
+
   return (
     <section
       id='contact'
@@ -17,7 +23,7 @@ const ContactSection: FC = () => {
     >
       {/* Screen reader heading */}
       <h2 id='contact-heading' className='sr-only'>
-        Contact Information
+        {t('contact.title')}
       </h2>
 
       {/* Whole Grid Layout */}
@@ -148,7 +154,7 @@ const ContactSection: FC = () => {
         {/* Right side: CONTACT sidebar */}
         <div className='flex flex-col items-center' aria-hidden='true'>
           <span className='w-fit rotate-90 rounded-md bg-gray-200 p-2 px-5 text-xl text-gray-800 dark:bg-[#1a1443] dark:text-white'>
-            CONTACT
+            {t('navigation.contact').toUpperCase()}
           </span>
           <span className='mt-2 h-32 w-[1px] bg-gray-300 dark:bg-white'></span>
         </div>

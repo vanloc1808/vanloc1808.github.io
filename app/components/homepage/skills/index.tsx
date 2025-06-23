@@ -1,10 +1,15 @@
+'use client';
+
 import { skillsData } from '@/utils/data/skills';
 import { skillsImage } from '@/utils/skill-image';
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
 import { FC } from 'react';
+import { useTranslation } from '@/app/context/I18nContext';
 
 const Skills: FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div
       id='skills'
@@ -22,7 +27,7 @@ const Skills: FC = () => {
         <div className='flex items-center'>
           <span className='h-[2px] w-24 bg-[#1a1443] dark:bg-white'></span>
           <span className='w-fit rounded-md bg-gray-200 px-5 py-3 text-xl text-gray-800 dark:bg-[#1a1443] dark:text-white'>
-            SKILLS
+            {t('skills.title')}
           </span>
           <span className='h-[2px] w-24 bg-[#1a1443] dark:bg-white'></span>
         </div>
