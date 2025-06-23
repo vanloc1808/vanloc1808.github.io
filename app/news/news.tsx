@@ -2,7 +2,6 @@ import { FC } from 'react';
 import { newsData } from '@/utils/data/news-data';
 import Image from 'next/image';
 import { BsNewspaper } from 'react-icons/bs';
-import GlowCard from '../components/helper/glow-card';
 
 const News: FC = () => {
   return (

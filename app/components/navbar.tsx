@@ -57,6 +57,14 @@ const Navbar: FC = (): React.JSX.Element => {
   const themeButtonRef = useRef<HTMLButtonElement>(null);
   const { t } = useTranslation();
 
+  // Helper function to get theme icon
+  const getThemeIcon = () => {
+    if (theme === 'light') return '☀️';
+    if (theme === 'dark') return '🌙';
+    if (theme === 'system') return '🖥️';
+    return '🖥️';
+  };
+
   /**
    * Toggles the mobile menu open/closed state.
    *
@@ -242,11 +250,7 @@ const Navbar: FC = (): React.JSX.Element => {
               aria-haspopup='menu'
               type='button'
             >
-              <span aria-hidden='true'>
-                {theme === 'light' && '☀️'}
-                {theme === 'dark' && '🌙'}
-                {theme === 'system' && '🖥️'}
-              </span>
+              <span aria-hidden='true'>{getThemeIcon()}</span>
               <span className='sr-only'>Theme: {theme}</span>
             </button>
             {isThemeMenuOpen && (

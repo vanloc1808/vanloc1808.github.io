@@ -2,7 +2,6 @@
 
 import Image from 'next/image';
 import { educations } from '@/utils/data/educations';
-import { BsPersonWorkspace } from 'react-icons/bs';
 import GlowCard from '../../helper/glow-card';
 import lottieFile from '/public/lottie/study.json';
 import { FC } from 'react';
@@ -24,7 +23,7 @@ interface EducationItem {
 }
 
 const Education: FC = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation();
 
   return (
     <div
@@ -67,7 +66,7 @@ const Education: FC = () => {
             <div className='absolute bottom-0 left-8 top-0 w-0.5 bg-gradient-to-b from-violet-500 via-purple-500 to-pink-500 opacity-30'></div>
 
             <div className='flex flex-col gap-8'>
-              {educations.map((education: EducationItem, index: number) => (
+              {educations.map((education: EducationItem) => (
                 <div key={education.id} className='relative'>
                   {/* Timeline dot */}
                   <div className='absolute left-6 top-8 z-10 h-4 w-4 rounded-full border-4 border-white bg-gradient-to-r from-violet-500 to-purple-500 dark:border-[#0d1224]'></div>

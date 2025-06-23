@@ -5,7 +5,7 @@ import { FaGlobe } from 'react-icons/fa';
 import { useTranslation } from '../context/I18nContext';
 
 const LanguageSwitcher: FC = () => {
-  const { locale, setLocale, t } = useTranslation();
+  const { locale, setLocale } = useTranslation();
 
   return (
     <div className='group relative'>

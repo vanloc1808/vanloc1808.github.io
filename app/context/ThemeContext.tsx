@@ -55,11 +55,11 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     applyTheme(savedTheme);
 
     let mediaQuery: MediaQueryList | null = null;
-    let handleChange: ((e: MediaQueryListEvent) => void) | null = null;
+    let handleChange: (() => void) | null = null;
 
     if (savedTheme === 'system') {
       mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-      handleChange = (e: MediaQueryListEvent) => {
+      handleChange = () => {
         applyTheme('system');
       };
       mediaQuery.addEventListener('change', handleChange);
