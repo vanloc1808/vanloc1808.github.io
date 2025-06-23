@@ -2,7 +2,6 @@ interface Education {
   id: number;
   title: string;
   institution: string;
-  duration: string;
   startYear: number;
   endYear: number | null; // null means "Present"
   logo: string;
@@ -14,7 +13,6 @@ export const educations: Education[] = [
     id: 1,
     title:
       'Master of Science in Computer Science, majoring in Artificial Intelligence',
-    duration: 'Dec 2024 - Present',
     startYear: 2024,
     endYear: null, // Present
     institution:
@@ -25,7 +23,6 @@ export const educations: Education[] = [
   {
     id: 2,
     title: 'Bachelor of Science in Computer Science, Honors Program',
-    duration: 'Oct 2020 - Oct 2024',
     startYear: 2020,
     endYear: 2024,
     institution:
@@ -36,7 +33,6 @@ export const educations: Education[] = [
   {
     id: 3,
     title: 'Gifted Student on Mathematics',
-    duration: 'Aug 2017 - Aug 2020',
     startYear: 2017,
     endYear: 2020,
     institution:

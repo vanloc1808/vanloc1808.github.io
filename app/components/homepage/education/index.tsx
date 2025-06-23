@@ -17,7 +17,6 @@ interface EducationItem {
   id: number;
   title: string;
   institution: string;
-  duration: string;
   startYear: number;
   endYear: number | null;
   logo: string;
