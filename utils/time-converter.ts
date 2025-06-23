@@ -55,3 +55,46 @@ export const getMonthName = (
 
   return monthNames[locale][month - 1] || '';
 };
+
+export const formatDateForLocale = (
+  dateString: string,
+  locale: 'en' | 'vi' = 'en'
+): string => {
+  // Handle different date formats
+  let date: Date;
+
+  // Try to parse the date string
+  if (dateString.includes('tháng')) {
+    // Already in Vietnamese format, convert to Date object
+    const parts = dateString.match(/(\d+) tháng (\d+), (\d+)/);
+    if (parts) {
+      date = new Date(
+        parseInt(parts[3]),
+        parseInt(parts[2]) - 1,
+        parseInt(parts[1])
+      );
+    } else {
+      date = new Date(dateString);
+    }
+  } else {
+    date = new Date(dateString);
+  }
+
+  if (isNaN(date.getTime())) {
+    return dateString; // Return original if parsing fails
+  }
+
+  if (locale === 'vi') {
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
+    return `${day} tháng ${month}, ${year}`;
+  } else {
+    // Return English format
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+    });
+  }
+};

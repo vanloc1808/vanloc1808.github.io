@@ -97,12 +97,12 @@ export const news: MultilingualNews = {
     {
       date: '14 tháng 12, 2024',
       title:
-        '📄 Bài báo "NewsInsight2.0: Phiên bản Nâng cấp Tích hợp Tối ưu hóa Truy vấn dựa trên Mô hình Ngôn ngữ Lớn với Cơ chế Thời gian Tiên tiến" đã được công bố tại Hội nghị Quốc tế lần thứ 13 về Công nghệ Thông tin và Truyền thông (SOICT), 2024',
+        '📄 Bài báo "NewsInsight2.0: An Enhanced Version Integrating Large Language Model-Based Query Optimization with Advanced Temporal Mechanisms" đã được công bố tại Hội nghị Quốc tế lần thứ 13 về Công nghệ Thông tin và Truyền thông (SOICT), 2024',
     },
     {
       date: '9 tháng 12, 2024',
       title:
-        '📄 Bài báo "Một Phương pháp Tiếp cận Giải thích Dữ liệu Hình ảnh Phức tạp với Mô hình Thị giác-Ngôn ngữ" đã được công bố tại Hội thảo đầu tiên về Học tập và Ứng dụng Mô hình Thị giác-Ngôn ngữ Lớn, ACCV 2024',
+        '📄 Bài báo "An Approach to Complex Visual Data Interpretation with Vision-Language Models" đã được công bố tại Hội thảo đầu tiên về Học tập và Ứng dụng Mô hình Thị giác-Ngôn ngữ Lớn, ACCV 2024',
     },
     {
       date: '8 tháng 12, 2024',
@@ -143,17 +143,17 @@ export const news: MultilingualNews = {
     {
       date: '16 tháng 8, 2024',
       title:
-        '📄 Bài báo "Xác thực Ảnh được Tăng cường bởi AI: Phương pháp Tiếp cận Hướng tới Người dùng để Phát hiện và Phân tích Hình ảnh bị Thao túng" đã được công bố tại Hội nghị Quốc tế năm 2024 về Phân tích Đa phương tiện và Nhận dạng Mẫu (MAPR)',
+        '📄 Bài báo "AI-Enhanced Photo Authenticity: A User-Focused Approach to Detecting and Analyzing Manipulated Images" đã được công bố tại Hội nghị Quốc tế năm 2024 về Phân tích Đa phương tiện và Nhận dạng Mẫu (MAPR)',
     },
     {
       date: '2 tháng 7, 2024',
       title:
-        '📄 Bài báo "Phương pháp Kết hợp để Phát hiện Cheapfake Sử dụng Kiểm tra Uy tín và Mạng End-To-End" đã được công bố tại Hội thảo đầu tiên về Chiến lược Tập trung vào Bảo mật để Chống lại Rối loạn Thông tin, ACM AsiaCCS 2024',
+        '📄 Bài báo "A Hybrid Approach for Cheapfake Detection Using Reputation Checking and End-To-End Network" đã được công bố tại Hội thảo đầu tiên về Chiến lược Tập trung vào Bảo mật để Chống lại Rối loạn Thông tin, ACM AsiaCCS 2024',
     },
     {
       date: '11 tháng 6, 2024',
       title:
-        '📄 Bài báo "Mạng Thống nhất để Phát hiện Thông tin Ngoài Ngữ cảnh Sử dụng Dữ liệu Tổng hợp Sinh tạo" đã được công bố tại Hội nghị Quốc tế năm 2024 về Truy xuất Đa phương tiện (ACM ICMR 2024)',
+        '📄 Bài báo "A Unified Network for Detecting Out-Of-Context Information Using Generative Synthetic Data" đã được công bố tại Hội nghị Quốc tế năm 2024 về Truy xuất Đa phương tiện (ACM ICMR 2024)',
     },
     {
       date: '1 tháng 6, 2023',

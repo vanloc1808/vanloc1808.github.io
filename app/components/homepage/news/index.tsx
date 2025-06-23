@@ -5,6 +5,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
 import { FC } from 'react';
 import { useTranslation } from '@/app/context/I18nContext';
+import { formatDateForLocale } from '@/utils/time-converter';
 
 interface NewsItem {
   date: string;
@@ -35,7 +36,7 @@ const NewsSection: FC = () => {
               <li key={index} className='mb-4'>
                 {/* Kept date color */}
                 <span className='block text-[#448171] dark:text-[#16f2b3]'>
-                  {newsItem.date}
+                  {formatDateForLocale(newsItem.date, locale)}
                 </span>
                 {/* List item title inherits color from ul */}
                 <strong>{newsItem.title}</strong>

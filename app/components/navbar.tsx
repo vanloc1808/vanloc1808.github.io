@@ -304,11 +304,12 @@ const Navbar: FC = (): React.JSX.Element => {
                   <span aria-hidden='true'>🖥️</span> System
                 </button>
               </div>
-            )}{' '}
-            {/* Language Switcher - Far Right */}
-            <div className='opacity-70 transition-opacity duration-200 hover:opacity-100'>
-              <LanguageSwitcher />
-            </div>
+            )}
+          </div>
+
+          {/* Language Switcher - Far Right */}
+          <div className='opacity-70 transition-opacity duration-200 hover:opacity-100'>
+            <LanguageSwitcher />
           </div>
         </div>
 
