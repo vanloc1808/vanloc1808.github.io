@@ -30,8 +30,8 @@ const translations: Record<Locale, Translation> = {
       experience: 'Experience',
       education: 'Education',
       projects: 'Projects',
-      publications: 'Publications',
-      news: 'News',
+      publications: 'PUBLICATIONS',
+      news: 'NEWS',
       contact: 'Contact',
     },
     education: {
@@ -122,7 +122,7 @@ const translations: Record<Locale, Translation> = {
       back: 'Back',
       next: 'Next',
       previous: 'Previous',
-      all: 'All',
+      all: 'ALL',
     },
   },
   vi: {
@@ -132,8 +132,8 @@ const translations: Record<Locale, Translation> = {
       experience: 'Kinh nghiệm',
       education: 'Học vấn',
       projects: 'Dự án',
-      publications: 'Công trình',
-      news: 'Tin tức',
+      publications: 'CÔNG TRÌNH',
+      news: 'TIN TỨC',
       contact: 'Liên hệ',
     },
     education: {
@@ -224,7 +224,7 @@ const translations: Record<Locale, Translation> = {
       back: 'Quay lại',
       next: 'Tiếp theo',
       previous: 'Trước đó',
-      all: 'Tất cả',
+      all: 'TẤT CẢ',
     },
   },
 };
