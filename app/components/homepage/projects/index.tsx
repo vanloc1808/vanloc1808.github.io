@@ -1,11 +1,17 @@
-import { projectsData } from '@/utils/data/projects-data';
+'use client';
+
+import { getProjectsData } from '@/utils/data/projects-data';
 import { FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
 import ProjectCard from './project-card';
 import { FC } from 'react';
 import { Project } from '@/types/project';
+import { useTranslation } from '@/app/context/I18nContext';
 
 const Projects: FC = () => {
+  const { locale, t } = useTranslation();
+  const projectsData = getProjectsData(locale);
+
   return (
     <div id='projects' className='relative z-50 my-12 lg:my-24'>
       <div className='sticky top-10'>
@@ -14,7 +20,7 @@ const Projects: FC = () => {
           <div className='flex items-center'>
             <span className='h-[2px] w-24 bg-[#1a1443] dark:bg-white'></span>
             <span className='mx-3 w-fit rounded-md bg-gray-200 px-5 py-3 text-xl text-gray-800 dark:bg-[#1a1443] dark:text-white'>
-              PROJECTS
+              {t('projects.title')}
             </span>
             <span className='h-[2px] w-24 bg-[#1a1443] dark:bg-white'></span>
           </div>
@@ -46,7 +52,7 @@ const Projects: FC = () => {
           role='button'
           href='/projects'
         >
-          <span>View More</span>
+          <span>{t('projects.viewAll')}</span>
           <FaArrowRight size={16} />
         </Link>
       </div>

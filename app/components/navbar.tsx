@@ -3,6 +3,9 @@
 import Link from 'next/link';
 import { useTheme } from '@/app/context/ThemeContext';
 import React, { FC, useState, useEffect, useRef } from 'react';
+import { useTranslation } from '../context/I18nContext';
+import LanguageSwitcher from './LanguageSwitcher';
+import { getPersonalData } from '@/utils/data/personal-data';
 
 /**
  * Interface for theme context properties.
@@ -31,6 +34,7 @@ interface Theme {
  * Features:
  * - Responsive design with mobile hamburger menu
  * - Dark/light theme toggle
+ * - Internationalization support
  * - Smooth navigation transitions
  * - Full accessibility support with ARIA labels and keyboard navigation
  * - Auto-closing menu on navigation
@@ -52,6 +56,16 @@ const Navbar: FC = (): React.JSX.Element => {
   const [isThemeMenuOpen, setIsThemeMenuOpen] = useState<boolean>(false);
   const themeMenuRef = useRef<HTMLDivElement>(null);
   const themeButtonRef = useRef<HTMLButtonElement>(null);
+  const { locale, t } = useTranslation();
+  const personalData = getPersonalData(locale);
+
+  // Helper function to get theme icon
+  const getThemeIcon = () => {
+    if (theme === 'light') return '☀️';
+    if (theme === 'dark') return '🌙';
+    if (theme === 'system') return '🖥️';
+    return '🖥️';
+  };
 
   /**
    * Toggles the mobile menu open/closed state.
@@ -124,153 +138,108 @@ const Navbar: FC = (): React.JSX.Element => {
       aria-label='Main navigation'
       onKeyDown={handleMenuKeyDown}
     >
-      <div className='flex items-center justify-between py-5'>
+      <div className='flex items-center justify-between px-12 py-5 sm:px-16 lg:px-24 xl:px-32 2xl:px-40'>
         <div className='flex flex-shrink-0 items-center'>
           <Link
             href='/'
             onClick={closeMenu}
             className='rounded text-3xl font-bold text-[#448171] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:text-[#16f2b3]'
-            aria-label='Van-Loc Nguyen - Go to homepage'
+            aria-label={`${personalData.name} - Go to homepage`}
           >
-            VAN-LOC NGUYEN
+            {personalData.name}
           </Link>
         </div>
 
-        {/* Hamburger Menu Button */}
-        <button
-          onClick={toggleMenu}
-          className='flex h-10 w-10 flex-col items-center justify-center rounded border-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 md:hidden'
-          aria-label={
-            isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'
-          }
-          aria-expanded={isMenuOpen}
-          aria-controls='mobile-menu'
-          type='button'
-        >
-          <span className='sr-only'>
-            {isMenuOpen ? 'Close menu' : 'Open menu'}
-          </span>
-          <span
-            className={`block h-0.5 w-6 bg-gray-800 transition-all duration-300 dark:bg-white ${isMenuOpen ? 'translate-y-1.5 rotate-45' : ''}`}
-            aria-hidden='true'
-          ></span>
-          <span
-            className={`mt-1.5 block h-0.5 w-6 bg-gray-800 transition-all duration-300 dark:bg-white ${isMenuOpen ? 'opacity-0' : ''}`}
-            aria-hidden='true'
-          ></span>
-          <span
-            className={`mt-1.5 block h-0.5 w-6 bg-gray-800 transition-all duration-300 dark:bg-white ${isMenuOpen ? '-translate-y-1.5 -rotate-45' : ''}`}
-            aria-hidden='true'
-          ></span>
-        </button>
+        {/* Desktop Navigation Links */}
+        <div className='hidden items-center space-x-1 md:flex'>
+          <Link
+            className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+            href='/#about'
+            onClick={closeMenu}
+            aria-label='Go to About section'
+          >
+            <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+              {t('navigation.about').toUpperCase()}
+            </div>
+          </Link>
+          <Link
+            className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+            href='/experiences'
+            onClick={closeMenu}
+            aria-label='Go to Experiences page'
+          >
+            <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+              {t('navigation.experience').toUpperCase()}
+            </div>
+          </Link>
+          <Link
+            className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+            href='/#skills'
+            onClick={closeMenu}
+            aria-label='Go to Skills section'
+          >
+            <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+              {t('skills.title')}
+            </div>
+          </Link>
+          <Link
+            className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+            href='/#education'
+            onClick={closeMenu}
+            aria-label='Go to Education section'
+          >
+            <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+              {t('navigation.education').toUpperCase()}
+            </div>
+          </Link>
+          <Link
+            className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+            href='/projects'
+            onClick={closeMenu}
+            aria-label='Go to Projects page'
+          >
+            <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+              {t('navigation.projects').toUpperCase()}
+            </div>
+          </Link>
+          <Link
+            className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+            href='/publications'
+            onClick={closeMenu}
+            aria-label='Go to Publications page'
+          >
+            <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+              {t('navigation.publications').toUpperCase()}
+            </div>
+          </Link>
+          <Link
+            className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+            href='/news'
+            onClick={closeMenu}
+            aria-label='Go to News page'
+          >
+            <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+              {t('navigation.news').toUpperCase()}
+            </div>
+          </Link>
+          <Link
+            className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+            href='https://blog.nguyenvanloc.com/'
+            onClick={closeMenu}
+            aria-label='Go to Blogs (opens in new tab)'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+              BLOGS
+            </div>
+          </Link>
+        </div>
 
-        {/* Navigation Links */}
-        <ul
-          id='mobile-menu'
-          className={`absolute left-0 right-0 top-full mt-0 flex flex-col items-start bg-white text-sm transition-all duration-300 ease-in-out dark:bg-gray-900 md:relative md:flex md:flex-row md:items-center md:space-x-1 md:bg-transparent md:dark:bg-transparent ${isMenuOpen ? 'visible opacity-100' : 'invisible opacity-0 md:visible md:opacity-100'} space-y-4 border-b border-gray-200 px-4 py-4 shadow-lg dark:border-gray-700 md:space-y-0 md:border-none md:px-0 md:py-0 md:shadow-none`}
-          role='list'
-          aria-label='Navigation menu'
-        >
-          <li role='none'>
-            <Link
-              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
-              href='/#about'
-              onClick={closeMenu}
-              aria-label='Go to About section'
-            >
-              <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
-                ABOUT
-              </div>
-            </Link>
-          </li>
-          <li role='none'>
-            <Link
-              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
-              href='/experiences'
-              onClick={closeMenu}
-              aria-label='Go to Experiences page'
-            >
-              <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
-                EXPERIENCES
-              </div>
-            </Link>
-          </li>
-          <li role='none'>
-            <Link
-              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
-              href='/#skills'
-              onClick={closeMenu}
-              aria-label='Go to Skills section'
-            >
-              <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
-                SKILLS
-              </div>
-            </Link>
-          </li>
-          <li role='none'>
-            <Link
-              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
-              href='/#education'
-              onClick={closeMenu}
-              aria-label='Go to Education section'
-            >
-              <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
-                EDUCATIONS
-              </div>
-            </Link>
-          </li>
-          <li role='none'>
-            <Link
-              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
-              href='/projects'
-              onClick={closeMenu}
-              aria-label='Go to Projects page'
-            >
-              <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
-                PROJECTS
-              </div>
-            </Link>
-          </li>
-          <li role='none'>
-            <Link
-              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
-              href='/publications'
-              onClick={closeMenu}
-              aria-label='Go to Publications page'
-            >
-              <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
-                PUBLICATIONS
-              </div>
-            </Link>
-          </li>
-          <li role='none'>
-            <Link
-              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
-              href='/news'
-              onClick={closeMenu}
-              aria-label='Go to News page'
-            >
-              <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
-                NEWS
-              </div>
-            </Link>
-          </li>
-          <li role='none'>
-            <Link
-              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
-              href='https://blog.nguyenvanloc.com/'
-              onClick={closeMenu}
-              aria-label='Go to Blogs (opens in new tab)'
-              target='_blank'
-              rel='noopener noreferrer'
-            >
-              <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
-                BLOGS
-              </div>
-            </Link>
-          </li>
-          {/* Theme Toggle Button */}
-          <li className='relative' role='none'>
+        {/* Desktop Controls - Theme Toggle and Language Switcher */}
+        <div className='hidden items-center gap-4 md:flex'>
+          {/* Theme Toggle Button - Desktop */}
+          <div className='relative'>
             <button
               ref={themeButtonRef}
               onClick={e => {
@@ -283,11 +252,7 @@ const Navbar: FC = (): React.JSX.Element => {
               aria-haspopup='menu'
               type='button'
             >
-              <span aria-hidden='true'>
-                {theme === 'light' && '☀️'}
-                {theme === 'dark' && '🌙'}
-                {theme === 'system' && '🖥️'}
-              </span>
+              <span aria-hidden='true'>{getThemeIcon()}</span>
               <span className='sr-only'>Theme: {theme}</span>
             </button>
             {isThemeMenuOpen && (
@@ -340,6 +305,155 @@ const Navbar: FC = (): React.JSX.Element => {
                 </button>
               </div>
             )}
+          </div>
+
+          {/* Language Switcher - Far Right */}
+          <div className='opacity-70 transition-opacity duration-200 hover:opacity-100'>
+            <LanguageSwitcher />
+          </div>
+        </div>
+
+        {/* Hamburger Menu Button */}
+        <button
+          onClick={toggleMenu}
+          className='flex h-10 w-10 flex-col items-center justify-center rounded border-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 md:hidden'
+          aria-label={
+            isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'
+          }
+          aria-expanded={isMenuOpen}
+          aria-controls='mobile-menu'
+          type='button'
+        >
+          <span className='sr-only'>
+            {isMenuOpen ? 'Close menu' : 'Open menu'}
+          </span>
+          <span
+            className={`block h-0.5 w-6 bg-gray-800 transition-all duration-300 dark:bg-white ${isMenuOpen ? 'translate-y-1.5 rotate-45' : ''}`}
+            aria-hidden='true'
+          ></span>
+          <span
+            className={`mt-1.5 block h-0.5 w-6 bg-gray-800 transition-all duration-300 dark:bg-white ${isMenuOpen ? 'opacity-0' : ''}`}
+            aria-hidden='true'
+          ></span>
+          <span
+            className={`mt-1.5 block h-0.5 w-6 bg-gray-800 transition-all duration-300 dark:bg-white ${isMenuOpen ? '-translate-y-1.5 -rotate-45' : ''}`}
+            aria-hidden='true'
+          ></span>
+        </button>
+
+        {/* Mobile Navigation Menu */}
+        <ul
+          id='mobile-menu'
+          className={`absolute left-0 right-0 top-full mt-0 flex flex-col items-start bg-white text-sm transition-all duration-300 ease-in-out dark:bg-gray-900 md:hidden ${isMenuOpen ? 'visible opacity-100' : 'invisible opacity-0'} space-y-4 border-b border-gray-200 px-4 py-4 shadow-lg dark:border-gray-700`}
+          role='menu'
+          aria-label='Mobile navigation menu'
+          aria-hidden={!isMenuOpen}
+        >
+          <li role='none'>
+            <Link
+              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+              href='/#about'
+              onClick={closeMenu}
+              role='menuitem'
+              aria-label='Go to About section'
+            >
+              <div className='text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+                {t('navigation.about').toUpperCase()}
+              </div>
+            </Link>
+          </li>
+          <li role='none'>
+            <Link
+              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+              href='/experiences'
+              onClick={closeMenu}
+              role='menuitem'
+              aria-label='Go to Experiences page'
+            >
+              <div className='text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+                {t('navigation.experience').toUpperCase()}
+              </div>
+            </Link>
+          </li>
+          <li role='none'>
+            <Link
+              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+              href='/#skills'
+              onClick={closeMenu}
+              role='menuitem'
+              aria-label='Go to Skills section'
+            >
+              <div className='text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+                SKILLS
+              </div>
+            </Link>
+          </li>
+          <li role='none'>
+            <Link
+              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+              href='/#education'
+              onClick={closeMenu}
+              role='menuitem'
+              aria-label='Go to Education section'
+            >
+              <div className='text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+                {t('navigation.education').toUpperCase()}
+              </div>
+            </Link>
+          </li>
+          <li role='none'>
+            <Link
+              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+              href='/projects'
+              onClick={closeMenu}
+              role='menuitem'
+              aria-label='Go to Projects page'
+            >
+              <div className='text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+                {t('navigation.projects').toUpperCase()}
+              </div>
+            </Link>
+          </li>
+          <li role='none'>
+            <Link
+              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+              href='/publications'
+              onClick={closeMenu}
+              role='menuitem'
+              aria-label='Go to Publications page'
+            >
+              <div className='text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+                {t('navigation.publications').toUpperCase()}
+              </div>
+            </Link>
+          </li>
+          <li role='none'>
+            <Link
+              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+              href='/news'
+              onClick={closeMenu}
+              role='menuitem'
+              aria-label='Go to News page'
+            >
+              <div className='text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+                {t('navigation.news').toUpperCase()}
+              </div>
+            </Link>
+          </li>
+          <li role='none'>
+            <Link
+              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+              href='https://blog.nguyenvanloc.com/'
+              onClick={closeMenu}
+              role='menuitem'
+              aria-label='Go to Blogs (opens in new tab)'
+              target='_blank'
+              rel='noopener noreferrer'
+            >
+              <div className='text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+                BLOGS
+              </div>
+            </Link>
           </li>
         </ul>
       </div>

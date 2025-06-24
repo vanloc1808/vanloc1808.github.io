@@ -1,4 +1,6 @@
-import { personalData } from '@/utils/data/personal-data';
+'use client';
+
+import { getPersonalData } from '@/utils/data/personal-data';
 import { CoderProfile } from '@/app/types/personal';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -8,10 +10,14 @@ import { MdDownload } from 'react-icons/md';
 import { RiContactsFill } from 'react-icons/ri';
 import { SiLeetcode, SiGooglescholar } from 'react-icons/si';
 import { FC } from 'react';
+import { useTranslation } from '@/app/context/I18nContext';
 
 const HeroSection: FC = () => {
+  const { locale, t } = useTranslation();
+  const personalData = getPersonalData(locale);
+
   const coderProfile: CoderProfile = {
-    name: 'Van-Loc Nguyen',
+    name: locale === 'vi' ? 'Nguyễn Văn Lộc' : 'Van-Loc Nguyen',
     skills: ['Python', 'C++', 'PyTorch', 'Jupyter Notebook', 'FastAPI'],
     hardWorker: true,
     quickLearner: true,
@@ -39,12 +45,12 @@ const HeroSection: FC = () => {
       <div className='grid grid-cols-1 items-start gap-y-8 lg:grid-cols-2 lg:gap-12'>
         <div className='order-2 flex flex-col items-start justify-center p-2 pb-20 md:pb-10 lg:order-1 lg:pt-10'>
           <h1 className='text-3xl font-bold leading-10 text-gray-800 dark:text-white md:font-extrabold lg:text-[2.6rem] lg:leading-[3.5rem]'>
-            Hello, <br />
-            This is{' '}
+            {t('hero.hello')} <br />
+            {t('hero.thisIs')}{' '}
             <span className='text-pink-500 dark:text-pink-500'>
               {personalData.name}
             </span>
-            {` (vanloc1808), I'm an `}
+            {` (vanloc1808), ${t('hero.imAn')} `}
             <span className='text-[#448171] dark:text-[#16f2b3]'>
               {personalData.designation}
             </span>
@@ -125,7 +131,7 @@ const HeroSection: FC = () => {
                 className='flex items-center gap-1 rounded-full border-none bg-white px-3 py-3 text-center text-xs font-medium uppercase tracking-wider text-violet-600 no-underline transition-all duration-200 ease-out hover:gap-3 focus:outline-none dark:bg-[#0d1224] dark:text-[#ffff] md:px-8 md:py-4 md:text-sm md:font-semibold'
                 type='button'
               >
-                <span>Contact me</span>
+                <span>{t('hero.contactMe')}</span>
                 <RiContactsFill size={16} aria-hidden='true' />
               </button>
             </Link>
@@ -138,7 +144,7 @@ const HeroSection: FC = () => {
               href={personalData.resume}
               aria-label='Download my resume (PDF, opens in new tab)'
             >
-              <span>Get Resume</span>
+              <span>{t('hero.getResume')}</span>
               <MdDownload size={16} aria-hidden='true' />
             </Link>
           </div>

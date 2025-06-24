@@ -2,6 +2,8 @@ import Image from 'next/image';
 import { BsPersonWorkspace } from 'react-icons/bs';
 import GlowCard from './glow-card';
 import { FC } from 'react';
+import { formatDateForLocale } from '@/utils/time-converter';
+import { useTranslation } from '@/app/context/I18nContext';
 
 interface Publication {
   id: number;
@@ -21,6 +23,8 @@ const PublicationCard: FC<PublicationCardProps> = ({
   publication,
   identifier,
 }) => {
+  const { locale } = useTranslation();
+
   return (
     <a
       href={publication.url}
@@ -49,7 +53,7 @@ const PublicationCard: FC<PublicationCardProps> = ({
                 Published at {publication.conference}
               </p>
               <p className='mb-2 text-xs text-[#df7518] sm:text-sm'>
-                {publication.date}
+                {formatDateForLocale(publication.date, locale)}
               </p>
               <p className='mb-2 break-words text-sm sm:text-base'>
                 {publication.description}

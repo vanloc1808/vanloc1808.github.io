@@ -1,16 +1,22 @@
+'use client';
+
 import { FC, Suspense } from 'react';
-import { projectsData } from '@/utils/data/projects-data';
+import { getProjectsData } from '@/utils/data/projects-data';
 import ProjectCard from '../components/homepage/projects/project-card';
 import ProjectSkeleton from '../components/ProjectSkeleton';
+import { useTranslation } from '../context/I18nContext';
 
 const Projects: FC = () => {
+  const { locale, t } = useTranslation();
+  const projectsData = getProjectsData(locale);
+
   return (
     <div id='projects' className='relative z-50 my-12 lg:my-24'>
       <div className='sticky top-10'>
         <div className='absolute -top-3 left-0 h-[80px] w-[80px] translate-x-1/2 rounded-full bg-violet-100 opacity-30 blur-3xl filter'></div>
         <div className='relative flex items-center justify-start'>
           <span className='absolute left-0 w-fit rounded-md bg-gray-200 px-5 py-3 text-xl text-gray-800 dark:bg-[#1a1443] dark:text-white'>
-            ALL PROJECTS
+            {t('common.all')} {t('projects.title')}
           </span>
           <span className='h-[2px] w-full bg-[#1a1443]'></span>
         </div>

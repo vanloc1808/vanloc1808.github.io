@@ -1,6 +1,6 @@
 'use client';
 
-import { publicationsData } from '@/utils/data/publications-data';
+import { getPublications } from '@/utils/data/publications-data';
 import dynamic from 'next/dynamic';
 const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), {
   ssr: false,
@@ -10,6 +10,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
 import { FC } from 'react';
 import PublicationCard from '../../helper/publication-card';
+import { useTranslation } from '@/app/context/I18nContext';
 
 interface PublicationItem {
   id: number;
@@ -21,6 +22,9 @@ interface PublicationItem {
 }
 
 const Publication: FC = () => {
+  const { t, locale } = useTranslation();
+  const publicationsData = getPublications(locale);
+
   return (
     <div
       id='publication'
@@ -30,7 +34,7 @@ const Publication: FC = () => {
         <div className='flex items-center'>
           <span className='h-[2px] w-24 bg-[#1a1443]'></span>
           <span className='w-fit rounded-md bg-gray-200 px-5 py-3 text-xl text-gray-800 dark:bg-[#1a1443] dark:text-white'>
-            RECENT PUBLICATIONS
+            {t('publications.title')}
           </span>
           <span className='h-[2px] w-24 bg-[#1a1443]'></span>
         </div>
@@ -65,7 +69,7 @@ const Publication: FC = () => {
           role='button'
           href='/publications'
         >
-          <span>View More</span>
+          <span>{t('publications.viewAll')}</span>
           <FaArrowRight size={16} />
         </Link>
       </div>
