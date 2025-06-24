@@ -43,20 +43,6 @@ export const news: MultilingualNews = {
         '🎓 Graduated at rank 6/59 of the Bachelor of Science - Honors Program in Information Technology at the University of Science, VNUHCM.',
     },
     {
-      date: 'October 23, 2024',
-      title: '📄 One paper (co-author) accepted at SOICT 2024',
-    },
-    {
-      date: 'October 19, 2024',
-      title:
-        '📄 One paper (co-first-author) accepted at LAVA Workshop, ACCV 2024',
-    },
-    {
-      date: 'October 8, 2024',
-      title:
-        '🎯 Advanced to the final round of AI Challenge, Ho Chi Minh City 2024',
-    },
-    {
       date: 'October 7, 2024',
       title: '🏆 Won first prize at the LAVA Workshop Challenge, ACCV 2024',
     },
@@ -118,20 +104,6 @@ export const news: MultilingualNews = {
       date: '1 tháng 12, 2024',
       title:
         '🎓 Tốt nghiệp với thứ hạng 6/59 của Chương trình Cử nhân Tài năng Công nghệ Thông tin tại Trường Đại học Khoa học Tự nhiên, ĐHQG-HCM.',
-    },
-    {
-      date: '23 tháng 10, 2024',
-      title: '📄 Một bài báo (đồng tác giả) được chấp nhận tại SOICT 2024',
-    },
-    {
-      date: '19 tháng 10, 2024',
-      title:
-        '📄 Một bài báo (đồng tác giả chính) được chấp nhận tại LAVA Workshop, ACCV 2024',
-    },
-    {
-      date: '8 tháng 10, 2024',
-      title:
-        '🎯 Vào vòng chung kết của Thử thách AI, Thành phố Hồ Chí Minh 2024',
     },
     {
       date: '7 tháng 10, 2024',
