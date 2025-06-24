@@ -107,11 +107,12 @@ export const news: MultilingualNews = {
     {
       date: '8 tháng 12, 2024',
       title:
-        '🏆 Đạt giải ba tại Giải thưởng Nghiên cứu Khoa học Sinh viên lần thứ 26 - Euréka, 2024',
+        '🏆 Đạt giải ba tại Giải thưởng Sinh viên Nghiên cứu Khoa học Euréka lần thứ 26, 2024',
     },
     {
       date: '5 tháng 12, 2024',
-      title: '🏆 Đạt giải ba tại Thử thách AI, Thành phố Hồ Chí Minh 2024',
+      title:
+        '🏆 Đạt giải ba tại Hội thi thử thách Trí tuệ nhân tạo (AI Challenge), Thành phố Hồ Chí Minh 2024',
     },
     {
       date: '1 tháng 12, 2024',
