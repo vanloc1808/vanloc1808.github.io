@@ -139,7 +139,7 @@ export const news: MultilingualNews = {
     },
     {
       date: '25 tháng 8, 2024',
-      title: '📚 Bảo vệ thành công luận văn tốt nghiệp với điểm 10.00',
+      title: '📚 Bảo vệ thành công khóa luận tốt nghiệp với điểm 10.00',
     },
     {
       date: '16 tháng 8, 2024',
