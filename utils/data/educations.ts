@@ -1,8 +1,10 @@
-interface Education {
+export interface Education {
   id: number;
   title: string;
   institution: string;
+  startMonth: number;
   startYear: number;
+  endMonth: number | null;
   endYear: number | null; // null means "Present"
   logo: string;
   secondLogo: string | null;
@@ -19,7 +21,9 @@ export const educations: MultilingualEducations = {
       id: 1,
       title:
         'Master of Science in Computer Science, majoring in Artificial Intelligence',
+      startMonth: 12, // December
       startYear: 2024,
+      endMonth: null,
       endYear: null, // Present
       institution:
         'University of Science, Vietnam National University Ho Chi Minh City',
@@ -29,7 +33,9 @@ export const educations: MultilingualEducations = {
     {
       id: 2,
       title: 'Bachelor of Science in Computer Science, Honors Program',
+      startMonth: 10, // October
       startYear: 2020,
+      endMonth: 10, // October
       endYear: 2024,
       institution:
         'University of Science, Vietnam National University Ho Chi Minh City',
@@ -39,7 +45,9 @@ export const educations: MultilingualEducations = {
     {
       id: 3,
       title: 'Gifted Student on Mathematics',
+      startMonth: 8, // August
       startYear: 2017,
+      endMonth: 8, // August
       endYear: 2020,
       institution:
         'Le Quy Don High School for Gifted Students, Ba Ria - Vung Tau Province',
@@ -54,7 +62,9 @@ export const educations: MultilingualEducations = {
     {
       id: 1,
       title: 'Thạc sĩ Khoa học Máy tính, chuyên ngành Trí tuệ Nhân tạo',
+      startMonth: 12, // Tháng 12
       startYear: 2024,
+      endMonth: null,
       endYear: null, // Present
       institution:
         'Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Thành phố Hồ Chí Minh',
@@ -64,7 +74,9 @@ export const educations: MultilingualEducations = {
     {
       id: 2,
       title: 'Cử nhân Khoa học Máy tính, Chương trình Cử nhân Tài năng',
+      startMonth: 10, // Tháng 10
       startYear: 2020,
+      endMonth: 10, // Tháng 10
       endYear: 2024,
       institution:
         'Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Thành phố Hồ Chí Minh',
@@ -74,7 +86,9 @@ export const educations: MultilingualEducations = {
     {
       id: 3,
       title: 'Học sinh Chuyên Toán',
+      startMonth: 8, // Tháng 8
       startYear: 2017,
+      endMonth: 8, // Tháng 8
       endYear: 2020,
       institution: 'Trường THPT Chuyên Lê Quý Đôn, Tỉnh Bà Rịa - Vũng Tàu',
       logo: '/images/education/lqd-logo.png',
