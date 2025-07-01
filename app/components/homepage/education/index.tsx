@@ -33,7 +33,7 @@ const Education: FC = () => {
     >
       <Image
         src='/section.svg'
-        alt='Hero'
+        alt='Section background decoration'
         width={1572}
         height={795}
         className='absolute top-0 -z-10'
@@ -81,14 +81,6 @@ const Education: FC = () => {
                   <div className='ml-16'>
                     <GlowCard identifier={`education-${education.id}`}>
                       <div className='relative p-8 text-gray-800 dark:text-white'>
-                        <Image
-                          src='/blur-23.svg'
-                          alt='Hero'
-                          width={1080}
-                          height={200}
-                          className='absolute bottom-0 opacity-80'
-                        />
-
                         {/* Status badge */}
                         <div className='mb-4 flex items-start justify-end'>
                           <div
@@ -104,10 +96,10 @@ const Education: FC = () => {
                           </div>
                         </div>
 
-                        <div className='flex items-start gap-x-8 px-6 py-4'>
+                        <div className='flex items-start gap-x-4 px-6 py-4 sm:gap-x-6 lg:gap-x-8'>
                           {education.secondLogo ? (
-                            <div className='flex flex-shrink-0 flex-row items-center gap-x-4'>
-                              <div className='relative h-20 w-20 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white]'>
+                            <div className='flex flex-shrink-0 flex-row items-center gap-x-2 sm:gap-x-3 lg:gap-x-4'>
+                              <div className='relative h-12 w-12 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-16 sm:w-16 lg:h-20 lg:w-20'>
                                 <Image
                                   src={education.logo}
                                   alt={`${education.institution} logo`}
@@ -115,7 +107,7 @@ const Education: FC = () => {
                                   className='object-contain'
                                 />
                               </div>
-                              <div className='relative h-20 w-20 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white]'>
+                              <div className='relative h-12 w-12 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-16 sm:w-16 lg:h-20 lg:w-20'>
                                 <Image
                                   src={education.secondLogo}
                                   alt={`${education.institution} second logo`}
@@ -125,7 +117,7 @@ const Education: FC = () => {
                               </div>
                             </div>
                           ) : (
-                            <div className='relative flex h-24 w-24 flex-shrink-0 items-center justify-center overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white]'>
+                            <div className='relative flex h-12 w-12 flex-shrink-0 items-center justify-center overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-16 sm:w-16 lg:h-20 lg:w-20'>
                               <Image
                                 src={education.logo}
                                 alt={`${education.institution} logo`}

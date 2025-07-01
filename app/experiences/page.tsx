@@ -35,7 +35,7 @@ const Experience: FC = () => {
     <div id='experiences' className='relative z-50 my-12 border-t lg:my-24'>
       <Image
         src='/section.svg'
-        alt='Hero'
+        alt='Section background decoration'
         width={1572}
         height={795}
         className='absolute top-0 -z-10'
@@ -84,14 +84,6 @@ const Experience: FC = () => {
                     <div className='ml-16'>
                       <GlowCard identifier={`experience-${experience.id}`}>
                         <div className='relative p-8 text-gray-800 dark:text-white'>
-                          <Image
-                            src='/blur-23.svg'
-                            alt='Hero'
-                            width={1080}
-                            height={200}
-                            className='absolute bottom-0 opacity-80'
-                          />
-
                           {/* Status badge */}
                           <div className='mb-4 flex items-start justify-end'>
                             <div
@@ -109,11 +101,11 @@ const Experience: FC = () => {
                             </div>
                           </div>
 
-                          <div className='flex items-start gap-x-8 px-6 py-4'>
-                            <div className='flex h-24 w-24 flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-violet-500 to-purple-500 shadow-lg dark:drop-shadow-[0_0_10px_white]'>
+                          <div className='flex items-start gap-x-4 px-6 py-4 sm:gap-x-6 lg:gap-x-8'>
+                            <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-violet-500 to-purple-500 shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-16 sm:w-16 lg:h-20 lg:w-20'>
                               <BsPersonWorkspace
-                                size={36}
-                                className='text-white'
+                                size={24}
+                                className='text-white sm:text-[28px] lg:text-[32px]'
                               />
                             </div>
                             <div className='flex-1'>

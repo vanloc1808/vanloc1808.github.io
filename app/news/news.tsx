@@ -31,13 +31,6 @@ const News: FC = () => {
                   identifier={`news-${index}-${newsItem.date}`}
                 >
                   <div className='relative p-3'>
-                    <Image
-                      src='/blur-23.svg'
-                      alt='Hero'
-                      width={1080}
-                      height={200}
-                      className='pointer-events-none absolute bottom-0 opacity-80'
-                    />
                     <div className='relative z-10 flex items-center gap-x-8 px-3 py-5'>
                       <div className='text-violet-500 transition-all duration-300 hover:scale-125'>
                         <BsNewspaper size={36} />
