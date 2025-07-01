@@ -1,30 +1,28 @@
 'use client';
 
 import Image from 'next/image';
-import { getEducations } from '@/utils/data/educations';
+import { getEducations, type Education } from '@/utils/data/educations';
 import GlowCard from '../../helper/glow-card';
 import lottieFile from '/public/lottie/study.json';
 import { FC } from 'react';
 import { useTranslation } from '../../../context/I18nContext';
+import { getMonthName } from '@/utils/time-converter';
 
 import dynamic from 'next/dynamic';
 const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), {
   ssr: false,
 });
 
-interface EducationItem {
-  id: number;
-  title: string;
-  institution: string;
-  startYear: number;
-  endYear: number | null;
-  logo: string;
-  secondLogo: string | null;
-}
-
 const Education: FC = () => {
   const { t, locale } = useTranslation();
   const educations = getEducations(locale);
+
+  const formatDate = (month: number | null, year: number | null): string => {
+    if (month === null || year === null) {
+      return t('timeline.present');
+    }
+    return `${getMonthName(month, locale)} ${year}`;
+  };
 
   return (
     <div
@@ -33,7 +31,7 @@ const Education: FC = () => {
     >
       <Image
         src='/section.svg'
-        alt='Hero'
+        alt='Section background decoration'
         width={1572}
         height={795}
         className='absolute top-0 -z-10'
@@ -67,47 +65,41 @@ const Education: FC = () => {
             <div className='absolute bottom-0 left-8 top-0 w-0.5 bg-gradient-to-b from-violet-500 via-purple-500 to-pink-500 opacity-30'></div>
 
             <div className='flex flex-col gap-8'>
-              {educations.map((education: EducationItem) => (
+              {educations.map((education: Education) => (
                 <div key={education.id} className='relative'>
                   {/* Timeline dot */}
                   <div className='absolute left-6 top-8 z-10 h-4 w-4 rounded-full border-4 border-white bg-gradient-to-r from-violet-500 to-purple-500 dark:border-[#0d1224]'></div>
 
-                  {/* Timeline year label */}
+                  {/* Timeline date label */}
                   <div className='absolute left-12 top-6 ml-4 text-sm font-semibold text-violet-500 dark:text-violet-400'>
-                    {education.startYear} -{' '}
-                    {education.endYear || t('timeline.present')}
+                    {formatDate(education.startMonth, education.startYear)} -{' '}
+                    {formatDate(education.endMonth, education.endYear)}
                   </div>
 
                   <div className='ml-16'>
                     <GlowCard identifier={`education-${education.id}`}>
                       <div className='relative p-8 text-gray-800 dark:text-white'>
-                        <Image
-                          src='/blur-23.svg'
-                          alt='Hero'
-                          width={1080}
-                          height={200}
-                          className='absolute bottom-0 opacity-80'
-                        />
-
                         {/* Status badge */}
                         <div className='mb-4 flex items-start justify-end'>
                           <div
                             className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                              education.endMonth === null ||
                               education.endYear === null
                                 ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
                                 : 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
                             }`}
                           >
-                            {education.endYear === null
+                            {education.endMonth === null ||
+                            education.endYear === null
                               ? t('education.timeline.current')
                               : t('education.timeline.completed')}
                           </div>
                         </div>
 
-                        <div className='flex items-start gap-x-8 px-6 py-4'>
+                        <div className='flex items-start gap-x-2 px-6 py-4 sm:gap-x-4 lg:gap-x-6'>
                           {education.secondLogo ? (
-                            <div className='flex flex-shrink-0 flex-row items-center gap-x-4'>
-                              <div className='relative h-20 w-20 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white]'>
+                            <div className='flex flex-shrink-0 flex-col items-start gap-1 sm:flex-row sm:items-center sm:gap-x-2 lg:gap-x-3'>
+                              <div className='relative h-10 w-10 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
                                 <Image
                                   src={education.logo}
                                   alt={`${education.institution} logo`}
@@ -115,7 +107,7 @@ const Education: FC = () => {
                                   className='object-contain'
                                 />
                               </div>
-                              <div className='relative h-20 w-20 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white]'>
+                              <div className='relative h-10 w-10 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
                                 <Image
                                   src={education.secondLogo}
                                   alt={`${education.institution} second logo`}
@@ -125,7 +117,7 @@ const Education: FC = () => {
                               </div>
                             </div>
                           ) : (
-                            <div className='relative flex h-24 w-24 flex-shrink-0 items-center justify-center overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white]'>
+                            <div className='relative flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
                               <Image
                                 src={education.logo}
                                 alt={`${education.institution} logo`}
@@ -147,15 +139,24 @@ const Education: FC = () => {
                               <div className='flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400'>
                                 <div className='flex items-center gap-1'>
                                   <div className='h-2 w-2 rounded-full bg-violet-500'></div>
-                                  <span>{education.startYear}</span>
+                                  <span>
+                                    {formatDate(
+                                      education.startMonth,
+                                      education.startYear
+                                    )}
+                                  </span>
                                 </div>
                                 <div className='h-px flex-1 bg-gradient-to-r from-violet-500 to-purple-500'></div>
                                 <div className='flex items-center gap-1'>
                                   <span>
-                                    {education.endYear || t('timeline.present')}
+                                    {formatDate(
+                                      education.endMonth,
+                                      education.endYear
+                                    )}
                                   </span>
                                   <div
                                     className={`h-2 w-2 rounded-full ${
+                                      education.endMonth === null ||
                                       education.endYear === null
                                         ? 'animate-pulse bg-green-500'
                                         : 'bg-purple-500'

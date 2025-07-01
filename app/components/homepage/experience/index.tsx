@@ -46,7 +46,7 @@ const Experience: FC = () => {
     >
       <Image
         src='/section.svg'
-        alt='Hero'
+        alt='Section background decoration'
         width={1572}
         height={795}
         className='absolute top-0 -z-10'
@@ -94,14 +94,6 @@ const Experience: FC = () => {
                   <div className='ml-16'>
                     <GlowCard identifier={`experience-${experience.id}`}>
                       <div className='relative p-8 text-gray-800 dark:text-white'>
-                        <Image
-                          src='/blur-23.svg'
-                          alt='Hero'
-                          width={1080}
-                          height={200}
-                          className='absolute bottom-0 opacity-80'
-                        />
-
                         {/* Status badge */}
                         <div className='mb-4 flex items-start justify-end'>
                           <div
@@ -119,11 +111,11 @@ const Experience: FC = () => {
                           </div>
                         </div>
 
-                        <div className='flex items-start gap-x-8 px-6 py-4'>
-                          <div className='flex h-24 w-24 flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-violet-500 to-purple-500 shadow-lg dark:drop-shadow-[0_0_10px_white]'>
+                        <div className='flex items-start gap-x-3 px-6 py-4 sm:gap-x-4 lg:gap-x-6'>
+                          <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-violet-500 to-purple-500 shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
                             <BsPersonWorkspace
-                              size={36}
-                              className='text-white'
+                              size={20}
+                              className='text-white sm:text-[24px] lg:text-[28px]'
                             />
                           </div>
                           <div className='flex-1'>

@@ -455,6 +455,87 @@ const Navbar: FC = (): React.JSX.Element => {
               </div>
             </Link>
           </li>
+
+          {/* Mobile Controls - Theme Toggle and Language Switcher */}
+          <li
+            role='none'
+            className='w-full border-t border-gray-200 pt-4 dark:border-gray-700'
+          >
+            <div className='flex items-center justify-between px-4'>
+              {/* Theme Toggle for Mobile */}
+              <div className='relative'>
+                <button
+                  onClick={e => {
+                    e.stopPropagation();
+                    setIsThemeMenuOpen(v => !v);
+                  }}
+                  className='flex items-center gap-2 rounded px-3 py-2 text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:text-white dark:hover:text-pink-600'
+                  aria-label={`Current theme: ${theme}. Click to open theme menu`}
+                  aria-expanded={isThemeMenuOpen}
+                  aria-haspopup='menu'
+                  type='button'
+                >
+                  <span aria-hidden='true'>{getThemeIcon()}</span>
+                  <span className='text-sm'>Theme</span>
+                </button>
+                {isThemeMenuOpen && (
+                  <div
+                    ref={themeMenuRef}
+                    className='absolute left-0 z-50 mt-2 w-40 rounded-lg border border-gray-300 bg-white p-2 shadow-lg dark:border-gray-700 dark:bg-gray-900'
+                    onClick={e => e.stopPropagation()}
+                    role='menu'
+                    aria-label='Theme selection menu'
+                    onKeyDown={handleThemeMenuKeyDown}
+                  >
+                    <button
+                      className={`flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:hover:bg-gray-800 ${theme === 'light' ? 'bg-gray-100 font-bold dark:bg-gray-800' : ''}`}
+                      onClick={e => {
+                        e.stopPropagation();
+                        setTheme('light');
+                        setIsThemeMenuOpen(false);
+                      }}
+                      type='button'
+                      role='menuitem'
+                      aria-label='Switch to light theme'
+                    >
+                      <span aria-hidden='true'>☀️</span> Light
+                    </button>
+                    <button
+                      className={`flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:hover:bg-gray-800 ${theme === 'dark' ? 'bg-gray-100 font-bold dark:bg-gray-800' : ''}`}
+                      onClick={e => {
+                        e.stopPropagation();
+                        setTheme('dark');
+                        setIsThemeMenuOpen(false);
+                      }}
+                      type='button'
+                      role='menuitem'
+                      aria-label='Switch to dark theme'
+                    >
+                      <span aria-hidden='true'>🌙</span> Dark
+                    </button>
+                    <button
+                      className={`flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:hover:bg-gray-800 ${theme === 'system' ? 'bg-gray-100 font-bold dark:bg-gray-800' : ''}`}
+                      onClick={e => {
+                        e.stopPropagation();
+                        setTheme('system');
+                        setIsThemeMenuOpen(false);
+                      }}
+                      type='button'
+                      role='menuitem'
+                      aria-label='Use system theme preference'
+                    >
+                      <span aria-hidden='true'>🖥️</span> System
+                    </button>
+                  </div>
+                )}
+              </div>
+
+              {/* Language Switcher for Mobile */}
+              <div className='opacity-70 transition-opacity duration-200 hover:opacity-100'>
+                <LanguageSwitcher />
+              </div>
+            </div>
+          </li>
         </ul>
       </div>
     </nav>

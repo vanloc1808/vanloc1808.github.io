@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { BsPersonWorkspace } from 'react-icons/bs';
 import GlowCard from './glow-card';
 import { FC } from 'react';
@@ -34,13 +33,6 @@ const PublicationCard: FC<PublicationCardProps> = ({
     >
       <GlowCard identifier={identifier}>
         <div className='relative p-3'>
-          <Image
-            src='/blur-23.svg'
-            alt='Hero'
-            width={1080}
-            height={200}
-            className='absolute bottom-0 opacity-80'
-          />
           <div className='flex items-start gap-x-4 px-3 py-4'>
             <div className='mt-1 text-violet-500 transition-all duration-300 hover:scale-125'>
               <BsPersonWorkspace size={32} />
