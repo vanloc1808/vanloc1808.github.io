@@ -96,10 +96,10 @@ const Education: FC = () => {
                           </div>
                         </div>
 
-                        <div className='flex items-start gap-x-4 px-6 py-4 sm:gap-x-6 lg:gap-x-8'>
+                        <div className='flex items-start gap-x-3 px-6 py-4 sm:gap-x-4 lg:gap-x-6'>
                           {education.secondLogo ? (
-                            <div className='flex flex-shrink-0 flex-row items-center gap-x-2 sm:gap-x-3 lg:gap-x-4'>
-                              <div className='relative h-12 w-12 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-16 sm:w-16 lg:h-20 lg:w-20'>
+                            <div className='flex flex-shrink-0 flex-row items-center gap-x-1 sm:gap-x-2 lg:gap-x-3'>
+                              <div className='relative h-10 w-10 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
                                 <Image
                                   src={education.logo}
                                   alt={`${education.institution} logo`}
@@ -107,7 +107,7 @@ const Education: FC = () => {
                                   className='object-contain'
                                 />
                               </div>
-                              <div className='relative h-12 w-12 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-16 sm:w-16 lg:h-20 lg:w-20'>
+                              <div className='relative h-10 w-10 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
                                 <Image
                                   src={education.secondLogo}
                                   alt={`${education.institution} second logo`}
@@ -117,7 +117,7 @@ const Education: FC = () => {
                               </div>
                             </div>
                           ) : (
-                            <div className='relative flex h-12 w-12 flex-shrink-0 items-center justify-center overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-16 sm:w-16 lg:h-20 lg:w-20'>
+                            <div className='relative flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
                               <Image
                                 src={education.logo}
                                 alt={`${education.institution} logo`}

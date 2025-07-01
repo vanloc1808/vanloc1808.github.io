@@ -101,11 +101,11 @@ const Experience: FC = () => {
                             </div>
                           </div>
 
-                          <div className='flex items-start gap-x-4 px-6 py-4 sm:gap-x-6 lg:gap-x-8'>
-                            <div className='flex h-12 w-12 flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-violet-500 to-purple-500 shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-16 sm:w-16 lg:h-20 lg:w-20'>
+                          <div className='flex items-start gap-x-3 px-6 py-4 sm:gap-x-4 lg:gap-x-6'>
+                            <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-violet-500 to-purple-500 shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
                               <BsPersonWorkspace
-                                size={24}
-                                className='text-white sm:text-[28px] lg:text-[32px]'
+                                size={20}
+                                className='text-white sm:text-[24px] lg:text-[28px]'
                               />
                             </div>
                             <div className='flex-1'>
