@@ -1,5 +1,8 @@
 # Portfolio Website Improvements
 
+## Translation
+- [ ] Double check the translation to Vietnamese
+
 ## Performance & Technical Improvements
 
 - [x] Implement proper caching strategies for static assets
