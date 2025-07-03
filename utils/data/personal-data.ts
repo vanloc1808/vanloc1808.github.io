@@ -30,7 +30,7 @@ export const personalData: MultilingualPersonalData = {
       '👋 My name is Van-Loc Nguyen.\n\n💻 I am a professional and enthusiastic programmer in my daily life.\n\n🚀 I am a quick learner with a self-learning attitude.\n\n🔍 I love to learn and explore new technologies and am passionate about problem-solving.\n\n🤖 I love Artificial Intelligence, especially Computer Vision and Deep Learning.\n\n🐍 My core skill is based on Python and I love almost all of the things with Python.',
     email: 'contact@nguyenvanloc.com',
     phone: '',
-    address: 'District 5, Ho Chi Minh City, Vietnam',
+    address: 'Chợ Quán Ward, Hồ Chí Minh City, Vietnam',
     github: 'https://github.com/vanloc1808',
     googleScholar:
       'https://scholar.google.com/citations?user=39z1A1IAAAAJ&hl=en',
@@ -47,16 +47,15 @@ export const personalData: MultilingualPersonalData = {
     profile: '/profile_image.png',
     designation: 'Kỹ sư AI',
     description:
-      '👋 Tên tôi là Nguyễn Văn Lộc.\n\n💻 Tôi là một lập trình viên chuyên nghiệp và đam mê trong cuộc sống hàng ngày.\n\n🚀 Tôi là người học nhanh với thái độ tự học.\n\n🔍 Tôi thích học hỏi và khám phá các công nghệ mới, đồng thời đam mê việc giải quyết vấn đề.\n\n🤖 Tôi yêu thích Trí tuệ Nhân tạo, đặc biệt là Thị giác Máy tính và Học sâu.\n\n🐍 Kỹ năng cốt lõi của tôi dựa trên Python và tôi yêu thích hầu hết mọi thứ liên quan đến Python.',
+      '👋 Xin chào, tôi là Nguyễn Văn Lộc.\n\n💻 Tôi là một lập trình viên chuyên nghiệp, luôn tràn đầy nhiệt huyết trong công việc hằng ngày.\n\n🚀 Tôi luôn giữ tinh thần tự học cao.\n\n🔍 Tôi đam mê tìm hiểu, khám phá công nghệ mới và yêu thích việc giải quyết các bài toán thực tiễn.\n\n🤖 Tôi đặc biệt yêu thích lĩnh vực Trí tuệ Nhân tạo, nhất là Thị giác Máy tính và Học sâu.\n\n🐍 Kỹ năng chính của tôi là Python, và tôi yêu thích gần như mọi thứ liên quan đến ngôn ngữ này.',
     email: 'contact@nguyenvanloc.com',
     phone: '',
-    address: 'Quận 5, Thành phố Hồ Chí Minh, Việt Nam',
+    address: 'Phường Chợ Quán, Thành phố Hồ Chí Minh, Việt Nam',
     github: 'https://github.com/vanloc1808',
     googleScholar:
       'https://scholar.google.com/citations?user=39z1A1IAAAAJ&hl=en',
     facebook: 'https://www.facebook.com/vanloc1808/',
     linkedIn: 'https://www.linkedin.com/in/vanloc1808/',
-    // twitter: "https://twitter.com/said7388",
     stackOverflow: 'https://stackoverflow.com/users/20888325/van-loc-nguyen',
     leetcode: 'https://leetcode.com/u/vanloc1808/',
     devUsername: 'vanloc1808',
