@@ -1,4 +1,3 @@
-import crefin from '/image/crefin.jpg';
 import { Project } from '@/types/project';
 
 interface MultilingualProjectsData {
@@ -17,7 +16,7 @@ export const projectsData: MultilingualProjectsData = {
       role: 'Co-main Developer',
       code: 'https://github.com/nbtin/fakenews-detection-demo',
       demo: 'https://youtu.be/INMS347zwS4',
-      image: crefin,
+      image: '/image/crefin.jpg',
     },
     {
       id: 1,
@@ -39,7 +38,7 @@ export const projectsData: MultilingualProjectsData = {
       frontend_code:
         'https://github.com/software-architecture-20tn/chat-app-frontend',
       demo: '',
-      image: crefin,
+      image: '/image/crefin.jpg',
     },
     {
       id: 2,
@@ -51,7 +50,7 @@ export const projectsData: MultilingualProjectsData = {
       backend_code: 'https://github.com/hungt1/MiniShoppingServer',
       frontend_code: 'https://github.com/mekanican/MiniShopping',
       demo: '',
-      image: crefin,
+      image: '/image/crefin.jpg',
     },
     {
       id: 3,
@@ -62,7 +61,7 @@ export const projectsData: MultilingualProjectsData = {
       role: 'Socket Programmer',
       code: 'https://github.com/vanloc1808/computer-network-projects/tree/main/Socket-Email',
       demo: '',
-      image: crefin,
+      image: '/image/crefin.jpg',
     },
     {
       id: 4,
@@ -73,7 +72,7 @@ export const projectsData: MultilingualProjectsData = {
       role: 'Main Developer',
       code: 'https://github.com/vanloc1808/chess-game',
       demo: '',
-      image: crefin,
+      image: '/image/crefin.jpg',
     },
     {
       id: 5,
@@ -84,7 +83,7 @@ export const projectsData: MultilingualProjectsData = {
       role: 'Developer',
       code: 'https://github.com/vanloc1808/search-engine',
       demo: '',
-      image: crefin,
+      image: '/image/crefin.jpg',
     },
     {
       id: 6,
@@ -95,7 +94,7 @@ export const projectsData: MultilingualProjectsData = {
       role: 'Developer',
       code: 'https://github.com/mekanican/BigInteger',
       demo: '',
-      image: crefin,
+      image: '/image/crefin.jpg',
     },
   ],
   vi: [
@@ -108,7 +107,7 @@ export const projectsData: MultilingualProjectsData = {
       role: 'Đồng chính phát triển',
       code: 'https://github.com/nbtin/fakenews-detection-demo',
       demo: 'https://youtu.be/INMS347zwS4',
-      image: crefin,
+      image: '/image/crefin.jpg',
     },
     {
       id: 1,
@@ -130,7 +129,7 @@ export const projectsData: MultilingualProjectsData = {
       frontend_code:
         'https://github.com/software-architecture-20tn/chat-app-frontend',
       demo: '',
-      image: crefin,
+      image: '/image/crefin.jpg',
     },
     {
       id: 2,
@@ -142,7 +141,7 @@ export const projectsData: MultilingualProjectsData = {
       backend_code: 'https://github.com/hungt1/MiniShoppingServer',
       frontend_code: 'https://github.com/mekanican/MiniShopping',
       demo: '',
-      image: crefin,
+      image: '/image/crefin.jpg',
     },
     {
       id: 3,
@@ -153,7 +152,7 @@ export const projectsData: MultilingualProjectsData = {
       role: 'Lập trình viên Socket',
       code: 'https://github.com/vanloc1808/computer-network-projects/tree/main/Socket-Email',
       demo: '',
-      image: crefin,
+      image: '/image/crefin.jpg',
     },
     {
       id: 4,
@@ -164,7 +163,7 @@ export const projectsData: MultilingualProjectsData = {
       role: 'Nhà phát triển chính',
       code: 'https://github.com/vanloc1808/chess-game',
       demo: '',
-      image: crefin,
+      image: '/image/crefin.jpg',
     },
     {
       id: 5,
@@ -175,7 +174,7 @@ export const projectsData: MultilingualProjectsData = {
       role: 'Nhà phát triển',
       code: 'https://github.com/vanloc1808/search-engine',
       demo: '',
-      image: crefin,
+      image: '/image/crefin.jpg',
     },
     {
       id: 6,
@@ -186,7 +185,7 @@ export const projectsData: MultilingualProjectsData = {
       role: 'Nhà phát triển',
       code: 'https://github.com/mekanican/BigInteger',
       demo: '',
-      image: crefin,
+      image: '/image/crefin.jpg',
     },
   ],
 };
