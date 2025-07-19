@@ -1,4 +1,4 @@
-import crefin from '/public/image/crefin.jpg';
+import crefin from '/image/crefin.jpg';
 import { Project } from '@/types/project';
 
 interface MultilingualProjectsData {
