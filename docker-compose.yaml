@@ -36,4 +36,5 @@ services:
 
 networks:
   localnet:
-    driver: bridge
+    external: true
+    name: localnet
