@@ -1,6 +1,7 @@
 # Portfolio Website Improvements
 
 ## Translation
+
 - [ ] Double check the translation to Vietnamese
 
 ## Performance & Technical Improvements

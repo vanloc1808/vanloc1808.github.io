@@ -11,6 +11,6 @@ updates:
       interval: 'weekly'
     groups:
       all-npm-dependencies:
-        patterns: ["*"]  # Group all npm updates together
+        patterns: ['*'] # Group all npm updates together
     ignore:
-      - dependency-name: "tailwindcss"
+      - dependency-name: 'tailwindcss'
