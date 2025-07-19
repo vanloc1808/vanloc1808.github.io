@@ -10,11 +10,11 @@ services:
     env_file:
       - .env
     ports:
-      - '3000:3000'
+      - '3000'
     restart: always
     labels:
       - 'traefik.enable=true'
-      - 'traefik.http.routers.portfolio.rule=Host(`nguyenvanloc.com`)'
+      - 'traefik.http.routers.portfolio.rule=Host(`nguyenvanloc.com`) || Host(`www.nguyenvanloc.com`)'
       - 'traefik.http.routers.portfolio.entrypoints=websecure'
       - 'traefik.http.routers.portfolio.tls=true'
       - 'traefik.http.routers.portfolio.service=portfolio'
