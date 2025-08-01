@@ -139,7 +139,7 @@ const Navbar: FC = (): React.JSX.Element => {
       onKeyDown={handleMenuKeyDown}
     >
       <div className='flex items-center justify-between px-12 py-5 sm:px-16 lg:px-24 xl:px-32 2xl:px-40'>
-        <div className='flex flex-shrink-0 items-center'>
+        <div className='-ml-2 flex flex-shrink-0 items-center'>
           <Link
             href='/'
             onClick={closeMenu}
@@ -218,12 +218,12 @@ const Navbar: FC = (): React.JSX.Element => {
             onClick={closeMenu}
             aria-label='Go to Certificates and Awards page'
           >
-            <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+            <div className='text-center text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
               {t('navigation.certificates').toUpperCase()}
             </div>
           </Link>
           <Link
-            className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+            className='block rounded px-1 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
             href='/activities'
             onClick={closeMenu}
             aria-label='Go to Activities page'
