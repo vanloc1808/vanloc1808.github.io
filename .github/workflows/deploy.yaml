@@ -1,83 +1,83 @@
-name: Deploy to VPS
+# name: Deploy to VPS
 
-on:
-  workflow_run:
-    workflows: ['CI']
-    branches: [main]
-    types:
-      - completed
+# on:
+#   workflow_run:
+#     workflows: ['CI']
+#     branches: [main]
+#     types:
+#       - completed
 
-env:
-  SSH_USER: ${{ secrets.VPS_USER }}
-  SSH_HOST: ${{ secrets.VPS_HOST }}
-  PROJECT_DIR: ${{ secrets.VPS_PROJECT_DIR }}
+# env:
+#   SSH_USER: ${{ secrets.VPS_USER }}
+#   SSH_HOST: ${{ secrets.VPS_HOST }}
+#   PROJECT_DIR: ${{ secrets.VPS_PROJECT_DIR }}
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+# jobs:
+#   deploy:
+#     runs-on: ubuntu-latest
+#     if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
 
-      - name: Set up SSH key
-        uses: webfactory/ssh-agent@v0.9.0
-        with:
-          ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
+#       - name: Set up SSH key
+#         uses: webfactory/ssh-agent@v0.9.0
+#         with:
+#           ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
 
-      - name: Deploy to VPS via SSH
-        run: |
-          ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST << 'EOF'
-            set -e
-            echo "🚀 Starting deployment to VPS..."
+#       - name: Deploy to VPS via SSH
+#         run: |
+#           ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST << 'EOF'
+#             set -e
+#             echo "🚀 Starting deployment to VPS..."
 
-            cd ${{ env.PROJECT_DIR }}
+#             cd ${{ env.PROJECT_DIR }}
 
-            echo "📥 Pulling latest code..."
-            git fetch origin
-            git checkout main
-            git pull origin main
+#             echo "📥 Pulling latest code..."
+#             git fetch origin
+#             git checkout main
+#             git pull origin main
 
-            echo "🛑 Stopping existing containers..."
-            docker compose down --remove-orphans || true
+#             echo "🛑 Stopping existing containers..."
+#             docker compose down --remove-orphans || true
 
-            echo "🗑️ Cleaning up old containers and images..."
-            docker rm -f portfolio-frontend || true
-            docker rmi vanloc1808/portfolio:latest || true
+#             echo "🗑️ Cleaning up old containers and images..."
+#             docker rm -f portfolio-frontend || true
+#             docker rmi vanloc1808/portfolio:latest || true
 
-            echo "📦 Pulling latest Docker images..."
-            docker compose pull
+#             echo "📦 Pulling latest Docker images..."
+#             docker compose pull
 
-            echo "🔧 Starting services..."
-            docker compose up -d
+#             echo "🔧 Starting services..."
+#             docker compose up -d
 
-            echo "⏳ Waiting for services to be ready..."
-            sleep 10
+#             echo "⏳ Waiting for services to be ready..."
+#             sleep 10
 
-            echo "🔍 Checking service status..."
-            docker compose ps
+#             echo "🔍 Checking service status..."
+#             docker compose ps
 
-            echo "📊 Checking container health..."
-            docker compose logs --tail=20 portfolio
+#             echo "📊 Checking container health..."
+#             docker compose logs --tail=20 portfolio
 
-            echo "✅ Deployment completed successfully!"
-          EOF
+#             echo "✅ Deployment completed successfully!"
+#           EOF
 
-      - name: Verify deployment
-        run: |
-          ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST << 'EOF'
-            echo "🔍 Final verification..."
-            cd ${{ env.PROJECT_DIR }}
+#       - name: Verify deployment
+#         run: |
+#           ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST << 'EOF'
+#             echo "🔍 Final verification..."
+#             cd ${{ env.PROJECT_DIR }}
 
-            # Check if container is running
-            if docker compose ps | grep -q "portfolio.*Up"; then
-              echo "✅ Portfolio container is running"
-            else
-              echo "❌ Portfolio container is not running"
-              docker compose logs portfolio
-              exit 1
-            fi
+#             # Check if container is running
+#             if docker compose ps | grep -q "portfolio.*Up"; then
+#               echo "✅ Portfolio container is running"
+#             else
+#               echo "❌ Portfolio container is not running"
+#               docker compose logs portfolio
+#               exit 1
+#             fi
 
-            echo "🌐 Portfolio should be accessible at: https://nguyenvanloc.com"
-          EOF
+#             echo "🌐 Portfolio should be accessible at: https://nguyenvanloc.com"
+#           EOF
