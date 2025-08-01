@@ -5,7 +5,7 @@ import { getActivities } from '@/utils/data/activities-data';
 import experiences from '/public/lottie/code.json';
 import dynamic from 'next/dynamic';
 import { useTranslation } from '../context/I18nContext';
-import { FaUserCheck, FaHandHeart, FaUsers, FaRegStar } from 'react-icons/fa';
+import { FaUserCheck, FaHeart, FaUsers, FaRegStar } from 'react-icons/fa';
 import GlowCard from '../components/helper/glow-card';
 
 const AnimationLottie = dynamic(
@@ -24,7 +24,7 @@ const Activities: FC = () => {
       case 'review':
         return <FaUserCheck className='h-4 w-4' />;
       case 'volunteer':
-        return <FaHandHeart className='h-4 w-4' />;
+        return <FaHeart className='h-4 w-4' />;
       case 'membership':
         return <FaUsers className='h-4 w-4' />;
       default:
