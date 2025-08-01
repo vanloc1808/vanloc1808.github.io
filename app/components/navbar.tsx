@@ -214,6 +214,26 @@ const Navbar: FC = (): React.JSX.Element => {
           </Link>
           <Link
             className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+            href='/certificates-and-awards'
+            onClick={closeMenu}
+            aria-label='Go to Certificates and Awards page'
+          >
+            <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+              {t('navigation.certificates').toUpperCase()}
+            </div>
+          </Link>
+          <Link
+            className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+            href='/activities'
+            onClick={closeMenu}
+            aria-label='Go to Activities page'
+          >
+            <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+              {t('navigation.activities').toUpperCase()}
+            </div>
+          </Link>
+          <Link
+            className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
             href='/news'
             onClick={closeMenu}
             aria-label='Go to News page'
@@ -424,6 +444,32 @@ const Navbar: FC = (): React.JSX.Element => {
             >
               <div className='text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
                 {t('navigation.publications').toUpperCase()}
+              </div>
+            </Link>
+          </li>
+          <li role='none'>
+            <Link
+              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+              href='/certificates-and-awards'
+              onClick={closeMenu}
+              role='menuitem'
+              aria-label='Go to Certificates and Awards page'
+            >
+              <div className='text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+                {t('navigation.certificates').toUpperCase()}
+              </div>
+            </Link>
+          </li>
+          <li role='none'>
+            <Link
+              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+              href='/activities'
+              onClick={closeMenu}
+              role='menuitem'
+              aria-label='Go to Activities page'
+            >
+              <div className='text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+                {t('navigation.activities').toUpperCase()}
               </div>
             </Link>
           </li>

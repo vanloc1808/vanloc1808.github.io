@@ -31,6 +31,8 @@ const translations: Record<Locale, Translation> = {
       education: 'Education',
       projects: 'Projects',
       publications: 'PUBLICATIONS',
+      certificates: 'CERTIFICATES & AWARDS',
+      activities: 'ACTIVITIES',
       news: 'NEWS',
       contact: 'Contact',
     },
@@ -89,6 +91,19 @@ const translations: Record<Locale, Translation> = {
       viewAll: 'View All',
       readPaper: 'Read Paper',
     },
+    certificates: {
+      title: 'CERTIFICATES & AWARDS',
+      viewAll: 'View All',
+      award: 'Award',
+      certificate: 'Certificate',
+    },
+    activities: {
+      title: 'OTHER ACTIVITIES',
+      viewAll: 'View All',
+      reviewer: 'Reviewer',
+      volunteer: 'Volunteer',
+      member: 'Member',
+    },
     contact: {
       title: 'CONTACT WITH ME',
       description:
@@ -133,6 +148,8 @@ const translations: Record<Locale, Translation> = {
       education: 'Học vấn',
       projects: 'Dự án',
       publications: 'CÔNG TRÌNH',
+      certificates: 'GIẢI THƯỞNG & CHỨNG CHỈ',
+      activities: 'HOẠT ĐỘNG KHÁC',
       news: 'TIN TỨC',
       contact: 'Liên hệ',
     },
@@ -190,6 +207,19 @@ const translations: Record<Locale, Translation> = {
       title: 'CÔNG TRÌNH',
       viewAll: 'Xem tất cả',
       readPaper: 'Đọc bài báo',
+    },
+    certificates: {
+      title: 'GIẢI THƯỞNG & CHỨNG CHỈ',
+      viewAll: 'Xem tất cả',
+      award: 'Giải thưởng',
+      certificate: 'Chứng chỉ',
+    },
+    activities: {
+      title: 'HOẠT ĐỘNG KHÁC',
+      viewAll: 'Xem tất cả',
+      reviewer: 'Người đánh giá',
+      volunteer: 'Tình nguyện viên',
+      member: 'Thành viên',
     },
     contact: {
       title: 'LIÊN HỆ VỚI TÔI',
