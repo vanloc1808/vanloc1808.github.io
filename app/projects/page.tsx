@@ -24,9 +24,9 @@ const Projects: FC = () => {
 
       <div className='pt-24'>
         <Suspense fallback={<ProjectSkeleton />}>
-          <div className='flex flex-col gap-6'>
+          <div className='grid grid-cols-1 gap-6 md:grid-cols-2 lg:gap-8'>
             {projectsData.map((project, index) => (
-              <div key={index} className='mx-auto w-full max-w-2xl'>
+              <div key={index} className='mx-auto w-full'>
                 <div className='box-border flex items-center justify-center rounded shadow-[0_0_30px_0_rgba(0,0,0,0.3)] transition-all duration-[0.5s]'>
                   <ProjectCard
                     project={project}
