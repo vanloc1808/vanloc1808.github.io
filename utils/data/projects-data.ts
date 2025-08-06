@@ -8,7 +8,7 @@ interface MultilingualProjectsData {
 export const projectsData: MultilingualProjectsData = {
   en: [
     {
-      id: 0,
+      id: 6,
       name: 'Fake News Analysis and Detection',
       description:
         'This is my undergraduate thesis. This combines the output of our end-to-end networks for cheapfakes detection, a reputation online checking flow, and a system for advising users on the reality of the news they are reading.',
@@ -19,7 +19,7 @@ export const projectsData: MultilingualProjectsData = {
       image: '/image/crefin.jpg',
     },
     {
-      id: 1,
+      id: 5,
       name: 'Connect',
       description:
         'A powerful chat-app with features like Telegram. This is the project for Software Architecture course.',
@@ -41,7 +41,7 @@ export const projectsData: MultilingualProjectsData = {
       image: '/image/crefin.jpg',
     },
     {
-      id: 2,
+      id: 4,
       name: 'MiniShopping',
       description:
         'A mobile application for e-commerce, allow users to buy online products. This is the project for Mobile Development course.',
@@ -64,7 +64,7 @@ export const projectsData: MultilingualProjectsData = {
       image: '/image/crefin.jpg',
     },
     {
-      id: 4,
+      id: 2,
       name: 'Chess Game',
       description:
         'An offline game that allows PvP chess between two people. This is the project for Object-Oriented Programming course.',
@@ -75,7 +75,7 @@ export const projectsData: MultilingualProjectsData = {
       image: '/image/crefin.jpg',
     },
     {
-      id: 5,
+      id: 1,
       name: 'Search Engine',
       description:
         'An application that allows users to search for a string on a given dataset of text files. This is the project for Arts of Programming course.',
@@ -86,7 +86,7 @@ export const projectsData: MultilingualProjectsData = {
       image: '/image/crefin.jpg',
     },
     {
-      id: 6,
+      id: 0,
       name: 'Big Integers',
       description:
         'An application that performs arithmetic operations, logic operations on Big Integers. This is the project for Arts of Programming course.',
@@ -99,8 +99,8 @@ export const projectsData: MultilingualProjectsData = {
   ],
   vi: [
     {
-      id: 0,
-      name: 'Phân tích và Phát hiện Tin giả',
+      id: 6,
+      name: 'Fake News Analysis and Detection',
       description:
         'Đây là luận văn tốt nghiệp đại học của tôi. Kết hợp đầu ra của các mạng end-to-end cho việc phát hiện cheapfakes, quy trình kiểm tra uy tín trực tuyến, và hệ thống tư vấn người dùng về tính thực tế của tin tức họ đang đọc.',
       tools: ['Python', 'PyTorch', 'Streamlit'],
@@ -110,7 +110,7 @@ export const projectsData: MultilingualProjectsData = {
       image: '/image/crefin.jpg',
     },
     {
-      id: 1,
+      id: 5,
       name: 'Connect',
       description:
         'Một ứng dụng chat mạnh mẽ với các tính năng như Telegram. Đây là dự án cho môn Kiến trúc Phần mềm.',
@@ -132,7 +132,7 @@ export const projectsData: MultilingualProjectsData = {
       image: '/image/crefin.jpg',
     },
     {
-      id: 2,
+      id: 4,
       name: 'MiniShopping',
       description:
         'Ứng dụng di động cho thương mại điện tử, cho phép người dùng mua sản phẩm trực tuyến. Đây là dự án cho môn Phát triển Di động.',
@@ -145,7 +145,7 @@ export const projectsData: MultilingualProjectsData = {
     },
     {
       id: 3,
-      name: 'Điều khiển PC qua Email',
+      name: 'PC Control via Email',
       description:
         'Một chương trình cho phép người dùng điều khiển máy tính từ xa bằng email của họ. Đây là dự án cho môn Mạng Máy tính.',
       tools: ['Python', 'Socket'],
@@ -155,8 +155,8 @@ export const projectsData: MultilingualProjectsData = {
       image: '/image/crefin.jpg',
     },
     {
-      id: 4,
-      name: 'Game Cờ vua',
+      id: 2,
+      name: 'Chess Game',
       description:
         'Một game offline cho phép chơi cờ vua PvP giữa hai người. Đây là dự án cho môn Lập trình Hướng đối tượng.',
       tools: ['C++'],
@@ -166,8 +166,8 @@ export const projectsData: MultilingualProjectsData = {
       image: '/image/crefin.jpg',
     },
     {
-      id: 5,
-      name: 'Công cụ Tìm kiếm',
+      id: 1,
+      name: 'Search Engine',
       description:
         'Ứng dụng cho phép người dùng tìm kiếm một chuỗi trong tập dữ liệu các file văn bản đã cho. Đây là dự án cho môn Nghệ thuật Lập trình.',
       tools: ['C++'],
@@ -177,8 +177,8 @@ export const projectsData: MultilingualProjectsData = {
       image: '/image/crefin.jpg',
     },
     {
-      id: 6,
-      name: 'Số nguyên lớn',
+      id: 0,
+      name: 'Big Integers',
       description:
         'Ứng dụng thực hiện các phép toán số học, phép toán logic trên số nguyên lớn. Đây là dự án cho môn Nghệ thuật Lập trình.',
       tools: ['C++'],
