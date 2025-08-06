@@ -8,6 +8,36 @@ interface MultilingualProjectsData {
 export const projectsData: MultilingualProjectsData = {
   en: [
     {
+      id: 9,
+      name: 'SanghaGPT: Multilingual Buddhist Q&A Chatbot',
+      description:
+        'SanghaGPT is an intelligent, multilingual chatbot designed to answer questions about Buddhist teachings in both English and Vietnamese. Powered by state-of-the-art language models and integrated via the Model Context Protocol (MCP), SanghaGPT enables interactive, context-aware exploration of Buddhist texts such as suttas, commentaries, and traditional scriptures. The project features a robust data pipeline for curating high-quality question-answer pairs, automated evaluation workflows, and rigorous benchmarking against reference answers. With advanced prompt engineering and seamless LLM orchestration, SanghaGPT offers an engaging way for users to deepen their understanding of Buddhist philosophy, practices, and history.',
+      tools: [
+        'Python',
+        'HuggingFace Transformers',
+        'Fast API',
+        'MCP',
+        'LLM',
+        'LangChain',
+      ],
+      role: 'Main Developer',
+      code: 'https://github.com/hcmus-project-collection/sanghagpt',
+      image: '/image/sanghagpt.png',
+      blog_url: 'https://blog.nguyenvanloc.com/blog/20250806-sanghagpt',
+    },
+    {
+      id: 8,
+      name: 'Eastern Religion Corpus',
+      description:
+        'This project focuses on building a high-quality, structured corpus from classical Vietnamese Buddhist texts, such as "Thiền Uyển Tập Anh" and other historical scriptures. The pipeline includes comprehensive PDF preprocessing, automated sentence segmentation, header/footer and poem detection, as well as semantic entity recognition. Advanced regular expressions and natural language processing tools are applied to extract, clean, and normalize data. The final output is a machine-readable corpus that supports research in digital humanities, Buddhist studies, and AI-powered language modeling. This work addresses the unique challenges of digitizing and structuring pre-modern Vietnamese Buddhist literature for modern computational use.',
+      tools: ['Python', 'PyPDF', 'Underthesea', 'RegEx'],
+      role: 'Co-developer',
+      code: 'https://github.com/hcmus-project-collection/eastern-religion-corpus-creation',
+      image: '/image/crefin.jpg',
+      blog_url:
+        'https://blog.nguyenvanloc.com/blog/20250805-eastern-religion-corpus-creation',
+    },
+    {
       id: 7,
       name: 'GraphRAG: Knowledge-Graph Retrieval System',
       description:
@@ -111,6 +141,36 @@ export const projectsData: MultilingualProjectsData = {
     },
   ],
   vi: [
+    {
+      id: 9,
+      name: 'SanghaGPT: Chatbot Hỏi-Đáp Phật giáo Đa ngôn ngữ',
+      description:
+        'SanghaGPT là một chatbot thông minh, đa ngôn ngữ được thiết kế để trả lời các câu hỏi về giáo lý Phật giáo bằng cả tiếng Anh và tiếng Việt. Được hỗ trợ bởi các mô hình ngôn ngữ tiên tiến và tích hợp thông qua Model Context Protocol (MCP), SanghaGPT cho phép khám phá tương tác, nhận thức ngữ cảnh các văn bản Phật giáo như kinh sách, chú giải và kinh điển truyền thống. Dự án có tính năng pipeline dữ liệu mạnh mẽ để quản lý các cặp câu hỏi-trả lời chất lượng cao, quy trình đánh giá tự động và benchmark nghiêm ngặt so với câu trả lời tham chiếu. Với kỹ thuật prompt tiên tiến và điều phối LLM liền mạch, SanghaGPT cung cấp cách thức hấp dẫn để người dùng hiểu sâu hơn về triết học, thực hành và lịch sử Phật giáo.',
+      tools: [
+        'Python',
+        'HuggingFace Transformers',
+        'Fast API',
+        'MCP',
+        'LLM',
+        'LangChain',
+      ],
+      role: 'Nhà phát triển chính',
+      code: 'https://github.com/hcmus-project-collection/sanghagpt',
+      image: '/image/sanghagpt.png',
+      blog_url: 'https://blog.nguyenvanloc.com/blog/20250806-sanghagpt',
+    },
+    {
+      id: 8,
+      name: 'Kho ngữ liệu Tôn giáo Phương Đông',
+      description:
+        'Dự án này tập trung vào việc xây dựng một kho ngữ liệu có cấu trúc chất lượng cao từ các văn bản Phật giáo Việt Nam cổ điển, như "Thiền Uyển Tập Anh" và các kinh điển lịch sử khác. Pipeline bao gồm tiền xử lý PDF toàn diện, phân đoạn câu tự động, phát hiện header/footer và thơ, cũng như nhận dạng thực thể ngữ nghĩa. Các biểu thức chính quy tiên tiến và công cụ xử lý ngôn ngữ tự nhiên được áp dụng để trích xuất, làm sạch và chuẩn hóa dữ liệu. Đầu ra cuối cùng là một kho ngữ liệu có thể đọc được bằng máy hỗ trợ nghiên cứu trong nhân văn số, nghiên cứu Phật giáo và mô hình hóa ngôn ngữ được hỗ trợ bởi AI. Công việc này giải quyết những thách thức độc đáo của việc số hóa và cấu trúc hóa văn học Phật giáo Việt Nam tiền hiện đại cho mục đích tính toán hiện đại.',
+      tools: ['Python', 'PyPDF', 'Underthesea', 'RegEx'],
+      role: 'Đồng phát triển',
+      code: 'https://github.com/hcmus-project-collection/eastern-religion-corpus-creation',
+      image: '/image/crefin.jpg',
+      blog_url:
+        'https://blog.nguyenvanloc.com/blog/20250805-eastern-religion-corpus-creation',
+    },
     {
       id: 7,
       name: 'GraphRAG: Knowledge-Graph Retrieval System',
