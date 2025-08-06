@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.light {
+            background-color: white;
+            color: black;
+        }
+
+        body.dark {
+            background-color: #0d1224;
+            color: white;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #16f2b3;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Theme Switcher Test</h1>
+    <p>Current theme: <span id="current-theme">system</span></p>
+    <p>Browser prefers: <span id="browser-prefers"></span></p>
+
+    <button id="light-btn">☀️ Light</button>
+    <button id="dark-btn">🌙 Dark</button>
+    <button id="system-btn" class="active">🖥️ System</button>
+
+    <script>
+        let currentTheme = localStorage.getItem('theme') || 'system';
+
+        function updateBrowserPreference() {
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.getElementById('browser-prefers').textContent = prefersDark ? 'dark' : 'light';
+            return prefersDark;
+        }
+
+        function applyTheme(theme) {
+            console.log('Applying theme:', theme);
+            document.body.className = '';
+
+            if (theme === 'system') {
+                const prefersDark = updateBrowserPreference();
+                document.body.classList.add(prefersDark ? 'dark' : 'light');
+            } else {
+                document.body.classList.add(theme);
+            }
+
+            document.getElementById('current-theme').textContent = theme;
+
+            // Update button states
+            document.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
+            document.getElementById(theme + '-btn').classList.add('active');
+        }
+
+        function setTheme(theme) {
+            console.log('Setting theme to:', theme);
+            currentTheme = theme;
+            localStorage.setItem('theme', theme);
+            applyTheme(theme);
+
+            // Set up or remove system listener
+            if (theme === 'system') {
+                setupSystemListener();
+            } else {
+                removeSystemListener();
+            }
+        }
+
+        let mediaQuery = null;
+        let systemChangeHandler = null;
+
+        function setupSystemListener() {
+            console.log('Setting up system listener');
+            mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+            systemChangeHandler = () => {
+                console.log('System theme changed');
+                if (currentTheme === 'system') {
+                    applyTheme('system');
+                }
+            };
+            mediaQuery.addEventListener('change', systemChangeHandler);
+        }
+
+        function removeSystemListener() {
+            console.log('Removing system listener');
+            if (mediaQuery && systemChangeHandler) {
+                mediaQuery.removeEventListener('change', systemChangeHandler);
+            }
+        }
+
+        // Initialize
+        updateBrowserPreference();
+        applyTheme(currentTheme);
+        if (currentTheme === 'system') {
+            setupSystemListener();
+        }
+
+        // Button event listeners
+        document.getElementById('light-btn').addEventListener('click', () => setTheme('light'));
+        document.getElementById('dark-btn').addEventListener('click', () => setTheme('dark'));
+        document.getElementById('system-btn').addEventListener('click', () => setTheme('system'));
+
+        // Update browser preference display periodically
+        setInterval(updateBrowserPreference, 1000);
+    </script>
+</body>
+</html>
