@@ -113,7 +113,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 5,
       name: 'Connect',
       description:
-        'Một ứng dụng chat mạnh mẽ với các tính năng như Telegram. Đây là dự án cho môn Kiến trúc Phần mềm.',
+        'Một ứng dụng chat mạnh mẽ với các tính năng như Telegram. Đây là dự án cho môn Kiến trúc phần mềm.',
       tools: [
         'ReactJS',
         'Django REST Framework',
@@ -135,7 +135,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 4,
       name: 'MiniShopping',
       description:
-        'Ứng dụng di động cho thương mại điện tử, cho phép người dùng mua sản phẩm trực tuyến. Đây là dự án cho môn Phát triển Di động.',
+        'Ứng dụng di động cho thương mại điện tử, cho phép người dùng mua sản phẩm trực tuyến. Đây là dự án cho môn Phát triển phần mềm cho thiết bị di động.',
       tools: ['Android', 'Django REST Framework', 'NoSQL'],
       role: 'Nhà phát triển Android',
       backend_code: 'https://github.com/hungt1/MiniShoppingServer',
@@ -147,7 +147,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 3,
       name: 'PC Control via Email',
       description:
-        'Một chương trình cho phép người dùng điều khiển máy tính từ xa bằng email của họ. Đây là dự án cho môn Mạng Máy tính.',
+        'Một chương trình cho phép người dùng điều khiển máy tính từ xa bằng email của họ. Đây là dự án cho môn Mạng máy tính.',
       tools: ['Python', 'Socket'],
       role: 'Lập trình viên Socket',
       code: 'https://github.com/vanloc1808/computer-network-projects/tree/main/Socket-Email',
@@ -158,7 +158,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 2,
       name: 'Chess Game',
       description:
-        'Một game offline cho phép chơi cờ vua PvP giữa hai người. Đây là dự án cho môn Lập trình Hướng đối tượng.',
+        'Một game offline cho phép chơi cờ vua PvP giữa hai người. Đây là dự án cho môn Phương pháp lập trình hướng đối tượng.',
       tools: ['C++'],
       role: 'Nhà phát triển chính',
       code: 'https://github.com/vanloc1808/chess-game',
@@ -169,7 +169,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 1,
       name: 'Search Engine',
       description:
-        'Ứng dụng cho phép người dùng tìm kiếm một chuỗi trong tập dữ liệu các file văn bản đã cho. Đây là dự án cho môn Nghệ thuật Lập trình.',
+        'Ứng dụng cho phép người dùng tìm kiếm một chuỗi trong tập dữ liệu các file văn bản đã cho. Đây là dự án cho môn Kỹ thuật lập trình.',
       tools: ['C++'],
       role: 'Nhà phát triển',
       code: 'https://github.com/vanloc1808/search-engine',
@@ -180,7 +180,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 0,
       name: 'Big Integers',
       description:
-        'Ứng dụng thực hiện các phép toán số học, phép toán logic trên số nguyên lớn. Đây là dự án cho môn Nghệ thuật Lập trình.',
+        'Ứng dụng thực hiện các phép toán số học, phép toán logic trên số nguyên lớn. Đây là dự án cho môn Kỹ thuật lập trình.',
       tools: ['C++'],
       role: 'Nhà phát triển',
       code: 'https://github.com/mekanican/BigInteger',
