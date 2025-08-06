@@ -8,6 +8,19 @@ interface MultilingualProjectsData {
 export const projectsData: MultilingualProjectsData = {
   en: [
     {
+      id: 7,
+      name: 'GraphRAG: Knowledge-Graph Retrieval System',
+      description:
+        'A retrieval-augmented generation (RAG) system, integrating local large language models (LLMs) with a knowledge graph to enhance response quality. Automated document ingestion, triplet extraction, and knowledge graph construction were implemented to enable structured reasoning. Vector similarity search (using Milvus) was combined with knowledge graph traversal for hybrid retrieval, resulting in improved answer accuracy and reduced hallucination. A ranking algorithm was created to blend semantic and graph-based results before being passed to the LLM. The solution was deployed with local LLMs (with OpenAI-compatible APIs) for privacy and low-latency inference, with functionalities exposed through FastAPI APIs and a lightweight web interface.',
+      tools: ['Python', 'Milvus', 'LLM', 'FastAPI', 'ReactJS'],
+      role: 'Main Developer',
+      code: 'https://github.com/hcmus-project-collection/graphrag-llm-with-knowledge-base',
+      demo: 'https://youtu.be/ulzWoy0RMY4',
+      image: '/image/crefin.jpg',
+      blog_url:
+        'https://blog.nguyenvanloc.com/blog/20250704-graphrag-llm-with-knowledge-base',
+    },
+    {
       id: 6,
       name: 'Fake News Analysis and Detection',
       description:
@@ -98,6 +111,19 @@ export const projectsData: MultilingualProjectsData = {
     },
   ],
   vi: [
+    {
+      id: 7,
+      name: 'GraphRAG: Knowledge-Graph Retrieval System',
+      description:
+        'Hệ thống tạo sinh tăng cường truy xuất (RAG), tích hợp các mô hình ngôn ngữ lớn (LLM) cục bộ với đồ thị tri thức để nâng cao chất lượng phản hồi. Đã triển khai quy trình tự động hóa thu thập tài liệu, trích xuất triplet và xây dựng đồ thị tri thức để hỗ trợ lập luận có cấu trúc. Tìm kiếm tương tự vector (sử dụng Milvus) được kết hợp với duyệt đồ thị tri thức để truy xuất lai, dẫn đến cải thiện độ chính xác câu trả lời và giảm thiểu ảo giác. Một thuật toán xếp hạng đã được tạo ra để kết hợp kết quả dựa trên ngữ nghĩa và đồ thị trước khi được truyền đến LLM. Giải pháp được triển khai với các LLM cục bộ (với API tương thích OpenAI) để đảm bảo quyền riêng tư và suy luận độ trễ thấp, với các chức năng được tiếp xúc thông qua API FastAPI và giao diện web nhẹ.',
+      tools: ['Python', 'Milvus', 'LLM', 'FastAPI', 'ReactJS'],
+      role: 'Nhà phát triển chính',
+      code: 'https://github.com/hcmus-project-collection/graphrag-llm-with-knowledge-base',
+      demo: 'https://youtu.be/ulzWoy0RMY4',
+      image: '/image/crefin.jpg',
+      blog_url:
+        'https://blog.nguyenvanloc.com/blog/20250704-graphrag-llm-with-knowledge-base',
+    },
     {
       id: 6,
       name: 'Fake News Analysis and Detection',
