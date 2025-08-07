@@ -24,6 +24,7 @@
     "@fortawesome/free-solid-svg-icons": "^7.0.0",
     "@fortawesome/react-fontawesome": "^0.2.3",
     "@next/third-parties": "^15.4.5",
+    "@vercel/analytics": "^1.5.0",
     "axios": "^1.11.0",
     "braces": "^3.0.3",
     "cross-spawn": "^7.0.6",
