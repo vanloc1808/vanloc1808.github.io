@@ -4,8 +4,10 @@ export interface Activity {
   organization?: string;
   role: string;
   date?: string;
+  from_year?: number;
+  to_year?: number | string;
   description: string;
-  type: 'review' | 'volunteer' | 'membership' | 'other';
+  type: 'review' | 'volunteer' | 'membership' | 'consultant' | 'other';
 }
 
 interface MultilingualActivities {
@@ -15,6 +17,18 @@ interface MultilingualActivities {
 
 export const activities: MultilingualActivities = {
   en: [
+    {
+      id: 2,
+      title: 'Olympia Club',
+      organization:
+        'Le Quy Don High School for Gifted Students, Ho Chi Minh City',
+      role: 'Consultant',
+      description:
+        'Founding Members & Consultant for Olympia Club, a club of students who are interested in the gameshow "Road to Mount Olympia" or who are interested in knowledge, in general.',
+      type: 'consultant',
+      from_year: 2021,
+      to_year: 'Present',
+    },
     {
       id: 1,
       title:
