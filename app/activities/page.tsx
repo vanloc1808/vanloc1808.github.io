@@ -5,7 +5,13 @@ import { getActivities } from '@/utils/data/activities-data';
 import experiences from '/public/lottie/code.json';
 import dynamic from 'next/dynamic';
 import { useTranslation } from '../context/I18nContext';
-import { FaUserCheck, FaHeart, FaUsers, FaRegStar } from 'react-icons/fa';
+import {
+  FaUserCheck,
+  FaHeart,
+  FaUsers,
+  FaRegStar,
+  FaUserTie,
+} from 'react-icons/fa';
 import GlowCard from '../components/helper/glow-card';
 
 const AnimationLottie = dynamic(
@@ -27,6 +33,8 @@ const Activities: FC = () => {
         return <FaHeart className='h-4 w-4' />;
       case 'membership':
         return <FaUsers className='h-4 w-4' />;
+      case 'consultant':
+        return <FaUserTie className='h-4 w-4' />;
       default:
         return <FaRegStar className='h-4 w-4' />;
     }
@@ -40,6 +48,8 @@ const Activities: FC = () => {
         return t('activities.volunteer');
       case 'membership':
         return t('activities.member');
+      case 'consultant':
+        return t('activities.consultant');
       default:
         return 'Other';
     }
@@ -55,14 +65,14 @@ const Activities: FC = () => {
       </div>
 
       <div className='py-8'>
-        <div className='grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8'>
+        <div className='grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-8'>
           <div className='flex items-start justify-center lg:pr-4'>
             <div className='h-full w-full max-w-md'>
               <AnimationLottie animationData={experiences} />
             </div>
           </div>
 
-          <div>
+          <div className='lg:col-span-2'>
             <div className='flex flex-col gap-6'>
               {activitiesData.map(activity => (
                 <GlowCard
@@ -104,6 +114,13 @@ const Activities: FC = () => {
                     <p className='text-sm leading-relaxed text-gray-600 dark:text-gray-300'>
                       {activity.description}
                     </p>
+
+                    {/* Date */}
+                    {activity.from_year && activity.to_year && (
+                      <p className='text-sm text-gray-500 dark:text-gray-400'>
+                        {activity.from_year} - {activity.to_year}
+                      </p>
+                    )}
 
                     {/* Bottom accent */}
                     <div className='mt-4 h-1 w-full rounded-full bg-gradient-to-r from-green-500 to-blue-500 opacity-30'></div>
