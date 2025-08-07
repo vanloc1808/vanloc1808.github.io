@@ -18,6 +18,16 @@ interface MultilingualActivities {
 export const activities: MultilingualActivities = {
   en: [
     {
+      id: 1,
+      title:
+        '1st Workshop on Ambiguous Object Analysis in Computer Vision (AOCV)',
+      organization: "ACM Multimedia 2025 (ACM MM'25)",
+      role: 'Reviewer',
+      description:
+        "Reviewer of the 1st Workshop on Ambiguous Object Analysis in Computer Vision (AOCV) at ACM Multimedia 2025 (ACM MM'25).",
+      type: 'review',
+    },
+    {
       id: 2,
       title: 'Olympia Club',
       organization:
@@ -29,6 +39,8 @@ export const activities: MultilingualActivities = {
       from_year: 2021,
       to_year: 'Present',
     },
+  ],
+  vi: [
     {
       id: 1,
       title:
@@ -36,20 +48,19 @@ export const activities: MultilingualActivities = {
       organization: "ACM Multimedia 2025 (ACM MM'25)",
       role: 'Reviewer',
       description:
-        "Reviewer of the 1st Workshop on Ambiguous Object Analysis in Computer Vision (AOCV) at ACM Multimedia 2025 (ACM MM'25).",
+        "Reviewer cho The 1st Workshop on Ambiguous Object Analysis in Computer Vision (AOCV) tại hội nghị ACM Multimedia 2025 (ACM MM'25).",
       type: 'review',
     },
-  ],
-  vi: [
     {
-      id: 1,
-      title:
-        'Workshop lần thứ nhất về Phân tích Đối tượng Mơ hồ trong Thị giác Máy tính (AOCV)',
-      organization: "ACM Multimedia 2025 (ACM MM'25)",
-      role: 'Người đánh giá',
+      id: 2,
+      title: 'Câu lạc bộ Olympia',
+      organization: 'Trường THPT Chuyên Lê Quý Đôn, TP. Hồ Chí Minh',
+      role: 'Cố vấn',
       description:
-        "Người đánh giá của Workshop lần thứ nhất về Phân tích Đối tượng Mơ hồ trong Thị giác Máy tính (AOCV) tại ACM Multimedia 2025 (ACM MM'25).",
-      type: 'review',
+        'Thành viên sáng lập & Cố vấn cho Câu lạc bộ Olympia, một câu lạc bộ của học sinh có đam mê gameshow "Đường lên đỉnh Olympia" hoặc đam mê kiến thức nói chung.',
+      type: 'consultant',
+      from_year: 2021,
+      to_year: 'Hiện tại',
     },
   ],
 };
