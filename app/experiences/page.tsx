@@ -57,14 +57,14 @@ const Experience: FC = () => {
       </div>
 
       <div className='py-8'>
-        <div className='grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1.5fr] lg:gap-16'>
+        <div className='grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-16'>
           <div className='flex items-start justify-center'>
             <div className='h-1/2 w-1/2'>
               <AnimationLottie animationData={experience} />
             </div>
           </div>
 
-          <div className='relative'>
+          <div className='relative lg:col-span-2'>
             {/* Timeline line */}
             <div className='absolute bottom-0 left-8 top-0 w-0.5 bg-gradient-to-b from-violet-500 via-purple-500 to-pink-500 opacity-30'></div>
 

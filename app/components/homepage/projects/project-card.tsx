@@ -184,6 +184,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
               </div>
             )}
 
+            {project.blog_url && (
+              <div className='ml-4 mr-2 lg:ml-8'>
+                <span className='text-gray-800 dark:text-white'>
+                  Blog Post:
+                </span>
+                <span className='text-cyan-600 dark:text-cyan-400'>
+                  {' '}
+                  <a href={project.blog_url} target='_blank' rel='noreferrer'>
+                    {project.blog_url}
+                  </a>
+                </span>
+                <span className='text-gray-500 dark:text-gray-400'>,</span>
+              </div>
+            )}
+
             <div>
               <span className='text-gray-500 dark:text-gray-400'>{'};'}</span>
             </div>

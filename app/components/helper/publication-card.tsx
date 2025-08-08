@@ -44,14 +44,14 @@ const PublicationCard: FC<PublicationCardProps> = ({
               <p className='mb-1 text-xs text-[#448171] dark:text-[#16f2b3] sm:text-sm'>
                 Published at {publication.conference}
               </p>
-              <p className='mb-2 text-xs text-[#df7518] sm:text-sm'>
+              <p className='mb-2 text-xs text-[#6B5441] sm:text-sm'>
                 {formatDateForLocale(publication.date, locale)}
               </p>
               <p className='mb-2 break-words text-sm sm:text-base'>
                 {publication.description}
               </p>
               <p className='break-all text-xs text-[#448171] dark:text-[#16f2b3] sm:text-sm'>
-                <span className='text-[#448171] hover:text-[#df7518] dark:text-[#16f2b3]'>
+                <span className='text-[#448171] hover:text-[#6B5441] dark:text-[#16f2b3]'>
                   {publication.url}
                 </span>
               </p>

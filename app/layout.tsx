@@ -8,6 +8,7 @@ import './css/card.scss';
 import './css/globals.scss';
 import ScrollToTop from './components/helper/scroll-to-top';
 import { ReactNode } from 'react';
+import { Analytics } from '@vercel/analytics/next';
 
 export const metadata = {
   title: 'Van-Loc Nguyen | vanloc1808',
@@ -98,6 +99,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </footer>
           </I18nProvider>
         </ThemeProvider>
+        <Analytics />
         {/* <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} /> */}
       </body>
     </html>

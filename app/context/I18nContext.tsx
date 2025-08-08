@@ -107,6 +107,7 @@ const translations: Record<Locale, Translation> = {
       viewAll: 'View All',
       reviewer: 'Reviewer',
       volunteer: 'Volunteer',
+      consultant: 'Consultant',
       member: 'Member',
     },
     contact: {
@@ -227,9 +228,10 @@ const translations: Record<Locale, Translation> = {
     activities: {
       title: 'HOẠT ĐỘNG KHÁC',
       viewAll: 'Xem tất cả',
-      reviewer: 'Người đánh giá',
+      reviewer: 'Reviewer',
       volunteer: 'Tình nguyện viên',
       member: 'Thành viên',
+      consultant: 'Cố vấn',
     },
     contact: {
       title: 'LIÊN HỆ VỚI TÔI',

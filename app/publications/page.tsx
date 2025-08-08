@@ -27,14 +27,14 @@ const Publication: FC = () => {
       </div>
 
       <div className='py-8'>
-        <div className='grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8'>
+        <div className='grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-8'>
           <div className='flex items-start justify-center lg:pr-4'>
             <div className='h-full w-full max-w-md'>
               <AnimationLottie animationData={experiences} />
             </div>
           </div>
 
-          <div>
+          <div className='lg:col-span-2'>
             <div className='flex flex-col gap-4'>
               {publicationsData.map(publication => (
                 <PublicationCard

@@ -93,22 +93,27 @@ const Navbar: FC = (): React.JSX.Element => {
    */
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
+      console.log('🎯 Click outside handler triggered', event.target);
       if (
         themeMenuRef.current &&
         !themeMenuRef.current.contains(event.target as Node) &&
         themeButtonRef.current &&
         !themeButtonRef.current.contains(event.target as Node)
       ) {
+        console.log('🎯 Closing theme menu due to outside click');
         setIsThemeMenuOpen(false);
+      } else {
+        console.log('🎯 Click was inside theme menu area');
       }
     };
 
     if (isThemeMenuOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
+      // Use click instead of mousedown to avoid interfering with button events
+      document.addEventListener('click', handleClickOutside);
     }
 
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('click', handleClickOutside);
     };
   }, [isThemeMenuOpen]);
 
@@ -289,7 +294,13 @@ const Navbar: FC = (): React.JSX.Element => {
               <div
                 ref={themeMenuRef}
                 className='absolute right-0 z-50 mt-2 w-40 rounded-lg border border-gray-300 bg-white p-2 shadow-lg dark:border-gray-700 dark:bg-gray-900'
-                onClick={e => e.stopPropagation()}
+                onClick={e => {
+                  console.log('🎯 Theme dropdown container clicked');
+                  e.stopPropagation();
+                }}
+                onMouseDown={e => {
+                  console.log('🎯 Theme dropdown container mouseDown');
+                }}
                 role='menu'
                 aria-label='Theme selection menu'
                 onKeyDown={handleThemeMenuKeyDown}
@@ -297,9 +308,15 @@ const Navbar: FC = (): React.JSX.Element => {
                 <button
                   className={`flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:hover:bg-gray-800 ${theme === 'light' ? 'bg-gray-100 font-bold dark:bg-gray-800' : ''}`}
                   onClick={e => {
+                    console.log('🔆 Light button onClick event fired!');
                     e.stopPropagation();
+                    console.log('🔆 Light button clicked!');
                     setTheme('light');
                     setIsThemeMenuOpen(false);
+                  }}
+                  onMouseDown={e => {
+                    console.log('🔆 Light button mouseDown event fired!');
+                    e.stopPropagation();
                   }}
                   type='button'
                   role='menuitem'
@@ -310,9 +327,15 @@ const Navbar: FC = (): React.JSX.Element => {
                 <button
                   className={`flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:hover:bg-gray-800 ${theme === 'dark' ? 'bg-gray-100 font-bold dark:bg-gray-800' : ''}`}
                   onClick={e => {
+                    console.log('🌙 Dark button onClick event fired!');
                     e.stopPropagation();
+                    console.log('🌙 Dark button clicked!');
                     setTheme('dark');
                     setIsThemeMenuOpen(false);
+                  }}
+                  onMouseDown={e => {
+                    console.log('🌙 Dark button mouseDown event fired!');
+                    e.stopPropagation();
                   }}
                   type='button'
                   role='menuitem'
@@ -323,9 +346,15 @@ const Navbar: FC = (): React.JSX.Element => {
                 <button
                   className={`flex w-full items-center gap-2 rounded px-3 py-2 text-left text-sm transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:hover:bg-gray-800 ${theme === 'system' ? 'bg-gray-100 font-bold dark:bg-gray-800' : ''}`}
                   onClick={e => {
+                    console.log('🖥️ System button onClick event fired!');
                     e.stopPropagation();
+                    console.log('🖥️ System button clicked!');
                     setTheme('system');
                     setIsThemeMenuOpen(false);
+                  }}
+                  onMouseDown={e => {
+                    console.log('🖥️ System button mouseDown event fired!');
+                    e.stopPropagation();
                   }}
                   type='button'
                   role='menuitem'

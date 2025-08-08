@@ -50,7 +50,7 @@ export const educations: MultilingualEducations = {
       endMonth: 8, // August
       endYear: 2020,
       institution:
-        'Le Quy Don High School for Gifted Students, Ba Ria - Vung Tau Province',
+        'Le Quy Don High School for Gifted Students, Ho Chi Minh City',
       logo: '/images/education/lqd-logo.png',
       secondLogo: null,
     },
@@ -90,7 +90,7 @@ export const educations: MultilingualEducations = {
       startYear: 2017,
       endMonth: 8, // Tháng 8
       endYear: 2020,
-      institution: 'Trường THPT Chuyên Lê Quý Đôn, Tỉnh Bà Rịa - Vũng Tàu',
+      institution: 'Trường THPT Chuyên Lê Quý Đôn, Thành phố Hồ Chí Minh',
       logo: '/images/education/lqd-logo.png',
       secondLogo: null,
     },

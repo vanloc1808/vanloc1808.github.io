@@ -38,4 +38,6 @@ export interface Project {
 
   /** Optional project image or screenshot for visual representation */
   image?: any; // TODO: Replace 'any' with proper image type
+
+  blog_url?: string;
 }
