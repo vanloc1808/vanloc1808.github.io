@@ -143,7 +143,7 @@ const Navbar: FC = (): React.JSX.Element => {
       aria-label='Main navigation'
       onKeyDown={handleMenuKeyDown}
     >
-      <div className='flex items-center justify-between px-12 py-5 sm:px-16 lg:px-24 xl:px-32 2xl:px-40'>
+      <div className='flex items-center justify-start px-12 py-5 sm:px-16 lg:px-24 xl:px-32 2xl:px-40'>
         <div className='-ml-2 flex flex-shrink-0 items-center'>
           <Link
             href='/'
@@ -156,7 +156,7 @@ const Navbar: FC = (): React.JSX.Element => {
         </div>
 
         {/* Desktop Navigation Links */}
-        <div className='hidden items-center space-x-1 md:flex'>
+        <div className='hidden items-center space-x-1 md:ml-8 md:flex'>
           <Link
             className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
             href='/#about'
@@ -272,7 +272,7 @@ const Navbar: FC = (): React.JSX.Element => {
         </div>
 
         {/* Desktop Controls - Theme Toggle and Language Switcher */}
-        <div className='hidden items-center gap-4 md:flex'>
+        <div className='hidden items-center gap-4 md:ml-auto md:flex'>
           {/* Theme Toggle Button - Desktop */}
           <div className='relative'>
             <button
@@ -375,7 +375,7 @@ const Navbar: FC = (): React.JSX.Element => {
         {/* Hamburger Menu Button */}
         <button
           onClick={toggleMenu}
-          className='flex h-10 w-10 flex-col items-center justify-center rounded border-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 md:hidden'
+          className='ml-auto flex h-10 w-10 flex-col items-center justify-center rounded border-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 md:hidden'
           aria-label={
             isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'
           }
