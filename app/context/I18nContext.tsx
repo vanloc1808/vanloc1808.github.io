@@ -30,6 +30,7 @@ const translations: Record<Locale, Translation> = {
       experience: 'Experience',
       education: 'Education',
       projects: 'Projects',
+      services: 'SERVICES',
       publications: 'PUBLICATIONS',
       certificates: 'CERTIFICATES & AWARDS',
       activities: 'ACTIVITIES',
@@ -85,6 +86,10 @@ const translations: Record<Locale, Translation> = {
       sourceCode: 'Source Code',
       backendCode: 'Backend Code',
       frontendCode: 'Frontend Code',
+    },
+    services: {
+      title: 'SERVICES',
+      empty: 'Services coming soon',
     },
     publications: {
       title: 'PUBLICATIONS',
@@ -148,6 +153,7 @@ const translations: Record<Locale, Translation> = {
       experience: 'Kinh nghiệm',
       education: 'Học vấn',
       projects: 'Dự án',
+      services: 'DỊCH VỤ',
       publications: 'CÔNG TRÌNH',
       certificates: 'GIẢI THƯỞNG & CHỨNG CHỈ',
       activities: 'HOẠT ĐỘNG KHÁC',
@@ -203,6 +209,10 @@ const translations: Record<Locale, Translation> = {
       sourceCode: 'Mã nguồn',
       backendCode: 'Mã nguồn Backend',
       frontendCode: 'Mã nguồn Frontend',
+    },
+    services: {
+      title: 'DỊCH VỤ',
+      empty: 'Sắp ra mắt',
     },
     publications: {
       title: 'CÔNG TRÌNH',
