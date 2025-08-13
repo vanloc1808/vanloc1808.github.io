@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import { getPublications } from '@/utils/data/publications-data';
-import studyLottie from '/public/lottie/study.json';
+import educationLottie from '/public/lottie/education.json';
 import dynamic from 'next/dynamic';
 import { useTranslation } from '../context/I18nContext';
 const AnimationLottie = dynamic(
@@ -30,7 +30,7 @@ const Publication: FC = () => {
         <div className='grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-8'>
           <div className='flex items-start justify-center lg:pr-4'>
             <div className='h-full w-full max-w-md'>
-              <AnimationLottie animationData={studyLottie} />
+              <AnimationLottie animationData={educationLottie} />
             </div>
           </div>
 
