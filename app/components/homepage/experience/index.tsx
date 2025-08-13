@@ -68,7 +68,7 @@ const Experience: FC = () => {
       </div>
 
       <div className='py-8'>
-        <div className='grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-16'>
+        <div className='grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-8'>
           <div className='flex items-start justify-center'>
             <div className='h-1/2 w-1/2'>
               <AnimationLottie animationData={lottieFile} />
@@ -91,7 +91,7 @@ const Experience: FC = () => {
                     {formatDate(experience.endMonth, experience.endYear)}
                   </div>
 
-                  <div className='ml-16'>
+                  <div className='ml-12'>
                     <GlowCard identifier={`experience-${experience.id}`}>
                       <div className='relative p-8 text-gray-800 dark:text-white'>
                         {/* Status badge */}
