@@ -4,6 +4,7 @@ import * as React from 'react';
 import Image from 'next/image';
 import GlowCard from '../../helper/glow-card';
 import { Project } from '@/types/project';
+import { useTranslation } from '../../../context/I18nContext';
 
 interface ProjectCardProps {
   project: Project;
@@ -11,6 +12,12 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
+  const { t } = useTranslation();
+  const isCompleted = Boolean(
+    (project.demo && project.demo.trim()) ||
+      (project.blog_url && project.blog_url.trim())
+  );
+
   return (
     <GlowCard identifier={identifier}>
       <div className='relative w-full rounded-lg border border-gray-300 bg-gradient-to-r from-gray-100 to-gray-200 dark:border-[#1b2c68a0] dark:from-[#0d1224] dark:to-[#0a0d37]'>
@@ -44,6 +51,21 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
           <p className='ml-3 text-center text-base text-[#448171] dark:text-[#16f2b3] lg:text-xl'>
             {project.name}
           </p>
+        </div>
+
+        {/* Status badge */}
+        <div className='mb-2 flex items-start justify-end px-4 lg:px-8'>
+          <div
+            className={`rounded-full px-3 py-1 text-xs font-semibold ${
+              isCompleted
+                ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
+                : 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
+            }`}
+          >
+            {isCompleted
+              ? t('education.timeline.completed')
+              : t('education.timeline.current')}
+          </div>
         </div>
 
         {/* Code block */}
