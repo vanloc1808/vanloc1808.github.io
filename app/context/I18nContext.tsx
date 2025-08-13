@@ -103,7 +103,7 @@ const translations: Record<Locale, Translation> = {
       certificate: 'Certificate',
     },
     activities: {
-      title: 'OTHER ACTIVITIES',
+      title: 'ACTIVITIES',
       viewAll: 'View All',
       reviewer: 'Reviewer',
       volunteer: 'Volunteer',
@@ -226,7 +226,7 @@ const translations: Record<Locale, Translation> = {
       certificate: 'Chứng chỉ',
     },
     activities: {
-      title: 'HOẠT ĐỘNG KHÁC',
+      title: 'HOẠT ĐỘNG',
       viewAll: 'Xem tất cả',
       reviewer: 'Reviewer',
       volunteer: 'Tình nguyện viên',
