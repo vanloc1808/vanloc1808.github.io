@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import { getCertificates } from '@/utils/data/certificates-data';
-import experiences from '/public/lottie/code.json';
+import certificateLottie from '/public/lottie/education.json';
 import dynamic from 'next/dynamic';
 import { useTranslation } from '../context/I18nContext';
 import { FaTrophy, FaCertificate } from 'react-icons/fa';
@@ -32,7 +32,7 @@ const CertificatesAndAwards: FC = () => {
         <div className='grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-8'>
           <div className='flex items-start justify-center lg:pr-4'>
             <div className='h-full w-full max-w-md'>
-              <AnimationLottie animationData={experiences} />
+              <AnimationLottie animationData={certificateLottie} />
             </div>
           </div>
 
