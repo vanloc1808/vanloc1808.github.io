@@ -111,13 +111,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
             {project.code && (
               <div className='ml-4 mr-2 lg:ml-8'>
                 <span className='text-gray-800 dark:text-white'>Code:</span>
-                <span className='text-cyan-600 dark:text-cyan-400'>
+                <span className='text-green-600 dark:text-green-400'>
                   {' '}
                   <a
                     href={project.code}
                     target='_blank'
                     rel='noreferrer'
-                    className='transition-colors duration-200 hover:text-cyan-400 dark:hover:text-cyan-300'
+                    className='transition-colors duration-200 hover:text-green-400 dark:hover:text-green-300'
                   >
                     {project.code}
                   </a>
@@ -131,13 +131,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
                 <span className='text-gray-800 dark:text-white'>
                   Backend Code:
                 </span>
-                <span className='text-cyan-600 dark:text-cyan-400'>
+                <span className='text-green-600 dark:text-green-400'>
                   {' '}
                   <a
                     href={project.backend_code}
                     target='_blank'
                     rel='noreferrer'
-                    className='transition-colors duration-200 hover:text-cyan-400 dark:hover:text-cyan-300'
+                    className='transition-colors duration-200 hover:text-green-400 dark:hover:text-green-300'
                   >
                     {project.backend_code}
                   </a>
@@ -151,13 +151,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
                 <span className='text-gray-800 dark:text-white'>
                   Frontend Code:
                 </span>
-                <span className='text-cyan-600 dark:text-cyan-400'>
+                <span className='text-green-600 dark:text-green-400'>
                   {' '}
                   <a
                     href={project.frontend_code}
                     target='_blank'
                     rel='noreferrer'
-                    className='transition-colors duration-200 hover:text-cyan-400 dark:hover:text-cyan-300'
+                    className='transition-colors duration-200 hover:text-green-400 dark:hover:text-green-300'
                   >
                     {project.frontend_code}
                   </a>
@@ -169,13 +169,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
             {project.demo && (
               <div className='ml-4 mr-2 lg:ml-8'>
                 <span className='text-gray-800 dark:text-white'>Demo:</span>
-                <span className='text-cyan-600 dark:text-cyan-400'>
+                <span className='text-blue-600 dark:text-blue-400'>
                   {' '}
                   <a
                     href={project.demo}
                     target='_blank'
                     rel='noreferrer'
-                    className='transition-colors duration-200 hover:text-cyan-400 dark:hover:text-cyan-300'
+                    className='transition-colors duration-200 hover:text-blue-400 dark:hover:text-blue-300'
                   >
                     {project.demo}
                   </a>
@@ -189,9 +189,14 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
                 <span className='text-gray-800 dark:text-white'>
                   Blog Post:
                 </span>
-                <span className='text-cyan-600 dark:text-cyan-400'>
+                <span className='text-purple-600 dark:text-purple-400'>
                   {' '}
-                  <a href={project.blog_url} target='_blank' rel='noreferrer'>
+                  <a
+                    href={project.blog_url}
+                    target='_blank'
+                    rel='noreferrer'
+                    className='transition-colors duration-200 hover:text-purple-400 dark:hover:text-purple-300'
+                  >
                     {project.blog_url}
                   </a>
                 </span>
