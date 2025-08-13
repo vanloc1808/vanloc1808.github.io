@@ -31,6 +31,36 @@ const Experience: FC = () => {
     return `${getMonthName(month, locale as 'en' | 'vi')} ${year}`;
   };
 
+  const formatDuration = (
+    startMonth: number,
+    startYear: number,
+    endMonth: number | null,
+    endYear: number | null
+  ): string => {
+    const now = new Date();
+    const effectiveEndMonth = endMonth ?? now.getMonth() + 1;
+    const effectiveEndYear = endYear ?? now.getFullYear();
+
+    let totalMonths =
+      (effectiveEndYear - startYear) * 12 + (effectiveEndMonth - startMonth);
+    if (totalMonths < 0) totalMonths = 0;
+
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+
+    if (locale === 'vi') {
+      const parts: string[] = [];
+      if (years > 0) parts.push(`${years} năm`);
+      if (months > 0) parts.push(`${months} tháng`);
+      return parts.length > 0 ? parts.join(' ') : '0 tháng';
+    }
+
+    const parts: string[] = [];
+    if (years > 0) parts.push(`${years} yr${years > 1 ? 's' : ''}`);
+    if (months > 0) parts.push(`${months} mo${months > 1 ? 's' : ''}`);
+    return parts.length > 0 ? parts.join(' ') : '0 mos';
+  };
+
   return (
     <div id='experiences' className='relative z-50 my-12 border-t lg:my-24'>
       <Image
@@ -78,7 +108,18 @@ const Experience: FC = () => {
                     {/* Timeline date label */}
                     <div className='absolute left-12 top-6 ml-4 text-sm font-semibold text-violet-500 dark:text-violet-400'>
                       {formatDate(experience.startMonth, experience.startYear)}{' '}
-                      - {formatDate(experience.endMonth, experience.endYear)}
+                      - {formatDate(experience.endMonth, experience.endYear)}{' '}
+                      <span className='text-gray-500 dark:text-gray-400'>
+                        ·
+                      </span>{' '}
+                      <span className='text-gray-600 dark:text-gray-300'>
+                        {formatDuration(
+                          experience.startMonth,
+                          experience.startYear,
+                          experience.endMonth,
+                          experience.endYear
+                        )}
+                      </span>
                     </div>
 
                     <div className='ml-12'>
