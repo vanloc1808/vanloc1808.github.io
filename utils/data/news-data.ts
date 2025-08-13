@@ -68,7 +68,7 @@ export const news: MultilingualNews = {
     {
       date: 'June 1, 2023',
       title:
-        '💼 Start my work at Saritasa Vietnam as a Backend Developer (Python - Django) after finishing 3 months of internship',
+        '💼 Start my work at Saritasa Vietnam as a Backend Engineer (Python - Django) after finishing 3 months of internship',
     },
   ],
   vi: [
@@ -131,7 +131,7 @@ export const news: MultilingualNews = {
     {
       date: '1 tháng 6, 2023',
       title:
-        '💼 Bắt đầu công việc tại Saritasa Vietnam với vai trò Backend Developer (Python - Django) sau khi hoàn thành 3 tháng thực tập',
+        '💼 Bắt đầu công việc tại Saritasa Vietnam với vai trò Backend Engineer (Python - Django) sau khi hoàn thành 3 tháng thực tập',
     },
   ],
 };

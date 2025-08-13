@@ -30,7 +30,7 @@ export const experiences: MultilingualExperiences = {
     },
     {
       id: 1,
-      title: 'Backend Developer (Python + Django)',
+      title: 'Backend Engineer (Python + Django)',
       company: 'Saritasa - Builders of Better',
       companyLink: 'https://www.saritasa.com/',
       startMonth: 6,
@@ -42,7 +42,7 @@ export const experiences: MultilingualExperiences = {
     },
     {
       id: 2,
-      title: 'Python Developer Intern',
+      title: 'Backend Engineer Intern',
       company: 'Saritasa - Builders of Better',
       companyLink: 'https://www.saritasa.com/',
       startMonth: 3,
@@ -73,7 +73,7 @@ export const experiences: MultilingualExperiences = {
     },
     {
       id: 1,
-      title: 'Backend Developer (Python + Django)',
+      title: 'Backend Engineer (Python + Django)',
       company: 'Saritasa - Builders of Better',
       companyLink: 'https://www.saritasa.com/',
       startMonth: 6,
@@ -85,7 +85,7 @@ export const experiences: MultilingualExperiences = {
     },
     {
       id: 2,
-      title: 'Python Developer Intern',
+      title: 'Backend Engineer Intern',
       company: 'Saritasa - Builders of Better',
       companyLink: 'https://www.saritasa.com/',
       startMonth: 3,
