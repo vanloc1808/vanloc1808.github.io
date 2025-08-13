@@ -7,6 +7,15 @@ import { BsNewspaper } from 'react-icons/bs';
 import { useTranslation } from '../context/I18nContext';
 import { formatDateForLocale } from '@/utils/time-converter';
 import GlowCard from '../components/helper/glow-card';
+import dynamic from 'next/dynamic';
+import newsLottie from '/public/lottie/news.json';
+
+const AnimationLottie = dynamic(
+  () => import('../components/helper/animation-lottie'),
+  {
+    ssr: false,
+  }
+);
 
 const News: FC = () => {
   const { t, locale } = useTranslation();
@@ -22,8 +31,14 @@ const News: FC = () => {
       </div>
 
       <div className='py-8'>
-        <div className='grid grid-cols-1 gap-8'>
-          <div>
+        <div className='grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-8'>
+          <div className='flex items-start justify-center lg:pr-4'>
+            <div className='h-full w-full max-w-md'>
+              <AnimationLottie animationData={newsLottie} />
+            </div>
+          </div>
+
+          <div className='lg:col-span-2'>
             <div className='flex flex-col gap-6'>
               {newsData.map((newsItem, index) => (
                 <GlowCard

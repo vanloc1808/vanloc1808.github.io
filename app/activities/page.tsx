@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import { getActivities } from '@/utils/data/activities-data';
-import experiences from '/public/lottie/code.json';
+import activitiesLottie from '/public/lottie/activities.json';
 import dynamic from 'next/dynamic';
 import { useTranslation } from '../context/I18nContext';
 import {
@@ -68,7 +68,7 @@ const Activities: FC = () => {
         <div className='grid grid-cols-1 gap-6 lg:grid-cols-3 lg:gap-8'>
           <div className='flex items-start justify-center lg:pr-4'>
             <div className='h-full w-full max-w-md'>
-              <AnimationLottie animationData={experiences} />
+              <AnimationLottie animationData={activitiesLottie} />
             </div>
           </div>
 
