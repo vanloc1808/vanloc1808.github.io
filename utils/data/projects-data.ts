@@ -24,6 +24,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/hcmus-project-collection/sanghagpt',
       image: '/image/sanghagpt.png',
       blog_url: 'https://blog.nguyenvanloc.com/blog/20250806-sanghagpt',
+      isCompleted: true,
     },
     {
       id: 8,
@@ -36,6 +37,7 @@ export const projectsData: MultilingualProjectsData = {
       image: '/image/crefin.jpg',
       blog_url:
         'https://blog.nguyenvanloc.com/blog/20250805-eastern-religion-corpus-creation',
+      isCompleted: true,
     },
     {
       id: 7,
@@ -49,6 +51,7 @@ export const projectsData: MultilingualProjectsData = {
       image: '/image/crefin.jpg',
       blog_url:
         'https://blog.nguyenvanloc.com/blog/20250704-graphrag-llm-with-knowledge-base',
+      isCompleted: true,
     },
     {
       id: 6,
@@ -60,6 +63,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/nbtin/fakenews-detection-demo',
       demo: 'https://youtu.be/INMS347zwS4',
       image: '/image/crefin.jpg',
+      isCompleted: true,
     },
     {
       id: 5,
@@ -82,6 +86,7 @@ export const projectsData: MultilingualProjectsData = {
         'https://github.com/software-architecture-20tn/chat-app-frontend',
       demo: '',
       image: '/image/crefin.jpg',
+      isCompleted: false,
     },
     {
       id: 4,
@@ -94,6 +99,7 @@ export const projectsData: MultilingualProjectsData = {
       frontend_code: 'https://github.com/mekanican/MiniShopping',
       demo: '',
       image: '/image/crefin.jpg',
+      isCompleted: false,
     },
     {
       id: 3,
@@ -105,6 +111,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/vanloc1808/computer-network-projects/tree/main/socket_email',
       demo: '',
       image: '/image/crefin.jpg',
+      isCompleted: false,
     },
     {
       id: 2,
@@ -116,6 +123,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/vanloc1808/chess-game',
       demo: '',
       image: '/image/crefin.jpg',
+      isCompleted: false,
     },
     {
       id: 1,
@@ -127,6 +135,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/vanloc1808/search-engine',
       demo: '',
       image: '/image/crefin.jpg',
+      isCompleted: false,
     },
     {
       id: 0,
@@ -138,6 +147,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/mekanican/BigInteger',
       demo: '',
       image: '/image/crefin.jpg',
+      isCompleted: false,
     },
   ],
   vi: [
@@ -158,6 +168,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/hcmus-project-collection/sanghagpt',
       image: '/image/sanghagpt.png',
       blog_url: 'https://blog.nguyenvanloc.com/blog/20250806-sanghagpt',
+      isCompleted: true,
     },
     {
       id: 8,
@@ -170,6 +181,7 @@ export const projectsData: MultilingualProjectsData = {
       image: '/image/crefin.jpg',
       blog_url:
         'https://blog.nguyenvanloc.com/blog/20250805-eastern-religion-corpus-creation',
+      isCompleted: true,
     },
     {
       id: 7,
@@ -183,6 +195,7 @@ export const projectsData: MultilingualProjectsData = {
       image: '/image/crefin.jpg',
       blog_url:
         'https://blog.nguyenvanloc.com/blog/20250704-graphrag-llm-with-knowledge-base',
+      isCompleted: true,
     },
     {
       id: 6,
@@ -194,6 +207,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/nbtin/fakenews-detection-demo',
       demo: 'https://youtu.be/INMS347zwS4',
       image: '/image/crefin.jpg',
+      isCompleted: true,
     },
     {
       id: 5,
@@ -216,6 +230,7 @@ export const projectsData: MultilingualProjectsData = {
         'https://github.com/software-architecture-20tn/chat-app-frontend',
       demo: '',
       image: '/image/crefin.jpg',
+      isCompleted: false,
     },
     {
       id: 4,
@@ -228,6 +243,7 @@ export const projectsData: MultilingualProjectsData = {
       frontend_code: 'https://github.com/mekanican/MiniShopping',
       demo: '',
       image: '/image/crefin.jpg',
+      isCompleted: false,
     },
     {
       id: 3,
@@ -239,6 +255,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/vanloc1808/computer-network-projects/tree/main/socket_email',
       demo: '',
       image: '/image/crefin.jpg',
+      isCompleted: false,
     },
     {
       id: 2,
@@ -250,6 +267,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/vanloc1808/chess-game',
       demo: '',
       image: '/image/crefin.jpg',
+      isCompleted: false,
     },
     {
       id: 1,
@@ -261,6 +279,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/vanloc1808/search-engine',
       demo: '',
       image: '/image/crefin.jpg',
+      isCompleted: false,
     },
     {
       id: 0,
@@ -272,6 +291,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/mekanican/BigInteger',
       demo: '',
       image: '/image/crefin.jpg',
+      isCompleted: false,
     },
   ],
 };

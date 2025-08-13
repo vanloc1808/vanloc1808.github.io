@@ -40,4 +40,7 @@ export interface Project {
   image?: any; // TODO: Replace 'any' with proper image type
 
   blog_url?: string;
+
+  /** Whether the project is completed. If false, it is considered current/in progress. */
+  isCompleted: boolean;
 }

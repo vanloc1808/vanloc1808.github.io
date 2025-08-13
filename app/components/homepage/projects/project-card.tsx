@@ -13,10 +13,7 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
   const { t } = useTranslation();
-  const isCompleted = Boolean(
-    (project.demo && project.demo.trim()) ||
-      (project.blog_url && project.blog_url.trim())
-  );
+  const isCompleted = project.isCompleted;
 
   return (
     <GlowCard identifier={identifier}>
