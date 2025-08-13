@@ -57,9 +57,9 @@ const Experience: FC = () => {
       </div>
 
       <div className='py-8'>
-        <div className='grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-16'>
-          <div className='flex items-start justify-center'>
-            <div className='h-1/2 w-1/2'>
+        <div className='grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-8'>
+          <div className='flex items-start justify-center lg:pr-4'>
+            <div className='h-full w-full max-w-md'>
               <AnimationLottie animationData={experience} />
             </div>
           </div>
@@ -81,7 +81,7 @@ const Experience: FC = () => {
                       - {formatDate(experience.endMonth, experience.endYear)}
                     </div>
 
-                    <div className='ml-16'>
+                    <div className='ml-12'>
                       <GlowCard identifier={`experience-${experience.id}`}>
                         <div className='relative p-8 text-gray-800 dark:text-white'>
                           {/* Status badge */}
@@ -102,11 +102,8 @@ const Experience: FC = () => {
                           </div>
 
                           <div className='flex items-start gap-x-3 px-6 py-4 sm:gap-x-4 lg:gap-x-6'>
-                            <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-violet-500 to-purple-500 shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
-                              <BsPersonWorkspace
-                                size={20}
-                                className='text-white sm:text-[24px] lg:text-[28px]'
-                              />
+                            <div className='mt-1 text-violet-500 transition-all duration-300 hover:scale-125'>
+                              <BsPersonWorkspace size={32} />
                             </div>
                             <div className='flex-1'>
                               <h3 className='mb-2 text-base font-semibold uppercase leading-tight sm:text-lg'>
