@@ -49,8 +49,11 @@ const Experience: FC = () => {
     const effectiveEndMonth = endMonth ?? now.getMonth() + 1;
     const effectiveEndYear = endYear ?? now.getFullYear();
 
+    // LinkedIn-style inclusive month counting
     let totalMonths =
-      (effectiveEndYear - startYear) * 12 + (effectiveEndMonth - startMonth);
+      (effectiveEndYear - startYear) * 12 +
+      (effectiveEndMonth - startMonth) +
+      1;
     if (totalMonths < 0) totalMonths = 0;
 
     const years = Math.floor(totalMonths / 12);
@@ -64,9 +67,9 @@ const Experience: FC = () => {
     }
 
     const parts: string[] = [];
-    if (years > 0) parts.push(`${years} yr${years > 1 ? 's' : ''}`);
-    if (months > 0) parts.push(`${months} mo${months > 1 ? 's' : ''}`);
-    return parts.length > 0 ? parts.join(' ') : '0 mos';
+    if (years > 0) parts.push(`${years} year${years > 1 ? 's' : ''}`);
+    if (months > 0) parts.push(`${months} month${months > 1 ? 's' : ''}`);
+    return parts.length > 0 ? parts.join(' ') : '0 months';
   };
 
   return (
