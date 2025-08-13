@@ -40,7 +40,7 @@ const News: FC = () => {
                           {newsItem.title}
                         </p>
                         <p className='text-xs text-[#448171] dark:text-[#16f2b3] sm:text-sm'>
-                          Date: {formatDateForLocale(newsItem.date, locale)}
+                          {formatDateForLocale(newsItem.date, locale)}
                         </p>
                       </div>
                     </div>
