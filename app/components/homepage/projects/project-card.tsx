@@ -18,6 +18,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
   return (
     <GlowCard identifier={identifier}>
       <div className='relative w-full rounded-lg border border-gray-300 bg-gradient-to-r from-gray-100 to-gray-200 dark:border-[#1b2c68a0] dark:from-[#0d1224] dark:to-[#0a0d37]'>
+        {/* Diagonal status stamp */}
+        <div className='pointer-events-none absolute -right-3 -top-3 z-10 rotate-12'>
+          <div
+            className={`select-none rounded border-2 px-4 py-2 text-sm font-extrabold uppercase tracking-widest md:text-base lg:text-lg ${
+              isCompleted
+                ? 'border-blue-600 bg-blue-100/70 text-blue-700 dark:border-blue-300 dark:bg-blue-900/30 dark:text-blue-200'
+                : 'border-green-600 bg-green-100/70 text-green-700 dark:border-green-300 dark:bg-green-900/30 dark:text-green-200'
+            }`}
+          >
+            {isCompleted
+              ? t('education.timeline.completed')
+              : t('education.timeline.current')}
+          </div>
+        </div>
         {/* Project Image */}
         {project.image && (
           <div className='relative h-48 w-full overflow-hidden transition-transform duration-300 group-hover:scale-105'>
@@ -48,21 +62,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, identifier }) => {
           <p className='ml-3 text-center text-base text-[#448171] dark:text-[#16f2b3] lg:text-xl'>
             {project.name}
           </p>
-        </div>
-
-        {/* Status badge */}
-        <div className='mb-2 flex items-start justify-end px-4 lg:px-8'>
-          <div
-            className={`rounded-full px-3 py-1 text-xs font-semibold ${
-              isCompleted
-                ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
-                : 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
-            }`}
-          >
-            {isCompleted
-              ? t('education.timeline.completed')
-              : t('education.timeline.current')}
-          </div>
         </div>
 
         {/* Code block */}
