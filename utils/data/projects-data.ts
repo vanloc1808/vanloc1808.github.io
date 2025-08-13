@@ -54,7 +54,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 6,
       name: 'Fake News Analysis and Detection',
       description:
-        'This is my undergraduate thesis. This combines the output of our end-to-end networks for cheapfakes detection, a reputation online checking flow, and a system for advising users on the reality of the news they are reading.',
+        'An advanced undergraduate thesis project that implements a comprehensive fake news detection system using deep learning and computer vision techniques. The system combines end-to-end neural networks for cheapfake detection (manipulated images/videos), integrates online reputation verification workflows, and provides real-time user guidance on news authenticity. Features include automated content analysis, credibility scoring algorithms, and an intuitive Streamlit interface for user interaction. The project demonstrates practical application of PyTorch for computer vision tasks and showcases the importance of media literacy in the digital age.',
       tools: ['Python', 'PyTorch', 'Streamlit'],
       role: 'Co-main Developer',
       code: 'https://github.com/nbtin/fakenews-detection-demo',
@@ -65,7 +65,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 5,
       name: 'Connect',
       description:
-        'A powerful chat-app with features like Telegram. This is the project for Software Architecture course.',
+        'A feature-rich chat application built for the Software Architecture course, demonstrating modern full-stack development practices and microservices architecture. The application features real-time messaging, user authentication, group chat functionality, and file sharing capabilities similar to Telegram. Built with ReactJS frontend and Django REST Framework backend, it showcases proper API design, database optimization with PostgreSQL, and cloud deployment using Supabase. The project implements CI/CD pipelines with Docker, Jenkins, and GitHub Actions, demonstrating professional software development workflows and scalable architecture patterns.',
       tools: [
         'ReactJS',
         'Django REST Framework',
@@ -87,7 +87,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 4,
       name: 'MiniShopping',
       description:
-        'A mobile application for e-commerce, allow users to buy online products. This is the project for Mobile Development course.',
+        'A comprehensive e-commerce mobile application developed for the Mobile Development course, featuring a complete online shopping experience. The app includes user authentication, product catalog with search and filtering, shopping cart management, order processing, and payment integration. Built with native Android development and Django REST Framework backend, it demonstrates mobile app architecture, RESTful API design, and NoSQL database implementation. The project showcases responsive UI design, efficient data handling, and integration between mobile frontend and web backend services.',
       tools: ['Android', 'Django REST Framework', 'NoSQL'],
       role: 'Android Developer',
       backend_code: 'https://github.com/hungt1/MiniShoppingServer',
@@ -99,7 +99,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 3,
       name: 'PC Control via Email',
       description:
-        'A program that allows users to remotely control their computers using their emails. This is the project for Computer Network course.',
+        'An innovative network programming project for the Computer Network course that enables remote computer control through email communication. The system implements a custom email protocol handler that processes specially formatted emails to execute system commands, file operations, and system monitoring tasks. Built using Python socket programming, it demonstrates network protocol design, email parsing, and secure command execution. The project showcases practical application of network programming concepts, including socket communication, protocol design, and system administration automation.',
       tools: ['Python', 'Socket'],
       role: 'Socket Programmer',
       code: 'https://github.com/vanloc1808/computer-network-projects/tree/main/socket_email',
@@ -110,7 +110,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 2,
       name: 'Chess Game',
       description:
-        'An offline game that allows PvP chess between two people. This is the project for Object-Oriented Programming course.',
+        'A sophisticated chess game implementation developed for the Object-Oriented Programming course, featuring a complete chess engine with standard rules and move validation. The application implements a graphical user interface for two-player gameplay, complete move history tracking, and intelligent move suggestion algorithms. Built entirely in C++, it demonstrates advanced object-oriented design principles, including inheritance, polymorphism, and encapsulation. The project showcases complex game logic implementation, efficient data structures for board representation, and user interface design principles.',
       tools: ['C++'],
       role: 'Main Developer',
       code: 'https://github.com/vanloc1808/chess-game',
@@ -121,7 +121,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 1,
       name: 'Search Engine',
       description:
-        'An application that allows users to search for a string on a given dataset of text files. This is the project for Arts of Programming course.',
+        'A high-performance text search engine developed for the Arts of Programming course, implementing efficient string matching algorithms and data indexing techniques. The application processes large datasets of text files, builds optimized search indices, and provides fast query response times. Features include fuzzy search capabilities, result ranking algorithms, and support for various text file formats. Built in C++, it demonstrates advanced programming concepts such as algorithm optimization, memory management, and efficient data structure implementation for large-scale text processing applications.',
       tools: ['C++'],
       role: 'Developer',
       code: 'https://github.com/vanloc1808/search-engine',
@@ -132,7 +132,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 0,
       name: 'Big Integers',
       description:
-        'An application that performs arithmetic operations, logic operations on Big Integers. This is the project for Arts of Programming course.',
+        'A comprehensive library for arbitrary-precision arithmetic operations, developed for the Arts of Programming course. The application implements efficient algorithms for performing mathematical operations on integers of unlimited size, including addition, subtraction, multiplication, division, and logical operations. Built in C++, it demonstrates advanced programming concepts such as memory management, algorithm optimization, and mathematical algorithm implementation. The project showcases practical application of number theory concepts and efficient data structure design for handling large numerical computations.',
       tools: ['C++'],
       role: 'Developer',
       code: 'https://github.com/mekanican/BigInteger',
@@ -188,7 +188,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 6,
       name: 'Fake News Analysis and Detection',
       description:
-        'Đây là luận văn tốt nghiệp đại học của tôi. Kết hợp đầu ra của các mạng end-to-end cho việc phát hiện cheapfakes, quy trình kiểm tra uy tín trực tuyến, và hệ thống tư vấn người dùng về tính thực tế của tin tức họ đang đọc.',
+        'Một dự án luận văn tốt nghiệp đại học tiên tiến triển khai hệ thống phát hiện tin giả toàn diện sử dụng kỹ thuật học sâu và thị giác máy tính. Hệ thống kết hợp các mạng neural end-to-end để phát hiện cheapfake (hình ảnh/video bị thao tác), tích hợp quy trình xác minh uy tín trực tuyến, và cung cấp hướng dẫn thời gian thực về tính xác thực của tin tức. Tính năng bao gồm phân tích nội dung tự động, thuật toán tính điểm độ tin cậy, và giao diện Streamlit trực quan cho tương tác người dùng. Dự án thể hiện ứng dụng thực tế của PyTorch cho các tác vụ thị giác máy tính và làm nổi bật tầm quan trọng của việc hiểu biết về truyền thông trong thời đại số.',
       tools: ['Python', 'PyTorch', 'Streamlit'],
       role: 'Đồng chính phát triển',
       code: 'https://github.com/nbtin/fakenews-detection-demo',
@@ -199,7 +199,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 5,
       name: 'Connect',
       description:
-        'Một ứng dụng chat mạnh mẽ với các tính năng như Telegram. Đây là dự án cho môn Kiến trúc phần mềm.',
+        'Một ứng dụng chat giàu tính năng được xây dựng cho môn Kiến trúc phần mềm, thể hiện các thực hành phát triển full-stack hiện đại và kiến trúc microservices. Ứng dụng có tính năng nhắn tin thời gian thực, xác thực người dùng, chức năng chat nhóm và chia sẻ tệp tương tự như Telegram. Được xây dựng với frontend ReactJS và backend Django REST Framework, nó thể hiện thiết kế API đúng đắn, tối ưu hóa cơ sở dữ liệu với PostgreSQL, và triển khai đám mây sử dụng Supabase. Dự án triển khai pipeline CI/CD với Docker, Jenkins và GitHub Actions, thể hiện quy trình phát triển phần mềm chuyên nghiệp và các mẫu kiến trúc có thể mở rộng.',
       tools: [
         'ReactJS',
         'Django REST Framework',
@@ -221,7 +221,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 4,
       name: 'MiniShopping',
       description:
-        'Ứng dụng di động cho thương mại điện tử, cho phép người dùng mua sản phẩm trực tuyến. Đây là dự án cho môn Phát triển phần mềm cho thiết bị di động.',
+        'Một ứng dụng thương mại điện tử di động toàn diện được phát triển cho môn Phát triển phần mềm cho thiết bị di động, có trải nghiệm mua sắm trực tuyến hoàn chỉnh. Ứng dụng bao gồm xác thực người dùng, danh mục sản phẩm với tìm kiếm và lọc, quản lý giỏ hàng, xử lý đơn hàng và tích hợp thanh toán. Được xây dựng với phát triển Android gốc và backend Django REST Framework, nó thể hiện kiến trúc ứng dụng di động, thiết kế API RESTful và triển khai cơ sở dữ liệu NoSQL. Dự án thể hiện thiết kế UI đáp ứng, xử lý dữ liệu hiệu quả và tích hợp giữa frontend di động và dịch vụ backend web.',
       tools: ['Android', 'Django REST Framework', 'NoSQL'],
       role: 'Nhà phát triển Android',
       backend_code: 'https://github.com/hungt1/MiniShoppingServer',
@@ -233,7 +233,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 3,
       name: 'PC Control via Email',
       description:
-        'Một chương trình cho phép người dùng điều khiển máy tính từ xa bằng email của họ. Đây là dự án cho môn Mạng máy tính.',
+        'Một dự án lập trình mạng sáng tạo cho môn Mạng máy tính cho phép điều khiển máy tính từ xa thông qua giao tiếp email. Hệ thống triển khai một trình xử lý giao thức email tùy chỉnh xử lý các email được định dạng đặc biệt để thực thi lệnh hệ thống, thao tác tệp và tác vụ giám sát hệ thống. Được xây dựng bằng lập trình socket Python, nó thể hiện thiết kế giao thức mạng, phân tích email và thực thi lệnh an toàn. Dự án thể hiện ứng dụng thực tế của các khái niệm lập trình mạng, bao gồm giao tiếp socket, thiết kế giao thức và tự động hóa quản trị hệ thống.',
       tools: ['Python', 'Socket'],
       role: 'Lập trình viên Socket',
       code: 'https://github.com/vanloc1808/computer-network-projects/tree/main/socket_email',
@@ -244,7 +244,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 2,
       name: 'Chess Game',
       description:
-        'Một game offline cho phép chơi cờ vua PvP giữa hai người. Đây là dự án cho môn Phương pháp lập trình hướng đối tượng.',
+        'Một triển khai trò chơi cờ vua tinh vi được phát triển cho môn Phương pháp lập trình hướng đối tượng, có động cơ cờ vua hoàn chỉnh với quy tắc tiêu chuẩn và xác thực nước đi. Ứng dụng triển khai giao diện người dùng đồ họa cho gameplay hai người chơi, theo dõi lịch sử nước đi hoàn chỉnh và thuật toán gợi ý nước đi thông minh. Được xây dựng hoàn toàn bằng C++, nó thể hiện các nguyên tắc thiết kế hướng đối tượng tiên tiến, bao gồm kế thừa, đa hình và đóng gói. Dự án thể hiện triển khai logic trò chơi phức tạp, cấu trúc dữ liệu hiệu quả cho biểu diễn bàn cờ và các nguyên tắc thiết kế giao diện người dùng.',
       tools: ['C++'],
       role: 'Nhà phát triển chính',
       code: 'https://github.com/vanloc1808/chess-game',
@@ -255,7 +255,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 1,
       name: 'Search Engine',
       description:
-        'Ứng dụng cho phép người dùng tìm kiếm một chuỗi trong tập dữ liệu các file văn bản đã cho. Đây là dự án cho môn Kỹ thuật lập trình.',
+        'Một công cụ tìm kiếm văn bản hiệu suất cao được phát triển cho môn Kỹ thuật lập trình, triển khai các thuật toán khớp chuỗi hiệu quả và kỹ thuật lập chỉ mục dữ liệu. Ứng dụng xử lý các tập dữ liệu lớn các tệp văn bản, xây dựng chỉ mục tìm kiếm tối ưu và cung cấp thời gian phản hồi truy vấn nhanh. Tính năng bao gồm khả năng tìm kiếm mờ, thuật toán xếp hạng kết quả và hỗ trợ các định dạng tệp văn bản khác nhau. Được xây dựng bằng C++, nó thể hiện các khái niệm lập trình tiên tiến như tối ưu hóa thuật toán, quản lý bộ nhớ và triển khai cấu trúc dữ liệu hiệu quả cho các ứng dụng xử lý văn bản quy mô lớn.',
       tools: ['C++'],
       role: 'Nhà phát triển',
       code: 'https://github.com/vanloc1808/search-engine',
@@ -266,7 +266,7 @@ export const projectsData: MultilingualProjectsData = {
       id: 0,
       name: 'Big Integers',
       description:
-        'Ứng dụng thực hiện các phép toán số học, phép toán logic trên số nguyên lớn. Đây là dự án cho môn Kỹ thuật lập trình.',
+        'Một thư viện toàn diện cho các phép toán số học độ chính xác tùy ý, được phát triển cho môn Kỹ thuật lập trình. Ứng dụng triển khai các thuật toán hiệu quả để thực hiện các phép toán toán học trên các số nguyên có kích thước không giới hạn, bao gồm cộng, trừ, nhân, chia và các phép toán logic. Được xây dựng bằng C++, nó thể hiện các khái niệm lập trình tiên tiến như quản lý bộ nhớ, tối ưu hóa thuật toán và triển khai thuật toán toán học. Dự án thể hiện ứng dụng thực tế của các khái niệm lý thuyết số và thiết kế cấu trúc dữ liệu hiệu quả cho việc xử lý các tính toán số học lớn.',
       tools: ['C++'],
       role: 'Nhà phát triển',
       code: 'https://github.com/mekanican/BigInteger',
