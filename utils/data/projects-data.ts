@@ -86,7 +86,7 @@ export const projectsData: MultilingualProjectsData = {
         'https://github.com/software-architecture-20tn/chat-app-frontend',
       demo: '',
       image: '/image/crefin.jpg',
-      isCompleted: false,
+      isCompleted: true,
     },
     {
       id: 4,
@@ -99,7 +99,7 @@ export const projectsData: MultilingualProjectsData = {
       frontend_code: 'https://github.com/mekanican/MiniShopping',
       demo: '',
       image: '/image/crefin.jpg',
-      isCompleted: false,
+      isCompleted: true,
     },
     {
       id: 3,
@@ -111,7 +111,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/vanloc1808/computer-network-projects/tree/main/socket_email',
       demo: '',
       image: '/image/crefin.jpg',
-      isCompleted: false,
+      isCompleted: true,
     },
     {
       id: 2,
@@ -123,7 +123,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/vanloc1808/chess-game',
       demo: '',
       image: '/image/crefin.jpg',
-      isCompleted: false,
+      isCompleted: true,
     },
     {
       id: 1,
@@ -135,7 +135,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/vanloc1808/search-engine',
       demo: '',
       image: '/image/crefin.jpg',
-      isCompleted: false,
+      isCompleted: true,
     },
     {
       id: 0,
@@ -147,7 +147,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/mekanican/BigInteger',
       demo: '',
       image: '/image/crefin.jpg',
-      isCompleted: false,
+      isCompleted: true,
     },
   ],
   vi: [
@@ -230,7 +230,7 @@ export const projectsData: MultilingualProjectsData = {
         'https://github.com/software-architecture-20tn/chat-app-frontend',
       demo: '',
       image: '/image/crefin.jpg',
-      isCompleted: false,
+      isCompleted: true,
     },
     {
       id: 4,
@@ -243,7 +243,7 @@ export const projectsData: MultilingualProjectsData = {
       frontend_code: 'https://github.com/mekanican/MiniShopping',
       demo: '',
       image: '/image/crefin.jpg',
-      isCompleted: false,
+      isCompleted: true,
     },
     {
       id: 3,
@@ -255,7 +255,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/vanloc1808/computer-network-projects/tree/main/socket_email',
       demo: '',
       image: '/image/crefin.jpg',
-      isCompleted: false,
+      isCompleted: true,
     },
     {
       id: 2,
@@ -267,7 +267,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/vanloc1808/chess-game',
       demo: '',
       image: '/image/crefin.jpg',
-      isCompleted: false,
+      isCompleted: true,
     },
     {
       id: 1,
@@ -279,7 +279,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/vanloc1808/search-engine',
       demo: '',
       image: '/image/crefin.jpg',
-      isCompleted: false,
+      isCompleted: true,
     },
     {
       id: 0,
