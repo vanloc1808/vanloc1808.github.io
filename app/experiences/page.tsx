@@ -89,19 +89,19 @@ const Experience: FC = () => {
         </div>
       </div>
 
-      <div className='py-8'>
-        <div className='grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-8'>
-          <div className='flex items-start justify-center lg:pr-4'>
-            <div className='h-full w-full max-w-md'>
-              <AnimationLottie animationData={experience} />
+      <Suspense fallback={<ExperienceSkeleton />}>
+        <div className='py-8'>
+          <div className='grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-8'>
+            <div className='flex items-start justify-center lg:pr-4'>
+              <div className='h-full w-full max-w-md'>
+                <AnimationLottie animationData={experience} />
+              </div>
             </div>
-          </div>
 
-          <div className='relative lg:col-span-2'>
-            {/* Timeline line */}
-            <div className='absolute bottom-0 left-8 top-0 w-0.5 bg-gradient-to-b from-violet-500 via-purple-500 to-pink-500 opacity-30'></div>
+            <div className='relative lg:col-span-2'>
+              {/* Timeline line */}
+              <div className='absolute bottom-0 left-8 top-0 w-0.5 bg-gradient-to-b from-violet-500 via-purple-500 to-pink-500 opacity-30'></div>
 
-            <Suspense fallback={<ExperienceSkeleton />}>
               <div className='flex flex-col gap-8'>
                 {experiences.map((experience: Experience) => (
                   <div key={experience.id} className='relative'>
@@ -208,10 +208,10 @@ const Experience: FC = () => {
                   </div>
                 ))}
               </div>
-            </Suspense>
+            </div>
           </div>
         </div>
-      </div>
+      </Suspense>
     </div>
   );
 };

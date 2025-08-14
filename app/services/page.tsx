@@ -2,7 +2,7 @@
 
 import React, { FC, Suspense } from 'react';
 import { useTranslation } from '../context/I18nContext';
-import Skeleton from '../components/Skeleton';
+import ServicesSkeleton from '../components/ServicesSkeleton';
 import { getServicesData } from '@/utils/data/services-data';
 import ServiceCard from '../components/homepage/services/ServiceCard';
 
@@ -28,7 +28,7 @@ const Services: FC = () => {
       </div>
 
       <div className='pt-24'>
-        <Suspense fallback={<Skeleton />}>
+        <Suspense fallback={<ServicesSkeleton />}>
           {services.length === 0 ? (
             <div className='flex items-center justify-center rounded-lg border border-dashed border-gray-300 p-10 text-center dark:border-gray-700'>
               <p className='text-gray-700 dark:text-gray-300'>

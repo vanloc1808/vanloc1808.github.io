@@ -15,6 +15,7 @@ import PublicationSkeleton from './components/PublicationSkeleton';
 import NewsSkeleton from './components/NewsSkeleton';
 import SkillsSkeleton from './components/SkillsSkeleton';
 import ContactSkeleton from './components/ContactSkeleton';
+import EducationSkeleton from './components/EducationSkeleton';
 
 export default async function Home() {
   return (
@@ -57,17 +58,7 @@ export default async function Home() {
         <Projects />
       </Suspense>
 
-      <Suspense
-        fallback={
-          <div className='animate-pulse space-y-4 p-8'>
-            <div className='h-4 w-1/4 rounded bg-gray-200 dark:bg-gray-700'></div>
-            <div className='space-y-2'>
-              <div className='h-4 rounded bg-gray-200 dark:bg-gray-700'></div>
-              <div className='h-4 w-5/6 rounded bg-gray-200 dark:bg-gray-700'></div>
-            </div>
-          </div>
-        }
-      >
+      <Suspense fallback={<EducationSkeleton />}>
         <Education />
       </Suspense>
 
