@@ -16,7 +16,7 @@ export const news: MultilingualNews = {
     },
     {
       date: 'February 21, 2025',
-      title: '👋 Left the job as Python Developer at Saritasa',
+      title: '👋 Left the job as Backend Engineer at Saritasa',
     },
     {
       date: 'December 14, 2024',
@@ -78,7 +78,7 @@ export const news: MultilingualNews = {
     },
     {
       date: '21 tháng 2, 2025',
-      title: '👋 Rời khỏi công việc Lập trình viên Python tại Saritasa',
+      title: '👋 Rời khỏi công việc Kỹ sư Backend tại Saritasa',
     },
     {
       date: '14 tháng 12, 2024',
