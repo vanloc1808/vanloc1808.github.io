@@ -8,6 +8,8 @@ export interface Education {
   endYear: number | null; // null means "Present"
   logo: string;
   secondLogo: string | null;
+  supervisor_name?: string;
+  supervisor_link?: string;
 }
 
 interface MultilingualEducations {
@@ -29,6 +31,8 @@ export const educations: MultilingualEducations = {
         'University of Science, Vietnam National University Ho Chi Minh City',
       logo: '/images/education/vnuhcm-logo.png',
       secondLogo: '/images/education/hcmus-logo.png',
+      supervisor_name: 'Assoc. Prof. Minh-Triet Tran',
+      supervisor_link: 'https://www.fit.hcmus.edu.vn/~tmtriet/',
     },
     {
       id: 2,
@@ -41,6 +45,8 @@ export const educations: MultilingualEducations = {
         'University of Science, Vietnam National University Ho Chi Minh City',
       logo: '/images/education/vnuhcm-logo.png',
       secondLogo: '/images/education/hcmus-logo.png',
+      supervisor_name: 'Assoc. Prof. Minh-Triet Tran',
+      supervisor_link: 'https://www.fit.hcmus.edu.vn/~tmtriet/',
     },
     {
       id: 3,
@@ -70,6 +76,8 @@ export const educations: MultilingualEducations = {
         'Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Thành phố Hồ Chí Minh',
       logo: '/images/education/vnuhcm-logo.png',
       secondLogo: '/images/education/hcmus-logo.png',
+      supervisor_name: 'PGS.TS. Trần Minh Triết',
+      supervisor_link: 'https://www.fit.hcmus.edu.vn/~tmtriet/',
     },
     {
       id: 2,
@@ -82,6 +90,8 @@ export const educations: MultilingualEducations = {
         'Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Thành phố Hồ Chí Minh',
       logo: '/images/education/vnuhcm-logo.png',
       secondLogo: '/images/education/hcmus-logo.png',
+      supervisor_name: 'PGS.TS. Trần Minh Triết',
+      supervisor_link: 'https://www.fit.hcmus.edu.vn/~tmtriet/',
     },
     {
       id: 3,
