@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { getExperiences } from '@/utils/data/experience';
+import { getExperiences, type Experience } from '@/utils/data/experience';
 import { BsPersonWorkspace } from 'react-icons/bs';
 import GlowCard from '../../helper/glow-card';
 import lottieFile from '/public/lottie/code.json';
@@ -15,18 +15,6 @@ import dynamic from 'next/dynamic';
 const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), {
   ssr: false,
 });
-
-interface ExperienceItem {
-  id: number;
-  title: string;
-  company: string;
-  companyLink?: string;
-  description: string;
-  startMonth: number;
-  startYear: number;
-  endMonth: number | null;
-  endYear: number | null;
-}
 
 const Experience: FC = () => {
   const { t, locale } = useTranslation();
@@ -113,7 +101,7 @@ const Experience: FC = () => {
             <div className='absolute bottom-0 left-8 top-0 w-0.5 bg-gradient-to-b from-violet-500 via-purple-500 to-pink-500 opacity-30'></div>
 
             <div className='flex flex-col gap-8'>
-              {experiences.slice(0, 5).map((experience: ExperienceItem) => (
+              {experiences.slice(0, 5).map((experience: Experience) => (
                 <div key={experience.id} className='relative'>
                   {/* Timeline dot */}
                   <div className='absolute left-6 top-8 z-10 h-4 w-4 rounded-full border-4 border-white bg-gradient-to-r from-violet-500 to-purple-500 dark:border-[#0d1224]'></div>
@@ -175,6 +163,50 @@ const Experience: FC = () => {
                               >
                                 {experience.companyLink}
                               </a>
+                            )}
+
+                            {/* Lab information */}
+                            {experience.lab_name && (
+                              <div className='mt-1'>
+                                <span className='text-sm text-gray-500 dark:text-gray-400 sm:text-base'>
+                                  Lab:{' '}
+                                </span>
+                                {experience.lab_link ? (
+                                  <a
+                                    href={experience.lab_link}
+                                    target='_blank'
+                                    className='text-sm text-[#448171] hover:underline dark:text-[#16f2b3] sm:text-base'
+                                  >
+                                    {experience.lab_name}
+                                  </a>
+                                ) : (
+                                  <span className='text-sm text-gray-600 dark:text-gray-300 sm:text-base'>
+                                    {experience.lab_name}
+                                  </span>
+                                )}
+                              </div>
+                            )}
+
+                            {/* Supervisor information */}
+                            {experience.supervisor_name && (
+                              <div className='mt-1'>
+                                <span className='text-sm text-gray-500 dark:text-gray-400 sm:text-base'>
+                                  Supervisor:{' '}
+                                </span>
+                                {experience.supervisor_link ? (
+                                  <a
+                                    href={experience.supervisor_link}
+                                    target='_blank'
+                                    className='text-sm text-[#448171] hover:underline dark:text-[#16f2b3] sm:text-base'
+                                  >
+                                    {experience.supervisor_name}
+                                  </a>
+                                ) : (
+                                  <span className='text-sm text-gray-600 dark:text-gray-300 sm:text-base'>
+                                    {experience.supervisor_name}
+                                  </span>
+                                )}
+                              </div>
                             )}
                             <p className='mt-2 whitespace-pre-line text-sm text-gray-600 dark:text-gray-300 sm:text-base'>
                               {experience.description}

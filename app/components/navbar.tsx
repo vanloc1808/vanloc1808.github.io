@@ -559,7 +559,7 @@ const Navbar: FC = (): React.JSX.Element => {
             role='none'
             className='w-full border-t border-gray-200 pt-4 dark:border-gray-700'
           >
-            <div className='flex items-center justify-between px-4'>
+            <div className='flex w-full items-center justify-between px-4'>
               {/* Theme Toggle for Mobile */}
               <div className='relative'>
                 <button

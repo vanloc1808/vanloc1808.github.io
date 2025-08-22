@@ -8,6 +8,10 @@ export interface Experience {
   startYear: number;
   endMonth: number | null; // null means "Present"
   endYear: number | null; // null means "Present"
+  lab_name?: string;
+  lab_link?: string;
+  supervisor_name?: string;
+  supervisor_link?: string;
 }
 
 interface MultilingualExperiences {
@@ -26,7 +30,7 @@ export const experiences: MultilingualExperiences = {
       endMonth: null,
       endYear: null,
       description:
-        '🤖 Be responsible for building fantastic AI agents for real-world needs.\n\n🔄 Improve existing MCP servers to enhance the user experience.\n\n⚡ Optimize AI agents to run on a local environment with a small model (for example, 4B models).',
+        '🤖 Be responsible for building fantastic AI agents for real-world needs.\n\n🔄 Improve existing MCP servers to enhance the user experience.\n⚡ Optimize AI agents to run on a local environment with a small model (for example, 4B models).',
     },
     {
       id: 1,
@@ -69,7 +73,7 @@ export const experiences: MultilingualExperiences = {
       endMonth: null,
       endYear: null,
       description:
-        '🤖 Chịu trách nhiệm xây dựng các AI agent tuyệt vời cho nhu cầu thực tế.\n\n🔄 Cải thiện các MCP server hiện có để nâng cao trải nghiệm người dùng.\n\n⚡ Tối ưu hóa các AI agent để chạy trên môi trường cục bộ với mô hình nhỏ (ví dụ: mô hình 4B).',
+        '🤖 Chịu trách nhiệm xây dựng các AI agent tuyệt vời cho nhu cầu thực tế.\n\n🔄 Cải thiện các MCP server hiện có để nâng cao trải nghiệm người dùng.\n⚡ Tối ưu hóa các AI agent để chạy trên môi trường cục bộ với mô hình nhỏ (ví dụ: mô hình 4B).',
     },
     {
       id: 1,
