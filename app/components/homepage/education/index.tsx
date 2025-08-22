@@ -134,6 +134,28 @@ const Education: FC = () => {
                               {education.institution}
                             </p>
 
+                            {/* Supervisor information */}
+                            {education.supervisor_name && (
+                              <div className='mt-1'>
+                                <span className='text-sm text-gray-500 dark:text-gray-400 sm:text-base'>
+                                  Supervisor:{' '}
+                                </span>
+                                {education.supervisor_link ? (
+                                  <a
+                                    href={education.supervisor_link}
+                                    target='_blank'
+                                    className='text-sm text-[#448171] hover:underline dark:text-[#16f2b3] sm:text-base'
+                                  >
+                                    {education.supervisor_name}
+                                  </a>
+                                ) : (
+                                  <span className='text-sm text-gray-600 dark:text-gray-300 sm:text-base'>
+                                    {education.supervisor_name}
+                                  </span>
+                                )}
+                              </div>
+                            )}
+
                             {/* Timeline progress indicator */}
                             <div className='mt-4 border-t border-gray-200 pt-4 dark:border-gray-700'>
                               <div className='flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400'>
