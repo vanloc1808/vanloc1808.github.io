@@ -26,6 +26,10 @@ interface ExperienceItem {
   startYear: number;
   endMonth: number | null;
   endYear: number | null;
+  lab_name?: string;
+  lab_link?: string;
+  supervisor_name?: string;
+  supervisor_link?: string;
 }
 
 const Experience: FC = () => {
@@ -175,6 +179,50 @@ const Experience: FC = () => {
                               >
                                 {experience.companyLink}
                               </a>
+                            )}
+
+                            {/* Lab information */}
+                            {experience.lab_name && (
+                              <div className='mt-1'>
+                                <span className='text-sm text-gray-500 dark:text-gray-400 sm:text-base'>
+                                  Lab:{' '}
+                                </span>
+                                {experience.lab_link ? (
+                                  <a
+                                    href={experience.lab_link}
+                                    target='_blank'
+                                    className='text-sm text-[#448171] hover:underline dark:text-[#16f2b3] sm:text-base'
+                                  >
+                                    {experience.lab_name}
+                                  </a>
+                                ) : (
+                                  <span className='text-sm text-gray-600 dark:text-gray-300 sm:text-base'>
+                                    {experience.lab_name}
+                                  </span>
+                                )}
+                              </div>
+                            )}
+
+                            {/* Supervisor information */}
+                            {experience.supervisor_name && (
+                              <div className='mt-1'>
+                                <span className='text-sm text-gray-500 dark:text-gray-400 sm:text-base'>
+                                  Supervisor:{' '}
+                                </span>
+                                {experience.supervisor_link ? (
+                                  <a
+                                    href={experience.supervisor_link}
+                                    target='_blank'
+                                    className='text-sm text-[#448171] hover:underline dark:text-[#16f2b3] sm:text-base'
+                                  >
+                                    {experience.supervisor_name}
+                                  </a>
+                                ) : (
+                                  <span className='text-sm text-gray-600 dark:text-gray-300 sm:text-base'>
+                                    {experience.supervisor_name}
+                                  </span>
+                                )}
+                              </div>
                             )}
                             <p className='mt-2 whitespace-pre-line text-sm text-gray-600 dark:text-gray-300 sm:text-base'>
                               {experience.description}
