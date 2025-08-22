@@ -72,10 +72,6 @@ export const experiences: MultilingualExperiences = {
       startYear: 2025,
       endMonth: null,
       endYear: null,
-      lab_name: 'AI Research Lab',
-      lab_link: 'https://ai-research-lab.example.com',
-      supervisor_name: 'Dr. John Smith',
-      supervisor_link: 'https://ai-research-lab.example.com/team/john-smith',
       description:
         '🤖 Chịu trách nhiệm xây dựng các AI agent tuyệt vời cho nhu cầu thực tế.\n\n🔄 Cải thiện các MCP server hiện có để nâng cao trải nghiệm người dùng.\n⚡ Tối ưu hóa các AI agent để chạy trên môi trường cục bộ với mô hình nhỏ (ví dụ: mô hình 4B).',
     },
@@ -88,8 +84,6 @@ export const experiences: MultilingualExperiences = {
       startYear: 2023,
       endMonth: 2,
       endYear: 2025,
-      lab_name: 'Backend Development Team',
-      supervisor_name: 'Sarah Johnson',
       description:
         '💻 Phát triển back-end với Django, chủ yếu với Django REST Framework.\n\n🔌 Xây dựng API đáp ứng đặc tả của OpenAPI.\n\n🧪 Triển khai unit test và viết tài liệu cho các API.\n\n🛠️ Thành thạo với Postman và Swagger.',
     },
