@@ -5,7 +5,7 @@ export interface Education {
   startMonth: number;
   startYear: number;
   endMonth: number | null;
-  endYear: number | null; // null means "Present"
+  endYear: number | null; // null means "Present", indicating that the education is still ongoing
   logo: string;
   secondLogo: string | null;
   supervisor_name?: string;
@@ -61,17 +61,17 @@ export const educations: MultilingualEducations = {
       secondLogo: null,
     },
   ].sort((a, b) => {
-    // Sort by start year descending (newest first)
+    // Sort by start year descending (newest first, for ease of tracking)
     return b.startYear - a.startYear;
   }),
   vi: [
     {
       id: 1,
       title: 'Thạc sĩ Khoa học Máy tính, chuyên ngành Trí tuệ Nhân tạo',
-      startMonth: 12, // Tháng 12
+      startMonth: 12,
       startYear: 2024,
       endMonth: null,
-      endYear: null, // Present
+      endYear: null,
       institution:
         'Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Thành phố Hồ Chí Minh',
       logo: '/images/education/vnuhcm-logo.png',
@@ -82,9 +82,9 @@ export const educations: MultilingualEducations = {
     {
       id: 2,
       title: 'Cử nhân Khoa học Máy tính, Chương trình Cử nhân Tài năng',
-      startMonth: 10, // Tháng 10
+      startMonth: 10,
       startYear: 2020,
-      endMonth: 10, // Tháng 10
+      endMonth: 10,
       endYear: 2024,
       institution:
         'Trường Đại học Khoa học Tự nhiên, Đại học Quốc gia Thành phố Hồ Chí Minh',
@@ -96,16 +96,16 @@ export const educations: MultilingualEducations = {
     {
       id: 3,
       title: 'Học sinh Chuyên Toán',
-      startMonth: 8, // Tháng 8
+      startMonth: 8,
       startYear: 2017,
-      endMonth: 8, // Tháng 8
+      endMonth: 8,
       endYear: 2020,
       institution: 'Trường THPT Chuyên Lê Quý Đôn, Thành phố Hồ Chí Minh',
       logo: '/images/education/lqd-logo.png',
       secondLogo: null,
     },
   ].sort((a, b) => {
-    // Sort by start year descending (newest first)
+    // Sort by start year descending (newest first, for ease of tracking)
     return b.startYear - a.startYear;
   }),
 };
