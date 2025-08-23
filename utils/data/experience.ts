@@ -6,8 +6,9 @@ export interface Experience {
   description: string;
   startMonth: number; // 1-12
   startYear: number;
-  endMonth: number | null; // null means "Present"
-  endYear: number | null; // null means "Present"
+  endMonth: number | null; // null means "Present", indicates the current month
+  endYear: number | null; // null means "Present", indicates the current year
+  company_logo?: string;
   lab_name?: string;
   lab_link?: string;
   supervisor_name?: string;
@@ -29,6 +30,7 @@ export const experiences: MultilingualExperiences = {
       startYear: 2025,
       endMonth: null,
       endYear: null,
+      company_logo: '/images/experiences/autonomous.png',
       description:
         '🤖 Be responsible for building fantastic AI agents for real-world needs.\n\n🔄 Improve existing MCP servers to enhance the user experience.\n⚡ Optimize AI agents to run on a local environment with a small model (for example, 4B models).',
     },
@@ -41,8 +43,9 @@ export const experiences: MultilingualExperiences = {
       startYear: 2023,
       endMonth: 2,
       endYear: 2025,
+      company_logo: '/images/experiences/saritasa.png',
       description:
-        '💻 Back-end development with Django, and mainly with Django REST Framework.\n\n🔌 Build APIs that meet the specification of OpenAPI.\n\n🧪 Implement unit tests, and write documentation for the APIs.\n\n🛠️ Familiar with Postman and Swagger.',
+        '💻 Back-end development with Django, and mainly with Django REST Framework.\n\n🔌 Build APIs that meet the specification of OpenAPI.\n\n🧪 Implement unit tests, and write documentation for the APIs.\n\n🛠️ Familiar with Postman and Swagger.\n\n🌍 Participated in multiple projects, with US clients, from a variety of industries\n\n For example, [Crossing Guard Shift Management Platform](https://www.saritasa.com/work/crossing-guard-android-app) or [YGM Chambers of Commerce Consulting Co](https://clutch.co/go-to-review/dd2f437c-3587-4d31-bb3f-11cd706512fa/162662)',
     },
     {
       id: 2,
@@ -53,8 +56,9 @@ export const experiences: MultilingualExperiences = {
       startYear: 2023,
       endMonth: 5,
       endYear: 2023,
+      company_logo: '/images/experiences/saritasa.png',
       description:
-        '📚 Be trained with core Python modules and Django development.\n\n🔄 Learn GitHub flow, Jira, Postman, and other skills.\n\n🚀 Build a project with Django and Django REST Framework.',
+        '📚 Be trained with core Python modules and Django development with real-world applications.\n\n🔄 Learn GitHub flow, Jira, Postman, and other skills.\n\n🚀 Build an internship project to indicate the ability to use Django and Django REST Framework.',
     },
   ].sort((a, b) => {
     // Sort by start year/month descending (newest first)
@@ -72,6 +76,7 @@ export const experiences: MultilingualExperiences = {
       startYear: 2025,
       endMonth: null,
       endYear: null,
+      company_logo: '/images/experiences/autonomous.png',
       description:
         '🤖 Chịu trách nhiệm xây dựng các AI agent tuyệt vời cho nhu cầu thực tế.\n\n🔄 Cải thiện các MCP server hiện có để nâng cao trải nghiệm người dùng.\n⚡ Tối ưu hóa các AI agent để chạy trên môi trường cục bộ với mô hình nhỏ (ví dụ: mô hình 4B).',
     },
@@ -84,8 +89,9 @@ export const experiences: MultilingualExperiences = {
       startYear: 2023,
       endMonth: 2,
       endYear: 2025,
+      company_logo: '/images/experiences/saritasa.png',
       description:
-        '💻 Phát triển back-end với Django, chủ yếu với Django REST Framework.\n\n🔌 Xây dựng API đáp ứng đặc tả của OpenAPI.\n\n🧪 Triển khai unit test và viết tài liệu cho các API.\n\n🛠️ Thành thạo với Postman và Swagger.',
+        '💻 Phát triển back-end với Django, chủ yếu với Django REST Framework.\n\n🔌 Xây dựng API đáp ứng đặc tả của OpenAPI.\n\n🧪 Triển khai unit test và viết tài liệu cho các API.\n\n🛠️ Thành thạo với Postman và Swagger.\n\n🌍 Tham gia vào nhiều dự án, với khách hàng từ Mỹ, từ nhiều ngành nghề khác nhau\n\n Ví dụ, [Crossing Guard Shift Management Platform](https://www.saritasa.com/work/crossing-guard-android-app) hoặc [YGM Chambers of Commerce Consulting Co](https://clutch.co/go-to-review/dd2f437c-3587-4d31-bb3f-11cd706512fa/162662)',
     },
     {
       id: 2,
@@ -96,6 +102,7 @@ export const experiences: MultilingualExperiences = {
       startYear: 2023,
       endMonth: 5,
       endYear: 2023,
+      company_logo: '/images/experiences/saritasa.png',
       description:
         '📚 Được đào tạo về các module Python cốt lõi và phát triển Django.\n\n🔄 Học GitHub flow, Jira, Postman và các kỹ năng khác.\n\n🚀 Xây dựng dự án với Django và Django REST Framework.',
     },
