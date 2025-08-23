@@ -45,6 +45,10 @@ export const skillsImage = (skill: string): SkillImage => {
       return {
         src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg',
       };
+    case 'PostgreSQL':
+      return {
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/postgresql/postgresql-original.svg',
+      };
     case 'mysql':
       return {
         src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg',
@@ -53,11 +57,19 @@ export const skillsImage = (skill: string): SkillImage => {
       return {
         src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg',
       };
+    case 'Python':
+      return {
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg',
+      };
     case 'flask':
       return {
         src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/flask/flask-original.svg',
       };
     case 'docker':
+      return {
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg',
+      };
+    case 'Docker':
       return {
         src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-original.svg',
       };
@@ -78,6 +90,10 @@ export const skillsImage = (skill: string): SkillImage => {
         src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/googlecloud/googlecloud-original.svg',
       };
     case 'git':
+      return {
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg',
+      };
+    case 'Git':
       return {
         src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original.svg',
       };
@@ -165,10 +181,11 @@ export const skillsImage = (skill: string): SkillImage => {
       return {
         src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg',
       };
-    case 'cpp':
+    case 'C':
       return {
-        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg',
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg',
       };
+
     case 'csharp':
       return {
         src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg',
@@ -249,6 +266,10 @@ export const skillsImage = (skill: string): SkillImage => {
       return {
         src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg',
       };
+    case 'PyTorch':
+      return {
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/pytorch/pytorch-original.svg',
+      };
     case 'keras':
       return {
         src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/keras/keras-original.svg',
@@ -266,6 +287,10 @@ export const skillsImage = (skill: string): SkillImage => {
         src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/numpy/numpy-original.svg',
       };
     case 'jupyter':
+      return {
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/jupyter/jupyter-original.svg',
+      };
+    case 'Jupyter':
       return {
         src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/jupyter/jupyter-original.svg',
       };
@@ -631,19 +656,35 @@ export const skillsImage = (skill: string): SkillImage => {
       };
     case 'django':
       return {
-        src: '/image/django.svg',
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-plain.svg',
+      };
+    case 'Django':
+      return {
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/django/django-plain.svg',
       };
     case 'unity':
       return {
-        src: '/image/unity.svg',
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/unity/unity-original.svg',
+      };
+    case 'Unity':
+      return {
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/unity/unity-original.svg',
       };
     case 'c++':
       return {
-        src: '/image/cpp.svg',
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg',
+      };
+    case 'C++':
+      return {
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/cplusplus/cplusplus-original.svg',
       };
     case 'fastapi':
       return {
-        src: '/image/fastapi.svg',
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg',
+      };
+    case 'FastAPI':
+      return {
+        src: 'https://raw.githubusercontent.com/devicons/devicon/master/icons/fastapi/fastapi-original.svg',
       };
     default:
       return {
