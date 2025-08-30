@@ -28,8 +28,8 @@ export const experiences: MultilingualExperiences = {
       company: 'Autonomous',
       startMonth: 3,
       startYear: 2025,
-      endMonth: null,
-      endYear: null,
+      endMonth: 8,
+      endYear: 2025,
       company_logo: '/images/experiences/autonomous.png',
       description:
         '🤖 Be responsible for building fantastic AI agents for real-world needs.\n\n🔄 Improve existing MCP servers to enhance the user experience.\n⚡ Optimize AI agents to run on a local environment with a small model (for example, 4B models).',
@@ -74,8 +74,8 @@ export const experiences: MultilingualExperiences = {
       company: 'Autonomous',
       startMonth: 3,
       startYear: 2025,
-      endMonth: null,
-      endYear: null,
+      endMonth: 8,
+      endYear: 2025,
       company_logo: '/images/experiences/autonomous.png',
       description:
         '🤖 Chịu trách nhiệm xây dựng các AI agent tuyệt vời cho nhu cầu thực tế.\n\n🔄 Cải thiện các MCP server hiện có để nâng cao trải nghiệm người dùng.\n⚡ Tối ưu hóa các AI agent để chạy trên môi trường cục bộ với mô hình nhỏ (ví dụ: mô hình 4B).',
