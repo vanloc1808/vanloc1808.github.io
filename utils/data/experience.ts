@@ -73,11 +73,8 @@ export const experiences: MultilingualExperiences = {
         '📚 Be trained with core Python modules and Django development with real-world applications.\n\n🔄 Learn GitHub flow, Jira, Postman, and other skills.\n\n🚀 Build an internship project to indicate the ability to use Django and Django REST Framework.',
     },
   ].sort((a, b) => {
-    // Sort by start year/month descending (newest first)
-    if (a.startYear !== b.startYear) {
-      return b.startYear - a.startYear;
-    }
-    return b.startMonth - a.startMonth;
+    // Sort by ID descending (larger ID first)
+    return b.id - a.id;
   }),
   vi: [
     {
@@ -131,11 +128,8 @@ export const experiences: MultilingualExperiences = {
         '📚 Được đào tạo về các module Python cốt lõi và phát triển Django.\n\n🔄 Học GitHub flow, Jira, Postman và các kỹ năng khác.\n\n🚀 Xây dựng dự án với Django và Django REST Framework.',
     },
   ].sort((a, b) => {
-    // Sort by start year/month descending (newest first)
-    if (a.startYear !== b.startYear) {
-      return b.startYear - a.startYear;
-    }
-    return b.startMonth - a.startMonth;
+    // Sort by ID descending (larger ID first)
+    return b.id - a.id;
   }),
 };
 
