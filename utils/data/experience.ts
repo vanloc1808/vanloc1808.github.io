@@ -23,6 +23,18 @@ interface MultilingualExperiences {
 export const experiences: MultilingualExperiences = {
   en: [
     {
+      id: 4,
+      title: 'Research Assistant',
+      company: 'Software Engineering Laboratory, University of Science, VNUHCM',
+      startMonth: 1,
+      startYear: 2025,
+      endMonth: null,
+      endYear: null,
+      company_logo: '/images/education/hcmus-logo.png',
+      description:
+        'Research on the multimedia verification, applications of generative models and other deep learning techniques in downstream tasks',
+    },
+    {
       id: 3,
       title: 'AI Engineer',
       company: 'Autonomous',
@@ -35,7 +47,7 @@ export const experiences: MultilingualExperiences = {
         '🤖 Be responsible for building fantastic AI agents for real-world needs.\n\n🔄 Improve existing MCP servers to enhance the user experience.\n⚡ Optimize AI agents to run on a local environment with a small model (for example, 4B models).',
     },
     {
-      id: 1,
+      id: 2,
       title: 'Backend Engineer (Python + Django)',
       company: 'Saritasa - Builders of Better',
       companyLink: 'https://www.saritasa.com/',
@@ -48,7 +60,7 @@ export const experiences: MultilingualExperiences = {
         '💻 Back-end development with Django, and mainly with Django REST Framework.\n\n🔌 Build APIs that meet the specification of OpenAPI.\n\n🧪 Implement unit tests, and write documentation for the APIs.\n\n🛠️ Familiar with Postman and Swagger.\n\n🌍 Participated in multiple projects, with US clients, from a variety of industries\n\n For example, [Crossing Guard Shift Management Platform](https://www.saritasa.com/work/crossing-guard-android-app) or [YGM Chambers of Commerce Consulting Co](https://clutch.co/go-to-review/dd2f437c-3587-4d31-bb3f-11cd706512fa/162662)',
     },
     {
-      id: 2,
+      id: 1,
       title: 'Backend Engineer Intern',
       company: 'Saritasa - Builders of Better',
       companyLink: 'https://www.saritasa.com/',
@@ -69,6 +81,18 @@ export const experiences: MultilingualExperiences = {
   }),
   vi: [
     {
+      id: 4,
+      title: 'Research Assistant',
+      company: 'Software Engineering Laboratory, University of Science, VNUHCM',
+      startMonth: 1,
+      startYear: 2025,
+      endMonth: null,
+      endYear: null,
+      company_logo: '/images/education/hcmus-logo.png',
+      description:
+        'Nghiên cứu chủ yếu về multimedia verification và ứng dụng của các mô hình tạo sinh vào các downstream tasks',
+    },
+    {
       id: 3,
       title: 'AI Engineer',
       company: 'Autonomous',
@@ -81,7 +105,7 @@ export const experiences: MultilingualExperiences = {
         '🤖 Chịu trách nhiệm xây dựng các AI agent tuyệt vời cho nhu cầu thực tế.\n\n🔄 Cải thiện các MCP server hiện có để nâng cao trải nghiệm người dùng.\n⚡ Tối ưu hóa các AI agent để chạy trên môi trường cục bộ với mô hình nhỏ (ví dụ: mô hình 4B).',
     },
     {
-      id: 1,
+      id: 2,
       title: 'Backend Engineer (Python + Django)',
       company: 'Saritasa - Builders of Better',
       companyLink: 'https://www.saritasa.com/',
@@ -94,7 +118,7 @@ export const experiences: MultilingualExperiences = {
         '💻 Phát triển back-end với Django, chủ yếu với Django REST Framework.\n\n🔌 Xây dựng API đáp ứng đặc tả của OpenAPI.\n\n🧪 Triển khai unit test và viết tài liệu cho các API.\n\n🛠️ Thành thạo với Postman và Swagger.\n\n🌍 Tham gia vào nhiều dự án, với khách hàng từ Mỹ, từ nhiều ngành nghề khác nhau\n\n Ví dụ, [Crossing Guard Shift Management Platform](https://www.saritasa.com/work/crossing-guard-android-app) hoặc [YGM Chambers of Commerce Consulting Co](https://clutch.co/go-to-review/dd2f437c-3587-4d31-bb3f-11cd706512fa/162662)',
     },
     {
-      id: 2,
+      id: 1,
       title: 'Backend Engineer Intern',
       company: 'Saritasa - Builders of Better',
       companyLink: 'https://www.saritasa.com/',
