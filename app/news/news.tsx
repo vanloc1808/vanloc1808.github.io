@@ -50,10 +50,23 @@ const News: FC = () => {
                       <div className='text-violet-500 transition-all duration-300 hover:scale-125'>
                         <BsNewspaper size={36} />
                       </div>
-                      <div>
-                        <p className='mb-2 text-base font-medium uppercase sm:text-xl'>
-                          {newsItem.title}
-                        </p>
+                      <div className='flex-1'>
+                        <div className='mb-2 flex items-center gap-2'>
+                          <p className='text-base font-medium uppercase sm:text-xl'>
+                            {newsItem.title}
+                          </p>
+                          {newsItem.certificateLink && (
+                            <a
+                              href={newsItem.certificateLink}
+                              target='_blank'
+                              rel='noopener noreferrer'
+                              className='inline-flex items-center rounded-full bg-blue-100 px-2 py-1 text-xs font-medium text-blue-800 transition-colors hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800'
+                              title='View Certificate'
+                            >
+                              📄
+                            </a>
+                          )}
+                        </div>
                         <p className='text-xs text-[#448171] dark:text-[#16f2b3] sm:text-sm'>
                           {formatDateForLocale(newsItem.date, locale)}
                         </p>
