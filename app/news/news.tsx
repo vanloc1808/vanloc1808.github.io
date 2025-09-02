@@ -3,7 +3,15 @@
 import { FC } from 'react';
 import { getNews } from '@/utils/data/news-data';
 import Image from 'next/image';
-import { BsNewspaper } from 'react-icons/bs';
+import {
+  BsNewspaper,
+  FaSignOutAlt,
+  FaSignInAlt,
+  FaFileAlt,
+  FaTrophy,
+  FaGraduationCap,
+  FaBookOpen,
+} from 'react-icons/fa';
 import { useTranslation } from '../context/I18nContext';
 import { formatDateForLocale } from '@/utils/time-converter';
 import GlowCard from '../components/helper/glow-card';
