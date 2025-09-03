@@ -33,6 +33,10 @@ export const experiences: MultilingualExperiences = {
       company_logo: '/images/education/hcmus-logo.png',
       description:
         'Research on the multimedia verification, applications of generative models and other deep learning techniques in downstream tasks',
+      lab_name: 'Software Engineering Laboratory',
+      lab_link: 'https://selab.hcmus.edu.vn/',
+      supervisor_name: 'Assoc. Prof. Minh-Triet Tran',
+      supervisor_link: 'https://www.fit.hcmus.edu.vn/~tmtriet/',
     },
     {
       id: 3,
