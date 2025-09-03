@@ -76,10 +76,7 @@ export const experiences: MultilingualExperiences = {
       description:
         '📚 Be trained with core Python modules and Django development with real-world applications.\n\n🔄 Learn GitHub flow, Jira, Postman, and other skills.\n\n🚀 Build an internship project to indicate the ability to use Django and Django REST Framework.',
     },
-  ].sort((a, b) => {
-    // Sort by ID descending (larger ID first)
-    return b.id - a.id;
-  }),
+  ],
   vi: [
     {
       id: 4,
@@ -131,13 +128,29 @@ export const experiences: MultilingualExperiences = {
       description:
         '📚 Được đào tạo về các module Python cốt lõi và phát triển Django.\n\n🔄 Học GitHub flow, Jira, Postman và các kỹ năng khác.\n\n🚀 Xây dựng dự án với Django và Django REST Framework.',
     },
-  ].sort((a, b) => {
-    // Sort by ID descending (larger ID first)
-    return b.id - a.id;
-  }),
+  ],
 };
 
 // Helper function to get experiences based on locale
 export const getExperiences = (locale: 'en' | 'vi' = 'en'): Experience[] => {
-  return experiences[locale];
+  const list = experiences[locale];
+  return [...list].sort((a, b) => {
+    const aCurrent = a.endMonth === null || a.endYear === null;
+    const bCurrent = b.endMonth === null || b.endYear === null;
+
+    if (aCurrent !== bCurrent) {
+      return aCurrent ? -1 : 1; // current first
+    }
+
+    // Later start date first
+    if (a.startYear !== b.startYear) {
+      return b.startYear - a.startYear;
+    }
+    if (a.startMonth !== b.startMonth) {
+      return b.startMonth - a.startMonth;
+    }
+
+    // Stable fallback: keep original relative order by id descending
+    return b.id - a.id;
+  });
 };
