@@ -147,7 +147,7 @@ const Experience: FC = () => {
                           </div>
 
                           <div className='flex items-start gap-x-3 px-6 py-4 sm:gap-x-4 lg:gap-x-6'>
-                            <div className='relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
+                            <div className='relative h-10 w-10 flex-shrink-0 self-center overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
                               {experience.company_logo ? (
                                 <Image
                                   src={experience.company_logo}
