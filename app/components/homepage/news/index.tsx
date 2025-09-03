@@ -10,6 +10,7 @@ import { formatDateForLocale } from '@/utils/time-converter';
 interface NewsItem {
   date: string;
   title: string;
+  certificateLink?: string;
 }
 
 const NewsSection: FC = () => {
@@ -39,7 +40,20 @@ const NewsSection: FC = () => {
                   {formatDateForLocale(newsItem.date, locale)}
                 </span>
                 {/* List item title inherits color from ul */}
-                <strong>{newsItem.title}</strong>
+                <div className='flex items-center gap-2'>
+                  <strong>{newsItem.title}</strong>
+                  {newsItem.certificateLink && (
+                    <a
+                      href={newsItem.certificateLink}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='inline-flex items-center rounded-full bg-blue-100 px-2 py-1 text-xs font-medium text-blue-800 transition-colors hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-200 dark:hover:bg-blue-800'
+                      title='View Certificate'
+                    >
+                      📄
+                    </a>
+                  )}
+                </div>
               </li>
             ))}
           </ul>
