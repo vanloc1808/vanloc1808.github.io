@@ -19,6 +19,7 @@ export const projectsData: MultilingualProjectsData = {
         'MCP',
         'LLM',
         'LangChain',
+        'RAG',
       ],
       role: 'Main Developer',
       code: 'https://github.com/hcmus-project-collection/sanghagpt',
@@ -44,7 +45,7 @@ export const projectsData: MultilingualProjectsData = {
       name: 'GraphRAG: Knowledge-Graph Retrieval System',
       description:
         'A retrieval-augmented generation (RAG) system, integrating local large language models (LLMs) with a knowledge graph to enhance response quality. Automated document ingestion, triplet extraction, and knowledge graph construction were implemented to enable structured reasoning. Vector similarity search (using Milvus) was combined with knowledge graph traversal for hybrid retrieval, resulting in improved answer accuracy and reduced hallucination. A ranking algorithm was created to blend semantic and graph-based results before being passed to the LLM. The solution was deployed with local LLMs (with OpenAI-compatible APIs) for privacy and low-latency inference, with functionalities exposed through FastAPI APIs and a lightweight web interface.',
-      tools: ['Python', 'Milvus', 'LLM', 'FastAPI', 'ReactJS'],
+      tools: ['Python', 'Milvus', 'LLM', 'FastAPI', 'ReactJS', 'RAG'],
       role: 'Main Developer',
       code: 'https://github.com/hcmus-project-collection/graphrag-llm-with-knowledge-base',
       demo: 'https://youtu.be/ulzWoy0RMY4',
@@ -58,7 +59,7 @@ export const projectsData: MultilingualProjectsData = {
       name: 'Fake News Analysis and Detection',
       description:
         'An advanced undergraduate thesis project that implements a comprehensive fake news detection system using deep learning and computer vision techniques. The system combines end-to-end neural networks for cheapfake detection (manipulated images/videos), integrates online reputation verification workflows, and provides real-time user guidance on news authenticity. Features include automated content analysis, credibility scoring algorithms, and an intuitive Streamlit interface for user interaction. The project demonstrates practical application of PyTorch for computer vision tasks and showcases the importance of media literacy in the digital age.',
-      tools: ['Python', 'PyTorch', 'Streamlit'],
+      tools: ['Python', 'PyTorch', 'Streamlit', 'Selenium', 'Docker'],
       role: 'Co-main Developer',
       code: 'https://github.com/nbtin/fakenews-detection-demo',
       demo: 'https://youtu.be/INMS347zwS4',
@@ -163,6 +164,7 @@ export const projectsData: MultilingualProjectsData = {
         'MCP',
         'LLM',
         'LangChain',
+        'RAG',
       ],
       role: 'Nhà phát triển chính',
       code: 'https://github.com/hcmus-project-collection/sanghagpt',

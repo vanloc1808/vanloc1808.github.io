@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import { getExperiences } from '@/utils/data/experience';
+import { getExperiences, type Experience } from '@/utils/data/experience';
 import { BsPersonWorkspace } from 'react-icons/bs';
 import GlowCard from '../../helper/glow-card';
 import lottieFile from '/public/lottie/code.json';
@@ -10,23 +10,12 @@ import Link from 'next/link';
 import { FC } from 'react';
 import { useTranslation } from '../../../context/I18nContext';
 import { getMonthName } from '@/utils/time-converter';
+import { parseMarkdownLinks } from '@/utils/parse-markdown-links';
 
 import dynamic from 'next/dynamic';
 const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), {
   ssr: false,
 });
-
-interface ExperienceItem {
-  id: number;
-  title: string;
-  company: string;
-  companyLink?: string;
-  description: string;
-  startMonth: number;
-  startYear: number;
-  endMonth: number | null;
-  endYear: number | null;
-}
 
 const Experience: FC = () => {
   const { t, locale } = useTranslation();
@@ -50,12 +39,14 @@ const Experience: FC = () => {
     const effectiveEndYear = endYear ?? now.getFullYear();
 
     // LinkedIn-style inclusive month counting
+    // For example, March to August will be counted as 6 months
     let totalMonths =
       (effectiveEndYear - startYear) * 12 +
       (effectiveEndMonth - startMonth) +
       1;
-    if (totalMonths < 0) totalMonths = 0;
+    if (totalMonths < 0) totalMonths = 0; // For edge cases
 
+    // Count the number of years and months
     const years = Math.floor(totalMonths / 12);
     const months = totalMonths % 12;
 
@@ -113,7 +104,7 @@ const Experience: FC = () => {
             <div className='absolute bottom-0 left-8 top-0 w-0.5 bg-gradient-to-b from-violet-500 via-purple-500 to-pink-500 opacity-30'></div>
 
             <div className='flex flex-col gap-8'>
-              {experiences.slice(0, 5).map((experience: ExperienceItem) => (
+              {experiences.slice(0, 5).map((experience: Experience) => (
                 <div key={experience.id} className='relative'>
                   {/* Timeline dot */}
                   <div className='absolute left-6 top-8 z-10 h-4 w-4 rounded-full border-4 border-white bg-gradient-to-r from-violet-500 to-purple-500 dark:border-[#0d1224]'></div>
@@ -154,11 +145,22 @@ const Experience: FC = () => {
                         </div>
 
                         <div className='flex items-start gap-x-3 px-6 py-4 sm:gap-x-4 lg:gap-x-6'>
-                          <div className='flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-violet-500 to-purple-500 shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
-                            <BsPersonWorkspace
-                              size={20}
-                              className='text-white sm:text-[24px] lg:text-[28px]'
-                            />
+                          <div className='relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
+                            {experience.company_logo ? (
+                              <Image
+                                src={experience.company_logo}
+                                alt={`${experience.company} logo`}
+                                fill
+                                className='object-contain p-2'
+                              />
+                            ) : (
+                              <div className='flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-violet-500 to-purple-500'>
+                                <BsPersonWorkspace
+                                  size={20}
+                                  className='text-white sm:text-[24px] lg:text-[28px]'
+                                />
+                              </div>
+                            )}
                           </div>
                           <div className='flex-1'>
                             <h3 className='mb-2 text-base font-semibold uppercase leading-tight sm:text-lg'>
@@ -176,8 +178,52 @@ const Experience: FC = () => {
                                 {experience.companyLink}
                               </a>
                             )}
+
+                            {/* Lab information */}
+                            {experience.lab_name && (
+                              <div className='mt-1'>
+                                <span className='text-sm text-gray-500 dark:text-gray-400 sm:text-base'>
+                                  Lab:{' '}
+                                </span>
+                                {experience.lab_link ? (
+                                  <a
+                                    href={experience.lab_link}
+                                    target='_blank'
+                                    className='text-sm text-[#448171] hover:underline dark:text-[#16f2b3] sm:text-base'
+                                  >
+                                    {experience.lab_name}
+                                  </a>
+                                ) : (
+                                  <span className='text-sm text-gray-600 dark:text-gray-300 sm:text-base'>
+                                    {experience.lab_name}
+                                  </span>
+                                )}
+                              </div>
+                            )}
+
+                            {/* Supervisor information */}
+                            {experience.supervisor_name && (
+                              <div className='mt-1'>
+                                <span className='text-sm text-gray-500 dark:text-gray-400 sm:text-base'>
+                                  Supervisor:{' '}
+                                </span>
+                                {experience.supervisor_link ? (
+                                  <a
+                                    href={experience.supervisor_link}
+                                    target='_blank'
+                                    className='text-sm text-[#448171] hover:underline dark:text-[#16f2b3] sm:text-base'
+                                  >
+                                    {experience.supervisor_name}
+                                  </a>
+                                ) : (
+                                  <span className='text-sm text-gray-600 dark:text-gray-300 sm:text-base'>
+                                    {experience.supervisor_name}
+                                  </span>
+                                )}
+                              </div>
+                            )}
                             <p className='mt-2 whitespace-pre-line text-sm text-gray-600 dark:text-gray-300 sm:text-base'>
-                              {experience.description}
+                              {parseMarkdownLinks(experience.description)}
                             </p>
 
                             {/* Timeline progress indicator */}

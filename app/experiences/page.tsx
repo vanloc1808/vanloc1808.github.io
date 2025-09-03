@@ -17,6 +17,7 @@ import { BsPersonWorkspace } from 'react-icons/bs';
 import ExperienceSkeleton from '../components/ExperienceSkeleton';
 import { useTranslation } from '../context/I18nContext';
 import { getMonthName } from '@/utils/time-converter';
+import { parseMarkdownLinks } from '@/utils/parse-markdown-links';
 
 // Using the Experience interface from the data file
 
@@ -146,8 +147,22 @@ const Experience: FC = () => {
                           </div>
 
                           <div className='flex items-start gap-x-3 px-6 py-4 sm:gap-x-4 lg:gap-x-6'>
-                            <div className='mt-1 text-violet-500 transition-all duration-300 hover:scale-125'>
-                              <BsPersonWorkspace size={32} />
+                            <div className='relative h-10 w-10 flex-shrink-0 self-center overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
+                              {experience.company_logo ? (
+                                <Image
+                                  src={experience.company_logo}
+                                  alt={`${experience.company} logo`}
+                                  fill
+                                  className='object-contain p-2'
+                                />
+                              ) : (
+                                <div className='flex h-full w-full items-center justify-center overflow-hidden rounded-full bg-gradient-to-r from-violet-500 to-purple-500'>
+                                  <BsPersonWorkspace
+                                    size={20}
+                                    className='text-white sm:text-[24px] lg:text-[28px]'
+                                  />
+                                </div>
+                              )}
                             </div>
                             <div className='flex-1'>
                               <h3 className='mb-2 text-base font-semibold uppercase leading-tight sm:text-lg'>
@@ -165,8 +180,52 @@ const Experience: FC = () => {
                                   {experience.companyLink}
                                 </a>
                               )}
+
+                              {/* Lab information */}
+                              {experience.lab_name && (
+                                <div className='mt-1'>
+                                  <span className='text-sm text-gray-500 dark:text-gray-400 sm:text-base'>
+                                    Lab:{' '}
+                                  </span>
+                                  {experience.lab_link ? (
+                                    <a
+                                      href={experience.lab_link}
+                                      target='_blank'
+                                      className='text-sm text-[#448171] hover:underline dark:text-[#16f2b3] sm:text-base'
+                                    >
+                                      {experience.lab_name}
+                                    </a>
+                                  ) : (
+                                    <span className='text-sm text-gray-600 dark:text-gray-300 sm:text-base'>
+                                      {experience.lab_name}
+                                    </span>
+                                  )}
+                                </div>
+                              )}
+
+                              {/* Supervisor information */}
+                              {experience.supervisor_name && (
+                                <div className='mt-1'>
+                                  <span className='text-sm text-gray-500 dark:text-gray-400 sm:text-base'>
+                                    Supervisor:{' '}
+                                  </span>
+                                  {experience.supervisor_link ? (
+                                    <a
+                                      href={experience.supervisor_link}
+                                      target='_blank'
+                                      className='text-sm text-[#448171] hover:underline dark:text-[#16f2b3] sm:text-base'
+                                    >
+                                      {experience.supervisor_name}
+                                    </a>
+                                  ) : (
+                                    <span className='text-sm text-gray-600 dark:text-gray-300 sm:text-base'>
+                                      {experience.supervisor_name}
+                                    </span>
+                                  )}
+                                </div>
+                              )}
                               <p className='mt-2 whitespace-pre-line text-sm text-gray-600 dark:text-gray-300 sm:text-base'>
-                                {experience.description}
+                                {parseMarkdownLinks(experience.description)}
                               </p>
 
                               {/* Timeline progress indicator */}

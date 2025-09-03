@@ -1,6 +1,7 @@
 interface NewsItem {
   date: string;
   title: string;
+  certificateLink?: string;
 }
 
 interface MultilingualNews {
@@ -10,6 +11,29 @@ interface MultilingualNews {
 
 export const news: MultilingualNews = {
   en: [
+    {
+      date: 'August 29, 2025',
+      title: '🚪 Left the job as AI Engineer at Autonomous',
+    },
+    {
+      date: 'August 16, 2025',
+      title:
+        '📄 Our paper "SAMURAI: Shape-Aware Multimodal Retrieval for 3D Object Identification" has been published at the 2025 International Conference on Multimedia Analysis and Pattern Recognition (MAPR)',
+    },
+    {
+      date: 'July 14, 2025',
+      title:
+        '🥇 Won top 1 at the ACM Multimedia 2025 Grand Challenge on Event-Enriched Image Analysis',
+      certificateLink:
+        'https://cdn.nguyenvanloc.com/certificates/2025-ACMMM-EVENTA.pdf',
+    },
+    {
+      date: 'July 12, 2025',
+      title:
+        '🏅 Won top 1 in Track 1 of the ENTRep Challenge: Advancing Vision-Language AI for ENT Endoscopy Analysis at the ACM Multimedia 2025 Conference',
+      certificateLink:
+        'https://cdn.nguyenvanloc.com/certificates/2025-ACMMM-ENTRep.pdf',
+    },
     {
       date: 'March 3, 2025',
       title: '🎯 Started the job as an AI Engineer at Autonomous',
@@ -72,6 +96,29 @@ export const news: MultilingualNews = {
     },
   ],
   vi: [
+    {
+      date: '29 tháng 8, 2025',
+      title: '🚪 Rời khỏi công việc Kỹ sư AI tại Autonomous',
+    },
+    {
+      date: '16 tháng 8, 2025',
+      title:
+        '📄 Bài báo "SAMURAI: Shape-Aware Multimodal Retrieval for 3D Object Identification" đã được công bố tại The 2025 International Conference on Multimedia Analysis and Pattern Recognition (MAPR)',
+    },
+    {
+      date: '14 tháng 7, 2025',
+      title:
+        '🥇 Đạt top 1 tại ACM Multimedia 2025 Grand Challenge on Event-Enriched Image Analysis',
+      certificateLink:
+        'https://cdn.nguyenvanloc.com/certificates/2025-ACMMM-EVENTA.pdf',
+    },
+    {
+      date: '12 tháng 7, 2025',
+      title:
+        '🏅 Đạt top 1 tại Track 1 của ENTRep Challenge: Advancing Vision-Language AI for ENT Endoscopy Analysis tại ACM Multimedia 2025 Conference',
+      certificateLink:
+        'https://cdn.nguyenvanloc.com/certificates/2025-ACMMM-ENTRep.pdf',
+    },
     {
       date: '3 tháng 3, 2025',
       title: '🎯 Bắt đầu công việc với vai trò Kỹ sư AI tại Autonomous',
