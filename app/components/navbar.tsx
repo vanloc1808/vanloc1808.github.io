@@ -230,7 +230,7 @@ const Navbar: FC = (): React.JSX.Element => {
             </div>
           </Link>
           <Link
-            className='block rounded px-1 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+            className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
             href='/activities'
             onClick={closeMenu}
             aria-label='Go to Activities page'
