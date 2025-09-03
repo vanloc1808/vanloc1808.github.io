@@ -179,16 +179,6 @@ const Navbar: FC = (): React.JSX.Element => {
           </Link>
           <Link
             className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
-            href='/#skills'
-            onClick={closeMenu}
-            aria-label='Go to Skills section'
-          >
-            <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
-              {t('skills.title')}
-            </div>
-          </Link>
-          <Link
-            className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
             href='/#education'
             onClick={closeMenu}
             aria-label='Go to Education section'
@@ -209,16 +199,6 @@ const Navbar: FC = (): React.JSX.Element => {
           </Link>
           <Link
             className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
-            href='/services'
-            onClick={closeMenu}
-            aria-label='Go to Services page'
-          >
-            <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
-              {t('navigation.services').toUpperCase()}
-            </div>
-          </Link>
-          <Link
-            className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
             href='/publications'
             onClick={closeMenu}
             aria-label='Go to Publications page'
@@ -235,6 +215,18 @@ const Navbar: FC = (): React.JSX.Element => {
           >
             <div className='text-center text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
               {t('navigation.certificates').toUpperCase()}
+            </div>
+          </Link>
+          <Link
+            className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+            href='https://blog.nguyenvanloc.com/'
+            onClick={closeMenu}
+            aria-label='Go to Blogs (opens in new tab)'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+              BLOGS
             </div>
           </Link>
           <Link
@@ -259,14 +251,12 @@ const Navbar: FC = (): React.JSX.Element => {
           </Link>
           <Link
             className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
-            href='https://blog.nguyenvanloc.com/'
+            href='/services'
             onClick={closeMenu}
-            aria-label='Go to Blogs (opens in new tab)'
-            target='_blank'
-            rel='noopener noreferrer'
+            aria-label='Go to Services page'
           >
             <div className='text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
-              BLOGS
+              {t('navigation.services').toUpperCase()}
             </div>
           </Link>
         </div>
@@ -437,19 +427,6 @@ const Navbar: FC = (): React.JSX.Element => {
           <li role='none'>
             <Link
               className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
-              href='/#skills'
-              onClick={closeMenu}
-              role='menuitem'
-              aria-label='Go to Skills section'
-            >
-              <div className='text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
-                SKILLS
-              </div>
-            </Link>
-          </li>
-          <li role='none'>
-            <Link
-              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
               href='/#education'
               onClick={closeMenu}
               role='menuitem'
@@ -470,19 +447,6 @@ const Navbar: FC = (): React.JSX.Element => {
             >
               <div className='text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
                 {t('navigation.projects').toUpperCase()}
-              </div>
-            </Link>
-          </li>
-          <li role='none'>
-            <Link
-              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
-              href='/services'
-              onClick={closeMenu}
-              role='menuitem'
-              aria-label='Go to Services page'
-            >
-              <div className='text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
-                {t('navigation.services').toUpperCase()}
               </div>
             </Link>
           </li>
@@ -515,6 +479,19 @@ const Navbar: FC = (): React.JSX.Element => {
           <li role='none'>
             <Link
               className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+              href='/services'
+              onClick={closeMenu}
+              role='menuitem'
+              aria-label='Go to Services page'
+            >
+              <div className='text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+                {t('navigation.services').toUpperCase()}
+              </div>
+            </Link>
+          </li>
+          <li role='none'>
+            <Link
+              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
               href='/activities'
               onClick={closeMenu}
               role='menuitem'
@@ -535,6 +512,19 @@ const Navbar: FC = (): React.JSX.Element => {
             >
               <div className='text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
                 {t('navigation.news').toUpperCase()}
+              </div>
+            </Link>
+          </li>
+          <li role='none'>
+            <Link
+              className='block rounded px-4 py-2 no-underline outline-none hover:no-underline focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+              href='/services'
+              onClick={closeMenu}
+              role='menuitem'
+              aria-label='Go to Services page'
+            >
+              <div className='text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+                {t('navigation.services').toUpperCase()}
               </div>
             </Link>
           </li>
