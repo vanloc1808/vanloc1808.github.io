@@ -213,7 +213,7 @@ const Navbar: FC = (): React.JSX.Element => {
             onClick={closeMenu}
             aria-label='Go to Certificates and Awards page'
           >
-            <div className='text-center text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
+            <div className='whitespace-nowrap text-center text-sm text-gray-800 transition-colors duration-300 hover:text-pink-600 dark:text-white dark:hover:text-pink-600'>
               {t('navigation.certificates').toUpperCase()}
             </div>
           </Link>
