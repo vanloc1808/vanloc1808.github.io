@@ -23,6 +23,22 @@ interface MultilingualExperiences {
 export const experiences: MultilingualExperiences = {
   en: [
     {
+      id: 5,
+      title: 'Research Intern',
+      company: 'National Institute of Informatics (NII) - 国立情報学研究所',
+      startMonth: 10,
+      startYear: 2025,
+      endMonth: null,
+      endYear: null,
+      company_logo: '/images/experiences/nii.png',
+      description: '',
+      lab_name: 'Echizen Laboratory',
+      lab_link: 'https://research.nii.ac.jp/~iechizen/official/index-e.html',
+      supervisor_name: 'Prof. Isao Echizen',
+      supervisor_link:
+        'https://research.nii.ac.jp/~iechizen/official/members_echizen-e.html',
+    },
+    {
       id: 4,
       title: 'Research Assistant',
       company: 'Software Engineering Laboratory, University of Science, VNUHCM',
@@ -78,6 +94,22 @@ export const experiences: MultilingualExperiences = {
     },
   ],
   vi: [
+    {
+      id: 5,
+      title: 'Research Intern',
+      company: 'National Institute of Informatics (NII) - 国立情報学研究所',
+      startMonth: 10,
+      startYear: 2025,
+      endMonth: null,
+      endYear: null,
+      company_logo: '/images/experiences/nii.png',
+      description: '',
+      lab_name: 'Echizen Laboratory',
+      lab_link: 'https://research.nii.ac.jp/~iechizen/official/index-e.html',
+      supervisor_name: 'Prof. Isao Echizen',
+      supervisor_link:
+        'https://research.nii.ac.jp/~iechizen/official/members_echizen-e.html',
+    },
     {
       id: 4,
       title: 'Research Assistant',
