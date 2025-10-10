@@ -13,6 +13,8 @@ export interface Experience {
   lab_link?: string;
   supervisor_name?: string;
   supervisor_link?: string;
+  mentor_name?: string;
+  mentor_link?: string;
 }
 
 interface MultilingualExperiences {
@@ -23,6 +25,23 @@ interface MultilingualExperiences {
 export const experiences: MultilingualExperiences = {
   en: [
     {
+      id: 5,
+      title: 'Research Intern',
+      company: 'National Institute of Informatics (NII) - 国立情報学研究所',
+      startMonth: 10,
+      startYear: 2025,
+      endMonth: null,
+      endYear: null,
+      company_logo: '/images/experiences/nii.png',
+      companyLink: 'https://www.nii.ac.jp/',
+      description: '',
+      lab_name: 'Echizen Laboratory',
+      lab_link: 'https://research.nii.ac.jp/~iechizen/official/index-e.html',
+      supervisor_name: 'Prof. Isao Echizen',
+      supervisor_link:
+        'https://research.nii.ac.jp/~iechizen/official/members_echizen-e.html',
+    },
+    {
       id: 4,
       title: 'Research Assistant',
       company: 'Software Engineering Laboratory, University of Science, VNUHCM',
@@ -31,6 +50,7 @@ export const experiences: MultilingualExperiences = {
       endMonth: null,
       endYear: null,
       company_logo: '/images/education/hcmus-logo.png',
+      companyLink: 'https://selab.hcmus.edu.vn/',
       description:
         'Research on the multimedia verification, applications of generative models and other deep learning techniques in downstream tasks',
       lab_name: 'Software Engineering Laboratory',
@@ -47,6 +67,7 @@ export const experiences: MultilingualExperiences = {
       endMonth: 8,
       endYear: 2025,
       company_logo: '/images/experiences/autonomous.png',
+      companyLink: 'https://www.autonomous.ai/',
       description:
         '🤖 Be responsible for building fantastic AI agents for real-world needs.\n\n🔄 Improve existing MCP servers to enhance the user experience.\n⚡ Optimize AI agents to run on a local environment with a small model (for example, 4B models).',
     },
@@ -78,6 +99,22 @@ export const experiences: MultilingualExperiences = {
     },
   ],
   vi: [
+    {
+      id: 5,
+      title: 'Research Intern',
+      company: 'National Institute of Informatics (NII) - 国立情報学研究所',
+      startMonth: 10,
+      startYear: 2025,
+      endMonth: null,
+      endYear: null,
+      company_logo: '/images/experiences/nii.png',
+      description: '',
+      lab_name: 'Echizen Laboratory',
+      lab_link: 'https://research.nii.ac.jp/~iechizen/official/index-e.html',
+      supervisor_name: 'Prof. Isao Echizen',
+      supervisor_link:
+        'https://research.nii.ac.jp/~iechizen/official/members_echizen-e.html',
+    },
     {
       id: 4,
       title: 'Research Assistant',
