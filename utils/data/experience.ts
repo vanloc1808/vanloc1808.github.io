@@ -13,6 +13,8 @@ export interface Experience {
   lab_link?: string;
   supervisor_name?: string;
   supervisor_link?: string;
+  mentor_name?: string;
+  mentor_link?: string;
 }
 
 interface MultilingualExperiences {
