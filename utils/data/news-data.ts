@@ -12,6 +12,16 @@ interface MultilingualNews {
 export const news: MultilingualNews = {
   en: [
     {
+      date: 'October 24, 2025',
+      title:
+        '📄 Our paper "EnAug: ENT Endoscopy Images Classification Using Ensemble and Augmentation Methods| has been accepted to the 14th International Symposium on Information and Communication Technology (SOICT 2025)',
+    },
+    {
+      date: 'October 1, 2025',
+      title:
+        '💼 Started the job as a Research Intern at the National Institute of Informatics (NII), Tokyo, Japan',
+    },
+    {
       date: 'August 29, 2025',
       title: '🚪 Left the job as AI Engineer at Autonomous',
     },
@@ -19,6 +29,11 @@ export const news: MultilingualNews = {
       date: 'August 16, 2025',
       title:
         '📄 Our paper "SAMURAI: Shape-Aware Multimodal Retrieval for 3D Object Identification" has been published at the 2025 International Conference on Multimedia Analysis and Pattern Recognition (MAPR)',
+    },
+    {
+      date: 'July 14, 2025',
+      title:
+        '📄 Our paper "EVENT-Retriever: Event-Aware Multimodal Image Retrieval for Realistic Captions" has been accepted to the 33rd ACM International Conference on Multimedia (ACM MM 2025)',
     },
     {
       date: 'July 14, 2025',
@@ -97,6 +112,16 @@ export const news: MultilingualNews = {
   ],
   vi: [
     {
+      date: '24 tháng 10, 2025',
+      title:
+        '📄 Bài báo "EnAug: ENT Endoscopy Images Classification Using Ensemble and Augmentation Methods" đã được chấp nhận tại The 14th International Symposium on Information and Communication Technology (SOICT 2025)',
+    },
+    {
+      date: '1 tháng 10, 2025',
+      title:
+        '💼 Bắt đầu công việc làm Research Intern tại National Institute of Informatics (NII), Tokyo, Nhật Bản',
+    },
+    {
       date: '29 tháng 8, 2025',
       title: '🚪 Rời khỏi công việc Kỹ sư AI tại Autonomous',
     },
@@ -104,6 +129,11 @@ export const news: MultilingualNews = {
       date: '16 tháng 8, 2025',
       title:
         '📄 Bài báo "SAMURAI: Shape-Aware Multimodal Retrieval for 3D Object Identification" đã được công bố tại The 2025 International Conference on Multimedia Analysis and Pattern Recognition (MAPR)',
+    },
+    {
+      date: '14 tháng 7, 2025',
+      title:
+        '📄 Bài báo "EVENT-Retriever: Event-Aware Multimodal Image Retrieval for Realistic Captions" đã được chấp nhận tại The 33rd ACM International Conference on Multimedia (ACM MM 2025)',
     },
     {
       date: '14 tháng 7, 2025',
