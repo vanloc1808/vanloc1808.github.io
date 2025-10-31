@@ -14,7 +14,7 @@ export const news: MultilingualNews = {
     {
       date: 'October 24, 2025',
       title:
-        '📄 Our paper "EnAug: ENT Endoscopy Images Classification Using Ensemble and Augmentation Methods| has been accepted to the 14th International Symposium on Information and Communication Technology (SOICT 2025)',
+        '📄 Our paper "EnAug: ENT Endoscopy Images Classification Using Ensemble and Augmentation Methods" has been accepted to the 14th International Symposium on Information and Communication Technology (SOICT 2025)',
     },
     {
       date: 'October 1, 2025',
