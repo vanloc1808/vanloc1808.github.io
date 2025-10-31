@@ -23,7 +23,7 @@ export const publications: MultilingualPublications = {
       date: 'October 27, 2025',
       description:
         'Event-based image retrieval from free-form captions poses a unique challenge: models must understand not only visual features but also latent event semantics, context, and real-world knowledge. Conventional vision-language retrieval methods often fall short when captions describe abstract events, implicit causality, temporal context, or contain long, complex narratives. To tackle these issues, we introduce a multi-stage retrieval framework combining dense article retrieval, event-aware language model reranking, and efficient image collection, followed by caption-guided semantic matching and rank-aware selection. We leverage Qwen3 for article search, Qwen3-Reranker for contextual alignment, and Qwen2-VL for precise image scoring. To further enhance performance and robustness, we fuse outputs from multiple configurations using Reciprocal Rank Fusion (RRF). Our system achieves the \textbf{top-1 score} on the private test set of Track 2 in the EVENTA 2025 Grand Challenge, demonstrating the effectiveness of combining language-based reasoning and multimodal retrieval for complex, real-world image understanding. The code is available at https://github.com/Anonymous-Reseacher/EVENT-Retriever.',
-      url: 'available soon',
+      url: 'https://dl.acm.org/doi/10.1145/3746027.3762038',
     },
     {
       id: 7,
@@ -111,7 +111,7 @@ export const publications: MultilingualPublications = {
       date: '27 tháng 10, 2025',
       description:
         'Event-based image retrieval from free-form captions poses a unique challenge: models must understand not only visual features but also latent event semantics, context, and real-world knowledge. Conventional vision-language retrieval methods often fall short when captions describe abstract events, implicit causality, temporal context, or contain long, complex narratives. To tackle these issues, we introduce a multi-stage retrieval framework combining dense article retrieval, event-aware language model reranking, and efficient image collection, followed by caption-guided semantic matching and rank-aware selection. We leverage Qwen3 for article search, Qwen3-Reranker for contextual alignment, and Qwen2-VL for precise image scoring. To further enhance performance and robustness, we fuse outputs from multiple configurations using Reciprocal Rank Fusion (RRF). Our system achieves the top-1 score on the private test set of Track 2 in the EVENTA 2025 Grand Challenge, demonstrating the effectiveness of combining language-based reasoning and multimodal retrieval for complex, real-world image understanding. The code is available at https://github.com/Anonymous-Reseacher/EVENT-Retriever.',
-      url: 'available soon',
+      url: 'https://dl.acm.org/doi/10.1145/3746027.3762038',
     },
     {
       id: 7,
