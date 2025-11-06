@@ -35,6 +35,7 @@ export const projectsData: MultilingualProjectsData = {
       demo: 'https://arcanaai.nguyenvanloc.com',
       blog_url: 'https://blog.nguyenvanloc.com/blog/20250817-arcanaai',
       isCompleted: true,
+      image: '/image/arcana_ai.png',
     },
     {
       id: 9,
