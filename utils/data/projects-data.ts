@@ -34,7 +34,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/vanloc1808/arcana-ai',
       demo: 'https://arcanaai.nguyenvanloc.com',
       blog_url: 'https://blog.nguyenvanloc.com/blog/20250817-arcanaai',
-      isCompleted: true,
+      isCompleted: false,
       image: '/images/arcana_ai.png',
     },
     {
