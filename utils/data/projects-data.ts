@@ -8,6 +8,35 @@ interface MultilingualProjectsData {
 export const projectsData: MultilingualProjectsData = {
   en: [
     {
+      id: 10,
+      name: 'ArcanaAI: AI-Powered Tarot Reading Service',
+      description:
+        'ArcanaAI is a practical web application that blends the mysticism of tarot with modern AI. It uses OpenAI GPT with function calling for contextual, personalized readings, intelligent intent detection to decide when to draw cards, and a backend powered by FastAPI and SQLAlchemy. The system includes real-time chat, multiple tarot decks, subscription and dual payment (Lemon Squeezy and MetaMask), Cloudflare R2 for asset storage, and WebSocket notifications. It is containerized with Docker and features CI/CD with GitHub Actions.',
+      tools: [
+        'OpenAI',
+        'Function Calling',
+        'FastAPI',
+        'SQLAlchemy',
+        'PostgreSQL',
+        'Redis',
+        'Celery',
+        'Next.js',
+        'TypeScript',
+        'Tailwind CSS',
+        'Docker',
+        'GitHub Actions',
+        'Cloudflare R2',
+        'WebSockets',
+        'Lemon Squeezy',
+        'MetaMask',
+      ],
+      role: 'Main Developer',
+      code: 'https://github.com/vanloc1808/arcana-ai',
+      demo: 'https://arcanaai.nguyenvanloc.com',
+      blog_url: 'https://blog.nguyenvanloc.com/blog/20250817-arcanaai',
+      isCompleted: true,
+    },
+    {
       id: 9,
       name: 'SanghaGPT: Multilingual Buddhist Q&A Chatbot',
       description:
@@ -152,6 +181,35 @@ export const projectsData: MultilingualProjectsData = {
     },
   ],
   vi: [
+    {
+      id: 10,
+      name: 'ArcanaAI: Dịch vụ bói bài Tarot dùng AI',
+      description:
+        'ArcanaAI là một ứng dụng web thực tiễn kết hợp huyền bí Tarot với trí tuệ nhân tạo hiện đại. Hệ thống sử dụng OpenAI GPT cùng function calling để tạo các bài đọc Tarot cá nhân hóa theo ngữ cảnh, nhận diện ý định thông minh để quyết định khi nào rút bài, và backend với FastAPI và SQLAlchemy. Ứng dụng hỗ trợ chat thời gian thực, nhiều bộ bài, gói thuê bao và thanh toán kép (Lemon Squeezy và MetaMask), lưu trữ hình ảnh trên Cloudflare R2 và thông báo qua WebSocket. Dự án được container hóa bằng Docker và có CI/CD với GitHub Actions.',
+      tools: [
+        'OpenAI',
+        'Function Calling',
+        'FastAPI',
+        'SQLAlchemy',
+        'PostgreSQL',
+        'Redis',
+        'Celery',
+        'Next.js',
+        'TypeScript',
+        'Tailwind CSS',
+        'Docker',
+        'GitHub Actions',
+        'Cloudflare R2',
+        'WebSockets',
+        'Lemon Squeezy',
+        'MetaMask',
+      ],
+      role: 'Nhà phát triển chính',
+      code: 'https://github.com/vanloc1808/arcana-ai',
+      demo: 'https://arcanaai.nguyenvanloc.com',
+      blog_url: 'https://blog.nguyenvanloc.com/blog/20250817-arcanaai',
+      isCompleted: true,
+    },
     {
       id: 9,
       name: 'SanghaGPT: Chatbot Hỏi-Đáp Phật giáo Đa ngôn ngữ',
