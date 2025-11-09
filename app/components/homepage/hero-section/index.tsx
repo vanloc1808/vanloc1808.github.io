@@ -56,6 +56,24 @@ const HeroSection: FC = () => {
             </span>
             .
           </h1>
+          <div className='mt-4 space-y-2 text-sm text-gray-600 dark:text-gray-400 md:text-base'>
+            <div>
+              <span className='font-semibold'>Vietnamese:</span>{' '}
+              <span className='font-medium'>{personalData.names.vi}</span>
+            </div>
+            <div>
+              <span className='font-semibold'>English:</span>{' '}
+              <span className='font-medium'>{personalData.names.en}</span>
+            </div>
+            <div>
+              <span className='font-semibold'>Chinese:</span>{' '}
+              <span className='font-medium'>{personalData.names.zh}</span>
+            </div>
+            <div>
+              <span className='font-semibold'>Japanese:</span>{' '}
+              <span className='font-medium'>{personalData.names.ja}</span>
+            </div>
+          </div>
 
           <nav aria-label='Social media links' className='my-12'>
             <ul className='flex items-center gap-5' role='list'>

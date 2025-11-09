@@ -1,5 +1,11 @@
 interface PersonalData {
   name: string;
+  names: {
+    vi: string;
+    en: string;
+    zh: string;
+    ja: string;
+  };
   designation: string;
   description: string;
   email: string;
@@ -24,6 +30,12 @@ interface MultilingualPersonalData {
 export const personalData: MultilingualPersonalData = {
   en: {
     name: 'VAN-LOC NGUYEN',
+    names: {
+      vi: 'Nguyễn Văn Lộc',
+      en: 'Van-Loc Nguyen',
+      zh: '阮文禄',
+      ja: 'グエン・ヴァン・ロク',
+    },
     profile: '/profile_image.png',
     designation: 'AI Engineer',
     description:
@@ -44,6 +56,12 @@ export const personalData: MultilingualPersonalData = {
   },
   vi: {
     name: 'NGUYỄN VĂN LỘC',
+    names: {
+      vi: 'Nguyễn Văn Lộc',
+      en: 'Van-Loc Nguyen',
+      zh: '阮文禄',
+      ja: 'グエン・ヴァン・ロク',
+    },
     profile: '/profile_image.png',
     designation: 'Kỹ sư AI',
     description:
