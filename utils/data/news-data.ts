@@ -12,6 +12,11 @@ interface MultilingualNews {
 export const news: MultilingualNews = {
   en: [
     {
+      date: 'November 10, 2025',
+      title:
+        '📄 Our paper "Visionary: Optimized Temporal Video Retrieval via Large Language Model-Enhanced Query Processing" has been accepted to the 14th International Symposium on Information and Communication Technology (SOICT 2025)',
+    },
+    {
       date: 'October 24, 2025',
       title:
         '📄 Our paper "EnAug: ENT Endoscopy Images Classification Using Ensemble and Augmentation Methods" has been accepted to the 14th International Symposium on Information and Communication Technology (SOICT 2025)',
@@ -111,6 +116,11 @@ export const news: MultilingualNews = {
     },
   ],
   vi: [
+    {
+      date: '10 tháng 11, 2025',
+      title:
+        '📄 Bài báo "Visionary: Optimized Temporal Video Retrieval via Large Language Model-Enhanced Query Processing" đã được chấp nhận tại The 14th International Symposium on Information and Communication Technology (SOICT 2025)',
+    },
     {
       date: '24 tháng 10, 2025',
       title:
