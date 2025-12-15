@@ -15,6 +15,28 @@ interface MultilingualPublications {
 export const publications: MultilingualPublications = {
   en: [
     {
+      id: 10,
+      title:
+        'Visionary: Optimized Temporal Video Retrieval via Large Language Model-Enhanced Query Processing',
+      conference:
+        'The 14th International Symposium on Information and Communication Technology (SOICT 2025)',
+      date: 'November 10, 2025',
+      description:
+        'The rapid growth of video content necessitates efficient, real-time event retrieval systems. Addressing the Ho Chi Minh City AI Challenge 2025, we present Visionary, a new generation of the NewsInsight systems. Our system introduces four key contributions: (1) a novel adaptive keyframe extraction algorithm; (2) an enhanced pre-processing pipeline using the Qwen3-VL model for metadata generation and integrated optical character recognition; (3) a flexible architecture supporting multiple embedding models; and (4) the use of Reciprocal Rank Fusion to synthesize retrieval results. These enhancements aim to substantially improve retrieval accuracy and overall performance for complex, large-scale video retrieval tasks.',
+      url: 'available soon',
+    },
+    {
+      id: 9,
+      title:
+        'EnAug: ENT Endoscopy Images Classification Using Ensemble and Augmentation Methods',
+      conference:
+        'The 14th International Symposium on Information and Communication Technology (SOICT 2025)',
+      date: 'December 13, 2025',
+      description:
+        'Ear, nose, and throat (ENT) endoscopy is a key diagnostic tool for detecting a variety of head and neck conditions. However, automated analysis of endoscopic images remains challenging due to inconsistent image quality, limited labeled data, and the inherent variability in human interpretation. In this work, we present a robust classification framework based on an ensemble of deep learning models, designed specifically for ENT endoscopy images. To address class imbalance and improve generalization, we employ a novel data augmentation strategy that combines symmetry-based label flipping with Mixup, Mosaic, and other augmentation techniques. Our approach is evaluated on a curated ENT dataset covering seven anatomical categories, achieving an accuracy of $95.82\%$, which surpasses several competitive baselines. In addition to strong overall performance, our method demonstrates improved robustness on underrepresented classes, showing its potential for real-world deployment in clinical settings. This work highlights the effectiveness of deep learning ensembles and thoughtful augmentation in building scalable AI tools for medical imaging. The full implementation and models are available at our GitHub repository at https://github.com/thanhson28/acmmm2025_entrep_challenge_was',
+      url: 'available soon',
+    },
+    {
       id: 8,
       title:
         'EVENT-Retriever: Event-Aware Multimodal Image Retrieval for Realistic Captions',
