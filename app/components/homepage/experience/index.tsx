@@ -222,6 +222,28 @@ const Experience: FC = () => {
                                 )}
                               </div>
                             )}
+
+                            {/* Mentor information */}
+                            {experience.mentor_name && (
+                              <div className='mt-1'>
+                                <span className='text-sm text-gray-500 dark:text-gray-400 sm:text-base'>
+                                  Mentor:{' '}
+                                </span>
+                                {experience.mentor_link ? (
+                                  <a
+                                    href={experience.mentor_link}
+                                    target='_blank'
+                                    className='text-sm text-[#448171] hover:underline dark:text-[#16f2b3] sm:text-base'
+                                  >
+                                    {experience.mentor_name}
+                                  </a>
+                                ) : (
+                                  <span className='text-sm text-gray-600 dark:text-gray-300 sm:text-base'>
+                                    {experience.mentor_name}
+                                  </span>
+                                )}
+                              </div>
+                            )}
                             <p className='mt-2 whitespace-pre-line text-sm text-gray-600 dark:text-gray-300 sm:text-base'>
                               {parseMarkdownLinks(experience.description)}
                             </p>

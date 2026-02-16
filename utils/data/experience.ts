@@ -116,6 +116,8 @@ export const experiences: MultilingualExperiences = {
       supervisor_name: 'Prof. Isao Echizen',
       supervisor_link:
         'https://research.nii.ac.jp/~iechizen/official/members_echizen-e.html',
+      mentor_name: 'Dr. April Pyone Maung Maung',
+      mentor_link: 'https://rellm.jp/',
     },
     {
       id: 4,
