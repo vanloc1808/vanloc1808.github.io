@@ -40,6 +40,8 @@ export const experiences: MultilingualExperiences = {
       supervisor_name: 'Prof. Isao Echizen',
       supervisor_link:
         'https://research.nii.ac.jp/~iechizen/official/members_echizen-e.html',
+      mentor_name: 'Dr. April Pyone Maung Maung',
+      mentor_link: 'https://rellm.jp/',
     },
     {
       id: 4,
@@ -47,8 +49,8 @@ export const experiences: MultilingualExperiences = {
       company: 'Software Engineering Laboratory, University of Science, VNUHCM',
       startMonth: 1,
       startYear: 2025,
-      endMonth: null,
-      endYear: null,
+      endMonth: 12,
+      endYear: 2025,
       company_logo: '/images/education/hcmus-logo.png',
       companyLink: 'https://selab.hcmus.edu.vn/',
       description:
