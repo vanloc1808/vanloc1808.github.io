@@ -7,7 +7,13 @@ export interface Activity {
   from_year?: number;
   to_year?: number | string;
   description: string;
-  type: 'review' | 'volunteer' | 'membership' | 'consultant' | 'other';
+  type:
+    | 'review'
+    | 'volunteer'
+    | 'membership'
+    | 'consultant'
+    | 'participant'
+    | 'other';
 }
 
 interface MultilingualActivities {
@@ -17,6 +23,16 @@ interface MultilingualActivities {
 
 export const activities: MultilingualActivities = {
   en: [
+    {
+      id: 3,
+      title: 'Gemini 3 Hackathon Tokyo (Gemini 3 ハッカソン 東京)',
+      organization: 'Cerebral Valley and Google DeepMind',
+      role: 'Participant',
+      date: 'February 21, 2026',
+      description:
+        'Participated in the Gemini 3 Hackathon Tokyo, a hackathon event focused on building innovative applications using Google\'s Gemini API. Developed "Doodle Duel (Jankenpon)", a real-time competitive web party game that reinvents rock-paper-scissors with AI-powered drawing classification and creative gameplay. Event details: https://cerebralvalley.ai/e/gemini-3-tokyo-hackathon/details',
+      type: 'participant',
+    },
     {
       id: 1,
       title:
@@ -41,6 +57,16 @@ export const activities: MultilingualActivities = {
     },
   ],
   vi: [
+    {
+      id: 3,
+      title: 'Gemini 3 Hackathon Tokyo (Gemini 3 ハッカソン 東京)',
+      organization: 'Cerebral Valley và Google DeepMind',
+      role: 'Người tham gia',
+      date: '21 tháng 2, 2026',
+      description:
+        'Tham gia Gemini 3 Hackathon Tokyo, một sự kiện hackathon tập trung vào xây dựng các ứng dụng sáng tạo sử dụng Gemini API của Google. Phát triển "Doodle Duel (Jankenpon)", một trò chơi tiệc web cạnh tranh thời gian thực tái tạo lại trò oẳn tù tì với phân loại bản vẽ bằng AI và lối chơi sáng tạo. Chi tiết sự kiện: https://cerebralvalley.ai/e/gemini-3-tokyo-hackathon/details',
+      type: 'participant',
+    },
     {
       id: 1,
       title:
