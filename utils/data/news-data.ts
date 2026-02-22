@@ -12,6 +12,11 @@ interface MultilingualNews {
 export const news: MultilingualNews = {
   en: [
     {
+      date: 'February 21, 2026',
+      title:
+        '🚀 Participated in the Gemini 3 Hackathon Tokyo (Gemini 3 ハッカソン 東京, hosted by Cerebral Valley and Google DeepMind)',
+    },
+    {
       date: 'November 10, 2025',
       title:
         '📄 Our paper "Visionary: Optimized Temporal Video Retrieval via Large Language Model-Enhanced Query Processing" has been accepted to the 14th International Symposium on Information and Communication Technology (SOICT 2025)',
@@ -116,6 +121,11 @@ export const news: MultilingualNews = {
     },
   ],
   vi: [
+    {
+      date: '21 tháng 2, 2026',
+      title:
+        '🚀 Tham gia Gemini 3 Hackathon Tokyo (Gemini 3 ハッカソン 東京, do Cerebral Valley và Google DeepMind tổ chức)',
+    },
     {
       date: '10 tháng 11, 2025',
       title:
