@@ -29,7 +29,7 @@ export const projectsData: MultilingualProjectsData = {
       code: 'https://github.com/heyGio/jankenpon/tree/loc/hehe',
       demo: 'https://jankenpon.nguyenvanloc.com',
       isCompleted: false,
-      image: '/images/crefin.jpg',
+      image: '/images/doodle-duel.png',
     },
 
     {
