@@ -6,6 +6,7 @@ import activitiesLottie from '/public/lottie/activities.json';
 import dynamic from 'next/dynamic';
 import { useTranslation } from '../context/I18nContext';
 import {
+  FaHandPaper,
   FaUserCheck,
   FaHeart,
   FaUsers,
@@ -30,6 +31,8 @@ const Activities: FC = () => {
     switch (type) {
       case 'review':
         return <FaUserCheck className='h-4 w-4' />;
+      case 'participant':
+        return <FaHandPaper className='h-4 w-4' />;
       case 'volunteer':
         return <FaHeart className='h-4 w-4' />;
       case 'membership':
@@ -45,6 +48,8 @@ const Activities: FC = () => {
     switch (type) {
       case 'review':
         return t('activities.reviewer');
+      case 'participant':
+        return t('activities.participant');
       case 'volunteer':
         return t('activities.volunteer');
       case 'membership':
@@ -96,9 +101,16 @@ const Activities: FC = () => {
                       </div>
 
                       {/* Role */}
-                      <div className='mb-2 text-sm font-medium text-violet-600 dark:text-violet-400'>
-                        {activity.role}
-                      </div>
+                      {activity.role && (
+                        <div className='mb-3 flex items-baseline gap-2'>
+                          <span className='text-sm font-semibold text-gray-600 dark:text-gray-400'>
+                            {t('activities.roleLabel')}:
+                          </span>
+                          <span className='text-base font-semibold text-gray-800 dark:text-white'>
+                            {activity.role}
+                          </span>
+                        </div>
+                      )}
 
                       {/* Title */}
                       <h3 className='mb-3 text-lg font-bold leading-tight'>

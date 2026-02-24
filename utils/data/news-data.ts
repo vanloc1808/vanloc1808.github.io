@@ -14,7 +14,7 @@ export const news: MultilingualNews = {
     {
       date: 'February 21, 2026',
       title:
-        '🚀 Participated in the Gemini 3 Hackathon Tokyo (Gemini 3 ハッカソン 東京, hosted by Cerebral Valley and Google DeepMind)',
+        '🚀 Participated in the Gemini 3 Hackathon Tokyo (Gemini 3 ハッカソン 東京), hosted by Cerebral Valley and Google DeepMind',
     },
     {
       date: 'November 10, 2025',

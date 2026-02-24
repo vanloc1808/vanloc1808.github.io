@@ -30,7 +30,7 @@ export const activities: MultilingualActivities = {
       role: 'Participant',
       date: 'February 21, 2026',
       description:
-        'Participated in the Gemini 3 Hackathon Tokyo, a hackathon event focused on building innovative applications using Google\'s Gemini API. Developed "Doodle Duel (Jankenpon)", a real-time competitive web party game that reinvents rock-paper-scissors with AI-powered drawing classification and creative gameplay. Event details: https://cerebralvalley.ai/e/gemini-3-tokyo-hackathon/details',
+        'Participated in the Gemini 3 Hackathon Tokyo, a hackathon event focused on building innovative applications using Google\'s Gemini API. Developed "Doodle Duel (Jankenpon)", a real-time competitive web party game that reinvents rock-paper-scissors with AI-powered drawing classification and creative gameplay.\n Event details: https://cerebralvalley.ai/e/gemini-3-tokyo-hackathon/details',
       type: 'participant',
     },
     {
