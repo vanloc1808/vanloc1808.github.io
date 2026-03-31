@@ -12,6 +12,11 @@ interface MultilingualNews {
 export const news: MultilingualNews = {
   en: [
     {
+      date: 'March 28, 2026',
+      title:
+        '👋 Left the job as a Research Intern at the National Institute of Informatics (NII), Tokyo, Japan',
+    },
+    {
       date: 'February 21, 2026',
       title:
         '🚀 Participated in the Gemini 3 Hackathon Tokyo (Gemini 3 ハッカソン 東京), hosted by Cerebral Valley and Google DeepMind',
@@ -121,6 +126,11 @@ export const news: MultilingualNews = {
     },
   ],
   vi: [
+    {
+      date: '28 tháng 3, 2026',
+      title:
+        '👋 Rời khỏi vị trí Research Intern tại National Institute of Informatics (NII), Tokyo, Nhật Bản',
+    },
     {
       date: '21 tháng 2, 2026',
       title:
