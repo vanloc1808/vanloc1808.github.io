@@ -12,6 +12,10 @@ interface MultilingualNews {
 export const news: MultilingualNews = {
   en: [
     {
+      date: 'April 1, 2026',
+      title: '💼 Started the job as a Software Engineer at Eurofins',
+    },
+    {
       date: 'March 28, 2026',
       title:
         '👋 Left the job as a Research Intern at the National Institute of Informatics (NII), Tokyo, Japan',
@@ -126,6 +130,10 @@ export const news: MultilingualNews = {
     },
   ],
   vi: [
+    {
+      date: '1 tháng 4, 2026',
+      title: '💼 Bắt đầu công việc làm Software Engineer tại Eurofins',
+    },
     {
       date: '28 tháng 3, 2026',
       title:

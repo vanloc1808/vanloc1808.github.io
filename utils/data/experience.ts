@@ -25,6 +25,18 @@ interface MultilingualExperiences {
 export const experiences: MultilingualExperiences = {
   en: [
     {
+      id: 6,
+      title: 'Software Engineer',
+      startMonth: 4,
+      startYear: 2026,
+      endMonth: null,
+      endYear: null,
+      company: 'Eurofins',
+      companyLink: 'https://www.eurofins.com/',
+      description: '',
+      company_logo: '/images/experiences/eurofins.png',
+    },
+    {
       id: 5,
       title: 'Research Intern',
       company: 'National Institute of Informatics (NII) - 国立情報学研究所',
@@ -101,6 +113,18 @@ export const experiences: MultilingualExperiences = {
     },
   ],
   vi: [
+    {
+      id: 6,
+      title: 'Software Engineer',
+      startMonth: 4,
+      startYear: 2026,
+      endMonth: null,
+      endYear: null,
+      company: 'Eurofins',
+      companyLink: 'https://www.eurofins.com/',
+      description: '',
+      company_logo: '/images/experiences/eurofins.png',
+    },
     {
       id: 5,
       title: 'Research Intern',
