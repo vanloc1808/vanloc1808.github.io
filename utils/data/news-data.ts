@@ -23,7 +23,7 @@ export const news: MultilingualNews = {
     {
       date: 'March 17, 2026',
       title:
-        'Our paper PANDORA: Pixel-wise Attention Dissolution and Latent Guidance for Zero-Shot Object Removal has been accepted to the 2026 IEEE International Conference on Multimedia and Expo (ICME)',
+        '📄 Our paper PANDORA: Pixel-wise Attention Dissolution and Latent Guidance for Zero-Shot Object Removal has been accepted to the 2026 IEEE International Conference on Multimedia and Expo (ICME) in Bangkok, Thailand',
     },
     {
       date: 'February 21, 2026',
