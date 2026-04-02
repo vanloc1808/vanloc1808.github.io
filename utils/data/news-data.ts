@@ -21,6 +21,11 @@ export const news: MultilingualNews = {
         '👋 Left the job as a Research Intern at the National Institute of Informatics (NII), Tokyo, Japan',
     },
     {
+      date: 'March 17, 2026',
+      title:
+        'Our paper PANDORA: Pixel-wise Attention Dissolution and Latent Guidance for Zero-Shot Object Removal has been accepted to the 2026 IEEE International Conference on Multimedia and Expo (ICME)',
+    },
+    {
       date: 'February 21, 2026',
       title:
         '🚀 Participated in the Gemini 3 Hackathon Tokyo (Gemini 3 ハッカソン 東京), hosted by Cerebral Valley and Google DeepMind',
@@ -138,6 +143,11 @@ export const news: MultilingualNews = {
       date: '28 tháng 3, 2026',
       title:
         '👋 Rời khỏi vị trí Research Intern tại National Institute of Informatics (NII), Tokyo, Nhật Bản',
+    },
+    {
+      date: '17 tháng 3, 2026',
+      title:
+        '📄 Bài báo PANDORA: Pixel-wise Attention Dissolution and Latent Guidance for Zero-Shot Object Removal đã được chấp nhận tại IEEE International Conference on Multimedia and Expo (ICME) 2026',
     },
     {
       date: '21 tháng 2, 2026',

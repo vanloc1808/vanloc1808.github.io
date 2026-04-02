@@ -1,18 +1,10 @@
-import { dirname } from 'path';
-import { fileURLToPath } from 'url';
-import { FlatCompat } from '@eslint/eslintrc';
-import js from '@eslint/js';
+import nextCoreWebVitals from 'eslint-config-next/core-web-vitals';
+import nextTypeScript from 'eslint-config-next/typescript';
+import prettier from 'eslint-config-prettier/flat';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-  recommendedConfig: js.configs.recommended,
-});
-
-const eslintConfig = [
-  ...compat.extends('next/core-web-vitals', 'prettier'),
+export default [
+  ...nextCoreWebVitals,
+  ...nextTypeScript,
   {
     rules: {
       'react/react-in-jsx-scope': 'off',
@@ -21,6 +13,7 @@ const eslintConfig = [
       'no-unused-vars': 'off',
     },
   },
+  prettier,
   {
     ignores: [
       'node_modules/',
@@ -35,5 +28,3 @@ const eslintConfig = [
     ],
   },
 ];
-
-export default eslintConfig;
