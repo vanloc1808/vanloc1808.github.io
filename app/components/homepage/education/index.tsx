@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { getEducations, type Education } from '@/utils/data/educations';
 import GlowCard from '../../helper/glow-card';
-import lottieFile from '/public/lottie/study.json';
+import lottieFile from '@/public/lottie/study.json';
 import { FC } from 'react';
 import { useTranslation } from '../../../context/I18nContext';
 import { getMonthName } from '@/utils/time-converter';

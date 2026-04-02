@@ -2,7 +2,7 @@
 
 import { FC, Suspense } from 'react';
 import { getCertificates } from '@/utils/data/certificates-data';
-import certificateLottie from '/public/lottie/trophy.json';
+import certificateLottie from '@/public/lottie/trophy.json';
 import dynamic from 'next/dynamic';
 import { useTranslation } from '../context/I18nContext';
 import { FaTrophy, FaCertificate } from 'react-icons/fa';

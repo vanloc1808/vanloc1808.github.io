@@ -3,7 +3,7 @@
 import { FC, Suspense } from 'react';
 import { getExperiences } from '@/utils/data/experience';
 import type { Experience } from '@/utils/data/experience';
-import experience from '/public/lottie/code.json';
+import experience from '@/public/lottie/code.json';
 import dynamic from 'next/dynamic';
 const AnimationLottie = dynamic(
   () => import('../components/helper/animation-lottie'),
