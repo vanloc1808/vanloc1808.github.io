@@ -16,6 +16,17 @@ interface MultilingualCertificates {
 export const certificates: MultilingualCertificates = {
   en: [
     {
+      id: 4,
+      title:
+        'Certificate of Completion, International Research Internship Program from the Director General of National Institute of Informatics, Japan',
+      organization: 'National Institute of Informatics, Japan',
+      location: 'Chiyoda-ku, Tokyo, Japan',
+      date: 'March 2026',
+      description:
+        'The NII International Internship Program is an exchange activity with students from institutions with which NII has concluded a Memorandum of Understanding (MOU) agreement. This incentive program aims at giving interns the opportunity for professional and personal development by engaging in research activities under the guidance and supervision of NII researchers.',
+      type: 'certificate',
+    },
+    {
       id: 1,
       title:
         'Third Prize, The 26th Student Scientific Research Award - Euréka 2024',
@@ -24,7 +35,7 @@ export const certificates: MultilingualCertificates = {
       location: 'Ho Chi Minh City, Vietnam',
       date: 'December 2024',
       description:
-        'Student Scientific Research Award – Euréka is a prestigious award for students interested in scientific research across the country, contributing to the promotion of the scientific research movement of university students. The Ho Chi Minh Youth Union of Ho Chi Minh City hosts the award in collaboration with the National University of Ho Chi Minh City.',
+        'Student Scientific Research Award - Euréka is a prestigious award for students interested in scientific research across the country, contributing to the promotion of the scientific research movement of university students. The Ho Chi Minh Youth Union of Ho Chi Minh City hosts the award in collaboration with the National University of Ho Chi Minh City.',
       type: 'award',
     },
     {
@@ -51,6 +62,18 @@ export const certificates: MultilingualCertificates = {
     },
   ],
   vi: [
+    {
+      id: 4,
+      title:
+        'Certificate of Completion, International Research Internship Program from the Director General of National Institute of Informatics, Japan',
+      organization:
+        'Viện Tin học Quốc gia Nhật Bản (National Institute of Informatics, Japan)',
+      location: 'Chiyoda-ku, Tokyo, Nhật Bản',
+      date: 'Tháng 3 năm 2026',
+      description:
+        'Chương trình Thực tập Nghiên cứu Quốc tế của NII là hoạt động trao đổi với sinh viên từ các cơ sở giáo dục mà NII đã ký kết Biên bản Ghi nhớ (MOU). Chương trình này nhằm tạo cơ hội cho thực tập sinh phát triển cả về chuyên môn lẫn cá nhân thông qua việc tham gia các hoạt động nghiên cứu dưới sự hướng dẫn và giám sát của các nhà nghiên cứu tại NII.',
+      type: 'certificate',
+    },
     {
       id: 1,
       title:
