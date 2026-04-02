@@ -2,7 +2,7 @@
 
 import { FC, Suspense } from 'react';
 import { getPublications } from '@/utils/data/publications-data';
-import educationLottie from '/public/lottie/education.json';
+import educationLottie from '@/public/lottie/education.json';
 import dynamic from 'next/dynamic';
 import { useTranslation } from '../context/I18nContext';
 import PublicationSkeleton from '../components/PublicationSkeleton';

@@ -2,7 +2,7 @@
 
 import { FC, Suspense } from 'react';
 import { getActivities } from '@/utils/data/activities-data';
-import activitiesLottie from '/public/lottie/activities.json';
+import activitiesLottie from '@/public/lottie/activities.json';
 import dynamic from 'next/dynamic';
 import { useTranslation } from '../context/I18nContext';
 import {

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { getExperiences, type Experience } from '@/utils/data/experience';
 import { BsPersonWorkspace } from 'react-icons/bs';
 import GlowCard from '../../helper/glow-card';
-import lottieFile from '/public/lottie/code.json';
+import lottieFile from '@/public/lottie/code.json';
 import { FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
 import { FC } from 'react';

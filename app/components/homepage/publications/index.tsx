@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 const AnimationLottie = dynamic(() => import('../../helper/animation-lottie'), {
   ssr: false,
 });
-import experiences from '/public/lottie/code.json';
+import experiences from '@/public/lottie/code.json';
 import { FaArrowRight } from 'react-icons/fa';
 import Link from 'next/link';
 import { FC } from 'react';
