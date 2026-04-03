@@ -42,12 +42,12 @@ export default async function Home() {
         <NewsSection />
       </Suspense>
 
-      <Suspense fallback={<PublicationSkeleton />}>
-        <Publication />
-      </Suspense>
-
       <Suspense fallback={<ExperienceSkeleton />}>
         <Experience />
+      </Suspense>
+
+      <Suspense fallback={<PublicationSkeleton />}>
+        <Publication />
       </Suspense>
 
       <Suspense fallback={<SkillsSkeleton />}>
