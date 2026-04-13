@@ -18,7 +18,7 @@ export const news: MultilingualNews = {
     {
       date: 'March 28, 2026',
       title:
-        '👋 Left the job as a Research Intern at the National Institute of Informatics (NII), Tokyo, Japan',
+        '👋 Left the job as a Student Researcher at the National Institute of Informatics (NII), Tokyo, Japan',
     },
     {
       date: 'March 17, 2026',
@@ -43,7 +43,7 @@ export const news: MultilingualNews = {
     {
       date: 'October 1, 2025',
       title:
-        '💼 Started the job as a Research Intern at the National Institute of Informatics (NII), Tokyo, Japan',
+        '💼 Started the job as a Student Researcher at the National Institute of Informatics (NII), Tokyo, Japan',
     },
     {
       date: 'August 29, 2025',
@@ -142,7 +142,7 @@ export const news: MultilingualNews = {
     {
       date: '28 tháng 3, 2026',
       title:
-        '👋 Rời khỏi vị trí Research Intern tại National Institute of Informatics (NII), Tokyo, Nhật Bản',
+        '👋 Rời khỏi vị trí Student Researcher tại National Institute of Informatics (NII), Tokyo, Nhật Bản',
     },
     {
       date: '17 tháng 3, 2026',
@@ -167,7 +167,7 @@ export const news: MultilingualNews = {
     {
       date: '1 tháng 10, 2025',
       title:
-        '💼 Bắt đầu công việc làm Research Intern tại National Institute of Informatics (NII), Tokyo, Nhật Bản',
+        '💼 Bắt đầu công việc làm Student Researcher tại National Institute of Informatics (NII), Tokyo, Nhật Bản',
     },
     {
       date: '29 tháng 8, 2025',

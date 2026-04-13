@@ -38,7 +38,7 @@ export const experiences: MultilingualExperiences = {
     },
     {
       id: 5,
-      title: 'Research Intern',
+      title: 'Student Researcher',
       company: 'National Institute of Informatics (NII) - 国立情報学研究所',
       startMonth: 10,
       startYear: 2025,
@@ -127,7 +127,7 @@ export const experiences: MultilingualExperiences = {
     },
     {
       id: 5,
-      title: 'Research Intern',
+      title: 'Student Researcher',
       company: 'National Institute of Informatics (NII) - 国立情報学研究所',
       startMonth: 10,
       startYear: 2025,
