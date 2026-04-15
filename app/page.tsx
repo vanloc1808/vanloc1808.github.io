@@ -20,7 +20,7 @@ import EducationSkeleton from './components/EducationSkeleton';
 export default async function Home() {
   return (
     <>
-      <Suspense fallback={<HeroSkeleton />}>
+      <Suspense fallback={<HeroSkeleton />}> 
         <HeroSection />
       </Suspense>
 
@@ -38,31 +38,31 @@ export default async function Home() {
         <AboutSection />
       </Suspense>
 
-      <Suspense fallback={<NewsSkeleton />}>
+      <Suspense fallback={<NewsSkeleton />}> 
         <NewsSection />
       </Suspense>
 
-      <Suspense fallback={<ExperienceSkeleton />}>
+      <Suspense fallback={<ExperienceSkeleton />}> 
         <Experience />
       </Suspense>
 
-      <Suspense fallback={<PublicationSkeleton />}>
-        <Publication />
-      </Suspense>
-
-      <Suspense fallback={<SkillsSkeleton />}>
-        <Skills />
-      </Suspense>
-
-      <Suspense fallback={<ProjectSkeleton />}>
-        <Projects />
-      </Suspense>
-
-      <Suspense fallback={<EducationSkeleton />}>
+      <Suspense fallback={<EducationSkeleton />}> 
         <Education />
       </Suspense>
 
-      <Suspense fallback={<ContactSkeleton />}>
+      <Suspense fallback={<ProjectSkeleton />}> 
+        <Projects />
+      </Suspense>
+
+      <Suspense fallback={<PublicationSkeleton />}> 
+        <Publication />
+      </Suspense>
+
+      <Suspense fallback={<SkillsSkeleton />}> 
+        <Skills />
+      </Suspense>
+
+      <Suspense fallback={<ContactSkeleton />}> 
         <ContactSection />
       </Suspense>
     </>
