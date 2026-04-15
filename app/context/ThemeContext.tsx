@@ -54,7 +54,6 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     const savedTheme =
       (localStorage.getItem('theme') as 'light' | 'dark' | 'system' | null) ||
       'system';
-    console.log('🚀 Theme initialized from localStorage:', savedTheme);
     setThemeState(savedTheme);
     applyTheme(savedTheme);
     setMounted(true);
