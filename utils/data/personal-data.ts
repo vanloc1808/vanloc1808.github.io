@@ -43,7 +43,7 @@ export const personalData: MultilingualPersonalData = {
     email: 'contact@nguyenvanloc.com',
     phone: '',
     // address: 'Ho Chi Minh City, Vietnam',
-    address: 'Tokyo, Japan',
+    address: 'Ho Chi Minh City, Vietnam',
     github: 'https://github.com/vanloc1808',
     googleScholar:
       'https://scholar.google.com/citations?user=39z1A1IAAAAJ&hl=en',
@@ -61,7 +61,7 @@ export const personalData: MultilingualPersonalData = {
       vi: 'Nguyễn Văn Lộc',
       en: 'Van-Loc Nguyen',
       zh: '阮文禄',
-      ja: 'グエン・ヴァン・ロク',
+      ja: 'グエ���・ヴァン・ロク',
     },
     profile: '/profile_image.png',
     designation: 'Kỹ sư AI',
@@ -70,7 +70,7 @@ export const personalData: MultilingualPersonalData = {
     email: 'contact@nguyenvanloc.com',
     phone: '',
     // address: 'Thành phố Hồ Chí Minh, Việt Nam',
-    address: 'Tokyo, Nhật Bản',
+    address: 'Thành phố Hồ Chí Minh, Việt Nam',
     github: 'https://github.com/vanloc1808',
     googleScholar:
       'https://scholar.google.com/citations?user=39z1A1IAAAAJ&hl=en',
