@@ -77,7 +77,7 @@ const Education: FC = () => {
                   </div>
 
                   <div className='ml-16'>
-                    <GlowCard identifier={`education-${education.id}`}>
+                    <GlowCard identifier={`education-${education.id}`}> 
                       <div className='relative p-8 text-gray-800 dark:text-white'>
                         {/* Status badge */}
                         <div className='mb-4 flex items-start justify-end'>
@@ -96,9 +96,29 @@ const Education: FC = () => {
                           </div>
                         </div>
 
-                        <div className='flex items-start gap-x-2 px-6 py-4 sm:gap-x-4 lg:gap-x-6'>
-                          {education.secondLogo ? (
-                            <div className='flex flex-shrink-0 flex-col items-start gap-1 sm:flex-row sm:items-center sm:gap-x-2 lg:gap-x-3'>
+                        {/* Fixed-width logo column + text column so titles align across items */}
+                        <div className='grid grid-cols-[5.5rem_1fr] items-start gap-x-2 px-6 py-4 sm:grid-cols-[7.5rem_1fr] sm:gap-x-4 lg:grid-cols-[9rem_1fr] lg:gap-x-6'>
+                          <div className='flex items-center justify-center gap-2'>
+                            {education.secondLogo ? (
+                              <>
+                                <div className='relative h-10 w-10 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
+                                  <Image
+                                    src={education.logo}
+                                    alt={`${education.institution} logo`}
+                                    fill
+                                    className='object-contain'
+                                  />
+                                </div>
+                                <div className='relative h-10 w-10 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
+                                  <Image
+                                    src={education.secondLogo}
+                                    alt={`${education.institution} second logo`}
+                                    fill
+                                    className='object-contain'
+                                  />
+                                </div>
+                              </>
+                            ) : (
                               <div className='relative h-10 w-10 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
                                 <Image
                                   src={education.logo}
@@ -107,26 +127,10 @@ const Education: FC = () => {
                                   className='object-contain'
                                 />
                               </div>
-                              <div className='relative h-10 w-10 overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
-                                <Image
-                                  src={education.secondLogo}
-                                  alt={`${education.institution} second logo`}
-                                  fill
-                                  className='object-contain'
-                                />
-                              </div>
-                            </div>
-                          ) : (
-                            <div className='relative flex h-10 w-10 flex-shrink-0 items-center justify-center overflow-hidden rounded-full shadow-lg dark:drop-shadow-[0_0_10px_white] sm:h-12 sm:w-12 lg:h-16 lg:w-16'>
-                              <Image
-                                src={education.logo}
-                                alt={`${education.institution} logo`}
-                                fill
-                                className='object-contain'
-                              />
-                            </div>
-                          )}
-                          <div className='flex-1'>
+                            )}
+                          </div>
+
+                          <div className='min-w-0'>
                             <h3 className='mb-2 text-base font-semibold uppercase leading-tight sm:text-lg'>
                               {education.title}
                             </h3>
