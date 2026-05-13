@@ -25,13 +25,13 @@
     "@fortawesome/react-fontawesome": "^3.3.0",
     "@next/third-parties": "^16.2.2",
     "@vercel/analytics": "^2.0.1",
-    "axios": "^1.14.0",
+    "axios": "^1.16.0",
     "braces": "^3.0.3",
     "cross-spawn": "^7.0.6",
     "lottie-react": "^2.4.1",
     "micromatch": "^4.0.8",
     "nanoid": "^5.1.7",
-    "next": "16.2.2",
+    "next": "16.2.6",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-fast-marquee": "^1.6.5",
@@ -62,12 +62,17 @@
     "postcss": "^8.5.8",
     "prettier": "^3.8.1",
     "prettier-plugin-tailwindcss": "^0.7.2",
-    "puppeteer": "^24.40.0",
+    "puppeteer": "^24.43.1",
     "sass": "^1.98.0",
     "tailwindcss": "<4.0.0",
     "typedoc": "^0.28.18",
     "typedoc-plugin-markdown": "^4.11.0",
     "typescript": "^6.0.2"
+  },
+  "resolutions": {
+    "basic-ftp": "^5.3.1",
+    "postcss": "^8.5.14",
+    "ip-address": "^10.2.0"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
