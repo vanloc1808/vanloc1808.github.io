@@ -14,7 +14,7 @@ export const news: MultilingualNews = {
     {
       date: 'May 2, 2026',
       title:
-        '📄 Our demo paper "Cluster Erase" has been accepted to the IEEE ICME 2026 Workshop in Bangkok, Thailand',
+        '📄 Our demo paper "Cluster Erase: Zero-Shot Mass-Similar and Multi-Object Removal in Single Pass" has been accepted to the IEEE ICME 2026 Workshop in Bangkok, Thailand',
     },
     {
       date: 'April 1, 2026',
@@ -143,7 +143,7 @@ export const news: MultilingualNews = {
     {
       date: '2 tháng 5, 2026',
       title:
-        '📄 Demo paper "Cluster Erase" đã được chấp nhận tại IEEE ICME 2026 Workshop ở Bangkok, Thái Lan',
+        '📄 Demo paper "Cluster Erase: Zero-Shot Mass-Similar and Multi-Object Removal in Single Pass" đã được chấp nhận tại IEEE ICME 2026 Workshop ở Bangkok, Thái Lan',
     },
     {
       date: '1 tháng 4, 2026',
