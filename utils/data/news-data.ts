@@ -12,6 +12,11 @@ interface MultilingualNews {
 export const news: MultilingualNews = {
   en: [
     {
+      date: 'May 2, 2026',
+      title:
+        '📄 Our demo paper "Cluster Erase" has been accepted to the IEEE ICME 2026 Workshop in Bangkok, Thailand',
+    },
+    {
       date: 'April 1, 2026',
       title: '💼 Started the job as a Software Engineer at Eurofins',
     },
@@ -135,6 +140,11 @@ export const news: MultilingualNews = {
     },
   ],
   vi: [
+    {
+      date: '2 tháng 5, 2026',
+      title:
+        '📄 Demo paper "Cluster Erase" đã được chấp nhận tại IEEE ICME 2026 Workshop ở Bangkok, Thái Lan',
+    },
     {
       date: '1 tháng 4, 2026',
       title: '💼 Bắt đầu công việc làm Software Engineer tại Eurofins',
