@@ -12,7 +12,7 @@ interface MultilingualNews {
 export const news: MultilingualNews = {
   en: [
     {
-      date: 'May 2, 2026',
+      date: 'May 3, 2026',
       title:
         '📄 Our demo paper "Cluster Erase: Zero-Shot Mass-Similar and Multi-Object Removal in Single Pass" has been accepted to the IEEE ICME 2026 Workshop in Bangkok, Thailand',
     },
