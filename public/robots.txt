@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://vanloc1808.github.io/sitemap.xml
