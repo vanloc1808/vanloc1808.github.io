@@ -270,6 +270,17 @@ p.lead { font-size: 1.25em; line-height: 1.4; color: var(--fg); max-width: var(-
 }
 .front-name .row { display: block; }
 .front-name em { font-style: italic; font-weight: 400; color: var(--gold); }
+.front-subtitle {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(28px, 3vw, 48px);
+  line-height: 1.2;
+  color: var(--fg-mute);
+  margin: var(--s-4) 0 0;
+  letter-spacing: -0.01em;
+}
+.front-subtitle em { font-style: italic; font-weight: 600; color: var(--gold); }
 .front-tag {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
