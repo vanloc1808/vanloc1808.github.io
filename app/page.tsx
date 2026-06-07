@@ -43,6 +43,7 @@ export default function Home() {
               <span className="row"><em>Nguyen</em>,</span>
               <span className="row">building useful AI.</span>
             </h1>
+            <p className="front-subtitle">An engineer — a sun chaser — <em>and a lover</em></p>
           </div>
 
           {/* lede + console */}
