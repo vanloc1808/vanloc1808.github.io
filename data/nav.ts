@@ -28,7 +28,7 @@ export const EDITORIAL = {
 export const SITE = {
   brandName: 'Nguyễn Văn Lộc',
   brandSub: '— Vol. 26',
-  copyright: '© 2020–2026 Van‑Loc Nguyen · All rights reserved',
+  copyright: '© Van-Loc Nguyen · All rights reserved',
   volIssue: 'Vol. 26 / Issue 05',
   lastUpdated: 'Last updated · May 26',
 } as const;

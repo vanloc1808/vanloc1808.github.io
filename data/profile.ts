@@ -18,8 +18,8 @@ export const STATUS_ITEMS: StatusItem[] = [
 
 /** Bio paragraphs (plain text — no HTML tags needed). */
 export const BIO_PARAGRAPHS: string[] = [
-  'My name is Nguyễn Văn Lộc — a professional and enthusiastic programmer with a particular love for Artificial Intelligence, especially Computer Vision and Deep Learning. I am a quick learner with a self-learning attitude, always eager to explore new technologies and passionate about solving hard problems. Python is my core language and closest tool; I love almost everything that can be built with it.',
-  'Over the last several years I\'ve moved between a research lab at the University of Science in Ho Chi Minh City, a student researcher position at the National Institute of Informatics in Tokyo (Echizen Laboratory, under Prof. Isao Echizen), a role building AI agents at Autonomous, and now a Software Engineer position at Eurofins. The throughline is the same: take a model out of the notebook and into something a person can use without thinking about it.',
+  'My name is Nguyễn Văn Lộc (you can call me Felix) - a professional and enthusiastic programmer with a particular love for Artificial Intelligence, especially Computer Vision and Deep Learning. I am a quick learner with a self-learning attitude, always eager to explore new technologies and passionate about solving hard problems. Python is my core language and closest tool; I love almost everything that can be built with it.',
+  'Over the last several years I\'ve moved between a research lab at the University of Science, VNUHCM, a backend engineer role at Saritasa, an AI engineer role at Autonomous, a student researcher position at the National Institute of Informatics in Tokyo (Echizen Laboratory, under Prof. Isao Echizen), and now a Software Engineer position at Eurofins. The throughline is the same: take a model out of the notebook and into something a person can use without thinking about it.',
   'I read widely, ship steadily, and believe that the most interesting problems sit between disciplines — vision and language, research and product, Vietnamese and Japanese, theory and the messy thing it\'s supposed to model.',
 ];
 

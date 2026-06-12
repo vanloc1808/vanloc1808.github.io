@@ -566,6 +566,18 @@ p.lead { font-size: 1.25em; line-height: 1.4; color: var(--fg); max-width: var(-
 .channel-row .note   { font-family: var(--serif); font-style: italic; font-size: 1.02em; color: var(--fg-mute); line-height: 1.4; }
 .channel-row .arrow  { font-family: var(--mono); font-size: 14px; color: var(--accent); text-align: right; }
 
+/* linkedin badge — show the variant matching the active theme.
+   dark is the site default; light wins under [data-theme="light"]
+   or when system preference resolves to light. */
+.li-badge { margin-top: var(--s-5); }
+.li-badge-light { display: none; }
+[data-theme="light"] .li-badge-light { display: block; }
+[data-theme="light"] .li-badge-dark { display: none; }
+@media (prefers-color-scheme: light) {
+  [data-theme="system"] .li-badge-light { display: block; }
+  [data-theme="system"] .li-badge-dark { display: none; }
+}
+
 /* responsive */
 @media (max-width: 980px) {
   .masthead-inner { grid-template-columns: 1fr; gap: var(--s-2); }
