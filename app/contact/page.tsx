@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import LinkedInBadge from '@/components/LinkedInBadge';
 import { contactChannels, contactInfo } from '@/data/contact';
 import { EDITORIAL } from '@/data/nav';
 
@@ -85,6 +86,8 @@ export default function ContactPage() {
               </a>
             ))}
           </div>
+
+          <LinkedInBadge />
         </div>
       </section>
     </>
