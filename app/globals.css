@@ -570,6 +570,9 @@ p.lead { font-size: 1.25em; line-height: 1.4; color: var(--fg); max-width: var(-
    dark is the site default; light wins under [data-theme="light"]
    or when system preference resolves to light. */
 .li-badge { margin-top: var(--s-5); }
+/* the plain fallback anchor only flashes while LinkedIn's script boots
+   (or lingers when it's blocked) — never show it as raw text */
+.li-badge .badge-base__link { display: none; }
 .li-badge-light { display: none; }
 [data-theme="light"] .li-badge-light { display: block; }
 [data-theme="light"] .li-badge-dark { display: none; }

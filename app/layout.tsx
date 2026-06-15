@@ -23,6 +23,12 @@ export const metadata: Metadata = {
   title: 'Van‑Loc Nguyen — AI Engineer · Research · Tokyo / Saigon',
   description:
     'A computer‑vision and deep‑learning engineer working at the seam between research and production.',
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '48x48' },
+    ],
+  },
 };
 
 export default function RootLayout({

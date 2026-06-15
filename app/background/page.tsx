@@ -34,50 +34,12 @@ export default function BackgroundPage() {
         </div>
       </section>
 
-      {/* ── § 01  EDUCATION ── */}
+      {/* ── § 01  EXPERIENCE ── */}
       <section className="section">
         <div className="shell">
           <div className="section-head">
             <div className="number">
               <span className="num">§ 01</span>
-              <span>Education</span>
-            </div>
-            <h2>Trained in <em>science</em>, drawn to engineering.</h2>
-          </div>
-
-          <div className="tl-list">
-            {educationEntries.map((edu, i) => (
-              <div key={i} className="tl-item">
-                <div className="meta-col">
-                  <span className="period">{edu.period}</span>
-                  <span className="inst">
-                    {edu.institutionHref ? (
-                      <a href={edu.institutionHref} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', borderBottom: '1px solid var(--rule)' }}>
-                        {edu.institution}
-                      </a>
-                    ) : edu.institution}
-                  </span>
-                  <span className="loc">{edu.location}</span>
-                </div>
-                <div>
-                  <h3>
-                    {edu.degree}{edu.degreeEmphasis && <> <em>{edu.degreeEmphasis}</em></>}
-                  </h3>
-                  {/* descHtml is authored content — safe to inject */}
-                  <p dangerouslySetInnerHTML={{ __html: edu.descHtml }} />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── § 02  EXPERIENCE ── */}
-      <section className="section">
-        <div className="shell">
-          <div className="section-head">
-            <div className="number">
-              <span className="num">§ 02</span>
               <span>Experience</span>
             </div>
             <h2>From notebook to <em>production</em>.</h2>
@@ -103,6 +65,44 @@ export default function BackgroundPage() {
                   </h3>
                   {/* descHtml is authored content — safe to inject */}
                   {exp.descHtml && <p dangerouslySetInnerHTML={{ __html: exp.descHtml }} />}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── § 02  EDUCATION ── */}
+      <section className="section">
+        <div className="shell">
+          <div className="section-head">
+            <div className="number">
+              <span className="num">§ 02</span>
+              <span>Education</span>
+            </div>
+            <h2>Trained in <em>science</em>, drawn to engineering.</h2>
+          </div>
+
+          <div className="tl-list">
+            {educationEntries.map((edu, i) => (
+              <div key={i} className="tl-item">
+                <div className="meta-col">
+                  <span className="period">{edu.period}</span>
+                  <span className="inst">
+                    {edu.institutionHref ? (
+                      <a href={edu.institutionHref} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', borderBottom: '1px solid var(--rule)' }}>
+                        {edu.institution}
+                      </a>
+                    ) : edu.institution}
+                  </span>
+                  <span className="loc">{edu.location}</span>
+                </div>
+                <div>
+                  <h3>
+                    {edu.degree}{edu.degreeEmphasis && <> <em>{edu.degreeEmphasis}</em></>}
+                  </h3>
+                  {/* descHtml is authored content — safe to inject */}
+                  <p dangerouslySetInnerHTML={{ __html: edu.descHtml }} />
                 </div>
               </div>
             ))}

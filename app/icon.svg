@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Background plate -->
+  <rect x="1" y="1" width="62" height="62" rx="14" fill="#0a0a0a"/>
+  <!-- Diamond rule -->
+  <rect x="13" y="13" width="38" height="38" rx="3" transform="rotate(45 32 32)"
+    fill="none" stroke="#f5c542" stroke-width="1.4"/>
+  <!-- VL monogram -->
+  <text x="32" y="34"
+    font-family="Cormorant Garamond, Georgia, serif"
+    font-style="italic"
+    font-weight="600"
+    font-size="25"
+    letter-spacing="-1"
+    fill="#f5c542"
+    text-anchor="middle"
+    dominant-baseline="central">VL</text>
+</svg>

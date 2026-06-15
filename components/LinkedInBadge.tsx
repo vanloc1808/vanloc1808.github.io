@@ -1,6 +1,12 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+
+declare global {
+  interface Window {
+    LIRenderAll?: () => void;
+  }
+}
 
 const BADGE_SCRIPT_SRC = 'https://platform.linkedin.com/badges/js/profile.js';
 
@@ -34,6 +40,8 @@ function Badge({ theme }: { theme: 'light' | 'dark' }) {
 }
 
 export default function LinkedInBadge() {
+  const [blocked, setBlocked] = useState(false);
+
   useEffect(() => {
     // LinkedIn's script scans the DOM only when it executes, so it must be
     // re-injected on every mount or the badge stays empty after client-side
@@ -41,11 +49,22 @@ export default function LinkedInBadge() {
     const script = document.createElement('script');
     script.src = BADGE_SCRIPT_SRC;
     script.async = true;
+    // The script defers its DOM scan to the window load event unless the
+    // document is already complete; calling LIRenderAll directly removes
+    // that timing dependence (it skips badges it already rendered).
+    script.onload = () => window.LIRenderAll?.();
+    // platform.linkedin.com is on common privacy blocklists. When blocked,
+    // render nothing — the channel list already links to the profile.
+    script.onerror = () => setBlocked(true);
     document.body.appendChild(script);
     return () => {
       script.remove();
     };
   }, []);
+
+  if (blocked) {
+    return null;
+  }
 
   return (
     <div className="li-badge">
