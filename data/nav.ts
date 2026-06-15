@@ -11,7 +11,7 @@ export interface NavLink {
 export const NAV_LINKS: NavLink[] = [
   { href: '/', label: 'Index' },
   { href: '/background', label: 'Background' },
-  { href: '/work', label: 'Work' },
+  { href: '/work', label: 'Portfolio' },
   { href: '/journal', label: 'Journal' },
   { href: '/contact', label: 'Contact' },
   { href: 'https://blog.nguyenvanloc.com', label: 'Blog', external: true },
