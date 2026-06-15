@@ -23,6 +23,8 @@ export const experienceEntries: ExperienceEntry[] = [
     institutionHref: 'https://www.eurofins.com/',
     location: 'Ho Chi Minh City, Vietnam',
     role: 'Software Engineer',
+    descHtml:
+      'IT Application Monitoring and Observability.',
   },
   {
     period: 'Oct 2025 — Mar 2026',
