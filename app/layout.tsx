@@ -3,6 +3,7 @@ import { Cormorant_Garamond, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import SiteShell from '@/components/SiteShell';
 import ThemeScript from '@/components/ThemeScript';
+import WebMcpRegistration from '@/components/WebMcpRegistration';
 import { SITE_URL } from '@/lib/agent';
 
 const cormorant = Cormorant_Garamond({
@@ -49,6 +50,7 @@ export default function RootLayout({
         <ThemeScript />
       </head>
       <body>
+        <WebMcpRegistration />
         <SiteShell>{children}</SiteShell>
       </body>
     </html>
