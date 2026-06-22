@@ -3,6 +3,7 @@ import { Cormorant_Garamond, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 import SiteShell from '@/components/SiteShell';
 import ThemeScript from '@/components/ThemeScript';
+import { SITE_URL } from '@/lib/agent';
 
 const cormorant = Cormorant_Garamond({
   weight: ['300', '400', '500', '600'],
@@ -20,6 +21,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: 'Van‑Loc Nguyen — AI Engineer · Research · Tokyo / Saigon',
   description:
     'A computer‑vision and deep‑learning engineer working at the seam between research and production.',

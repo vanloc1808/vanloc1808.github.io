@@ -7,6 +7,10 @@ import { EDITORIAL } from '@/data/nav';
 export const metadata: Metadata = {
   title: 'Work & Publications — Van‑Loc Nguyen',
   description: 'A complete register of projects shipped and papers accepted.',
+  alternates: {
+    canonical: '/work',
+    types: { 'text/markdown': '/work.md' },
+  },
 };
 
 /* =========================================================
