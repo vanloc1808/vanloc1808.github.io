@@ -7,6 +7,10 @@ import { EDITORIAL } from '@/data/nav';
 export const metadata: Metadata = {
   title: 'Background — Van‑Loc Nguyen',
   description: 'Education, experience, and the thread connecting them.',
+  alternates: {
+    canonical: '/background',
+    types: { 'text/markdown': '/background.md' },
+  },
 };
 
 /* =========================================================

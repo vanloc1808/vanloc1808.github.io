@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { BIO_PARAGRAPHS, BIO_META, NAME_VARIANTS, STATUS_ITEMS, NOW_ITEMS } from '@/data/profile';
 import { projects, FEATURED_PROJECT_COUNT } from '@/data/projects';
@@ -5,6 +6,14 @@ import { publications } from '@/data/publications';
 import { journalEntries, type JournalEntry } from '@/data/journal';
 import { EDITORIAL, SITE, SOCIAL_LINKS } from '@/data/nav';
 import { contactInfo } from '@/data/contact';
+import { personJsonLd } from '@/lib/agent';
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: '/',
+    types: { 'text/markdown': '/index.md' },
+  },
+};
 
 /* =========================================================
    HOMEPAGE — index.html
@@ -24,6 +33,12 @@ export default function Home() {
 
   return (
     <>
+      {/* Machine-readable identity for AI agents and search engines. */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd()) }}
+      />
+
       {/* ── FRONT PAGE ── */}
       <section className="front">
         <div className="shell">
