@@ -145,7 +145,7 @@ export default function BackgroundPage() {
                 <span className="v">
                   Vietnamese <span className="mute">native ·</span>{' '}
                   English <span className="mute">fluent ·</span>{' '}
-                  日本語 <span className="mute">conversational ·</span>{' '}
+                  日本語 <span className="mute">basic ·</span>{' '}
                   中文 <span className="mute">basic</span>
                 </span>
               </div>

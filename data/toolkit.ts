@@ -32,7 +32,7 @@ export const toolCategories: ToolCategory[] = [
 
 export const additionalSkills = {
   /** Plain text — rendered as-is with muted spans for proficiency labels. */
-  humanLanguages: 'Vietnamese <muted>native ·</muted> English <muted>fluent ·</muted> 日本語 <muted>conversational ·</muted> 中文 <muted>basic</muted>',
+  humanLanguages: 'Vietnamese <muted>native ·</muted> English <muted>fluent ·</muted> 日本語 <muted>basic ·</muted> 中文 <muted>basic</muted>',
   alsoUses: 'Git, GitHub Actions, Jira, Linux, Jupyter, LaTeX, Postman, Swagger',
   interests: 'Diffusion world models · Vision‑language evaluation · Agents that don’t hallucinate · Multimedia verification',
 } as const;
