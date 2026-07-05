@@ -20,10 +20,11 @@ interface TweaksPanelProps {
 export default function TweaksPanel({ open, onClose }: TweaksPanelProps) {
   const [prefs, setPrefs] = useState<Prefs>(defaults);
 
-  // Load from localStorage on mount
+  // Hydrate browser-only prefs after mount; ThemeScript handles pre-paint DOM state.
   useEffect(() => {
     try {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') as Partial<Prefs>;
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setPrefs({ ...defaults, ...saved });
     } catch {
       // ignore

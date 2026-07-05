@@ -13,6 +13,5 @@ export default function ThemeScript() {
 })();
 `.trim();
 
-  // eslint-disable-next-line react/no-danger
   return <script dangerouslySetInnerHTML={{ __html: script }} />;
 }
