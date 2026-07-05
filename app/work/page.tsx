@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import type { Metadata } from 'next';
 import { projects } from '@/data/projects';
 import { publications } from '@/data/publications';
