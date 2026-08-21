@@ -3,7 +3,7 @@ import { journalEntries, type JournalEntry } from '@/data/journal';
 import { EDITORIAL } from '@/data/nav';
 
 export const metadata: Metadata = {
-  title: 'Journal — Van‑Loc Nguyen',
+  title: 'Journal — Van-Loc Nguyen',
   description: 'A running log of moves, papers, roles, awards, and moments worth noting.',
   alternates: {
     canonical: '/journal',

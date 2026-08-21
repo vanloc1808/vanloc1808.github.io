@@ -33,7 +33,7 @@ function Badge({ theme }: { theme: 'light' | 'dark' }) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        Van‑Loc (Felix) Nguyen
+        Van-Loc (Felix) Nguyen
       </a>
     </div>
   );

@@ -24,7 +24,7 @@ export const educationEntries: EducationEntry[] = [
     degree: 'Master of Science in Computer Science,',
     degreeEmphasis: 'majoring in Artificial Intelligence',
     descHtml:
-      'Pursuing research in computer vision and generative models under <a href="https://www.fit.hcmus.edu.vn/~tmtriet/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Assoc.&nbsp;Prof. Minh‑Triet Tran</a>. Current thesis focuses on zero‑shot object removal and multi‑object reasoning for video.',
+      'Pursuing research in computer vision and generative models under <a href="https://www.fit.hcmus.edu.vn/~tmtriet/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Assoc.&nbsp;Prof. Minh-Triet Tran</a>. Current thesis focuses on zero-shot object removal and multi-object reasoning for video.',
   },
   {
     period: 'Oct 2020 — Oct 2024',
@@ -33,7 +33,7 @@ export const educationEntries: EducationEntry[] = [
     degree: 'Bachelor of Science in Computer Science,',
     degreeEmphasis: 'Honors Program',
     descHtml:
-      'Graduated rank 6/59. Supervised by <a href="https://www.fit.hcmus.edu.vn/~tmtriet/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Assoc.&nbsp;Prof. Minh‑Triet Tran</a>. Defended undergraduate thesis with score 10.00; co‑authored multiple papers during final‑year research.',
+      'Graduated rank 6/59. Supervised by <a href="https://www.fit.hcmus.edu.vn/~tmtriet/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Assoc.&nbsp;Prof. Minh-Triet Tran</a>. Defended undergraduate thesis with score 10.00; co-authored multiple papers during final-year research.',
   },
   {
     period: 'Aug 2017 — Aug 2020',

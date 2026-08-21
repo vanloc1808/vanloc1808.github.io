@@ -25,7 +25,7 @@ export const toolCategories: ToolCategory[] = [
   {
     label: 'Web & Infra',
     items: 'Next.js, Django REST, FastAPI, Docker, PostgreSQL, Redis',
-    desc: 'Full‑stack when required. Comfortable with containerisation, background workers, CI/CD, and shipping things that stay up.',
+    desc: 'Full-stack when required. Comfortable with containerisation, background workers, CI/CD, and shipping things that stay up.',
     meta: 'Engineering backbone',
   },
 ];
@@ -34,5 +34,5 @@ export const additionalSkills = {
   /** Plain text — rendered as-is with muted spans for proficiency labels. */
   humanLanguages: 'Vietnamese <muted>native ·</muted> English <muted>fluent ·</muted> 日本語 <muted>basic ·</muted> 中文 <muted>basic</muted>',
   alsoUses: 'Git, GitHub Actions, Jira, Linux, Jupyter, LaTeX, Postman, Swagger',
-  interests: 'Diffusion world models · Vision‑language evaluation · Agents that don’t hallucinate · Multimedia verification',
+  interests: 'Diffusion world models · Vision-language evaluation · Agents that don’t hallucinate · Multimedia verification',
 } as const;

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 
 /* =========================================================
    HOMEPAGE — index.html
-   Editorial personal site for Van‑Loc Nguyen
+   Editorial personal site for Van-Loc Nguyen
    ========================================================= */
 
 /** CSS modifier class for the kind badge on the journal strip. */
@@ -54,7 +54,7 @@ export default function Home() {
           {/* name display */}
           <div className="front-title">
             <h1 className="front-name">
-              <span className="row">Van‑Loc (Felix)</span>
+              <span className="row">Van-Loc (Felix)</span>
               <span className="row"><em>Nguyen</em>,</span>
               <span className="row">building useful AI.</span>
             </h1>
@@ -64,7 +64,7 @@ export default function Home() {
           {/* lede + console */}
           <div className="front-tag">
             <p className="lede">
-              A computer‑vision and deep‑learning engineer working at the seam between research
+              A computer-vision and deep-learning engineer working at the seam between research
               and production — currently at <span className="pill">Eurofins</span> in Ho Chi Minh City,
               recently a student researcher in Tokyo, presently chasing a Master&#39;s in AI.
             </p>
@@ -77,13 +77,13 @@ export default function Home() {
                   <span className="dot live" />
                 </span>
                 <span>~ / whoami.py</span>
-                <span>utf‑8</span>
+                <span>utf-8</span>
               </div>
               <div className="console-body">
                 <div className="ln"><span className="n">1</span><span><span className="k">class</span> <span className="v">Engineer</span><span className="p">:</span></span></div>
-                <div className="ln"><span className="n">2</span><span className="ind"><span className="v">name</span>      <span className="p">=</span> <span className="s">&quot;Van‑Loc Nguyen&quot;</span></span></div>
+                <div className="ln"><span className="n">2</span><span className="ind"><span className="v">name</span>      <span className="p">=</span> <span className="s">&quot;Van-Loc Nguyen&quot;</span></span></div>
                 <div className="ln"><span className="n">3</span><span className="ind"><span className="v">based</span>     <span className="p">=</span> <span className="s">&quot;Ho Chi Minh / Tokyo&quot;</span></span></div>
-                <div className="ln"><span className="n">4</span><span className="ind"><span className="v">focus</span>     <span className="p">=</span> <span className="p">[</span><span className="s">&quot;vision&quot;</span><span className="p">,</span> <span className="s">&quot;deep‑learning&quot;</span><span className="p">,</span> <span className="s">&quot;agents&quot;</span><span className="p">]</span></span></div>
+                <div className="ln"><span className="n">4</span><span className="ind"><span className="v">focus</span>     <span className="p">=</span> <span className="p">[</span><span className="s">&quot;vision&quot;</span><span className="p">,</span> <span className="s">&quot;deep-learning&quot;</span><span className="p">,</span> <span className="s">&quot;agents&quot;</span><span className="p">]</span></span></div>
                 <div className="ln"><span className="n">5</span><span className="ind"><span className="v">stack</span>     <span className="p">=</span> <span className="p">&#123;</span><span className="s">&quot;py&quot;</span><span className="p">,</span> <span className="s">&quot;torch&quot;</span><span className="p">,</span> <span className="s">&quot;django&quot;</span><span className="p">,</span> <span className="s">&quot;docker&quot;</span><span className="p">,</span> <span className="s">&quot;git&quot;</span><span className="p">&#125;</span></span></div>
                 <div className="ln"><span className="n">6</span><span className="ind"><span className="v">writes</span>    <span className="p">=</span> <span className="p">[</span><span className="s">&quot;papers&quot;</span><span className="p">,</span> <span className="s">&quot;systems&quot;</span><span className="p">,</span> <span className="s">&quot;docs&quot;</span><span className="p">]</span></span></div>
                 <div className="ln"><span className="n">7</span><span className="ind"><span className="v">curious</span>   <span className="p">=</span> <span className="k">True</span></span></div>

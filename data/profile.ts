@@ -32,7 +32,7 @@ export interface NameVariant {
 
 export const NAME_VARIANTS: NameVariant[] = [
   { lang: 'Vi',    nameHtml: 'Nguyễn Văn <em>Lộc</em>' },
-  { lang: 'En',    nameHtml: 'Van‑Loc Nguyen <em>(Felix)</em>' },
+  { lang: 'En',    nameHtml: 'Van-Loc Nguyen <em>(Felix)</em>' },
   { lang: '日本語', nameHtml: 'グエン・ヴァン・ロク' },
   { lang: '中文',   nameHtml: '阮文禄' },
 ];
@@ -62,12 +62,12 @@ export const NOW_ITEMS: NowItem[] = [
   },
   {
     label: 'Researching',
-    titleText: 'Zero‑shot object removal and multi‑object reasoning for video, continuing work from PANDORA and Cluster‑Erase.',
+    titleText: 'Zero-shot object removal and multi-object reasoning for video, continuing work from PANDORA and Cluster-Erase.',
     meta: 'Master\'s thesis · HCMUS',
   },
   {
     label: 'Reading',
-    titleText: 'Diffusion world models, evaluation of vision‑language systems, and the long quiet literature on agents that don\'t hallucinate.',
+    titleText: 'Diffusion world models, evaluation of vision-language systems, and the long quiet literature on agents that don\'t hallucinate.',
     meta: 'Ongoing',
   },
 ];

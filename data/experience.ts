@@ -34,7 +34,7 @@ export const experienceEntries: ExperienceEntry[] = [
     role: 'Student Researcher —',
     roleEmphasis: 'Echizen Laboratory',
     descHtml:
-      'Six‑month research residency under <a href="https://research.nii.ac.jp/~iechizen/official/members_echizen-e.html" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Prof. Isao Echizen</a>, mentored by <a href="https://rellm.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Dr. April Pyone Maung Maung</a> at the <a href="https://research.nii.ac.jp/~iechizen/official/index-e.html" target="_blank" rel="noopener noreferrer" style="color:var(--fg-mute);border-bottom:1px solid var(--rule)">Echizen Laboratory</a>. Worked on media authenticity and digital forensics.',
+      'Six-month research residency under <a href="https://research.nii.ac.jp/~iechizen/official/members_echizen-e.html" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Prof. Isao Echizen</a>, mentored by <a href="https://rellm.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Dr. April Pyone Maung Maung</a> at the <a href="https://research.nii.ac.jp/~iechizen/official/index-e.html" target="_blank" rel="noopener noreferrer" style="color:var(--fg-mute);border-bottom:1px solid var(--rule)">Echizen Laboratory</a>. Worked on media authenticity and digital forensics.',
   },
   {
     period: 'Mar 2025 — Aug 2025',
@@ -43,7 +43,7 @@ export const experienceEntries: ExperienceEntry[] = [
     location: 'Remote',
     role: 'AI Engineer',
     descHtml:
-      'Responsible for building AI agents for real‑world needs. Improved existing MCP servers to enhance user experience. Optimised AI agents to run on local environments with small models (e.g. 4B‑parameter models).',
+      'Responsible for building AI agents for real-world needs. Improved existing MCP servers to enhance user experience. Optimised AI agents to run on local environments with small models (e.g. 4B-parameter models).',
   },
   {
     period: 'Jan 2025 — Dec 2025',
@@ -52,7 +52,7 @@ export const experienceEntries: ExperienceEntry[] = [
     location: 'Ho Chi Minh City, Vietnam',
     role: 'Research Assistant',
     descHtml:
-      'Research on multimedia verification, applications of generative models, and other deep learning techniques in downstream tasks under <a href="https://www.fit.hcmus.edu.vn/~tmtriet/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Assoc.&nbsp;Prof. Minh‑Triet Tran</a>.',
+      'Research on multimedia verification, applications of generative models, and other deep learning techniques in downstream tasks under <a href="https://www.fit.hcmus.edu.vn/~tmtriet/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Assoc.&nbsp;Prof. Minh-Triet Tran</a>.',
   },
   {
     period: 'Jun 2023 — Feb 2025',
@@ -62,7 +62,7 @@ export const experienceEntries: ExperienceEntry[] = [
     role: 'Backend Engineer —',
     roleEmphasis: 'Python + Django',
     descHtml:
-      'Back‑end development with Django REST Framework; built OpenAPI‑compliant APIs, implemented unit tests, and wrote documentation. Worked across multiple projects with US clients from varied industries including a <a href="https://www.saritasa.com/work/crossing-guard-android-app" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Crossing Guard Shift Management Platform</a> and chambers‑of‑commerce consulting tooling. Proficient in Postman and Swagger.',
+      'Back-end development with Django REST Framework; built OpenAPI-compliant APIs, implemented unit tests, and wrote documentation. Worked across multiple projects with US clients from varied industries including a <a href="https://www.saritasa.com/work/crossing-guard-android-app" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Crossing Guard Shift Management Platform</a> and chambers-of-commerce consulting tooling. Proficient in Postman and Swagger.',
   },
   {
     period: 'Mar 2023 — May 2023',
@@ -71,6 +71,6 @@ export const experienceEntries: ExperienceEntry[] = [
     location: 'Ho Chi Minh City, Vietnam',
     role: 'Backend Engineer Intern',
     descHtml:
-      'Trained on core Python modules and Django development with real‑world applications. Learned GitHub flow, Jira, and Postman. Built an internship project demonstrating ability in Django and Django REST Framework.',
+      'Trained on core Python modules and Django development with real-world applications. Learned GitHub flow, Jira, and Postman. Built an internship project demonstrating ability in Django and Django REST Framework.',
   },
 ];

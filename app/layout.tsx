@@ -23,9 +23,9 @@ const jetbrains = JetBrains_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: 'Van‑Loc Nguyen — AI Engineer · Research · Tokyo / Saigon',
+  title: 'Van-Loc Nguyen — AI Engineer · Research · Tokyo / Saigon',
   description:
-    'A computer‑vision and deep‑learning engineer working at the seam between research and production.',
+    'A computer-vision and deep-learning engineer working at the seam between research and production.',
   icons: {
     icon: [
       { url: '/icon.svg', type: 'image/svg+xml' },

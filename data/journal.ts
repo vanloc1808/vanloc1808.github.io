@@ -22,7 +22,7 @@ export const journalEntries: JournalEntry[] = [
   {
     date: 'May 2, 2026',
     kind: 'Paper',
-    headHtml: 'Demo paper <em>Cluster Erase: Zero‑Shot Mass‑Similar and Multi‑Object Removal in Single Pass</em> accepted to the IEEE ICME 2026 Workshop in Bangkok, Thailand.',
+    headHtml: 'Demo paper <em>Cluster Erase: Zero-Shot Mass-Similar and Multi-Object Removal in Single Pass</em> accepted to the IEEE ICME 2026 Workshop in Bangkok, Thailand.',
     where: 'ICMEW · TH',
   },
   {
@@ -40,7 +40,7 @@ export const journalEntries: JournalEntry[] = [
   {
     date: 'Mar 17, 2026',
     kind: 'Paper',
-    headHtml: 'Paper <em>PANDORA: Pixel‑wise Attention Dissolution and Latent Guidance for Zero‑Shot Object Removal</em> accepted to the 2026 IEEE International Conference on Multimedia and Expo (ICME) in Bangkok, Thailand.',
+    headHtml: 'Paper <em>PANDORA: Pixel-wise Attention Dissolution and Latent Guidance for Zero-Shot Object Removal</em> accepted to the 2026 IEEE International Conference on Multimedia and Expo (ICME) in Bangkok, Thailand.',
     where: 'ICME · TH',
   },
   {
@@ -52,7 +52,7 @@ export const journalEntries: JournalEntry[] = [
   {
     date: 'Nov 10, 2025',
     kind: 'Paper',
-    headHtml: 'Paper <em>Visionary: Optimized Temporal Video Retrieval via Large Language Model‑Enhanced Query Processing</em> accepted to SOICT 2025.',
+    headHtml: 'Paper <em>Visionary: Optimized Temporal Video Retrieval via Large Language Model-Enhanced Query Processing</em> accepted to SOICT 2025.',
     where: 'SOICT · VN',
   },
   {
@@ -76,25 +76,25 @@ export const journalEntries: JournalEntry[] = [
   {
     date: 'Aug 16, 2025',
     kind: 'Paper',
-    headHtml: 'Paper <em>SAMURAI: Shape‑Aware Multimodal Retrieval for 3D Object Identification</em> published at MAPR 2025.',
+    headHtml: 'Paper <em>SAMURAI: Shape-Aware Multimodal Retrieval for 3D Object Identification</em> published at MAPR 2025.',
     where: 'MAPR 2025',
   },
   {
     date: 'Jul 14, 2025',
     kind: 'Paper',
-    headHtml: 'Paper <em>EVENT‑Retriever: Event‑Aware Multimodal Image Retrieval for Realistic Captions</em> accepted to the 33rd ACM International Conference on Multimedia (ACM MM 2025).',
+    headHtml: 'Paper <em>EVENT-Retriever: Event-Aware Multimodal Image Retrieval for Realistic Captions</em> accepted to the 33rd ACM International Conference on Multimedia (ACM MM 2025).',
     where: 'ACM MM 2025',
   },
   {
     date: 'Jul 14, 2025',
     kind: 'Award',
-    headHtml: 'Won <em>top 1</em> at the ACM Multimedia 2025 Grand Challenge on Event‑Enriched Image Analysis.',
+    headHtml: 'Won <em>top 1</em> at the ACM Multimedia 2025 Grand Challenge on Event-Enriched Image Analysis.',
     where: 'ACM MM 2025',
   },
   {
     date: 'Jul 12, 2025',
     kind: 'Award',
-    headHtml: 'Won <em>top 1</em> in Track 1 of the ENTRep Challenge: Advancing Vision‑Language AI for ENT Endoscopy Analysis at ACM Multimedia 2025.',
+    headHtml: 'Won <em>top 1</em> in Track 1 of the ENTRep Challenge: Advancing Vision-Language AI for ENT Endoscopy Analysis at ACM Multimedia 2025.',
     where: 'ACM MM 2025',
   },
   {
@@ -112,13 +112,13 @@ export const journalEntries: JournalEntry[] = [
   {
     date: 'Dec 14, 2024',
     kind: 'Paper',
-    headHtml: 'Paper <em>NewsInsight2.0: An Enhanced Version Integrating Large Language Model‑Based Query Optimisation with Advanced Temporal Mechanisms</em> published at SOICT 2024.',
+    headHtml: 'Paper <em>NewsInsight2.0: An Enhanced Version Integrating Large Language Model-Based Query Optimisation with Advanced Temporal Mechanisms</em> published at SOICT 2024.',
     where: 'SOICT · VN',
   },
   {
     date: 'Dec 9, 2024',
     kind: 'Paper',
-    headHtml: 'Paper <em>An Approach to Complex Visual Data Interpretation with Vision‑Language Models</em> published at the 1st LAVA Workshop, ACCV 2024.',
+    headHtml: 'Paper <em>An Approach to Complex Visual Data Interpretation with Vision-Language Models</em> published at the 1st LAVA Workshop, ACCV 2024.',
     where: 'ACCV 2024',
   },
   {
@@ -154,19 +154,19 @@ export const journalEntries: JournalEntry[] = [
   {
     date: 'Aug 16, 2024',
     kind: 'Paper',
-    headHtml: 'Paper <em>AI‑Enhanced Photo Authenticity: A User‑Focused Approach to Detecting and Analysing Manipulated Images</em> published at MAPR 2024.',
+    headHtml: 'Paper <em>AI-Enhanced Photo Authenticity: A User-Focused Approach to Detecting and Analysing Manipulated Images</em> published at MAPR 2024.',
     where: 'MAPR 2024',
   },
   {
     date: 'Jul 2, 2024',
     kind: 'Paper',
-    headHtml: 'Paper <em>A Hybrid Approach for Cheapfake Detection Using Reputation Checking and End‑To‑End Network</em> published at the ACM AsiaCCS 2024 workshop.',
+    headHtml: 'Paper <em>A Hybrid Approach for Cheapfake Detection Using Reputation Checking and End-To-End Network</em> published at the ACM AsiaCCS 2024 workshop.',
     where: 'AsiaCCS 2024',
   },
   {
     date: 'Jun 11, 2024',
     kind: 'Paper',
-    headHtml: 'Paper <em>A Unified Network for Detecting Out‑Of‑Context Information Using Generative Synthetic Data</em> published at ACM ICMR 2024.',
+    headHtml: 'Paper <em>A Unified Network for Detecting Out-Of-Context Information Using Generative Synthetic Data</em> published at ACM ICMR 2024.',
     where: 'ICMR 2024',
   },
   {

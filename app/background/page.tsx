@@ -5,7 +5,7 @@ import { toolCategories, additionalSkills } from '@/data/toolkit';
 import { EDITORIAL } from '@/data/nav';
 
 export const metadata: Metadata = {
-  title: 'Background — Van‑Loc Nguyen',
+  title: 'Background — Van-Loc Nguyen',
   description: 'Education, experience, and the thread connecting them.',
   alternates: {
     canonical: '/background',

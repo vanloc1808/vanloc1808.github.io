@@ -4,8 +4,8 @@ import { contactChannels, contactInfo } from '@/data/contact';
 import { EDITORIAL } from '@/data/nav';
 
 export const metadata: Metadata = {
-  title: 'Contact — Van‑Loc Nguyen',
-  description: 'All the ways to reach Van‑Loc Nguyen.',
+  title: 'Contact — Van-Loc Nguyen',
+  description: 'All the ways to reach Van-Loc Nguyen.',
   alternates: {
     canonical: '/contact',
     types: { 'text/markdown': '/contact.md' },

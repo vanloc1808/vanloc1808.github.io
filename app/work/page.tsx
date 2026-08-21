@@ -4,7 +4,7 @@ import { publications } from '@/data/publications';
 import { EDITORIAL } from '@/data/nav';
 
 export const metadata: Metadata = {
-  title: 'Work & Publications — Van‑Loc Nguyen',
+  title: 'Work & Publications — Van-Loc Nguyen',
   description: 'A complete register of projects shipped and papers accepted.',
   alternates: {
     canonical: '/work',
@@ -79,7 +79,7 @@ export default function WorkPage() {
               <span className="num">§ 02</span>
               <span>Publications</span>
             </div>
-            <h2>Peer‑reviewed <em>research</em>.</h2>
+            <h2>Peer-reviewed <em>research</em>.</h2>
           </div>
 
           <div>

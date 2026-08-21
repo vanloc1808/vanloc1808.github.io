@@ -13,12 +13,12 @@ export const contactChannels: ContactChannel[] = [
   {
     platform: 'GitHub',
     handle: 'vanloc1808',
-    note: 'Code, experiments, and open‑source contributions',
+    note: 'Code, experiments, and open-source contributions',
     href: 'https://github.com/vanloc1808',
   },
   {
     platform: 'Google Scholar',
-    handle: 'Van‑Loc Nguyen',
+    handle: 'Van-Loc Nguyen',
     note: 'Full publication list with citation counts',
     href: 'https://scholar.google.com/citations?user=vanloc1808',
   },

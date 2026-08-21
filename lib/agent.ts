@@ -20,9 +20,9 @@ import { toolCategories, additionalSkills } from '@/data/toolkit';
 /** Canonical origin. The apex (nguyenvanloc.com) redirects here. */
 export const SITE_URL = 'https://www.nguyenvanloc.com';
 
-const SITE_TITLE = 'Van‑Loc Nguyen — AI Engineer · Research · Tokyo / Saigon';
+const SITE_TITLE = 'Van-Loc Nguyen — AI Engineer · Research · Tokyo / Saigon';
 const SITE_DESCRIPTION =
-  'A computer‑vision and deep‑learning engineer working at the seam between research and production.';
+  'A computer-vision and deep-learning engineer working at the seam between research and production.';
 
 /* ── Pages registry ──────────────────────────────────────── */
 
@@ -52,7 +52,7 @@ export const PAGES: PageMeta[] = [
     slug: 'background',
     path: '/background',
     md: '/background.md',
-    title: 'Background — Van‑Loc Nguyen',
+    title: 'Background — Van-Loc Nguyen',
     description: 'Education, experience, and the thread connecting them.',
     changeFrequency: 'monthly',
     priority: 0.8,
@@ -61,7 +61,7 @@ export const PAGES: PageMeta[] = [
     slug: 'work',
     path: '/work',
     md: '/work.md',
-    title: 'Work & Publications — Van‑Loc Nguyen',
+    title: 'Work & Publications — Van-Loc Nguyen',
     description: 'A complete register of projects shipped and papers accepted.',
     changeFrequency: 'weekly',
     priority: 0.9,
@@ -70,7 +70,7 @@ export const PAGES: PageMeta[] = [
     slug: 'journal',
     path: '/journal',
     md: '/journal.md',
-    title: 'Journal — Van‑Loc Nguyen',
+    title: 'Journal — Van-Loc Nguyen',
     description: 'A running log of moves, papers, roles, awards, and moments worth noting.',
     changeFrequency: 'weekly',
     priority: 0.7,
@@ -79,8 +79,8 @@ export const PAGES: PageMeta[] = [
     slug: 'contact',
     path: '/contact',
     md: '/contact.md',
-    title: 'Contact — Van‑Loc Nguyen',
-    description: 'All the ways to reach Van‑Loc Nguyen.',
+    title: 'Contact — Van-Loc Nguyen',
+    description: 'All the ways to reach Van-Loc Nguyen.',
     changeFrequency: 'yearly',
     priority: 0.6,
   },
@@ -119,7 +119,7 @@ function frontMatter(title: string, summary: string): string {
 }
 
 function buildIndex(): string {
-  const out: string[] = [frontMatter('Van‑Loc Nguyen (Nguyễn Văn Lộc) — Felix', SITE_DESCRIPTION)];
+  const out: string[] = [frontMatter('Van-Loc Nguyen (Nguyễn Văn Lộc) — Felix', SITE_DESCRIPTION)];
 
   out.push('## About\n\n' + BIO_PARAGRAPHS.join('\n\n'));
 
@@ -175,7 +175,7 @@ function buildIndex(): string {
 }
 
 function buildBackground(): string {
-  const out: string[] = [frontMatter('Background — Van‑Loc Nguyen', page('background').description)];
+  const out: string[] = [frontMatter('Background — Van-Loc Nguyen', page('background').description)];
 
   out.push(
     '## Experience\n\n' +
@@ -210,7 +210,7 @@ function buildBackground(): string {
 }
 
 function buildWork(): string {
-  const out: string[] = [frontMatter('Work & Publications — Van‑Loc Nguyen', page('work').description)];
+  const out: string[] = [frontMatter('Work & Publications — Van-Loc Nguyen', page('work').description)];
 
   out.push(
     '## Projects\n\n' +
@@ -237,7 +237,7 @@ function buildWork(): string {
 }
 
 function buildJournal(): string {
-  const out: string[] = [frontMatter('Journal — Van‑Loc Nguyen', page('journal').description)];
+  const out: string[] = [frontMatter('Journal — Van-Loc Nguyen', page('journal').description)];
   out.push(
     journalEntries
       .map((j) => `- **${j.date}** · ${j.kind} — ${htmlToMarkdown(j.headHtml)} (${j.where})`)
@@ -247,7 +247,7 @@ function buildJournal(): string {
 }
 
 function buildContact(): string {
-  const out: string[] = [frontMatter('Contact — Van‑Loc Nguyen', page('contact').description)];
+  const out: string[] = [frontMatter('Contact — Van-Loc Nguyen', page('contact').description)];
 
   out.push(
     '## Details\n\n' +
@@ -287,7 +287,7 @@ export function pageMarkdown(slug: PageMeta['slug']): string {
 /** Concise index per the llmstxt.org convention. */
 export function llmsTxt(): string {
   const lines: string[] = [];
-  lines.push('# Van‑Loc Nguyen (Nguyễn Văn Lộc)', '');
+  lines.push('# Van-Loc Nguyen (Nguyễn Văn Lộc)', '');
   lines.push(`> ${SITE_DESCRIPTION}`, '');
   lines.push(
     'Felix is a computer-vision and deep-learning engineer (Python-first) currently a Software Engineer at Eurofins and an MSc AI researcher at HCMUS, recently a student researcher at NII Tokyo.',
@@ -316,7 +316,7 @@ export function llmsTxt(): string {
 
 /** Every page concatenated into one Markdown document. */
 export function llmsFullTxt(): string {
-  const header = `# Van‑Loc Nguyen — full site (Markdown)\n\n> ${SITE_DESCRIPTION}\n\n> Source: ${SITE_URL} · Generated from structured data.\n`;
+  const header = `# Van-Loc Nguyen — full site (Markdown)\n\n> ${SITE_DESCRIPTION}\n\n> Source: ${SITE_URL} · Generated from structured data.\n`;
   return header + '\n' + PAGES.map((p) => pageMarkdown(p.slug)).join('\n---\n\n');
 }
 
