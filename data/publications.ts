@@ -31,22 +31,23 @@ export interface Publication {
 export const publications: Publication[] = [
   /* ── 2026 ─────────────────────────────────────────── */
   {
-    date: 'May 2, 2026',
+    date: 'July 7, 2026',
     venue: 'IEEE International Conference on Multimedia & Expo Workshops — ICMEW 2026, Bangkok',
     status: 'Accepted',
-    titleAbbrev: 'Cluster Erase',
+    titleAbbrev: 'Clutter Erase',
     titleRest: 'Zero-Shot Mass-Similar and Multi-Object Removal in a Single Pass',
     abstract: 'A demonstration of a single-pass removal approach for visually similar object clusters in natural imagery, extending zero-shot inpainting toward the messy, repetitive scenes that one-object methods choke on.',
     featuredOnHome: true,
   },
   {
-    date: 'Mar 17, 2026',
+    date: 'July 7, 2026',
     venue: 'IEEE International Conference on Multimedia & Expo — ICME 2026, Bangkok',
     status: 'Accepted',
     titleAbbrev: 'PANDORA',
     titleRest: 'Pixel-wise Attention Dissolution and Latent Guidance for Zero-Shot Object Removal',
     abstract: 'A zero-shot object removal method that leverages pixel-wise attention dissolution and latent guidance within a diffusion framework — achieving clean inpainting without task-specific fine-tuning on the target scene.',
     featuredOnHome: true,
+    href: 'https://arxiv.org/pdf/2603.27555',
   },
   /* ── 2025 ─────────────────────────────────────────── */
   {
@@ -58,6 +59,7 @@ export const publications: Publication[] = [
     abstract: 'Addressing the Ho Chi Minh City AI Challenge 2025, Visionary introduces four key contributions: a novel adaptive keyframe extraction algorithm; an enhanced pre-processing pipeline using Qwen3-VL for metadata generation with integrated OCR; a flexible architecture supporting multiple embedding models; and the use of Reciprocal Rank Fusion to synthesise retrieval results for complex, large-scale video retrieval tasks.',
     homeAbstract: 'Addressing the Ho Chi Minh City AI Challenge 2025, Visionary introduces an adaptive keyframe extraction algorithm, a Qwen3-VL pre-processing pipeline for metadata generation with integrated OCR, a flexible architecture supporting multiple embedding models, and Reciprocal Rank Fusion for synthesizing retrieval results across complex, large-scale video tasks.',
     featuredOnHome: true,
+    href: 'https://link.springer.com/chapter/10.1007/978-981-92-2587-3_32',
   },
   {
     date: 'December 13, 2025',
@@ -68,6 +70,7 @@ export const publications: Publication[] = [
     abstract: 'A robust classification framework for ENT endoscopy images based on an ensemble of deep learning models. A novel augmentation strategy combining symmetry-based label flipping with Mixup, Mosaic, and other techniques addresses class imbalance. Evaluated on a curated ENT dataset covering seven anatomical categories, achieving 95.82% accuracy.',
     homeAbstract: 'A practical pipeline for classifying ENT endoscopy imagery that pairs an ensemble of vision backbones with a curated augmentation schedule, designed to remain robust to the imaging variance typical of clinical capture devices.',
     featuredOnHome: true,
+    href: 'https://link.springer.com/chapter/10.1007/978-981-92-2587-3_39',
   },
   {
     date: 'October 27, 2025',
