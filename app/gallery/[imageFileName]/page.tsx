@@ -86,7 +86,7 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
               <span className="rule" />
               <span className="label">Shared image</span>
             </div>
-            <h1>Gallery <em>study</em></h1>
+            <h1>Gallery </h1>
           </div>
           <p className="gallery-file">{image.fileName}</p>
         </header>
