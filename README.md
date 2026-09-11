@@ -18,6 +18,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
+## Gallery
+
+Place shareable image files in `public/images/`, then use:
+
+```text
+https://www.nguyenvanloc.com/gallery/<image-file-name>
+```
+
+For example, `public/images/sunset.jpg` is available at
+`/gallery/sunset.jpg`. The gallery route supports AVIF, GIF, JPEG, PNG,
+and WebP files. Unknown or missing files return a 404 page.
+
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
