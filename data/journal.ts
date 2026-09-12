@@ -20,6 +20,12 @@ export interface JournalEntry {
 
 export const journalEntries: JournalEntry[] = [
   {
+    date: 'Sep 12, 2026',
+    kind: 'Paper',
+    headHtml: 'Paper <em>Auditing the Reliability of Structured VLM Outputs for Paired Image-Edit Analysis</em> accepted to the International Conference on Future Data and Security Engineering (FDSE) 2026 in Ho Chi Minh City, Vietnam.',
+    where: 'FDSE · VN',
+  },
+  {
     date: 'May 2, 2026',
     kind: 'Paper',
     headHtml: 'Demo paper <em>Cluster Erase: Zero-Shot Mass-Similar and Multi-Object Removal in Single Pass</em> accepted to the IEEE ICME 2026 Workshop in Bangkok, Thailand.',
