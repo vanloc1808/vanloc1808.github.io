@@ -8,7 +8,7 @@ export interface ExperienceEntry {
   institution: string;
   institutionHref?: string;
   location: string;
-  /** Role title — plain text portion. */
+  /** Role title — plain text portion. `roleEmphasis`, when present, is rendered after it, preceded by an em dash. */
   role: string;
   /** Italic portion of the role title (e.g. "Echizen Laboratory"). */
   roleEmphasis?: string;
@@ -32,7 +32,7 @@ export const experienceEntries: ExperienceEntry[] = [
     institution: 'National Institute of Informatics (NII) — 国立情報学研究所',
     institutionHref: 'https://www.nii.ac.jp/',
     location: 'Tokyo, Japan',
-    role: 'Student Researcher —',
+    role: 'Student Researcher',
     roleEmphasis: 'Echizen Laboratory',
     descHtml:
       'Six-month research residency under <a href="https://research.nii.ac.jp/~iechizen/official/members_echizen-e.html" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Prof. Isao Echizen</a>, mentored by <a href="https://rellm.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Dr. April Pyone Maung Maung</a> at the <a href="https://research.nii.ac.jp/~iechizen/official/index-e.html" target="_blank" rel="noopener noreferrer" style="color:var(--fg-mute);border-bottom:1px solid var(--rule)">Echizen Laboratory</a>. Worked on media authenticity and digital forensics.',
@@ -60,7 +60,7 @@ export const experienceEntries: ExperienceEntry[] = [
     institution: 'Saritasa — Builders of Better',
     institutionHref: 'https://www.saritasa.com/',
     location: 'Ho Chi Minh City, Vietnam',
-    role: 'Backend Engineer —',
+    role: 'Backend Engineer',
     roleEmphasis: 'Python + Django',
     descHtml:
       'Back-end development with Django REST Framework; built OpenAPI-compliant APIs, implemented unit tests, and wrote documentation. Worked across multiple projects with US clients from varied industries including a <a href="https://www.saritasa.com/work/crossing-guard-android-app" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Crossing Guard Shift Management Platform</a> and chambers-of-commerce consulting tooling. Proficient in Postman and Swagger.',

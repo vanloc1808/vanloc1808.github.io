@@ -65,7 +65,8 @@ export default function BackgroundPage() {
                 </div>
                 <div>
                   <h3>
-                    {exp.role}{exp.roleEmphasis && <> <em>{exp.roleEmphasis}</em></>}
+                    {exp.role}
+                    {exp.roleEmphasis && <>{' — '}<em>{exp.roleEmphasis}</em></>}
                   </h3>
                   {/* descHtml is authored content — safe to inject */}
                   {exp.descHtml && <p dangerouslySetInnerHTML={{ __html: exp.descHtml }} />}
@@ -103,7 +104,8 @@ export default function BackgroundPage() {
                 </div>
                 <div>
                   <h3>
-                    {edu.degree}{edu.degreeEmphasis && <> <em>{edu.degreeEmphasis}</em></>}
+                    {edu.degree}
+                    {edu.degreeEmphasis && <>{' — '}<em>{edu.degreeEmphasis}</em></>}
                   </h3>
                   {/* descHtml is authored content — safe to inject */}
                   <p dangerouslySetInnerHTML={{ __html: edu.descHtml }} />

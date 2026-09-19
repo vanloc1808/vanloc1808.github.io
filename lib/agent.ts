@@ -181,7 +181,7 @@ function buildBackground(): string {
     '## Experience\n\n' +
       experienceEntries
         .map((e) => {
-          const role = htmlToMarkdown(`${e.role} ${e.roleEmphasis ?? ''}`).replace(/\s*—\s*$/, '');
+          const role = e.roleEmphasis ? `${e.role} — ${e.roleEmphasis}` : e.role;
           const desc = e.descHtml ? `\n\n${htmlToMarkdown(e.descHtml)}` : '';
           return `### ${role} — ${e.institution}\n${e.period} · ${e.location}${desc}`;
         })
@@ -192,7 +192,7 @@ function buildBackground(): string {
     '## Education\n\n' +
       educationEntries
         .map((e) => {
-          const degree = htmlToMarkdown(`${e.degree} ${e.degreeEmphasis ?? ''}`).replace(/\s*—\s*$/, '');
+          const degree = e.degreeEmphasis ? `${e.degree} — ${e.degreeEmphasis}` : e.degree;
           return `### ${degree} — ${e.institution}\n${e.period} · ${e.location}\n\n${htmlToMarkdown(e.descHtml)}`;
         })
         .join('\n\n')
