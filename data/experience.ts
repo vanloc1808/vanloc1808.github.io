@@ -23,8 +23,9 @@ export const experienceEntries: ExperienceEntry[] = [
     institutionHref: 'https://www.eurofins.com/',
     location: 'Ho Chi Minh City, Vietnam',
     role: 'Software Engineer',
+    roleEmphasis: 'IT Application Monitoring and Observability',
     descHtml:
-      'Be a part of IT Application Monitoring and Observability team. Develop scalable Python services for collecting, processing, and analyzing telemetry data (logs, metrics, traces). Develop real-time data pipelines to ingest and process high-volume observability data streams. Implement intelligent alerting systems to reduce noise and improve incident detection accuracy. Build ML-based root cause analysis tools to accelerate incident investigation and resolution. Implement LLM-based assistants that help engineers debug production issues by querying observability datasets. Design prompt engineering and evaluation frameworks to improve accuracy of LLM-generated diagnostics and recommendations.',
+      'Develop Python services and real-time pipelines for observability data, intelligent alerting, ML-based root cause analysis, and LLM-powered tools for production debugging and diagnostics.',
   },
   {
     period: 'Oct 2025 — Mar 2026',
