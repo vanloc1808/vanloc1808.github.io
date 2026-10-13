@@ -46,3 +46,9 @@ export const SOCIAL_LINKS: SocialLink[] = [
   { label: 'Stack Overflow', href: 'https://stackoverflow.com/users/vanloc1808' },
   { label: 'Facebook', href: 'https://facebook.com/vanloc1808' },
 ];
+
+/** Travel map, previewed on the homepage and linked out for the full view. */
+export const FOOTPRINTS = {
+  href: 'https://footprints.nguyenvanloc.com/',
+  host: 'footprints.nguyenvanloc.com',
+} as const;

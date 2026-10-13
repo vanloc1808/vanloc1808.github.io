@@ -8,7 +8,7 @@
    ========================================================= */
 
 import { BIO_PARAGRAPHS, BIO_META, NAME_VARIANTS, STATUS_ITEMS, NOW_ITEMS } from '@/data/profile';
-import { SITE, SOCIAL_LINKS } from '@/data/nav';
+import { FOOTPRINTS, SITE, SOCIAL_LINKS } from '@/data/nav';
 import { projects, FEATURED_PROJECT_COUNT, type Tag } from '@/data/projects';
 import { publications } from '@/data/publications';
 import { journalEntries } from '@/data/journal';
@@ -168,6 +168,8 @@ function buildIndex(): string {
         .map((j) => `- **${j.date}** · ${j.kind} — ${htmlToMarkdown(j.headHtml)} (${j.where})`)
         .join('\n')
   );
+
+  out.push(`## Footprints\n\nA map of places I've travelled: ${FOOTPRINTS.href}`);
 
   out.push('## Elsewhere\n\n' + SOCIAL_LINKS.map((l) => `- ${l.label}: ${l.href}`).join('\n'));
 

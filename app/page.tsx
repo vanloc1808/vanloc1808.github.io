@@ -4,7 +4,7 @@ import { BIO_PARAGRAPHS, BIO_META, NAME_VARIANTS, STATUS_ITEMS, NOW_ITEMS } from
 import { projects, FEATURED_PROJECT_COUNT } from '@/data/projects';
 import { publications } from '@/data/publications';
 import { journalEntries, type JournalEntry } from '@/data/journal';
-import { EDITORIAL, SITE, SOCIAL_LINKS } from '@/data/nav';
+import { EDITORIAL, FOOTPRINTS, SITE, SOCIAL_LINKS } from '@/data/nav';
 import { contactInfo } from '@/data/contact';
 import { personJsonLd } from '@/lib/agent';
 
@@ -291,12 +291,58 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── § 06  CONTACT TEASE ── */}
-      <section className="section" style={{ borderBottom: 0 }}>
+      {/* ── § 06  FOOTPRINTS ── */}
+      <section className="section">
         <div className="shell">
           <div className="section-head">
             <div className="number">
               <span className="num">§ 06</span>
+              <span>Footprints</span>
+            </div>
+            <h2>Places I&#39;ve <em>wandered</em>.</h2>
+          </div>
+
+          <a
+            className="footprints"
+            href={FOOTPRINTS.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open the full footprints map in a new tab"
+          >
+            <div className="console-head">
+              <span className="dots">
+                <span className="dot" />
+                <span className="dot" />
+                <span className="dot live" />
+              </span>
+              <span>{FOOTPRINTS.host}</span>
+              <span>live preview</span>
+            </div>
+            <div className="footprints-frame">
+              {/* Decorative preview only — clicks go to the anchor. */}
+              <iframe
+                src={FOOTPRINTS.href}
+                title="Preview of the footprints travel map"
+                loading="lazy"
+                tabIndex={-1}
+                aria-hidden="true"
+                sandbox="allow-scripts allow-same-origin"
+                referrerPolicy="no-referrer"
+              />
+              <span className="footprints-cta">
+                Explore the full map <span className="arrow">→</span>
+              </span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      {/* ── § 07  CONTACT TEASE ── */}
+      <section className="section" style={{ borderBottom: 0 }}>
+        <div className="shell">
+          <div className="section-head">
+            <div className="number">
+              <span className="num">§ 07</span>
               <span>Correspondence</span>
             </div>
             <h2>I read every <em>letter</em>.</h2>
