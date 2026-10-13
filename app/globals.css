@@ -566,6 +566,17 @@ p.lead { font-size: 1.25em; line-height: 1.4; color: var(--fg); max-width: var(-
 .channel-row .note   { font-family: var(--serif); font-style: italic; font-size: 1.02em; color: var(--fg-mute); line-height: 1.4; }
 .channel-row .arrow  { font-family: var(--mono); font-size: 14px; color: var(--accent); text-align: right; }
 
+/* footprints preview — the iframe renders at 2x and is scaled down so
+   the map shows its desktop layout; the wrapping anchor takes all clicks */
+.footprints { display: block; background: var(--bg-elev); border: 1px solid var(--rule); font-family: var(--mono); color: var(--fg-mute); transition: border-color 150ms ease; }
+.footprints:hover { border-color: var(--accent); }
+.footprints-frame { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: var(--bg-soft); }
+.footprints-frame iframe { position: absolute; top: 0; left: 0; width: 200%; height: 200%; border: 0; transform: scale(0.5); transform-origin: 0 0; pointer-events: none; }
+.footprints-cta { position: absolute; right: var(--s-3); bottom: var(--s-3); display: inline-flex; align-items: center; gap: 10px; padding: 10px 18px; background: var(--bg); border: 1px solid var(--accent); color: var(--accent); font-size: 12px; text-transform: uppercase; letter-spacing: 0.18em; transition: all 150ms ease; }
+.footprints:hover .footprints-cta { background: var(--accent); color: #0a0a0a; }
+.footprints-cta .arrow { display: inline-block; transition: transform 150ms ease; }
+.footprints:hover .footprints-cta .arrow { transform: translateX(3px); }
+
 /* linkedin badge — show the variant matching the active theme.
    dark is the site default; light wins under [data-theme="light"]
    or when system preference resolves to light. */
@@ -605,6 +616,8 @@ p.lead { font-size: 1.25em; line-height: 1.4; color: var(--fg); max-width: var(-
   .tl-item { grid-template-columns: 1fr; gap: var(--s-3); }
   .channel-row { grid-template-columns: 1fr 1fr; gap: var(--s-2); }
   .channel-row .note { display: none; }
+  .footprints-frame { aspect-ratio: 4 / 5; }
+  .footprints .console-head > span:last-child { display: none; }
 }
 .gallery-page { padding: var(--s-6) 0 var(--s-7); }
 .gallery-head { padding-bottom: var(--s-4); }
