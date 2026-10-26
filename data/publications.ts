@@ -38,6 +38,7 @@ export const publications: Publication[] = [
     titleRest: 'Zero-Shot Mass-Similar and Multi-Object Removal in a Single Pass',
     abstract: 'A demonstration of a single-pass removal approach for visually similar object clusters in natural imagery, extending zero-shot inpainting toward the messy, repetitive scenes that one-object methods choke on.',
     featuredOnHome: true,
+    href: 'https://store.computer.org/csdl/proceedings-article/icmew/2026/11720737/2kzQktHNd9m',
   },
   {
     date: 'July 7, 2026',
