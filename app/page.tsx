@@ -34,7 +34,7 @@ export default function Home() {
     { num: String(publications.length), label: `peer-reviewed papers, ${Math.min(...years)}–${Math.max(...years)}`, href: '/research', more: 'Research' },
     { num: String(awards.length), label: 'challenge awards at ACM MM, ACCV and more', href: '/research#awards', more: 'Awards' },
     { num: String(awards.filter((a) => FIRST_PLACE.test(a.headHtml)).length), label: 'first-place finishes', href: '/research#awards', more: 'Awards' },
-    { num: HONORS_RANK.value, label: HONORS_RANK.label, href: '/about#education', more: 'About' },
+    { num: HONORS_RANK.value, label: HONORS_RANK.label, href: '/experience#education', more: 'Education' },
   ];
 
   return (

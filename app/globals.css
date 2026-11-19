@@ -187,6 +187,11 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   text-transform: uppercase; letter-spacing: 0.16em; color: var(--fg-mute);
   padding: var(--s-2) 0; position: relative; transition: color 150ms ease;
 }
+.vl-nav a, .vl-btn--quiet { white-space: nowrap; }
+@media (min-width: 981px) and (max-width: 1240px) {
+  .vl-nav { gap: var(--s-4); }
+  .vl-nav a { font-size: 11px; letter-spacing: 0.1em; }
+}
 .vl-nav a:hover { color: var(--fg); }
 .vl-nav a[aria-current="page"] { color: var(--accent-text); }
 .vl-nav a[aria-current="page"]::before { content: ""; position: absolute; left: -12px; top: 50%; width: 6px; height: 6px; transform: translateY(-50%); background: var(--accent); }
@@ -287,6 +292,7 @@ a.vl-entry:hover .vl-entry__arrow { transform: translateX(3px); }
 .vl-footer__bottom { display: flex; justify-content: space-between; gap: var(--s-3); padding: var(--s-3) 0 var(--s-5); border-top: 1px solid var(--rule); }
 
 @media (max-width: 980px) {
+  .vl-masthead { position: static; }
   .vl-masthead__inner { flex-wrap: wrap; row-gap: var(--s-2); }
   .vl-masthead__tools { margin-left: auto; }
   .vl-nav { order: 3; width: 100%; margin-left: 0; flex-wrap: wrap; gap: var(--s-2) var(--s-5); padding-left: 12px; }

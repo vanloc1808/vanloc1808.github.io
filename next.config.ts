@@ -4,7 +4,7 @@ import type { NextConfig } from "next";
  * Pages served as both HTML and Markdown. Keep in sync with
  * `PAGES` in `lib/agent.ts` and the `*.md` route handlers.
  */
-const PAGE_PATHS = ["/", "/work", "/research", "/about", "/journal", "/contact"];
+const PAGE_PATHS = ["/", "/work", "/research", "/experience", "/about", "/journal", "/contact"];
 
 const DISCOVERY_LINK_HEADER = [
   '</.well-known/api-catalog>; rel="api-catalog"; type="application/linkset+json"',
@@ -17,9 +17,9 @@ const DISCOVERY_LINK_HEADER = [
 const nextConfig: NextConfig = {
   async redirects() {
     return [
-      // /background became /about in the redesign.
-      { source: "/background", destination: "/about", permanent: true },
-      { source: "/background.md", destination: "/about.md", permanent: true },
+      // The old /background page (experience and education) now lives at /experience.
+      { source: "/background", destination: "/experience", permanent: true },
+      { source: "/background.md", destination: "/experience.md", permanent: true },
     ];
   },
 
