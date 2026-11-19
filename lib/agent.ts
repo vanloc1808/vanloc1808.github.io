@@ -27,7 +27,7 @@ const SITE_DESCRIPTION =
 /* ── Pages registry ──────────────────────────────────────── */
 
 export interface PageMeta {
-  slug: 'index' | 'work' | 'research' | 'about' | 'journal' | 'contact';
+  slug: 'index' | 'work' | 'research' | 'experience' | 'about' | 'journal' | 'contact';
   /** HTML route. */
   path: string;
   /** Markdown route. */
@@ -67,11 +67,20 @@ export const PAGES: PageMeta[] = [
     priority: 0.9,
   },
   {
+    slug: 'experience',
+    path: '/experience',
+    md: '/experience.md',
+    title: 'Experience & Education — Van-Loc Nguyen',
+    description: 'Every role and degree, with a timeline of how they overlap.',
+    changeFrequency: 'monthly',
+    priority: 0.8,
+  },
+  {
     slug: 'about',
     path: '/about',
     md: '/about.md',
     title: 'About — Van-Loc Nguyen',
-    description: 'Bio, experience, education and the tools I reach for.',
+    description: 'Who I am, the names I go by, and the tools I reach for.',
     changeFrequency: 'monthly',
     priority: 0.8,
   },
@@ -182,16 +191,8 @@ function buildIndex(): string {
   return out.join('\n\n') + '\n';
 }
 
-function buildAbout(): string {
-  const out: string[] = [frontMatter('About — Van-Loc Nguyen', page('about').description)];
-
-  out.push('## Bio\n\n' + BIO_PARAGRAPHS.join('\n\n'));
-
-  out.push(
-    '## Names\n\n' +
-      NAME_VARIANTS.map((n) => `- **${n.lang}:** ${htmlToMarkdown(n.nameHtml)}`).join('\n') +
-      `\n- **Based:** ${BIO_META.based}\n- **Handle:** ${BIO_META.handle}`
-  );
+function buildExperience(): string {
+  const out: string[] = [frontMatter('Experience & Education — Van-Loc Nguyen', page('experience').description)];
 
   out.push(
     '## Experience\n\n' +
@@ -212,6 +213,20 @@ function buildAbout(): string {
           return `### ${degree} — ${e.institution}\n${e.period} · ${e.location}\n\n${htmlToMarkdown(e.descHtml)}`;
         })
         .join('\n\n')
+  );
+
+  return out.join('\n\n') + '\n';
+}
+
+function buildAbout(): string {
+  const out: string[] = [frontMatter('About — Van-Loc Nguyen', page('about').description)];
+
+  out.push('## Bio\n\n' + BIO_PARAGRAPHS.join('\n\n'));
+
+  out.push(
+    '## Names\n\n' +
+      NAME_VARIANTS.map((n) => `- **${n.lang}:** ${htmlToMarkdown(n.nameHtml)}`).join('\n') +
+      `\n- **Based:** ${BIO_META.based}\n- **Handle:** ${BIO_META.handle}`
   );
 
   out.push(
@@ -312,6 +327,7 @@ const BUILDERS: Record<PageMeta['slug'], () => string> = {
   index: buildIndex,
   work: buildWork,
   research: buildResearch,
+  experience: buildExperience,
   about: buildAbout,
   journal: buildJournal,
   contact: buildContact,

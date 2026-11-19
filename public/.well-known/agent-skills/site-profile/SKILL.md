@@ -13,6 +13,7 @@ Use this skill when a user asks about Van-Loc Nguyen, his projects, publications
 2. Fetch `https://www.nguyenvanloc.com/llms-full.txt` when a complete context snapshot is useful.
 3. Fetch a focused Markdown page for narrow questions:
    - `https://www.nguyenvanloc.com/index.md`
+   - `https://www.nguyenvanloc.com/experience.md`
    - `https://www.nguyenvanloc.com/about.md`
    - `https://www.nguyenvanloc.com/work.md`
    - `https://www.nguyenvanloc.com/research.md`
