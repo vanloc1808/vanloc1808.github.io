@@ -1,5 +1,7 @@
 /* =========================================================
    NAVIGATION & SITE META
+   One name per page: the nav label, the page title, the
+   footer link and the agent registry all use these.
    ========================================================= */
 
 export interface NavLink {
@@ -9,28 +11,25 @@ export interface NavLink {
 }
 
 export const NAV_LINKS: NavLink[] = [
-  { href: '/', label: 'Index' },
-  { href: '/background', label: 'Background' },
-  { href: '/work', label: 'Portfolio' },
+  { href: '/work', label: 'Work' },
+  { href: '/research', label: 'Research' },
+  { href: '/about', label: 'About' },
   { href: '/journal', label: 'Journal' },
   { href: '/contact', label: 'Contact' },
   { href: 'https://blog.nguyenvanloc.com', label: 'Blog', external: true },
 ];
 
-/** Editorial strip that appears at the top of every page hero. */
+/** Editorial strip shown once, on the homepage hero. */
 export const EDITORIAL = {
   issueLabel: '№ 026 · The Practitioner Issue',
-  established: 'Established 2002',
-  typeset: 'Set in Cormorant & JetBrains Mono',
+  based: 'Ho Chi Minh City',
 } as const;
 
-/** Brand + colophon constants used in Masthead and footer. */
+/** Colophon constants used in the footer. */
 export const SITE = {
-  brandName: 'Nguyễn Văn Lộc',
-  brandSub: '— Vol. 26',
-  copyright: '© Van-Loc Nguyen · All rights reserved',
-  volIssue: 'Vol. 26 / Issue 05',
-  lastUpdated: 'Last updated · May 26',
+  copyright: '© Van-Loc Nguyen',
+  colophon: 'Set in Cormorant Garamond & JetBrains Mono',
+  cvHref: '/CV.pdf',
 } as const;
 
 /** Footer social / elsewhere links. */
@@ -47,7 +46,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
   { label: 'Facebook', href: 'https://facebook.com/vanloc1808' },
 ];
 
-/** Travel map, previewed on the homepage and linked out for the full view. */
+/** Travel map, previewed on /about and linked out for the full view. */
 export const FOOTPRINTS = {
   href: 'https://footprints.nguyenvanloc.com/',
   host: 'footprints.nguyenvanloc.com',

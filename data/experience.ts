@@ -4,6 +4,8 @@
    ========================================================= */
 
 export interface ExperienceEntry {
+  /** Short label for the About timeline ("Eurofins · Software Eng."). */
+  timelineLabel: string;
   period: string;
   institution: string;
   institutionHref?: string;
@@ -18,6 +20,7 @@ export interface ExperienceEntry {
 
 export const experienceEntries: ExperienceEntry[] = [
   {
+    timelineLabel: 'Eurofins · Software Eng.',
     period: 'Apr 2026 — Present',
     institution: 'Eurofins',
     institutionHref: 'https://www.eurofins.com/',
@@ -28,6 +31,7 @@ export const experienceEntries: ExperienceEntry[] = [
       'Develop Python services and real-time pipelines for observability data, intelligent alerting, ML-based root cause analysis, and LLM-powered tools for production debugging and diagnostics.',
   },
   {
+    timelineLabel: 'NII Tokyo · Researcher',
     period: 'Oct 2025 — Mar 2026',
     institution: 'National Institute of Informatics (NII) — 国立情報学研究所',
     institutionHref: 'https://www.nii.ac.jp/',
@@ -35,27 +39,30 @@ export const experienceEntries: ExperienceEntry[] = [
     role: 'Student Researcher',
     roleEmphasis: 'Echizen Laboratory',
     descHtml:
-      'Six-month research residency under <a href="https://research.nii.ac.jp/~iechizen/official/members_echizen-e.html" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Prof. Isao Echizen</a>, mentored by <a href="https://rellm.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Dr. April Pyone Maung Maung</a> at the <a href="https://research.nii.ac.jp/~iechizen/official/index-e.html" target="_blank" rel="noopener noreferrer" style="color:var(--fg-mute);border-bottom:1px solid var(--rule)">Echizen Laboratory</a>. Worked on media authenticity and digital forensics.',
+      'Six-month research residency under <a href="https://research.nii.ac.jp/~iechizen/official/members_echizen-e.html" target="_blank" rel="noopener noreferrer">Prof. Isao Echizen</a>, mentored by <a href="https://rellm.jp/" target="_blank" rel="noopener noreferrer">Dr. April Pyone Maung Maung</a> at the <a href="https://research.nii.ac.jp/~iechizen/official/index-e.html" target="_blank" rel="noopener noreferrer">Echizen Laboratory</a>. Worked on media authenticity and digital forensics.',
   },
   {
+    timelineLabel: 'Autonomous · AI Engineer',
     period: 'Mar 2025 — Aug 2025',
     institution: 'Autonomous',
     institutionHref: 'https://www.autonomous.ai/',
     location: 'Remote',
     role: 'AI Engineer',
     descHtml:
-      'Responsible for building AI agents for real-world needs. Improved existing MCP servers to enhance user experience. Optimised AI agents to run on local environments with small models (e.g. 4B-parameter models).',
+      'Responsible for building AI agents for real-world needs. Improved existing MCP servers to enhance user experience. Optimized AI agents to run on local environments with small models (e.g. 4B-parameter models).',
   },
   {
+    timelineLabel: 'SELab · Research Asst.',
     period: 'Jan 2025 — Dec 2025',
     institution: 'Software Engineering Laboratory, University of Science, VNUHCM',
     institutionHref: 'https://selab.hcmus.edu.vn/',
     location: 'Ho Chi Minh City, Vietnam',
     role: 'Research Assistant',
     descHtml:
-      'Research on multimedia verification, applications of generative models, and other deep learning techniques in downstream tasks under <a href="https://www.fit.hcmus.edu.vn/~tmtriet/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Assoc.&nbsp;Prof. Minh-Triet Tran</a>.',
+      'Research on multimedia verification, applications of generative models, and other deep learning techniques in downstream tasks under <a href="https://www.fit.hcmus.edu.vn/~tmtriet/" target="_blank" rel="noopener noreferrer">Assoc.&nbsp;Prof. Minh-Triet Tran</a>.',
   },
   {
+    timelineLabel: 'Saritasa · Backend Eng.',
     period: 'Jun 2023 — Feb 2025',
     institution: 'Saritasa — Builders of Better',
     institutionHref: 'https://www.saritasa.com/',
@@ -63,9 +70,10 @@ export const experienceEntries: ExperienceEntry[] = [
     role: 'Backend Engineer',
     roleEmphasis: 'Python + Django',
     descHtml:
-      'Back-end development with Django REST Framework; built OpenAPI-compliant APIs, implemented unit tests, and wrote documentation. Worked across multiple projects with US clients from varied industries including a <a href="https://www.saritasa.com/work/crossing-guard-android-app" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Crossing Guard Shift Management Platform</a> and chambers-of-commerce consulting tooling. Proficient in Postman and Swagger.',
+      'Back-end development with Django REST Framework; built OpenAPI-compliant APIs, implemented unit tests, and wrote documentation. Worked across multiple projects with US clients from varied industries including a <a href="https://www.saritasa.com/work/crossing-guard-android-app" target="_blank" rel="noopener noreferrer">Crossing Guard Shift Management Platform</a> and chambers-of-commerce consulting tooling. Proficient in Postman and Swagger.',
   },
   {
+    timelineLabel: 'Saritasa · Intern',
     period: 'Mar 2023 — May 2023',
     institution: 'Saritasa — Builders of Better',
     institutionHref: 'https://www.saritasa.com/',

@@ -19,13 +19,13 @@ export const toolCategories: ToolCategory[] = [
   {
     label: 'ML / CV',
     items: 'PyTorch, Diffusers, OpenCV, HuggingFace, LangChain',
-    desc: 'From training loops to inference optimisation. Comfortable with diffusion models, RAG pipelines, and multimodal retrieval.',
+    desc: 'From training loops to inference optimization. Comfortable with diffusion models, RAG pipelines, and multimodal retrieval.',
     meta: 'Research & production',
   },
   {
     label: 'Web & Infra',
     items: 'Next.js, Django REST, FastAPI, Docker, PostgreSQL, Redis',
-    desc: 'Full-stack when required. Comfortable with containerisation, background workers, CI/CD, and shipping things that stay up.',
+    desc: 'Full-stack when required. Comfortable with containerization, background workers, CI/CD, and shipping things that stay up.',
     meta: 'Engineering backbone',
   },
 ];

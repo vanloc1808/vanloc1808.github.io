@@ -1,6 +1,11 @@
 import type { Metadata } from 'next';
-import { journalEntries, type JournalEntry } from '@/data/journal';
-import { EDITORIAL } from '@/data/nav';
+import { journalEntries } from '@/data/journal';
+import { publications } from '@/data/publications';
+import { paperId, paperTitle } from '@/lib/papers';
+import { groupByYear, monthDay } from '@/lib/format';
+import JournalBrowser from '@/components/JournalBrowser';
+import SubNav from '@/components/SubNav';
+import { PageHeader } from '@/components/ui';
 
 export const metadata: Metadata = {
   title: 'Journal — Van-Loc Nguyen',
@@ -12,58 +17,32 @@ export const metadata: Metadata = {
 };
 
 /* =========================================================
-   JOURNAL / DISPATCHES PAGE
+   JOURNAL — the full log, grouped by year, filterable by kind.
    ========================================================= */
 
-/** CSS modifier class for the kind badge. */
-function kindClass(kind: JournalEntry['kind']): string {
-  const coloured = new Set(['Paper', 'Role', 'Award']);
-  return coloured.has(kind) ? `kind ${kind.toLowerCase()}` : 'kind';
-}
-
 export default function JournalPage() {
+  const groups = groupByYear(journalEntries, (e) => e.date).map((g) => ({
+    year: g.year,
+    entries: g.items.map((e) => {
+      // Papers are described on Research: link there and drop the repeated "Paper" word.
+      const em = e.headHtml.match(/<em>([^<]+)<\/em>/)?.[1];
+      const paper = e.kind === 'Paper' ? publications.find((p) => paperTitle(p) === em) : undefined;
+      const headHtml = e.kind === 'Paper' ? e.headHtml.replace(/^Paper /, '') : e.headHtml;
+      return { ...e, headHtml, shortDate: monthDay(e.date), href: paper ? `/research#${paperId(paper)}` : undefined };
+    }),
+  }));
+
   return (
     <>
-      {/* ── PAGE HERO ── */}
-      <section className="front" style={{ paddingBottom: 'var(--s-6)' }}>
-        <div className="shell">
-          <div className="front-top">
-            <div className="col-l">{EDITORIAL.issueLabel}</div>
-            <div className="col-c">{EDITORIAL.established}</div>
-            <div className="col-r">{EDITORIAL.typeset}</div>
-          </div>
-          <hr className="rule-gold" />
-          <div className="front-title">
-            <h1 className="display"><em>Journal</em></h1>
-          </div>
-          <p style={{ fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: 'clamp(18px, 2vw, 26px)', color: 'var(--fg-mute)', marginTop: 'var(--s-4)', maxWidth: '60ch', marginBottom: 0 }}>
-            A running log of moves, papers, roles, awards, and moments worth noting.
-          </p>
-        </div>
-      </section>
-
-      {/* ── § 01  ALL DISPATCHES ── */}
-      <section className="section" style={{ borderBottom: 0 }}>
-        <div className="shell">
-          <div className="section-head">
-            <div className="number">
-              <span className="num">§ 01</span>
-              <span>Dispatches</span>
-            </div>
-            <h2>What&#39;s <em>changed</em>, in order.</h2>
-          </div>
-
-          <div className="journal-list">
-            {journalEntries.map((entry, i) => (
-              <div key={i} className="journal-item">
-                <span className="date">{entry.date}</span>
-                <span className={kindClass(entry.kind)}>{entry.kind}</span>
-                {/* headHtml is authored content — safe to inject */}
-                <span className="head" dangerouslySetInnerHTML={{ __html: entry.headHtml }} />
-                <span className="where">{entry.where}</span>
-              </div>
-            ))}
-          </div>
+      <PageHeader
+        name="Journal"
+        title={<em>Journal</em>}
+        dek="A running log of papers, roles, moves, awards and moments worth noting. Newest first."
+      />
+      <SubNav items={groups.map((g) => ({ id: `y${g.year}`, label: g.year, count: g.entries.length }))} />
+      <section className="vl-section">
+        <div className="vl-shell">
+          <JournalBrowser groups={groups} />
         </div>
       </section>
     </>

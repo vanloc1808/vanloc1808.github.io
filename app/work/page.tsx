@@ -1,119 +1,76 @@
 import type { Metadata } from 'next';
-import { projects } from '@/data/projects';
-import { publications } from '@/data/publications';
-import { EDITORIAL } from '@/data/nav';
+import { PROJECT_GROUPS, projects } from '@/data/projects';
+import { SOCIAL_LINKS } from '@/data/nav';
+import SubNav from '@/components/SubNav';
+import { LineRow, ProjectCard } from '@/components/display';
+import { Button, PageHeader, Section, Tag } from '@/components/ui';
 
 export const metadata: Metadata = {
-  title: 'Work & Publications — Van-Loc Nguyen',
-  description: 'A complete register of projects shipped and papers accepted.',
+  title: 'Work — Van-Loc Nguyen',
+  description: 'Every project: live products, research builds and coursework.',
   alternates: {
     canonical: '/work',
     types: { 'text/markdown': '/work.md' },
   },
 };
 
+const GITHUB = SOCIAL_LINKS.find((l) => l.label.startsWith('GitHub'))!.href;
+
+/* Publications used to live at /work#publications; send old links on. */
+const LEGACY_ANCHOR = `if (location.hash === '#publications') location.replace('/research');`;
+
+const SECTION_TITLES: Record<string, string> = {
+  live: 'Running in production',
+  research: 'Prototypes from the lab',
+  course: 'Where the habits formed',
+};
+
+const NUMBER_WORDS = ['No', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve'];
+const word = (n: number) => NUMBER_WORDS[n] ?? String(n);
+const plural = (n: number, s: string) => `${n} ${s}${n === 1 ? '' : 's'}`;
+
 /* =========================================================
-   WORK & PUBLICATIONS PAGE
+   WORK — live products as cards, research builds as a wide
+   card, coursework one line each.
    ========================================================= */
 
 export default function WorkPage() {
+  const groups = PROJECT_GROUPS.map((g) => ({ ...g, items: projects.filter((p) => p.group === g.id) }));
+  const [live, research, course] = groups.map((g) => g.items.length);
+
   return (
     <>
-      {/* ── PAGE HERO ── */}
-      <section className="front" style={{ paddingBottom: 'var(--s-6)' }}>
-        <div className="shell">
-          <div className="front-top">
-            <div className="col-l">{EDITORIAL.issueLabel}</div>
-            <div className="col-c">{EDITORIAL.established}</div>
-            <div className="col-r">{EDITORIAL.typeset}</div>
-          </div>
-          <hr className="rule-gold" />
-          <div className="front-title">
-            <h1 className="display">Work &amp; <em>Publications</em></h1>
-          </div>
-          <p style={{ fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: 'clamp(18px, 2vw, 26px)', color: 'var(--fg-mute)', marginTop: 'var(--s-4)', maxWidth: '60ch', marginBottom: 0 }}>
-            A complete register of projects shipped, papers accepted, and systems built.
-          </p>
-        </div>
-      </section>
+      <script dangerouslySetInnerHTML={{ __html: LEGACY_ANCHOR }} />
+      <PageHeader
+        name="Work"
+        title={<em>Work</em>}
+        dek={`${word(projects.length)} projects. ${word(live)} ${live === 1 ? 'is a live product' : 'are live products'}, ${word(research).toLowerCase()} ${research === 1 ? 'is a research build' : 'are research builds'}, ${word(course).toLowerCase()} ${course === 1 ? 'is coursework' : 'are coursework'}.`}
+        actions={<Button href={GITHUB}>Code on GitHub</Button>}
+      />
+      <SubNav items={groups.map((g) => ({ id: g.id, label: g.label, count: g.items.length }))} />
 
-      {/* ── § 01  PROJECTS ── */}
-      <section id="projects" className="section">
-        <div className="shell">
-          <div className="section-head">
-            <div className="number">
-              <span className="num">§ 01</span>
-              <span>Projects</span>
+      {groups.map((g) => (
+        <Section key={g.id} id={g.id} eyebrow={g.label} heading={SECTION_TITLES[g.id]} count={plural(g.items.length, 'project')}>
+          {g.id === 'course' ? (
+            <div>
+              {g.items.map((p) => (
+                <LineRow key={p.num} p={p} />
+              ))}
             </div>
-            <h2>Systems built to <em>solve</em> real problems.</h2>
-          </div>
-
-          <div className="work-list">
-            {projects.map((project) => (
-              <a key={project.num} className="work-row" href={project.href} target="_blank" rel="noopener noreferrer">
-                <span className="num">{project.num} /</span>
-                <span className="title">
-                  <em>{project.title}</em>
-                  {project.subtitle && <> <span className="mute">{project.subtitle}</span></>}
-                </span>
-                <span className="desc">{project.desc}</span>
-                <span className="meta">
-                  {project.tags.map((tag) => (
-                    <span key={tag.label} className={tag.isLive ? 'tag live' : 'tag'}>
-                      {tag.label}
-                    </span>
-                  ))}
-                </span>
-                <span className="arrow">→</span>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── § 02  PUBLICATIONS ── */}
-      <section id="publications" className="section" style={{ borderBottom: 0 }}>
-        <div className="shell">
-          <div className="section-head">
-            <div className="number">
-              <span className="num">§ 02</span>
-              <span>Publications</span>
+          ) : (
+            <div className="vl-cards">
+              {g.items.map((p) => (
+                <ProjectCard
+                  key={p.num}
+                  p={p}
+                  wide={g.id === 'research'}
+                  badge={g.id === 'research' ? <Tag>Undergraduate thesis</Tag> : undefined}
+                />
+              ))}
             </div>
-            <h2>Peer-reviewed <em>research</em>.</h2>
-          </div>
-
-          <div>
-            {publications.map((pub, i) => {
-              const titleNode = pub.titleAbbrev ? (
-                <><em>{pub.titleAbbrev}</em>: {pub.titleRest}</>
-              ) : (
-                pub.titleRest
-              );
-
-              return (
-                <article key={i} className="pub">
-                  <div className="meta-col">
-                    <span className="date">{pub.date}</span>
-                    <span className="venue">{pub.venue}</span>
-                    <span className="status">● {pub.status}</span>
-                  </div>
-                  <div>
-                    <h3>
-                      {pub.href ? (
-                        <a href={pub.href} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--gold-dim)' }}>
-                          {titleNode}
-                        </a>
-                      ) : titleNode}
-                    </h3>
-                    {/* abstract may contain <strong> — authored content, safe to inject */}
-                    <p className="abstract" dangerouslySetInnerHTML={{ __html: pub.abstract }} />
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+          )}
+        </Section>
+      ))}
     </>
   );
 }
