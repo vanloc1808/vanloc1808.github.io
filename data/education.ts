@@ -42,6 +42,6 @@ export const educationEntries: EducationEntry[] = [
     degree: 'Gifted Student',
     degreeEmphasis: 'Mathematics',
     descHtml:
-      'Specialised track in mathematics at one of Ho Chi Minh City\'s leading gifted high schools, building the analytical foundations that carried into computer science research.',
+      'Specialized track in mathematics at one of Ho Chi Minh City\'s leading gifted high schools, building the analytical foundations that carried into computer science research.',
   },
 ];

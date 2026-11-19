@@ -70,7 +70,7 @@ export const projects: Project[] = [
     group: 'live',
     isLive: true,
     title: 'ArcanaAI',
-    desc: 'AI-powered tarot reading service using OpenAI function calling, real-time chat, multiple decks, dual payment (Lemon Squeezy & MetaMask), Cloudflare R2 asset storage, and WebSocket notifications. Containerised with Docker and CI/CD via GitHub Actions.',
+    desc: 'AI-powered tarot reading service using OpenAI function calling, real-time chat, multiple decks, dual payment (Lemon Squeezy & MetaMask), Cloudflare R2 asset storage, and WebSocket notifications. Containerized with Docker and CI/CD via GitHub Actions.',
     tags: [
       { label: 'OpenAI' },
       { label: 'FastAPI' },
@@ -138,14 +138,14 @@ export const projects: Project[] = [
     num: '05',
     group: 'course',
     title: 'MiniShopping',
-    desc: 'E-commerce mobile app (Android) with user authentication, product catalogue, cart management, order processing, and payment integration. Django REST Framework backend with NoSQL database. Mobile Development course project.',
+    desc: 'E-commerce mobile app (Android) with user authentication, product catalog, cart management, order processing, and payment integration. Django REST Framework backend with NoSQL database. Mobile Development course project.',
     tags: [
       { label: 'Android' },
       { label: 'Django REST Framework' },
       { label: 'NoSQL' },
     ],
     href: 'https://github.com/mekanican/MiniShopping',
-    homeSummary: 'E-commerce Android app with catalogue, cart, order processing, and payment integration on a Django REST Framework backend.',
+    homeSummary: 'E-commerce Android app with catalog, cart, order processing, and payment integration on a Django REST Framework backend.',
     homeTags: [
       { label: 'Android' },
       { label: 'Django REST Framework' },
@@ -187,7 +187,7 @@ export const projects: Project[] = [
     num: '09',
     group: 'course',
     title: 'Big Integers',
-    desc: 'Arbitrary-precision arithmetic library implementing addition, subtraction, multiplication, division, and logical operations on unbounded integers. Demonstrates algorithm optimisation, memory management, and number theory concepts in C++.',
+    desc: 'Arbitrary-precision arithmetic library implementing addition, subtraction, multiplication, division, and logical operations on unbounded integers. Demonstrates algorithm optimization, memory management, and number theory concepts in C++.',
     tags: [
       { label: 'C++' },
     ],

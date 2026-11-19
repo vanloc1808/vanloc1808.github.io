@@ -222,7 +222,7 @@ function buildAbout(): string {
       `\n- **Interests:** ${additionalSkills.interests}`
   );
 
-  out.push(`## Footprints\n\nA map of places I've travelled: ${FOOTPRINTS.href}`);
+  out.push(`## Footprints\n\nA map of places I've traveled: ${FOOTPRINTS.href}`);
 
   return out.join('\n\n') + '\n';
 }

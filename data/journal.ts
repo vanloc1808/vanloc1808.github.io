@@ -5,7 +5,7 @@
 
 /**
  * CSS modifier appended to the "kind" badge.
- * "paper" | "role" | "award" get a coloured pill;
+ * "paper" | "role" | "award" get a colored pill;
  * others ("Move" | "Milestone" | "Event") render plain.
  */
 export type JournalKind = 'Paper' | 'Role' | 'Move' | 'Award' | 'Milestone' | 'Event';
@@ -35,7 +35,7 @@ export const journalEntries: JournalEntry[] = [
   {
     date: 'May 2, 2026',
     kind: 'Paper',
-    headHtml: 'Demo paper <em>Clutter Erase: Zero-Shot Mass-Similar and Multi-Object Removal in Single Pass</em> accepted to the IEEE ICME 2026 Workshop in Bangkok, Thailand.',
+    headHtml: 'Demo paper <em>Zero-Shot Mass-Similar and Multi-Object Removal in Single Pass</em> (the Clutter Erase system) accepted to the IEEE ICME 2026 Workshop in Bangkok, Thailand.',
     where: 'ICMEW · TH',
   },
   {
@@ -125,7 +125,7 @@ export const journalEntries: JournalEntry[] = [
   {
     date: 'Dec 14, 2024',
     kind: 'Paper',
-    headHtml: 'Paper <em>NewsInsight2.0: An Enhanced Version Integrating Large Language Model-Based Query Optimisation with Advanced Temporal Mechanisms</em> published at SOICT 2024.',
+    headHtml: 'Paper <em>NewsInsight2.0: An Enhanced Version Integrating Large Language Model-based Query Optimization with Advanced Temporal Mechanisms</em> published at SOICT 2024.',
     where: 'SOICT · VN',
   },
   {
@@ -167,7 +167,7 @@ export const journalEntries: JournalEntry[] = [
   {
     date: 'Aug 16, 2024',
     kind: 'Paper',
-    headHtml: 'Paper <em>AI-Enhanced Photo Authenticity: A User-Focused Approach to Detecting and Analysing Manipulated Images</em> published at MAPR 2024.',
+    headHtml: 'Paper <em>AI-Enhanced Photo Authenticity: A User-Focused Approach to Detecting and Analyzing Manipulated Images</em> published at MAPR 2024.',
     where: 'MAPR 2024',
   },
   {

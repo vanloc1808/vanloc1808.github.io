@@ -44,7 +44,7 @@ export const experienceEntries: ExperienceEntry[] = [
     location: 'Remote',
     role: 'AI Engineer',
     descHtml:
-      'Responsible for building AI agents for real-world needs. Improved existing MCP servers to enhance user experience. Optimised AI agents to run on local environments with small models (e.g. 4B-parameter models).',
+      'Responsible for building AI agents for real-world needs. Improved existing MCP servers to enhance user experience. Optimized AI agents to run on local environments with small models (e.g. 4B-parameter models).',
   },
   {
     period: 'Jan 2025 — Dec 2025',
