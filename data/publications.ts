@@ -125,6 +125,7 @@ export const publications: Publication[] = [
     award: 'Top-1 · EVENTA 2025',
     doi: '10.1145/3746027.3762038',
     codeHref: 'https://github.com/vdkhoi20/EVENT-Retriever',
+    figure: { src: '/images/papers/event-retriever.webp', width: 1400, height: 894, caption: 'Fig. 1 · event-aware retrieval pipeline' },
     href: 'https://dl.acm.org/doi/10.1145/3746027.3762038',
     abstract: 'Event-based image retrieval from free-form captions presents a significant challenge: models must understand not only visual features but also latent event semantics, context, and real-world knowledge. Conventional vision-language retrieval approaches often fall short when captions describe abstract events, implicit causality, temporal context, or contain long, complex narratives. To tackle these issues, we introduce a multi-stage retrieval framework combining dense article retrieval, event-aware language model reranking, and efficient image collection, followed by caption-guided semantic matching and rank-aware selection. We leverage Qwen3 for article search, Qwen3-Reranker for contextual alignment, and Qwen2-VL for precise image scoring. To further enhance performance and robustness, we fuse outputs from multiple configurations using Reciprocal Rank Fusion (RRF). Our system achieves the <strong>top-1 score</strong> on the private test set of Track 2 in the EVENTA 2025 Grand Challenge, demonstrating the effectiveness of combining language-based reasoning and multimodal retrieval for complex, real-world image understanding.',
   },
