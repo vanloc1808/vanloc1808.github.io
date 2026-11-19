@@ -1,84 +1,43 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { NAV_LINKS, SITE } from '@/data/nav';
-import TweaksPanel from './TweaksPanel';
+import ThemeToggle from './ThemeToggle';
 
 export default function Masthead() {
   const pathname = usePathname();
-  const [clock, setClock] = useState('—:—');
-  const [tweaksOpen, setTweaksOpen] = useState(false);
-
-  useEffect(() => {
-    function updateClock() {
-      const now = new Date();
-      const opts: Intl.DateTimeFormatOptions = {
-        hour: '2-digit',
-        minute: '2-digit',
-        timeZone: 'Asia/Ho_Chi_Minh',
-        hour12: false,
-      };
-      const time = now.toLocaleTimeString('en-US', opts);
-      setClock(time + ' ICT');
-    }
-    updateClock();
-    const id = setInterval(updateClock, 30000);
-    return () => clearInterval(id);
-  }, []);
 
   return (
-    <header className="masthead">
-      <div className="shell masthead-inner">
-        <Link href="/" className="brand">
-          <span className="brand-mark">
-            Nguyễn <em>Văn Lộc</em>
-          </span>
-          <span className="brand-sub">{SITE.brandSub}</span>
+    <header className="vl-masthead">
+      <div className="vl-shell vl-masthead__inner">
+        <Link href="/" className="vl-brand" aria-label="Nguyễn Văn Lộc, home">
+          Nguyễn <em>Văn Lộc</em>
         </Link>
 
-        <nav className="nav" aria-label="primary">
-          {NAV_LINKS.map(({ href, label, external }) => {
-            const isActive = external
-              ? false
-              : href === '/'
-                ? pathname === '/'
-                : pathname.startsWith(href);
-            return (
+        <nav className="vl-nav" aria-label="Primary">
+          {NAV_LINKS.map(({ href, label, external }) =>
+            external ? (
+              <a key={href} href={href} target="_blank" rel="noopener noreferrer">
+                {label} ↗
+              </a>
+            ) : (
               <Link
                 key={href}
                 href={href}
-                className={isActive ? 'active' : ''}
-                target={external ? '_blank' : undefined}
-                rel={external ? 'noopener noreferrer' : undefined}
+                aria-current={pathname === href || pathname.startsWith(`${href}/`) ? 'page' : undefined}
               >
                 {label}
               </Link>
-            );
-          })}
+            )
+          )}
         </nav>
 
-        <div className="masthead-meta">
-          <span className="live-dot">Online</span>
-          <span>{clock}</span>
-          <div
-            className="tweaks-wrap"
-            onMouseEnter={() => setTweaksOpen(true)}
-            onMouseLeave={() => setTweaksOpen(false)}
-          >
-            <button
-              className="tweaks-toggle"
-              type="button"
-              onClick={() => setTweaksOpen((o) => !o)}
-              aria-haspopup="dialog"
-              aria-expanded={tweaksOpen}
-              aria-label="Toggle tweaks panel"
-            >
-              Tweaks
-            </button>
-            <TweaksPanel open={tweaksOpen} onClose={() => setTweaksOpen(false)} />
-          </div>
+        <div className="vl-masthead__tools">
+          <ThemeToggle />
+          <a className="vl-btn vl-btn--quiet" href={SITE.cvHref} target="_blank" rel="noopener noreferrer">
+            CV ↗
+          </a>
         </div>
       </div>
     </header>

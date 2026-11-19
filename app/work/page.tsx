@@ -1,119 +1,66 @@
 import type { Metadata } from 'next';
-import { projects } from '@/data/projects';
-import { publications } from '@/data/publications';
-import { EDITORIAL } from '@/data/nav';
+import { PROJECT_GROUPS, projects } from '@/data/projects';
+import { SOCIAL_LINKS } from '@/data/nav';
+import SubNav from '@/components/SubNav';
+import { Button, Entry, EntryList, PageHeader, Section, Tag, Tags } from '@/components/ui';
 
 export const metadata: Metadata = {
-  title: 'Work & Publications — Van-Loc Nguyen',
-  description: 'A complete register of projects shipped and papers accepted.',
+  title: 'Work — Van-Loc Nguyen',
+  description: 'Every project: live products, research builds and coursework.',
   alternates: {
     canonical: '/work',
     types: { 'text/markdown': '/work.md' },
   },
 };
 
+const GITHUB = SOCIAL_LINKS.find((l) => l.label.startsWith('GitHub'))!.href;
+
+/* Publications used to live at /work#publications; send old links on. */
+const LEGACY_ANCHOR = `if (location.hash === '#publications') location.replace('/research');`;
+
 /* =========================================================
-   WORK & PUBLICATIONS PAGE
+   WORK — every project, grouped by what it is.
    ========================================================= */
 
 export default function WorkPage() {
+  const groups = PROJECT_GROUPS.map((g) => ({ ...g, items: projects.filter((p) => p.group === g.id) }));
+
   return (
     <>
-      {/* ── PAGE HERO ── */}
-      <section className="front" style={{ paddingBottom: 'var(--s-6)' }}>
-        <div className="shell">
-          <div className="front-top">
-            <div className="col-l">{EDITORIAL.issueLabel}</div>
-            <div className="col-c">{EDITORIAL.established}</div>
-            <div className="col-r">{EDITORIAL.typeset}</div>
-          </div>
-          <hr className="rule-gold" />
-          <div className="front-title">
-            <h1 className="display">Work &amp; <em>Publications</em></h1>
-          </div>
-          <p style={{ fontFamily: 'var(--serif)', fontStyle: 'italic', fontSize: 'clamp(18px, 2vw, 26px)', color: 'var(--fg-mute)', marginTop: 'var(--s-4)', maxWidth: '60ch', marginBottom: 0 }}>
-            A complete register of projects shipped, papers accepted, and systems built.
-          </p>
-        </div>
-      </section>
+      <script dangerouslySetInnerHTML={{ __html: LEGACY_ANCHOR }} />
+      <PageHeader
+        name="Work"
+        title={<em>Work</em>}
+        dek={`${projects.length} projects, from a vision-LLM party game to a C++ chess engine. Live products first, then research builds, then the coursework where the habits formed.`}
+        actions={<Button href={GITHUB}>Code on GitHub</Button>}
+      />
+      <SubNav items={groups.map((g) => ({ id: g.id, label: g.label, count: g.items.length }))} />
 
-      {/* ── § 01  PROJECTS ── */}
-      <section id="projects" className="section">
-        <div className="shell">
-          <div className="section-head">
-            <div className="number">
-              <span className="num">§ 01</span>
-              <span>Projects</span>
-            </div>
-            <h2>Systems built to <em>solve</em> real problems.</h2>
-          </div>
-
-          <div className="work-list">
-            {projects.map((project) => (
-              <a key={project.num} className="work-row" href={project.href} target="_blank" rel="noopener noreferrer">
-                <span className="num">{project.num} /</span>
-                <span className="title">
-                  <em>{project.title}</em>
-                  {project.subtitle && <> <span className="mute">{project.subtitle}</span></>}
-                </span>
-                <span className="desc">{project.desc}</span>
-                <span className="meta">
-                  {project.tags.map((tag) => (
-                    <span key={tag.label} className={tag.isLive ? 'tag live' : 'tag'}>
-                      {tag.label}
-                    </span>
-                  ))}
-                </span>
-                <span className="arrow">→</span>
-              </a>
+      {groups.map((g) => (
+        <Section key={g.id} id={g.id} eyebrow={g.label} heading={<>{g.heading}<em>{g.emphasis}</em>{g.tail}</>}>
+          <EntryList>
+            {g.items.map((p) => (
+              <Entry
+                key={p.num}
+                href={p.href}
+                meta={
+                  <>
+                    <span className="vl-entry__date">{p.num} /</span>
+                    {p.isLive && <Tag tone="live">● Live</Tag>}
+                  </>
+                }
+              >
+                <h3 className="vl-entry__title">
+                  <em>{p.title}</em>
+                  {p.subtitle && <> <span className="mute">{p.subtitle}</span></>}
+                </h3>
+                <p className="vl-entry__text">{p.desc}</p>
+                <Tags labels={p.tags.map((t) => t.label)} />
+              </Entry>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── § 02  PUBLICATIONS ── */}
-      <section id="publications" className="section" style={{ borderBottom: 0 }}>
-        <div className="shell">
-          <div className="section-head">
-            <div className="number">
-              <span className="num">§ 02</span>
-              <span>Publications</span>
-            </div>
-            <h2>Peer-reviewed <em>research</em>.</h2>
-          </div>
-
-          <div>
-            {publications.map((pub, i) => {
-              const titleNode = pub.titleAbbrev ? (
-                <><em>{pub.titleAbbrev}</em>: {pub.titleRest}</>
-              ) : (
-                pub.titleRest
-              );
-
-              return (
-                <article key={i} className="pub">
-                  <div className="meta-col">
-                    <span className="date">{pub.date}</span>
-                    <span className="venue">{pub.venue}</span>
-                    <span className="status">● {pub.status}</span>
-                  </div>
-                  <div>
-                    <h3>
-                      {pub.href ? (
-                        <a href={pub.href} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', borderBottom: '1px solid var(--gold-dim)' }}>
-                          {titleNode}
-                        </a>
-                      ) : titleNode}
-                    </h3>
-                    {/* abstract may contain <strong> — authored content, safe to inject */}
-                    <p className="abstract" dangerouslySetInnerHTML={{ __html: pub.abstract }} />
-                  </div>
-                </article>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+          </EntryList>
+        </Section>
+      ))}
     </>
   );
 }

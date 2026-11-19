@@ -44,30 +44,28 @@ export const BIO_META = {
 
 /* ── "Now" items ─────────────────────────────────────────── */
 
+/** One cell of the homepage "Now" grid. */
 export interface NowItem {
   label: string;
-  /** Optional link that appears at the start of the heading. */
-  titleLink?: { text: string; href: string };
-  /** Remainder of the heading text (always plain string). */
-  titleText: string;
+  /** Authored HTML — may contain <em> and <a>. */
+  titleHtml: string;
   meta: string;
 }
 
 export const NOW_ITEMS: NowItem[] = [
   {
-    label: 'Shipping',
-    titleLink: { text: 'ArcanaAI', href: 'https://arcanaai.nguyenvanloc.com' },
-    titleText: ' — redesigned UI with smoother tarot flow, clearer card storytelling, and a more immersive mystical aesthetic.',
-    meta: 'Personal project · Live',
+    label: 'Role',
+    titleHtml: 'Software Engineer at <em>Eurofins</em>, building observability pipelines and ML root-cause analysis.',
+    meta: 'Since Apr 2026',
   },
   {
-    label: 'Researching',
-    titleText: 'Zero-shot object removal and multi-object reasoning for video, continuing work from PANDORA and Cluster-Erase.',
+    label: 'Research',
+    titleHtml: 'Zero-shot object removal and multi-object reasoning for video, continuing work from PANDORA and Clutter Erase.',
     meta: 'Master\'s thesis · HCMUS',
   },
   {
-    label: 'Reading',
-    titleText: 'Diffusion world models, evaluation of vision-language systems, and the long quiet literature on agents that don\'t hallucinate.',
-    meta: 'Ongoing',
+    label: 'Shipping',
+    titleHtml: '<a href="https://arcanaai.nguyenvanloc.com" target="_blank" rel="noopener noreferrer"><em>ArcanaAI</em></a> — redesigned UI with smoother tarot flow, clearer card storytelling, and a more immersive mystical aesthetic.',
+    meta: 'Personal project · Live',
   },
 ];

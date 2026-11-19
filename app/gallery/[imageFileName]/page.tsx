@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { basename, join } from 'node:path';
 import { statSync } from 'node:fs';
 import { SITE_URL } from '@/lib/agent';
+import { Button, PageHeader } from '@/components/ui';
 
 const IMAGE_EXTENSIONS = /\.(?:avif|gif|jpe?g|png|webp)$/i;
 const IMAGE_DIRECTORY = join(process.cwd(), 'public', 'images');
@@ -77,43 +77,33 @@ export default async function GalleryPage({ params }: GalleryPageProps) {
   if (!image) notFound();
 
   return (
-    <main className="gallery-page">
-      <div className="shell">
-        <header className="gallery-head">
-          <div className="section-head">
-            <div className="number">
-              <span className="num">G/01</span>
-              <span className="rule" />
-              <span className="label">Shared image</span>
+    <>
+      <PageHeader name="Gallery" title={<em>Gallery</em>} dek={image.fileName} />
+      <section className="vl-section">
+        <div className="vl-shell">
+          <figure className="gallery-figure">
+            <div className="gallery-image-wrap">
+              <Image
+                src={image.src}
+                alt={`Photograph ${image.fileName}`}
+                fill
+                sizes="(max-width: 980px) 100vw, 1200px"
+                preload
+              />
             </div>
-            <h1>Gallery </h1>
+            <figcaption className="vl-meta">
+              <span>Van-Loc Nguyen · Personal archive</span>
+              <a href={image.src} target="_blank" rel="noreferrer">
+                Open original <span aria-hidden="true">↗</span>
+              </a>
+            </figcaption>
+          </figure>
+          <div className="vl-more" style={{ justifyContent: 'space-between', alignItems: 'center' }}>
+            <Button href="/">Back to the front page</Button>
+            <span className="vl-meta">Share this URL to share the image</span>
           </div>
-          <p className="gallery-file">{image.fileName}</p>
-        </header>
-
-        <figure className="gallery-figure">
-          <div className="gallery-image-wrap">
-            <Image
-              src={image.src}
-              alt={`Photograph ${image.fileName}`}
-              fill
-              sizes="(max-width: 980px) 100vw, 1200px"
-              preload
-            />
-          </div>
-          <figcaption>
-            <span>Van-Loc Nguyen · Personal archive</span>
-            <a href={image.src} target="_blank" rel="noreferrer">
-              Open original <span aria-hidden="true">↗</span>
-            </a>
-          </figcaption>
-        </figure>
-
-        <nav className="gallery-footer" aria-label="Gallery navigation">
-          <Link href="/">← Return to index</Link>
-          <span>Share this URL to share the image</span>
-        </nav>
-      </div>
-    </main>
+        </div>
+      </section>
+    </>
   );
 }

@@ -35,7 +35,7 @@ export const experienceEntries: ExperienceEntry[] = [
     role: 'Student Researcher',
     roleEmphasis: 'Echizen Laboratory',
     descHtml:
-      'Six-month research residency under <a href="https://research.nii.ac.jp/~iechizen/official/members_echizen-e.html" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Prof. Isao Echizen</a>, mentored by <a href="https://rellm.jp/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Dr. April Pyone Maung Maung</a> at the <a href="https://research.nii.ac.jp/~iechizen/official/index-e.html" target="_blank" rel="noopener noreferrer" style="color:var(--fg-mute);border-bottom:1px solid var(--rule)">Echizen Laboratory</a>. Worked on media authenticity and digital forensics.',
+      'Six-month research residency under <a href="https://research.nii.ac.jp/~iechizen/official/members_echizen-e.html" target="_blank" rel="noopener noreferrer">Prof. Isao Echizen</a>, mentored by <a href="https://rellm.jp/" target="_blank" rel="noopener noreferrer">Dr. April Pyone Maung Maung</a> at the <a href="https://research.nii.ac.jp/~iechizen/official/index-e.html" target="_blank" rel="noopener noreferrer">Echizen Laboratory</a>. Worked on media authenticity and digital forensics.',
   },
   {
     period: 'Mar 2025 — Aug 2025',
@@ -53,7 +53,7 @@ export const experienceEntries: ExperienceEntry[] = [
     location: 'Ho Chi Minh City, Vietnam',
     role: 'Research Assistant',
     descHtml:
-      'Research on multimedia verification, applications of generative models, and other deep learning techniques in downstream tasks under <a href="https://www.fit.hcmus.edu.vn/~tmtriet/" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Assoc.&nbsp;Prof. Minh-Triet Tran</a>.',
+      'Research on multimedia verification, applications of generative models, and other deep learning techniques in downstream tasks under <a href="https://www.fit.hcmus.edu.vn/~tmtriet/" target="_blank" rel="noopener noreferrer">Assoc.&nbsp;Prof. Minh-Triet Tran</a>.',
   },
   {
     period: 'Jun 2023 — Feb 2025',
@@ -63,7 +63,7 @@ export const experienceEntries: ExperienceEntry[] = [
     role: 'Backend Engineer',
     roleEmphasis: 'Python + Django',
     descHtml:
-      'Back-end development with Django REST Framework; built OpenAPI-compliant APIs, implemented unit tests, and wrote documentation. Worked across multiple projects with US clients from varied industries including a <a href="https://www.saritasa.com/work/crossing-guard-android-app" target="_blank" rel="noopener noreferrer" style="color:var(--gold);border-bottom:1px solid var(--gold-dim)">Crossing Guard Shift Management Platform</a> and chambers-of-commerce consulting tooling. Proficient in Postman and Swagger.',
+      'Back-end development with Django REST Framework; built OpenAPI-compliant APIs, implemented unit tests, and wrote documentation. Worked across multiple projects with US clients from varied industries including a <a href="https://www.saritasa.com/work/crossing-guard-android-app" target="_blank" rel="noopener noreferrer">Crossing Guard Shift Management Platform</a> and chambers-of-commerce consulting tooling. Proficient in Postman and Swagger.',
   },
   {
     period: 'Mar 2023 — May 2023',

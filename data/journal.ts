@@ -10,6 +10,13 @@
  */
 export type JournalKind = 'Paper' | 'Role' | 'Move' | 'Award' | 'Milestone' | 'Event';
 
+/** Tag tone per kind; kinds without one render as a plain tag. */
+export const JOURNAL_TONES: Partial<Record<JournalKind, 'paper' | 'role' | 'award'>> = {
+  Paper: 'paper',
+  Role: 'role',
+  Award: 'award',
+};
+
 export interface JournalEntry {
   date: string;
   kind: JournalKind;
@@ -28,7 +35,7 @@ export const journalEntries: JournalEntry[] = [
   {
     date: 'May 2, 2026',
     kind: 'Paper',
-    headHtml: 'Demo paper <em>Cluster Erase: Zero-Shot Mass-Similar and Multi-Object Removal in Single Pass</em> accepted to the IEEE ICME 2026 Workshop in Bangkok, Thailand.',
+    headHtml: 'Demo paper <em>Clutter Erase: Zero-Shot Mass-Similar and Multi-Object Removal in Single Pass</em> accepted to the IEEE ICME 2026 Workshop in Bangkok, Thailand.',
     where: 'ICMEW · TH',
   },
   {

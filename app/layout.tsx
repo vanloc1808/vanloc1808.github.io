@@ -43,7 +43,6 @@ export default function RootLayout({
     <html
       lang="en"
       data-theme="system"
-      data-density="compact"
       className={`${cormorant.variable} ${jetbrains.variable}`}
     >
       <head>

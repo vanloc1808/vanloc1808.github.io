@@ -9,7 +9,7 @@
 
 import { BIO_PARAGRAPHS, BIO_META, NAME_VARIANTS, STATUS_ITEMS, NOW_ITEMS } from '@/data/profile';
 import { FOOTPRINTS, SITE, SOCIAL_LINKS } from '@/data/nav';
-import { projects, FEATURED_PROJECT_COUNT, type Tag } from '@/data/projects';
+import { PROJECT_GROUPS, projects, type Tag } from '@/data/projects';
 import { publications } from '@/data/publications';
 import { journalEntries } from '@/data/journal';
 import { contactChannels, contactInfo } from '@/data/contact';
@@ -27,7 +27,7 @@ const SITE_DESCRIPTION =
 /* ── Pages registry ──────────────────────────────────────── */
 
 export interface PageMeta {
-  slug: 'index' | 'background' | 'work' | 'journal' | 'contact';
+  slug: 'index' | 'work' | 'research' | 'about' | 'journal' | 'contact';
   /** HTML route. */
   path: string;
   /** Markdown route. */
@@ -49,22 +49,31 @@ export const PAGES: PageMeta[] = [
     priority: 1,
   },
   {
-    slug: 'background',
-    path: '/background',
-    md: '/background.md',
-    title: 'Background — Van-Loc Nguyen',
-    description: 'Education, experience, and the thread connecting them.',
-    changeFrequency: 'monthly',
-    priority: 0.8,
-  },
-  {
     slug: 'work',
     path: '/work',
     md: '/work.md',
-    title: 'Work & Publications — Van-Loc Nguyen',
-    description: 'A complete register of projects shipped and papers accepted.',
+    title: 'Work — Van-Loc Nguyen',
+    description: 'Every project: live products, research builds and coursework.',
+    changeFrequency: 'monthly',
+    priority: 0.9,
+  },
+  {
+    slug: 'research',
+    path: '/research',
+    md: '/research.md',
+    title: 'Research — Van-Loc Nguyen',
+    description: 'Peer-reviewed papers on generative editing, multimodal retrieval and media authenticity, and the challenges they won.',
     changeFrequency: 'weekly',
     priority: 0.9,
+  },
+  {
+    slug: 'about',
+    path: '/about',
+    md: '/about.md',
+    title: 'About — Van-Loc Nguyen',
+    description: 'Bio, experience, education and the tools I reach for.',
+    changeFrequency: 'monthly',
+    priority: 0.8,
   },
   {
     slug: 'journal',
@@ -121,7 +130,7 @@ function frontMatter(title: string, summary: string): string {
 function buildIndex(): string {
   const out: string[] = [frontMatter('Van-Loc Nguyen (Nguyễn Văn Lộc) — Felix', SITE_DESCRIPTION)];
 
-  out.push('## About\n\n' + BIO_PARAGRAPHS.join('\n\n'));
+  out.push(`## About\n\n${BIO_PARAGRAPHS[0]}\n\nMore: ${SITE_URL}/about.md`);
 
   out.push(
     '## At a glance\n\n' +
@@ -132,12 +141,11 @@ function buildIndex(): string {
   out.push(
     '## Now\n\n' +
       NOW_ITEMS.map((n) => {
-        const link = n.titleLink ? `[${n.titleLink.text}](${n.titleLink.href})` : '';
-        return `- **${n.label}:** ${(link + htmlToMarkdown(n.titleText)).trim()} (${n.meta})`;
+        return `- **${n.label}:** ${htmlToMarkdown(n.titleHtml)} (${n.meta})`;
       }).join('\n')
   );
 
-  const featured = projects.slice(0, FEATURED_PROJECT_COUNT);
+  const featured = projects.filter((p) => p.group === 'live');
   out.push(
     '## Selected work\n\n' +
       featured
@@ -169,15 +177,21 @@ function buildIndex(): string {
         .join('\n')
   );
 
-  out.push(`## Footprints\n\nA map of places I've travelled: ${FOOTPRINTS.href}`);
-
   out.push('## Elsewhere\n\n' + SOCIAL_LINKS.map((l) => `- ${l.label}: ${l.href}`).join('\n'));
 
   return out.join('\n\n') + '\n';
 }
 
-function buildBackground(): string {
-  const out: string[] = [frontMatter('Background — Van-Loc Nguyen', page('background').description)];
+function buildAbout(): string {
+  const out: string[] = [frontMatter('About — Van-Loc Nguyen', page('about').description)];
+
+  out.push('## Bio\n\n' + BIO_PARAGRAPHS.join('\n\n'));
+
+  out.push(
+    '## Names\n\n' +
+      NAME_VARIANTS.map((n) => `- **${n.lang}:** ${htmlToMarkdown(n.nameHtml)}`).join('\n') +
+      `\n- **Based:** ${BIO_META.based}\n- **Handle:** ${BIO_META.handle}`
+  );
 
   out.push(
     '## Experience\n\n' +
@@ -208,21 +222,33 @@ function buildBackground(): string {
       `\n- **Interests:** ${additionalSkills.interests}`
   );
 
+  out.push(`## Footprints\n\nA map of places I've travelled: ${FOOTPRINTS.href}`);
+
   return out.join('\n\n') + '\n';
 }
 
 function buildWork(): string {
-  const out: string[] = [frontMatter('Work & Publications — Van-Loc Nguyen', page('work').description)];
+  const out: string[] = [frontMatter('Work — Van-Loc Nguyen', page('work').description)];
 
-  out.push(
-    '## Projects\n\n' +
-      projects
-        .map((p) => {
-          const title = p.subtitle ? `${p.title} ${p.subtitle}` : p.title;
-          return `### ${p.num} · ${title}\n${htmlToMarkdown(p.desc)}\n- Tags: ${tagList(p.tags)}\n- Link: ${p.href}`;
-        })
-        .join('\n\n')
-  );
+  for (const g of PROJECT_GROUPS) {
+    out.push(
+      `## ${g.label}\n\n` +
+        projects
+          .filter((p) => p.group === g.id)
+          .map((p) => {
+            const title = p.subtitle ? `${p.title} ${p.subtitle}` : p.title;
+            const live = p.isLive ? ' (live)' : '';
+            return `### ${p.num} · ${title}${live}\n${htmlToMarkdown(p.desc)}\n- Tags: ${tagList(p.tags)}\n- Link: ${p.href}`;
+          })
+          .join('\n\n')
+    );
+  }
+
+  return out.join('\n\n') + '\n';
+}
+
+function buildResearch(): string {
+  const out: string[] = [frontMatter('Research — Van-Loc Nguyen', page('research').description)];
 
   out.push(
     '## Publications\n\n' +
@@ -233,6 +259,14 @@ function buildWork(): string {
           return `### ${head}\n${p.venue} · ${p.status} · ${p.date}\n\n${htmlToMarkdown(p.abstract)}`;
         })
         .join('\n\n')
+  );
+
+  out.push(
+    '## Awards\n\n' +
+      journalEntries
+        .filter((j) => j.kind === 'Award')
+        .map((j) => `- **${j.date}** — ${htmlToMarkdown(j.headHtml)} (${j.where})`)
+        .join('\n')
   );
 
   return out.join('\n\n') + '\n';
@@ -269,8 +303,9 @@ function buildContact(): string {
 
 const BUILDERS: Record<PageMeta['slug'], () => string> = {
   index: buildIndex,
-  background: buildBackground,
   work: buildWork,
+  research: buildResearch,
+  about: buildAbout,
   journal: buildJournal,
   contact: buildContact,
 };
