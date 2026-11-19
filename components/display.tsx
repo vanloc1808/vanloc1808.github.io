@@ -302,6 +302,9 @@ export function Timeline({ rows, startYear, endYear }: { rows: TimelineRow[]; st
     return <span className={cls} style={{ left: `${left * 100}%`, width: `${(right - left) * 100}%` }} />;
   };
 
+  // One gridline per year, whatever the span.
+  const grid = { backgroundSize: `${100 / years.length}% 100%` };
+
   const group = (kind: TimelineRow['kind'], title: string) => {
     const items = visible.filter((r) => r.kind === kind);
     if (items.length === 0) return null;
@@ -317,7 +320,7 @@ export function Timeline({ rows, startYear, endYear }: { rows: TimelineRow[]; st
                 {role && ` · ${role}`}
                 {r.range[0] < start && ` (from ${Math.floor(r.range[0] / 12)})`}
               </span>
-              <div className="vl-timeline__track">{bar(r)}</div>
+              <div className="vl-timeline__track" style={grid}>{bar(r)}</div>
             </div>
           );
         })}
@@ -329,7 +332,7 @@ export function Timeline({ rows, startYear, endYear }: { rows: TimelineRow[]; st
     <div className="vl-timeline" role="img" aria-label={`Timeline of roles and studies, ${startYear} to ${endYear}. Details are listed below.`}>
       <div className="vl-timeline__row vl-timeline__axis">
         <span className="vl-timeline__label" />
-        <div className="vl-timeline__track" style={{ gridTemplateColumns: `repeat(${years.length}, 1fr)` }}>
+        <div className="vl-timeline__track" style={{ gridTemplateColumns: `repeat(${years.length}, minmax(0, 1fr))` }}>
           {years.map((y) => (
             <span key={y}>{y}</span>
           ))}

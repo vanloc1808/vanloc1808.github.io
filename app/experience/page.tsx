@@ -19,6 +19,11 @@ export const metadata: Metadata = {
    EXPERIENCE & EDUCATION — timeline, roles, degrees.
    ========================================================= */
 
+/** The timeline starts at the earliest year in the data, so every role and school is on it. */
+const firstYear = Math.min(
+  ...[...experienceEntries, ...educationEntries].map((e) => Number(e.period.match(/\d{4}/)?.[0] ?? new Date().getFullYear()))
+);
+
 export default function ExperiencePage() {
   const experience: TimelineItem[] = experienceEntries.map((e) => ({ ...e, title: e.role, emphasis: e.roleEmphasis }));
   const education: TimelineItem[] = educationEntries.map((e) => ({ ...e, title: e.degree, emphasis: e.degreeEmphasis }));
@@ -45,7 +50,7 @@ export default function ExperiencePage() {
 
       <Section id="timeline" eyebrow="Timeline" heading="Where the years went" count="At a glance">
         <Timeline
-          startYear={2023}
+          startYear={firstYear}
           endYear={new Date().getFullYear()}
           rows={[
             ...experienceEntries.map((e) => ({ label: e.timelineLabel, period: e.period, kind: 'work' as const })),

@@ -40,7 +40,7 @@ export const educationEntries: EducationEntry[] = [
       'Graduated rank 6/59. Supervised by <a href="https://www.fit.hcmus.edu.vn/~tmtriet/" target="_blank" rel="noopener noreferrer">Assoc.&nbsp;Prof. Minh-Triet Tran</a>. Defended undergraduate thesis with score 10.00; co-authored multiple papers during final-year research.',
   },
   {
-    timelineLabel: 'Lê Quý Đôn · Mathematics',
+    timelineLabel: 'LQD HSGS · Mathematics',
     period: 'Aug 2017 — Aug 2020',
     institution: 'Lê Quý Đôn High School for Gifted Students, Ho Chi Minh City',
     location: 'Ho Chi Minh City, Vietnam',
