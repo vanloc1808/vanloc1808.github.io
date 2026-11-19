@@ -11,9 +11,9 @@ export interface NavLink {
 }
 
 export const NAV_LINKS: NavLink[] = [
+  { href: '/experience', label: 'Experience & Education' },
   { href: '/work', label: 'Work' },
   { href: '/research', label: 'Research' },
-  { href: '/experience', label: 'Experience & Education' },
   { href: '/about', label: 'About' },
   { href: '/journal', label: 'Journal' },
   { href: '/contact', label: 'Contact' },
