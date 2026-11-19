@@ -19,9 +19,9 @@ export const metadata: Metadata = {
    EXPERIENCE & EDUCATION — timeline, roles, degrees.
    ========================================================= */
 
-/** The timeline starts at the earliest year in the data, so every role and school is on it. */
+/** The timeline starts with the first role; earlier studies show as clipped bars or are left off. */
 const firstYear = Math.min(
-  ...[...experienceEntries, ...educationEntries].map((e) => Number(e.period.match(/\d{4}/)?.[0] ?? new Date().getFullYear()))
+  ...experienceEntries.map((e) => Number(e.period.match(/\d{4}/)?.[0] ?? new Date().getFullYear()))
 );
 
 export default function ExperiencePage() {
