@@ -1,12 +1,12 @@
 import type { Metadata } from 'next';
-import { NOW_ITEMS } from '@/data/profile';
+import { HONORS_RANK, NOW_ITEMS } from '@/data/profile';
 import { projects } from '@/data/projects';
 import { publications } from '@/data/publications';
 import { JOURNAL_TONES, journalEntries } from '@/data/journal';
 import { EDITORIAL, SITE } from '@/data/nav';
 import { personJsonLd } from '@/lib/agent';
-import { shortDate } from '@/lib/format';
-import { Button, Entry, EntryList, Html, More, NowCell, NowGrid, Section, Tag, Tags } from '@/components/ui';
+import { Highlights, PaperRowCompact, ProjectCard } from '@/components/display';
+import { Button, Entry, EntryList, Html, More, NowCell, NowGrid, Section, Tag } from '@/components/ui';
 
 export const metadata: Metadata = {
   alternates: {
@@ -17,13 +17,25 @@ export const metadata: Metadata = {
 
 /* =========================================================
    HOME — introduce, show what's current, point onward.
-   Hero · Now · Work · Research · Journal (footer via SiteShell)
+   Hero · Highlights · Now · Work · Research · Journal
    ========================================================= */
 
+const FIRST_PLACE = /\btop 1\b|first prize/i;
+
 export default function Home() {
-  const liveProjects = projects.filter((p) => p.group === 'live');
-  const featuredPubs = publications.filter((p) => p.featuredOnHome).slice(0, 2);
-  const recent = journalEntries.slice(0, 3);
+  const live = projects.filter((p) => p.group === 'live');
+  const latestPapers = publications.slice(0, 3);
+  const awards = journalEntries.filter((e) => e.kind === 'Award');
+  // Papers live under Research; the journal strip shows everything else.
+  const lately = journalEntries.filter((e) => e.kind !== 'Paper').slice(0, 3);
+  const years = publications.map((p) => Number(p.date.match(/\d{4}/)?.[0]));
+
+  const highlights = [
+    { num: String(publications.length), label: `peer-reviewed papers, ${Math.min(...years)}–${Math.max(...years)}`, href: '/research', more: 'Research' },
+    { num: String(awards.length), label: 'challenge awards at ACM MM, ACCV and more', href: '/research#awards', more: 'Awards' },
+    { num: String(awards.filter((a) => FIRST_PLACE.test(a.headHtml)).length), label: 'first-place finishes', href: '/research#awards', more: 'Awards' },
+    { num: HONORS_RANK.value, label: HONORS_RANK.label, href: '/about#education', more: 'About' },
+  ];
 
   return (
     <>
@@ -59,7 +71,13 @@ export default function Home() {
         </div>
       </section>
 
-      <Section id="now" eyebrow="Now" heading={<>What I&#39;m working on this <em>quarter</em>.</>}>
+      <section className="vl-section vl-section--tight" aria-label="Highlights">
+        <div className="vl-shell">
+          <Highlights items={highlights} />
+        </div>
+      </section>
+
+      <Section id="now" eyebrow="Now" heading="This quarter" tight>
         <NowGrid>
           {NOW_ITEMS.map((item) => (
             <NowCell key={item.label} label={item.label} title={<Html html={item.titleHtml} />} meta={item.meta} />
@@ -67,58 +85,27 @@ export default function Home() {
         </NowGrid>
       </Section>
 
-      <Section id="work" eyebrow="Work" heading={<>A few <em>recent</em> projects.</>}>
-        <EntryList>
-          {liveProjects.map((p) => (
-            <Entry
-              key={p.num}
-              href={p.href}
-              meta={
-                <>
-                  <span className="vl-entry__date">{p.num} /</span>
-                  {p.isLive && <Tag tone="live">● Live</Tag>}
-                </>
-              }
-            >
-              <h3 className="vl-entry__title">
-                <em>{p.title}</em>
-                {p.subtitle && <> <span className="mute">{p.subtitle}</span></>}
-              </h3>
-              <p className="vl-entry__text">{p.homeSummary ?? p.desc}</p>
-              <Tags labels={(p.homeTags ?? p.tags).map((t) => t.label)} />
-            </Entry>
+      <Section id="work" eyebrow="Work" heading="Live projects" count={`${live.length} of ${projects.length}`}>
+        <div className="vl-cards">
+          {live.map((p) => (
+            <ProjectCard key={p.num} p={p} summary={p.homeSummary} />
           ))}
-        </EntryList>
-        <More href="/work">All work</More>
+        </div>
+        <More href="/work">All {projects.length} projects</More>
       </Section>
 
-      <Section id="research" eyebrow="Research" heading={<>Recent <em>papers</em>.</>}>
-        <EntryList>
-          {featuredPubs.map((p) => (
-            <Entry
-              key={p.titleRest}
-              href={p.href}
-              meta={
-                <>
-                  <span className="vl-entry__date">{shortDate(p.date)}</span>
-                  <Tag tone={p.status === 'Accepted' ? 'live' : undefined}>● {p.status}</Tag>
-                </>
-              }
-            >
-              <h3 className="vl-entry__title">
-                {p.titleAbbrev ? <><em>{p.titleAbbrev}</em>: {p.titleRest}</> : p.titleRest}
-              </h3>
-              <span className="vl-entry__venue">{p.venue}</span>
-              <Html as="p" className="vl-entry__text" html={p.homeAbstract ?? p.abstract} />
-            </Entry>
+      <Section id="research" eyebrow="Research" heading="Latest papers" count={`${latestPapers.length} of ${publications.length}`}>
+        <div>
+          {latestPapers.map((p) => (
+            <PaperRowCompact key={p.titleRest} p={p} />
           ))}
-        </EntryList>
-        <More href="/research">All papers</More>
+        </div>
+        <More href="/research">All {publications.length} papers</More>
       </Section>
 
-      <Section id="journal" eyebrow="Journal" heading={<>What&#39;s <em>changed</em> recently.</>}>
+      <Section id="journal" eyebrow="Journal" heading="Lately" count="Papers are under Research">
         <EntryList>
-          {recent.map((e, i) => (
+          {lately.map((e, i) => (
             <Entry
               key={i}
               compact

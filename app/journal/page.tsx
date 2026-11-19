@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import { journalEntries } from '@/data/journal';
+import { publications } from '@/data/publications';
+import { paperId, paperTitle } from '@/lib/papers';
 import { groupByYear, monthDay } from '@/lib/format';
 import JournalBrowser from '@/components/JournalBrowser';
 import SubNav from '@/components/SubNav';
@@ -21,7 +23,13 @@ export const metadata: Metadata = {
 export default function JournalPage() {
   const groups = groupByYear(journalEntries, (e) => e.date).map((g) => ({
     year: g.year,
-    entries: g.items.map((e) => ({ ...e, shortDate: monthDay(e.date) })),
+    entries: g.items.map((e) => {
+      // Papers are described on Research: link there and drop the repeated "Paper" word.
+      const em = e.headHtml.match(/<em>([^<]+)<\/em>/)?.[1];
+      const paper = e.kind === 'Paper' ? publications.find((p) => paperTitle(p) === em) : undefined;
+      const headHtml = e.kind === 'Paper' ? e.headHtml.replace(/^Paper /, '') : e.headHtml;
+      return { ...e, headHtml, shortDate: monthDay(e.date), href: paper ? `/research#${paperId(paper)}` : undefined };
+    }),
   }));
 
   return (

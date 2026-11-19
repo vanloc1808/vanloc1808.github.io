@@ -95,7 +95,27 @@ export function PageHeader({
   );
 }
 
-export function SectionHead({ eyebrow, children }: { eyebrow: string; children: ReactNode }) {
+export function SectionHead({
+  eyebrow,
+  count,
+  compact,
+  children,
+}: {
+  eyebrow: string;
+  /** Right-aligned note on compact heads ("2 of 9"). */
+  count?: ReactNode;
+  compact?: boolean;
+  children: ReactNode;
+}) {
+  if (compact) {
+    return (
+      <div className="vl-sectionhead vl-sectionhead--compact">
+        <span className="vl-sectionhead__eyebrow">{eyebrow}</span>
+        <h2>{children}</h2>
+        <span className="vl-sectionhead__count">{count}</span>
+      </div>
+    );
+  }
   return (
     <div className="vl-sectionhead">
       <span className="vl-sectionhead__eyebrow">{eyebrow}</span>
@@ -108,17 +128,27 @@ export function Section({
   id,
   eyebrow,
   heading,
+  count,
+  compact = true,
+  tight,
   children,
 }: {
   id?: string;
   eyebrow: string;
   heading: ReactNode;
+  count?: ReactNode;
+  /** Compact head (eyebrow · short title · count). Default since the v2 display. */
+  compact?: boolean;
+  /** Less vertical padding, for short blocks. */
+  tight?: boolean;
   children: ReactNode;
 }) {
   return (
-    <section id={id} className="vl-section">
+    <section id={id} className={tight ? 'vl-section vl-section--tight' : 'vl-section'}>
       <div className="vl-shell">
-        <SectionHead eyebrow={eyebrow}>{heading}</SectionHead>
+        <SectionHead eyebrow={eyebrow} count={count} compact={compact}>
+          {heading}
+        </SectionHead>
         {children}
       </div>
     </section>

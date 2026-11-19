@@ -8,7 +8,7 @@ const KINDS: JournalKind[] = ['Paper', 'Award', 'Role', 'Move', 'Milestone', 'Ev
 
 export interface JournalGroup {
   year: string;
-  entries: (JournalEntry & { shortDate: string })[];
+  entries: (JournalEntry & { shortDate: string; href?: string })[];
 }
 
 /** Year-grouped journal with a single-select filter by kind. */
@@ -19,7 +19,7 @@ export default function JournalBrowser({ groups }: { groups: JournalGroup[] }) {
 
   return (
     <>
-      <div className="vl-sectionhead">
+      <div className="vl-sectionhead vl-sectionhead--compact">
         <span className="vl-sectionhead__eyebrow">Filter</span>
         <div className="vl-chips" role="group" aria-label="Filter entries by kind">
           {(['All', ...KINDS] as const).map((k) => (
@@ -35,6 +35,7 @@ export default function JournalBrowser({ groups }: { groups: JournalGroup[] }) {
             </button>
           ))}
         </div>
+        <span className="vl-sectionhead__count">Paper rows open Research</span>
       </div>
 
       {groups.map((g) => {
@@ -46,8 +47,14 @@ export default function JournalBrowser({ groups }: { groups: JournalGroup[] }) {
               <Entry
                 key={`${e.date}-${i}`}
                 compact
+                href={e.href}
                 meta={<span className="vl-entry__date">{e.shortDate}</span>}
-                aside={<span className="vl-entry__aside">{e.where}</span>}
+                aside={
+                  <span className="vl-entry__aside">
+                    {e.where}
+                    {e.href && <span className="vl-entry__arrow" aria-hidden="true">&nbsp; →</span>}
+                  </span>
+                }
               >
                 <Tag tone={JOURNAL_TONES[e.kind]}>{e.kind}</Tag>{' '}
                 <Html className="vl-entry__title" html={e.headHtml} />

@@ -23,6 +23,14 @@ export interface Project {
   group: ProjectGroup;
   /** Deployed and running; shows a live tag. */
   isLive?: boolean;
+  /** Public URL of the running product ("Visit ↗"). */
+  liveHref?: string;
+  /** About 50 characters, for one-line rows (coursework). */
+  oneLine?: string;
+  /** Course the project was built for. */
+  course?: string;
+  /** Screenshot, cropped tight. Cards without one show no picture frame. */
+  screenshot?: { src: string; width: number; height: number };
   title: string;
   /** Secondary label shown in muted style, e.g. "(Jankenpon)" */
   subtitle?: string;
@@ -69,6 +77,7 @@ export const projects: Project[] = [
     num: '02',
     group: 'live',
     isLive: true,
+    liveHref: 'https://arcanaai.nguyenvanloc.com',
     title: 'ArcanaAI',
     desc: 'AI-powered tarot reading service using OpenAI function calling, real-time chat, multiple decks, dual payment (Lemon Squeezy & MetaMask), Cloudflare R2 asset storage, and WebSocket notifications. Containerized with Docker and CI/CD via GitHub Actions.',
     tags: [
@@ -116,6 +125,8 @@ export const projects: Project[] = [
   {
     num: '04',
     group: 'course',
+    oneLine: 'Real-time chat with group rooms and file sharing.',
+    course: 'Software Architecture',
     title: 'Connect',
     desc: 'Feature-rich chat application (real-time messaging, group chat, file sharing) built for the Software Architecture course. ReactJS frontend + Django REST Framework backend, PostgreSQL, Supabase, CI/CD with Docker, Jenkins, and GitHub Actions.',
     tags: [
@@ -137,6 +148,8 @@ export const projects: Project[] = [
   {
     num: '05',
     group: 'course',
+    oneLine: 'Android shop on a Django REST backend.',
+    course: 'Mobile Development',
     title: 'MiniShopping',
     desc: 'E-commerce mobile app (Android) with user authentication, product catalog, cart management, order processing, and payment integration. Django REST Framework backend with NoSQL database. Mobile Development course project.',
     tags: [
@@ -155,6 +168,8 @@ export const projects: Project[] = [
   {
     num: '06',
     group: 'course',
+    oneLine: 'Control a computer remotely through formatted emails.',
+    course: 'Computer Network',
     title: 'PC Control via Email',
     desc: 'Remote computer control via specially formatted emails. Custom email protocol handler processes commands for system operations, file management, and monitoring tasks. Built with Python socket programming for the Computer Network course.',
     tags: [
@@ -166,6 +181,8 @@ export const projects: Project[] = [
   {
     num: '07',
     group: 'course',
+    oneLine: 'C++ chess engine with move validation and hints.',
+    course: 'OOP',
     title: 'Chess Game',
     desc: 'Full chess engine with standard rules, move validation, graphical two-player gameplay, complete move history, and intelligent move suggestions. Built entirely in C++ for the OOP course, demonstrating inheritance, polymorphism, and encapsulation.',
     tags: [
@@ -176,6 +193,8 @@ export const projects: Project[] = [
   {
     num: '08',
     group: 'course',
+    oneLine: 'C++ text search with fuzzy matching and ranking.',
+    course: 'Arts of Programming',
     title: 'Search Engine',
     desc: 'High-performance text search engine with efficient string matching algorithms, data indexing, fuzzy search, and result ranking. Processes large datasets of text files with fast query response. Arts of Programming course project.',
     tags: [
@@ -186,6 +205,8 @@ export const projects: Project[] = [
   {
     num: '09',
     group: 'course',
+    oneLine: 'Arbitrary-precision integer arithmetic in C++.',
+    course: 'C++ library',
     title: 'Big Integers',
     desc: 'Arbitrary-precision arithmetic library implementing addition, subtraction, multiplication, division, and logical operations on unbounded integers. Demonstrates algorithm optimization, memory management, and number theory concepts in C++.',
     tags: [

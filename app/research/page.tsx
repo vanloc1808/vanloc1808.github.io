@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import { publications } from '@/data/publications';
 import { journalEntries } from '@/data/journal';
 import { SOCIAL_LINKS } from '@/data/nav';
-import { groupByYear, shortDate } from '@/lib/format';
+import { groupByYear } from '@/lib/format';
 import SubNav from '@/components/SubNav';
-import { Button, Entry, EntryList, Html, PageHeader, Section, Tag, YearGroup } from '@/components/ui';
+import { PaperRow } from '@/components/display';
+import { Button, Entry, EntryList, Html, PageHeader, Section } from '@/components/ui';
 
 export const metadata: Metadata = {
   title: 'Research — Van-Loc Nguyen',
@@ -16,8 +17,13 @@ export const metadata: Metadata = {
 };
 
 const SCHOLAR = SOCIAL_LINKS.find((l) => l.label.includes('Scholar'))!.href;
-
 const NUMBER_WORDS = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen'];
+
+/** "Won <em>top 1</em> at …" → the badge label. */
+function resultOf(headHtml: string): string {
+  const em = headHtml.match(/<em>([^<]+)<\/em>/)?.[1] ?? '';
+  return /top 1/i.test(em) ? 'Top-1' : em.replace(/^\w/, (c) => c.toUpperCase());
+}
 
 /* =========================================================
    RESEARCH — papers by year, then challenge wins.
@@ -33,7 +39,7 @@ export default function ResearchPage() {
       <PageHeader
         name="Research"
         title={<em>Research</em>}
-        dek={`${count} peer-reviewed papers on generative editing, multimodal retrieval and media authenticity, newest first. Then the challenges they won.`}
+        dek={`${count} peer-reviewed papers on generative editing, multimodal retrieval and media authenticity, and the challenges they won.`}
         actions={<Button href={SCHOLAR}>Google Scholar</Button>}
       />
       <SubNav
@@ -43,39 +49,38 @@ export default function ResearchPage() {
         ]}
       />
 
-      <Section id="papers" eyebrow="Papers" heading={<>Peer-reviewed <em>research</em>.</>}>
+      <Section id="papers" eyebrow="Papers" heading="Peer-reviewed research" count={`${publications.length} papers · newest first`}>
         {years.map((y) => (
-          <YearGroup key={y.year} year={y.year} count={y.items.length} noun={['paper', 'papers']}>
-            {y.items.map((p) => (
-              <Entry
-                key={p.titleRest}
-                href={p.href}
-                meta={
-                  <>
-                    <span className="vl-entry__date">{shortDate(p.date)}</span>
-                    <Tag tone={p.status === 'Accepted' ? 'live' : undefined}>● {p.status}</Tag>
-                  </>
-                }
-              >
-                <h3 className="vl-entry__title">
-                  {p.titleAbbrev ? <><em>{p.titleAbbrev}</em>: {p.titleRest}</> : p.titleRest}
-                </h3>
-                <span className="vl-entry__venue">{p.venue}</span>
-                {/* abstract may contain <strong> — authored content */}
-                <Html as="p" className="vl-entry__text" html={p.abstract} />
-              </Entry>
-            ))}
-          </YearGroup>
+          <div key={y.year} className="vl-yeargroup" id={`y${y.year}`}>
+            <div className="vl-yearhead">
+              <h3 className="vl-yearhead__year">{y.year}</h3>
+              <span className="vl-meta">
+                {y.items.length} paper{y.items.length === 1 ? '' : 's'}
+              </span>
+            </div>
+            <div>
+              {y.items.map((p) => (
+                <PaperRow key={p.titleRest} p={p} />
+              ))}
+            </div>
+          </div>
         ))}
       </Section>
 
-      <Section id="awards" eyebrow="Awards" heading={<>Challenges <em>won</em>.</>}>
+      <Section id="awards" eyebrow="Awards" heading="Challenges won" count={`${awards.length} awards`}>
         <EntryList>
           {awards.map((a, i) => (
             <Entry
               key={i}
               compact
-              meta={<span className="vl-entry__date">{a.date}</span>}
+              meta={
+                <>
+                  <span className="vl-award">
+                    <span aria-hidden="true">▲</span> {resultOf(a.headHtml)}
+                  </span>
+                  <span className="vl-entry__date">{a.date}</span>
+                </>
+              }
               aside={<span className="vl-entry__aside">{a.where}</span>}
             >
               <Html className="vl-entry__title" html={a.headHtml} />

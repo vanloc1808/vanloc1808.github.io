@@ -256,7 +256,14 @@ function buildResearch(): string {
         .map((p) => {
           const title = p.titleAbbrev ? `${p.titleAbbrev}: ${p.titleRest}` : p.titleRest;
           const head = p.href ? `[${title}](${p.href})` : title;
-          return `### ${head}\n${p.venue} · ${p.status} · ${p.date}\n\n${htmlToMarkdown(p.abstract)}`;
+          const extra = [
+            `- Authors: ${p.authors.join(', ')}${p.equalContribution?.length ? ` (equal contribution: ${p.equalContribution.join(', ')})` : ''}`,
+            p.award ? `- Award: ${p.award}` : '',
+            p.codeHref ? `- Code: ${p.codeHref}` : '',
+            p.projectHref ? `- Project page: ${p.projectHref}` : '',
+            p.doi ? `- DOI: ${p.doi}` : '',
+          ].filter(Boolean).join('\n');
+          return `### ${head}\n${p.venue} · ${p.status} · ${p.date}\n${extra}\n\n${htmlToMarkdown(p.abstract)}`;
         })
         .join('\n\n')
   );

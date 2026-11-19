@@ -7,6 +7,7 @@ import { SITE } from '@/data/nav';
 import Console from '@/components/Console';
 import MapCard from '@/components/MapCard';
 import SubNav from '@/components/SubNav';
+import { Timeline } from '@/components/display';
 import { Button, Entry, EntryList, FieldList, Html, NowCell, NowGrid, PageHeader, Section } from '@/components/ui';
 
 export const metadata: Metadata = {
@@ -28,7 +29,7 @@ interface TimelineItem {
   descHtml?: string;
 }
 
-function Timeline({ items }: { items: TimelineItem[] }) {
+function Details({ items }: { items: TimelineItem[] }) {
   return (
     <EntryList>
       {items.map((t, i) => (
@@ -79,6 +80,7 @@ export default function AboutPage() {
       <SubNav
         items={[
           { id: 'bio', label: 'Bio' },
+          { id: 'timeline', label: 'Timeline' },
           { id: 'experience', label: 'Experience', count: experience.length },
           { id: 'education', label: 'Education', count: education.length },
           { id: 'toolkit', label: 'Toolkit' },
@@ -86,7 +88,7 @@ export default function AboutPage() {
         ]}
       />
 
-      <Section id="bio" eyebrow="Bio" heading={<>Taking models out of the <em>notebook</em>.</>}>
+      <Section id="bio" eyebrow="Bio" heading="Taking models out of the notebook">
         <div className="vl-split">
           <div className="vl-prose vl-prose--dropcap">
             {BIO_PARAGRAPHS.map((p, i) => (
@@ -105,15 +107,25 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section id="experience" eyebrow="Experience" heading={<>From notebook to <em>production</em>.</>}>
-        <Timeline items={experience} />
+      <Section id="timeline" eyebrow="Timeline" heading="Where the years went" count={`${experience.length} roles`}>
+        <Timeline
+          startYear={2023}
+          endYear={new Date().getFullYear()}
+          rows={[
+            ...experienceEntries.map((e) => ({ label: e.timelineLabel, period: e.period, kind: 'work' as const })),
+            ...educationEntries.map((e) => ({ label: e.timelineLabel, period: e.period, kind: 'study' as const })),
+          ]}
+        />
+        <div id="experience">
+          <Details items={experience} />
+        </div>
       </Section>
 
-      <Section id="education" eyebrow="Education" heading={<>Trained in <em>science</em>, drawn to engineering.</>}>
-        <Timeline items={education} />
+      <Section id="education" eyebrow="Education" heading="Trained in science, drawn to engineering" count={`${education.length} schools`}>
+        <Details items={education} />
       </Section>
 
-      <Section id="toolkit" eyebrow="Toolkit" heading={<>The instruments I <em>reach for</em>.</>}>
+      <Section id="toolkit" eyebrow="Toolkit" heading="The instruments I reach for">
         <NowGrid>
           {toolCategories.map((c) => (
             <NowCell key={c.label} label={c.label} title={c.items} text={c.desc} meta={c.meta} />
@@ -138,7 +150,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section id="elsewhere" eyebrow="Elsewhere" heading={<>A self-portrait and a <em>map</em>.</>}>
+      <Section id="elsewhere" eyebrow="Elsewhere" heading="A self-portrait and a map">
         <div className="vl-split vl-split--even">
           <Console />
           <MapCard />

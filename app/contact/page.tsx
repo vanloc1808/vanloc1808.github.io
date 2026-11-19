@@ -26,7 +26,7 @@ export default function ContactPage() {
         dek="I read every letter. Email is still the best way in; everything else is below."
       />
 
-      <Section id="email" eyebrow="Email" heading={<>The best way to reach me is still <em>email</em>.</>}>
+      <Section id="email" eyebrow="Email" heading="The best way to reach me is still email">
         <div className="vl-split">
           <div>
             <p className="vl-pitch">
@@ -54,7 +54,7 @@ export default function ContactPage() {
         </div>
       </Section>
 
-      <Section id="elsewhere" eyebrow="Elsewhere" heading={<>Other places to <em>find</em> me.</>}>
+      <Section id="elsewhere" eyebrow="Elsewhere" heading="Other places to find me" count={`${contactChannels.length} channels`}>
         <EntryList>
           {contactChannels.map((ch) => (
             <Entry key={ch.platform} href={ch.href} meta={<span className="vl-entry__date">{ch.platform}</span>}>

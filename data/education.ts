@@ -4,6 +4,8 @@
    ========================================================= */
 
 export interface EducationEntry {
+  /** Short label for the About timeline ("Eurofins · Software Eng."). */
+  timelineLabel: string;
   period: string;
   institution: string;
   institutionHref?: string;
@@ -18,6 +20,7 @@ export interface EducationEntry {
 
 export const educationEntries: EducationEntry[] = [
   {
+    timelineLabel: 'HCMUS · MSc, AI',
     period: 'Dec 2024 — Present',
     institution: 'University of Science, Vietnam National University Ho Chi Minh City',
     location: 'Ho Chi Minh City, Vietnam',
@@ -27,6 +30,7 @@ export const educationEntries: EducationEntry[] = [
       'Pursuing research in computer vision and generative models under <a href="https://www.fit.hcmus.edu.vn/~tmtriet/" target="_blank" rel="noopener noreferrer">Assoc.&nbsp;Prof. Minh-Triet Tran</a>. Current thesis focuses on zero-shot object removal and multi-object reasoning for video.',
   },
   {
+    timelineLabel: 'HCMUS · BSc',
     period: 'Oct 2020 — Oct 2024',
     institution: 'University of Science, Vietnam National University Ho Chi Minh City',
     location: 'Ho Chi Minh City, Vietnam',
@@ -36,6 +40,7 @@ export const educationEntries: EducationEntry[] = [
       'Graduated rank 6/59. Supervised by <a href="https://www.fit.hcmus.edu.vn/~tmtriet/" target="_blank" rel="noopener noreferrer">Assoc.&nbsp;Prof. Minh-Triet Tran</a>. Defended undergraduate thesis with score 10.00; co-authored multiple papers during final-year research.',
   },
   {
+    timelineLabel: 'Lê Quý Đôn · Mathematics',
     period: 'Aug 2017 — Aug 2020',
     institution: 'Lê Quý Đôn High School for Gifted Students, Ho Chi Minh City',
     location: 'Ho Chi Minh City, Vietnam',

@@ -69,3 +69,8 @@ export const NOW_ITEMS: NowItem[] = [
     meta: 'Personal project · Live',
   },
 ];
+
+/* ── Highlights ──────────────────────────────────────────── */
+
+/** Academic rank shown in the homepage highlights (from education.ts). */
+export const HONORS_RANK = { value: '6/59', label: 'rank, BSc Honors Program, HCMUS' } as const;
