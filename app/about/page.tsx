@@ -107,7 +107,7 @@ export default function AboutPage() {
         </div>
       </Section>
 
-      <Section id="timeline" eyebrow="Timeline" heading="Where the years went" count={`${experience.length} roles`}>
+      <Section id="timeline" eyebrow="Timeline" heading="Where the years went" count="At a glance">
         <Timeline
           startYear={2023}
           endYear={new Date().getFullYear()}
@@ -116,9 +116,10 @@ export default function AboutPage() {
             ...educationEntries.map((e) => ({ label: e.timelineLabel, period: e.period, kind: 'study' as const })),
           ]}
         />
-        <div id="experience">
-          <Details items={experience} />
-        </div>
+      </Section>
+
+      <Section id="experience" eyebrow="Experience" heading="From notebook to production" count={`${experience.length} roles`}>
+        <Details items={experience} />
       </Section>
 
       <Section id="education" eyebrow="Education" heading="Trained in science, drawn to engineering" count={`${education.length} schools`}>
