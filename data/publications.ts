@@ -47,9 +47,23 @@ export interface Publication {
 export const publications: Publication[] = [
   /* ── 2026 ─────────────────────────────────────────── */
   {
+    date: 'November 26, 2026',
+    venue: 'The 13th International Conference on Future Data and Security Engineering (FDSE 2026)',
+    status: 'Published',
+    titleAbbrev: 'EditAudit',
+    titleRest: 'Auditing the Reliability of Structured VLM Outputs for Paired Image-Edit Analysis',
+    venueShort: 'FDSE ’26',
+    tldr: 'A method for auditing the reliability of structured VLM outputs in the context of paired image-edit analysis.',
+    authors: ['Van-Loc Nguyen','Minh-Triet Tran'],
+    figure: { src: '/images/papers/editaudit.webp', width: 1048, height: 589, caption: 'Fig. 1 · EditAudit overview' },
+    abstract: 'Vision-language models can produce readable descriptions of image edits, but fluent structured output is not necessarily reliable for forensic use. We present EditAudit, a paired-image reliability study in which the model receives a source image, its edited version, and the editing instruction, and predicts the edit category, approximate location, and difficulty level. Using Qwen3-VL-8B-Instruct adapted with QLoRA under exposure-matched schedules, the historical three-seed R1/R2 experiment produced category differences of $+1.70$, $-32.39$, and $-21.78$ percentage points; location accuracy averaged below $4.5\%$, and joint accuracy was near zero. A separate fresh six-seed principal comparison yielded a $-12.78$-point mean category difference, with decreases in five of six seeds. Permissive semantic recovery reduced some output-format errors but did not remove the large category decreases. Across the evaluated matched seeds, difficulty-biased ordering produced no consistent improvement, supporting matched-seed evaluation, strict end-to-end metrics, and separate analysis of semantic and formatting failures.',
+    featuredOnHome: false,
+    href: 'https://doi.org/10.1007/978-981-92-8104-6_7',
+  },
+  {
     date: 'July 7, 2026',
     venue: 'IEEE International Conference on Multimedia & Expo Workshops — ICMEW 2026, Bangkok',
-    status: 'Accepted',
+    status: 'Published',
     titleRest: 'Zero-Shot Mass-Similar and Multi-Object Removal in Single Pass',
     venueShort: 'ICMEW ’26',
     tldr: 'Clutter Erase, an interactive system that removes dense or mass-similar objects in a single pass, powered by PANDORA.',
@@ -63,7 +77,7 @@ export const publications: Publication[] = [
   {
     date: 'July 7, 2026',
     venue: 'IEEE International Conference on Multimedia & Expo — ICME 2026, Bangkok',
-    status: 'Accepted',
+    status: 'Published',
     titleAbbrev: 'PANDORA',
     titleRest: 'Pixel-wise Attention Dissolution and Latent Guidance for Zero-Shot Object Removal',
     venueShort: 'ICME ’26',
@@ -80,7 +94,7 @@ export const publications: Publication[] = [
   {
     date: 'December 13, 2025',
     venue: 'The 14th International Symposium on Information and Communication Technology (SOICT 2025)',
-    status: 'Accepted',
+    status: 'Published',
     titleAbbrev: 'Visionary',
     titleRest: 'Optimized Temporal Video Retrieval via Large Language Model-Enhanced Query Processing',
     venueShort: 'SOICT ’25',
@@ -97,7 +111,7 @@ export const publications: Publication[] = [
   {
     date: 'December 13, 2025',
     venue: 'The 14th International Symposium on Information and Communication Technology (SOICT 2025)',
-    status: 'Accepted',
+    status: 'Published',
     titleAbbrev: 'EnAug',
     titleRest: 'ENT Endoscopy Images Classification Using Ensemble and Augmentation Methods',
     venueShort: 'SOICT ’25',

@@ -27,9 +27,15 @@ export interface JournalEntry {
 
 export const journalEntries: JournalEntry[] = [
   {
+    date: 'Nov 26, 2026',
+    kind: 'Paper',
+    headHtml: 'Paper <em>EditAudit: Auditing the Reliability of Structured VLM Outputs for Paired Image-Edit Analysis</em> presented at the 13th International Conference on Future Data and Security Engineering (FDSE 2026), held at University of Science, VNUHCM, Ho Chi Minh City, Vietnam.',
+    where: 'FDSE · VN',
+  },
+  {
     date: 'Sep 12, 2026',
     kind: 'Paper',
-    headHtml: 'Paper <em>Auditing the Reliability of Structured VLM Outputs for Paired Image-Edit Analysis</em> accepted to the International Conference on Future Data and Security Engineering (FDSE) 2026 in Ho Chi Minh City, Vietnam.',
+    headHtml: 'Paper <em>EditAudit: Auditing the Reliability of Structured VLM Outputs for Paired Image-Edit Analysis</em> accepted to the 13th International Conference on Future Data and Security Engineering (FDSE 2026) in Ho Chi Minh City, Vietnam.',
     where: 'FDSE · VN',
   },
   {
