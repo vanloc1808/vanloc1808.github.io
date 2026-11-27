@@ -232,10 +232,10 @@ export const publications: Publication[] = [
   /* ── 2024 / MMM ────────────────────────────────────── */
   {
     date: 'February 1, 2024',
-    venue: 'The MediaEval 2023 Workshop, MMM 2024',
+    venue: 'MediaEval 2023 Workshop',
     status: 'Published',
     titleRest: 'Transparent Tracking of Spermatozoa with YOLOv8',
-    venueShort: 'MMM ’24',
+    venueShort: 'MediaEval 2023 Workshop',
     tldr: 'Transparent, reproducible detection and tracking of sperm cells with YOLOv8.',
     authors: ['Bao-Tin Nguyen', 'Van-Loc Nguyen', 'Minh-Triet Tran'],
     equalContribution: ['Bao-Tin Nguyen', 'Van-Loc Nguyen'],
