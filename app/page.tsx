@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { HONORS_RANK, NOW_ITEMS } from '@/data/profile';
 import { projects } from '@/data/projects';
-import { publications } from '@/data/publications';
+import { peerReviewed, publications } from '@/data/publications';
 import { JOURNAL_TONES, journalEntries } from '@/data/journal';
 import { EDITORIAL, SITE } from '@/data/nav';
 import { personJsonLd } from '@/lib/agent';
@@ -28,10 +28,10 @@ export default function Home() {
   const awards = journalEntries.filter((e) => e.kind === 'Award');
   // Papers live under Research; the journal strip shows everything else.
   const lately = journalEntries.filter((e) => e.kind !== 'Paper').slice(0, 3);
-  const years = publications.map((p) => Number(p.date.match(/\d{4}/)?.[0]));
+  const years = peerReviewed.map((p) => Number(p.date.match(/\d{4}/)?.[0]));
 
   const highlights = [
-    { num: String(publications.length), label: `peer-reviewed papers, ${Math.min(...years)}–${Math.max(...years)}`, href: '/research', more: 'Research' },
+    { num: String(peerReviewed.length), label: `peer-reviewed papers, ${Math.min(...years)}–${Math.max(...years)}`, href: '/research', more: 'Research' },
     { num: String(awards.length), label: 'challenge awards at ACM MM, ACCV and more', href: '/research#awards', more: 'Awards' },
     { num: String(awards.filter((a) => FIRST_PLACE.test(a.headHtml)).length), label: 'first-place finishes', href: '/research#awards', more: 'Awards' },
     { num: HONORS_RANK.value, label: HONORS_RANK.label, href: '/experience#education', more: 'Education' },

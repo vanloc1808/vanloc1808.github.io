@@ -6,7 +6,8 @@
 export interface Publication {
   date: string;
   venue: string;
-  status: 'Accepted' | 'Published';
+  /** 'Preprint' marks work not yet peer-reviewed; it is listed but never counted as a paper. */
+  status: 'Accepted' | 'Published' | 'Preprint';
   /**
    * Short project name or acronym rendered in italics before the colon,
    * e.g. "Visionary" → <em>Visionary</em>: {titleRest}
@@ -243,3 +244,9 @@ export const publications: Publication[] = [
     abstract: 'Accurate spermatozoa tracking is crucial for understanding fertilization and reproductive health and developing novel sperm-based diagnostics and therapies. This paper explores the application of YOLOv8, a state-of-the-art object detection model, for automated and robust spermatozoa tracking in microscopic videos. Our approach employs transfer learning, fine-tuning the pre-trained YOLOv8 model on the VISEM-Tracking dataset of labeled spermatozoa images. We evaluate the performance of the proposed method on a specific part of the dataset, which does not participate in the training step. By providing a reliable and efficient tool for automated spermatozoa tracking, this work paves the way for further research, advancements, and applications in the field of reproductive medicine.',
   },
 ];
+
+/** Accepted or published papers: the only ones counted as peer-reviewed. */
+export const peerReviewed = publications.filter((p) => p.status !== 'Preprint');
+
+/** Preprints (e.g. arXiv) awaiting peer review; listed separately, never counted. */
+export const preprints = publications.filter((p) => p.status === 'Preprint');
