@@ -27,12 +27,12 @@ function bibtex(p: Publication): string {
   const fields = [
     `  title     = {${paperTitle(p)}}`,
     `  author    = {${p.authors.map((a) => `${family(a)}, ${given(a)}`).join(' and ')}}`,
-    `  booktitle = {${p.venue}}`,
+    p.status === 'Preprint' ? `  howpublished = {${p.venue}}` : `  booktitle = {${p.venue}}`,
     `  year      = {${year}}`,
     p.doi ? `  doi       = {${p.doi}}` : null,
     p.href ? `  url       = {${p.href}}` : null,
   ].filter(Boolean);
-  return `@inproceedings{${key},\n${fields.join(',\n')}\n}`;
+  return `@${p.status === 'Preprint' ? 'misc' : 'inproceedings'}{${key},\n${fields.join(',\n')}\n}`;
 }
 
 /* ── badges ─────────────────────────────────────────────── */

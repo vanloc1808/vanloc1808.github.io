@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { publications } from '@/data/publications';
+import { peerReviewed, preprints } from '@/data/publications';
 import { journalEntries } from '@/data/journal';
 import { SOCIAL_LINKS } from '@/data/nav';
 import { groupByYear } from '@/lib/format';
@@ -30,9 +30,9 @@ function resultOf(headHtml: string): string {
    ========================================================= */
 
 export default function ResearchPage() {
-  const years = groupByYear(publications, (p) => p.date);
+  const years = groupByYear(peerReviewed, (p) => p.date);
   const awards = journalEntries.filter((e) => e.kind === 'Award');
-  const count = NUMBER_WORDS[publications.length] ?? String(publications.length);
+  const count = NUMBER_WORDS[peerReviewed.length] ?? String(peerReviewed.length);
 
   return (
     <>
@@ -45,11 +45,12 @@ export default function ResearchPage() {
       <SubNav
         items={[
           ...years.map((y) => ({ id: `y${y.year}`, label: y.year, count: y.items.length })),
+          ...(preprints.length > 0 ? [{ id: 'preprints', label: 'Preprints', count: preprints.length }] : []),
           { id: 'awards', label: 'Awards', count: awards.length },
         ]}
       />
 
-      <Section id="papers" eyebrow="Papers" heading="Peer-reviewed research" count={`${publications.length} papers · newest first`}>
+      <Section id="papers" eyebrow="Papers" heading="Peer-reviewed research" count={`${peerReviewed.length} papers · newest first`}>
         {years.map((y) => (
           <div key={y.year} className="vl-yeargroup" id={`y${y.year}`}>
             <div className="vl-yearhead">
@@ -66,6 +67,16 @@ export default function ResearchPage() {
           </div>
         ))}
       </Section>
+
+      {preprints.length > 0 && (
+        <Section id="preprints" eyebrow="Preprints" heading="Under review" count={`${preprints.length} preprint${preprints.length === 1 ? '' : 's'} · not peer-reviewed`}>
+          <div>
+            {preprints.map((p) => (
+              <PaperRow key={p.titleRest} p={p} />
+            ))}
+          </div>
+        </Section>
+      )}
 
       <Section id="awards" eyebrow="Awards" heading="Challenges won" count={`${awards.length} awards`}>
         <EntryList>

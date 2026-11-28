@@ -10,7 +10,7 @@
 import { BIO_PARAGRAPHS, BIO_META, NAME_VARIANTS, STATUS_ITEMS, NOW_ITEMS } from '@/data/profile';
 import { FOOTPRINTS, SITE, SOCIAL_LINKS } from '@/data/nav';
 import { PROJECT_GROUPS, projects, type Tag } from '@/data/projects';
-import { publications } from '@/data/publications';
+import { peerReviewed, preprints, publications, type Publication } from '@/data/publications';
 import { journalEntries } from '@/data/journal';
 import { contactChannels, contactInfo } from '@/data/contact';
 import { experienceEntries } from '@/data/experience';
@@ -265,23 +265,23 @@ function buildWork(): string {
 function buildResearch(): string {
   const out: string[] = [frontMatter('Research — Van-Loc Nguyen', page('research').description)];
 
-  out.push(
-    '## Publications\n\n' +
-      publications
-        .map((p) => {
-          const title = p.titleAbbrev ? `${p.titleAbbrev}: ${p.titleRest}` : p.titleRest;
-          const head = p.href ? `[${title}](${p.href})` : title;
-          const extra = [
-            `- Authors: ${p.authors.join(', ')}${p.equalContribution?.length ? ` (equal contribution: ${p.equalContribution.join(', ')})` : ''}`,
-            p.award ? `- Award: ${p.award}` : '',
-            p.codeHref ? `- Code: ${p.codeHref}` : '',
-            p.projectHref ? `- Project page: ${p.projectHref}` : '',
-            p.doi ? `- DOI: ${p.doi}` : '',
-          ].filter(Boolean).join('\n');
-          return `### ${head}\n${p.venue} · ${p.status} · ${p.date}\n${extra}\n\n${htmlToMarkdown(p.abstract)}`;
-        })
-        .join('\n\n')
-  );
+  const entry = (p: Publication) => {
+    const title = p.titleAbbrev ? `${p.titleAbbrev}: ${p.titleRest}` : p.titleRest;
+    const head = p.href ? `[${title}](${p.href})` : title;
+    const extra = [
+      `- Authors: ${p.authors.join(', ')}${p.equalContribution?.length ? ` (equal contribution: ${p.equalContribution.join(', ')})` : ''}`,
+      p.award ? `- Award: ${p.award}` : '',
+      p.codeHref ? `- Code: ${p.codeHref}` : '',
+      p.projectHref ? `- Project page: ${p.projectHref}` : '',
+      p.doi ? `- DOI: ${p.doi}` : '',
+    ].filter(Boolean).join('\n');
+    return `### ${head}\n${p.venue} · ${p.status} · ${p.date}\n${extra}\n\n${htmlToMarkdown(p.abstract)}`;
+  };
+
+  out.push('## Peer-reviewed publications\n\n' + peerReviewed.map(entry).join('\n\n'));
+  if (preprints.length > 0) {
+    out.push('## Preprints (not peer-reviewed)\n\n' + preprints.map(entry).join('\n\n'));
+  }
 
   out.push(
     '## Awards\n\n' +
